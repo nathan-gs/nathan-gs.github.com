@@ -5,16 +5,18 @@
     <title>Nathan Bijnens</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Nathan Bijnens">
 
     <!-- Le styles -->
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/jqcloud/jqcloud-1.0.0.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Maven+Pro:900,500,700' rel='stylesheet' type='text/css'>
     <style>
         body {
             padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
             font-family: 'Maven Pro', sans-serif;
             font-weight: 500;
+            text-align: justify;
         }
 
         h1, h2 {
@@ -82,26 +84,71 @@
             font-size: 13px;
         }
 
+        .skills .wordcloud {
+            height: 400px;
+        }
+
         p {
             margin-bottom: 5px;
+        }
+
+        /* jQcloud specifics */
+
+        div.jqcloud {
+            font-family: inherit;
+            margin-top: -60px;
+            margin-bottom: -60px;
+        }
+
+        div.jqcloud span.w10 {
+            color: #000;
+        }
+        div.jqcloud span.w9 {
+            color: #191919;
+        }
+        div.jqcloud span.w8 {
+            color: #323232;
+        }
+        div.jqcloud span.w7 {
+            color: #4b4b4b;
+        }
+        div.jqcloud span.w6 {
+            color: #646464;
+        }
+        div.jqcloud span.w5 {
+            color: #7d7d7d;
+        }
+        div.jqcloud span.w4 {
+            color: #969696;
+        }
+        div.jqcloud span.w3 {
+            color: #afafaf;
+        }
+        div.jqcloud span.w2 {
+            color: #c8c8c8;
+        }
+        div.jqcloud span.w1 {
+            color: #e1e1e1;
         }
     </style>
 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Nathan Bijnens</h1>
 
-    <section class="introduction row">
-        <h2>Introduction</h2>
+<h1>Nathan Bijnens</h1>
+
+<section class="introduction">
+
+    <h2>Introduction</h2>
+    <div class="container">
         <div class="row">
             <div class="span6">
                <dl>
@@ -125,12 +172,12 @@
                    <dt class="span2">GitHub</dt><dd><a href="https://github.com/nathan-gs">github.com/nathan-gs</a></dd>
                    <dt class="span2">Twitter</dt><dd><a href="http://twitter.com/nathan_gs">@nathan_gs</a></dd>
                    <dt class="span2">LinkedIn</dt><dd><a href="http://linkedin.com/in/nbijnens">linkedin.com/in/nbijnens</a></dd>
-                   <dt class="span2">Skype</dt><dd><a href="tel:nathan_gs">nathan_gs</a></dd>
+                   <dt class="span2">Skype</dt><dd><a href="skype:nathan_gs">nathan_gs</a></dd>
                </dl>
 
             </div>
             <div class="span6">
-                <img class="span6" src="nathan.jpg" alt="Nathan Bijnens">
+                <img class="span6" src="nathan-460px.jpg" alt="Nathan Bijnens">
             </div>
 
 
@@ -146,73 +193,239 @@
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="experience row">
-        <h2>experience</h2>
-        <section>
-            <div>As from April 2012 I work for <h4>DataCrunchers</h4>, as a <h4>Hadoop and Big Data Consultant</h4>. DataCrunchers is the leading Belgian consultancy firm around everything big data. I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em>, I co-presented our <em>Hadoop Ecosystem course</em>, I created a new website using Drupal and I am responsible for our Microsoft big data partnership.</div>
-        </section>
+<section class="experience">
+    <h2>experience</h2>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <section>
+                    <div>As from April 2012 I work for <h4>DataCrunchers</h4>, as a <h4>Hadoop and Big Data Consultant</h4>. DataCrunchers is the leading Belgian consultancy firm around everything big data. I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em>, I co-presented our <em>Hadoop Ecosystem course</em>, I created a new website using Drupal and I am responsible for our Microsoft big data partnership.</div>
+                </section>
 
-        <section>
-            <div>
-                Since March 2007 I am the <h4>Consultant, Managing Director and founder</h4> of <h4>Servs</h4> BVBA; mainly active as an IT consultant in the field of <em>big data</em> & <em>hadoop</em>, <em>web applications</em> (<em>php</em>, <em>sql</em>, <em>scalability</em>, <em>best practices</em>, …), <em>devops</em> &amp; <em>linux</em> orientated <em>system administration</em> and hosting applications.
+                <section>
+                    <div>
+                        Since March 2007 I am the <h4>Consultant, Managing Director and founder</h4> of <h4>Servs</h4> BVBA; mainly active as an IT consultant in the field of <em>big data</em> & <em>hadoop</em>, <em>web applications</em> (<em>PHP</em>, <em>sql</em>, <em>scalability</em>, <em>best practices</em>, …), <em>devops</em> &amp; <em>linux</em> orientated <em>system administration</em> and hosting applications.
+                    </div>
+                </section>
+
+                <section>
+                    <div>From March 2011 till April 2012 I worked for <h4>iController</h4>, as <h4>Lead Application and Warehouse Developer</h4>. We build a <em>credit management</em> <em>web application</em>, written in <em>PHP</em>. I managed a small group of developers, took the lead on everything technical and coordinated with the directors, partners and clients.</div>
+                    <div>My job involved lots of <em>PHP</em>, <em>refactoring</em>, <em>performance tuning</em>, <em>system engineering</em> and bits of <em>data analysis</em>.</div>
+                </section>
+
+                <section>
+                    <div>From April till August 2011 I worked as a consultant for <h4>Truvo</h4>, the Belgian yellow pages, doing a <h4>hadoop deduplication</h4> job. I used <em>Hadoop</em> <em>Pig</em>, wrote custom <em>UDFs</em> in <em>Java</em> for <em>Ngram</em> matching and solved performance issues. At first <em>Amazon Elastic MapReduce</em> was used, later I setup a <em>hadoop</em> cluster.</div>
+                </section>
+
+                <section>
+                    <div>At the 2011 edition of the <h4>FOSDEM DataDevRoom</h4>, an <em>open source conference</em>, I gave a presentation about <h4><a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">Hadoop Pig: MapReduce the easy way</a></h4>, it was featured on the front page of <a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">slideshare.net</a>.</div>
+                </section>
+
+                <section>
+                    <div>From September 2010 till February 2011 I was employed at <h4>Netlog</h4> as a <h4>Warehouse and Web Developer</h4>, creating an <em>analytical warehouse</em> based on <em>Hbase</em>. I also created large parts of the <em>processing infrastructure</em> using <em>Hadoop</em> and <em>Hadoop Pig</em>. I also advised on new technologies, <em>GIT</em> migration, <em>best practices</em> & <em>unit testing</em>. Netlog is a social community network, with over 70 million members, mainly active in Europe and the Arabic world.</div>
+                </section>
+
+                <section>
+                    <div>From October 2009 to August 2010 I started working at <h4>iController</h4>, a small SME in Ghent, as <h4>web application developer</h4>. I developed a new, greatly improved debtor & credit management web application. We used the <em>Symfony</em> <em>PHP</em> framework as a starting point to create a stable and easy to maintain application.</div>
+                </section>
+
+                <section>
+                    <div>In 2009 I was active as a consultant to a Dutch services organization. The assignment mainly consisted of <h4>creating a link between existing systems and a new website</h4>.</div>
+                </section>
+
+                <section>
+                    <div>
+                        From 2008 till present I perform various <h4>short term consultancy</h4> tasks commissioned by <h4>Sinergio</h4>. For a <h5>semi government organisation</h5> I set up a new <em>tomcat</em> server and did a general check up on their <em>Linux</em> servers. For another company I configured an <em>ASP.Net</em> application and installed an <em>IIS</em> server. For <h5>Sio Hosting</h5> (Formerly Sinergio Hosting) I planned and executed the move from traditional servers to a <em>virtualized</em> <em>xen cluster</em>. I also check the integrity and <em>security</em> of their <em>hosting platform</em> on a regular basis. I advise them on strategic planning.
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <div>During 2004 – 2010 I advised on and co-developed for <h4>4levels</h4> several websites, backend systems and web applications.</div>
+                    </div>
+                </section>
+
+                <section>
+                    <div>During my secondary education I created a <h4>PHP CMS</h4>, with features as native <em>PHP</em> templates, module in module support (recursion) following a very basic <em>MVC</em> pattern. It was used and expanded by two web agencies to create over 30 websites.</div>
+                </section>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section>
-            <div>From March 2011 till April 2012 I worked for <h4>iController</h4>, as <h4>Lead Application and Warehouse Developer</h4>. We build a <em>credit management</em> <em>web application</em>, written in <em>PHP</em>. I managed a small group of developers, took the lead on everything technical and coordinated with the directors, partners and clients.</div>
-            <div>My job involved lots of <em>PHP</em>, <em>refactoring</em>, <em>performance tuning</em>, <em>system engineering</em> and bits of <em>data analysis</em>.</div>
-        </section>
+<section class="skills">
+    <h2>skills</h2>
+    <div class="container">
+        <div class="row">
+            <div class="span12 wordcloud">
 
-        <section>
-            <div>From April till August 2011 I worked as a consultant for <h4>Truvo</h4>, the Belgian yellow pages, doing a <h4>hadoop deduplication</h4> job. I used <em>Hadoop Pig</em>, wrote custom <em>UDFs</em> in <em>Java</em> for <em>Ngram</em> matching and solved performance issues. At first Amazon <em>Elastic MapReduce</em> was used, later I setup a <em>hadoop cluster</em>.</div>
-        </section>
-
-        <section>
-            <div>At the 2011 edition of the <h4>FOSDEM DataDevRoom</h4>, an <em>open source conference</em>, I gave a presentation about <h4><a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">Hadoop Pig: MapReduce the easy way</a></h4>, it was featured on the front page of <a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">slideshare.net</a>.</div>
-        </section>
-
-        <section>
-            <div>From September 2010 till February 2011 I was employed at <h4>Netlog</h4> as a <h4>Warehouse and Web Developer</h4>, creating an <em>analytical warehouse</em> based on <em>Hbase</em>. I also created large parts of the <em>processing infrastructure</em> using <em>Hadoop</em> and <em>Hadoop Pig</em>. I also advised on new technologies, <em>git migration</em>, <em>best practices</em> & <em>unit testing</em>. Netlog is a social community network, with over 70 million members, mainly active in Europe and the Arabic world.</div>
-        </section>
-
-        <section>
-            <div>From October 2009 to August 2010 I started working at <h4>iController</h4>, a small SME in Ghent, as <h4>web application developer</h4>. I developed a new, greatly improved debtor & credit management web application. We used the <em>Symfony</em> <em>PHP</em> framework as a starting point to create a stable and easy to maintain application.</div>
-        </section>
-
-        <section>
-            <div>In 2009 I was active as a consultant to a Dutch services organization. The assignment mainly consisted of <h4>creating a link between existing systems and a new website</h4>.</div>
-        </section>
-
-        <section>
-            <div>
-                From 2008 till present I perform various <h4>short term consultancy</h4> tasks commissioned by <h4>Sinergio</h4>. For a <h5>semi government organisation</h5> I set up a new <em>tomcat</em> server and did a general check up on their <em>Linux</em> servers. For another company I configured an <em>ASP.Net</em> application and installed an <em>IIS</em> server. For <h5>Sio Hosting</h5> (Formerly Sinergio Hosting) I planned and executed the move from traditional servers to a <em>virtualized</em> <em>xen cluster</em>. I also check the integrity and <em>security</em> of their <em>hosting platform</em> on a regular basis. I advise them on strategic planning.
             </div>
-        </section>
-
-        <section>
-            <div>
-                <div>During 2004 – 2010 I advised on and co-developed for <h4>4levels</h4> several websites, backend systems and web applications.</div>
+        </div>
+        <div class="row">
+            <div class="span6">
+                <section>
+                    <div>In recent times I have become very interested by the processing and storage of <h4>big data</h4>. I read as much as I can about <em>Hadoop</em>, <em>MapReduce</em> and I'm learning <em>Java</em> in the process. I program in <em>Pig</em> Latin and write queries in <em>Hive</em> regularly.  Also the setup and administration of a <em>Hadoop</em> & <em>Hbase</em> cluster interests me a lot.</div>
+                    <div>
+                        Some <em>Hadoop</em> &amp; <em>Big Data</em> related skills:
+                        <ul>
+                            <li>
+                                Using & administrating a <em>Hadoop</em> cluster, including <em>Hbase</em> and <em>Zookeeper</em>.
+                                <ul>
+                                    <li>Deploying <em>Hadoop on Azure</em>.</li>
+                                    <li>Using <em>Amazon Elastic MapReduce</em>.</li>
+                                    <li><em>Whirr</em> to deploy <em>Hadoop</em> to <em>Amazon EC2</em>.</li>
+                                </ul>
+                            </li>
+                            <li>Query the data with <em>Pig</em> &amp; <em>Hive</em>.</li>
+                            <li>Write <em>Pig UDFs</em> in <em>Java</em>.</li>
+                            <li>Developing solutions for <em>real-time big data</em> using <em>Storm</em>.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div>Next to programming I have always been passionate about <h4>Linux</h4> and open source. I have used over the last 10 years several distributions from <em>Debian</em> &amp; <em>Ubuntu</em>, <em>CentOS</em> over <em>Gentoo</em> to <em>Linux From Scratch</em>. I have setup countless servers from <em>virtualized</em> (<em>Xen</em>, <em>VirtualBox</em>, <em>libvirt</em>) to almost bare metal web servers. I administrated <em>Apache</em> and <em>Nginx</em> servers, configured and tuned <em>MySQL</em> and played with <em>Postfix</em> extensively.</div>
+                    <p>I am following the <em>DevOps</em> movement. I am using <em>Puppet</em> to automate and <em>Ganglia</em> to monitor critical <em>infrastructure</em>. I have open sourced and contributed to several <em>Puppet</em> modules.</p>
+                    <p>I follow and try out with great interest <em>Cloud</em> related techniques and technologies, in all its forms: <em>IaaS</em>, <em>PaaS</em>, <em>MaaS</em>, … I have used as test or in production <em>Amazon S3</em>, <em>Amazon EC2</em>, <em>Amazon MapReduce</em>, <em>Google BigQuery2</em> (private beta tester), <em>Windows Azure</em> Platform and <em>Hadoop on Azure</em> (private beta tester) and <em>OpenStack</em>.</p>
+                </section>
             </div>
-        </section>
+            <div class="span6">
+                <section>
+                    I am learning <h4>Java</h4>, mostly using <em>Spring</em>, <em>Maven</em> and <em>Jersey</em> in combination with the <em>JavaScript</em> MVC framework <em>AngularJS</em>.
+                    <ul>
+                        <li>Autowiring & <em>Dependency Injection</em> using <em>Spring</em>.</li>
+                        <li>Consuming the <em>Twitter</em> &amp; <em>LinkedIn</em> <em>API</em>, using <em>OAuth</em>.</li>
+                        <li>Creating a <em>json</em> based <em>REST</em> <em>API</em> using <em>Jersey</em>.</li>
+                        <li>Unit testing using <em>JUnit</em>.</li>
+                    </ul>
+                </section>
+                <section>
+                    <div>I have used <h4>PHP</h4> for over 9 years, from the new <em>namespaces</em>, <em>closures</em> over <em>Iterators</em> to <em>PDO</em>, as well as some more exotic <em>multibyte</em> &amp; <em>UTF8</em> functions, <em>xml</em> & <em>xslt</em> and <em>pecl</em> extensions. The last three years I've been using <em>PHP</em> in a combination with the <em>symfony</em> & <em>Symfony2</em> frameworks. I use <em>PHPUnit</em> extensively, integrated with <em>Jenkins</em>, to assure that what I write works and keeps on working.</div>
+                    <div>
+                        Some <em>PHP</em> related skills:
+                        <ul>
+                            <li><em>MySQL</em>, but also various other databases, like <em>Oracle</em>, <em>MSSQL</em>, <em>Sybase</em>, <em>ODBC</em> using plain <em>PDO</em>, the <em>Doctrine</em> & <em>Doctrine2</em> ORM and <em>Propel</em>.</li>
+                            <li><em>PHP</em> to <em>Hbase</em> communication using <em>Thrift</em>.</li>
+                            <li><em>Memcached</em> &amp; <em>Redis</em>.</li>
+                            <li><em>html5</em>, <em>CSS</em> &amp; <em>jQuery</em></li>
+                            <li>Creating a <em>Drupal</em> site, using <em>Bootstrap</em> and deploying on <em>Windows Azure</em>.</li>
+                            <li><em>GIT</em>, <em>Mercurial</em> &amp; <em>SVN</em>.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div>I am setting my first steps into the <h4>Python</h4> world. I used <em>Python</em> to create a <em>Ganglia</em> proxy and aggregator, I consumed <em>REST</em> and <em>SOAP</em> <em>API</em>'s, wrote <em>Threaded</em> applications and deployed to the <em>Google App Engine</em>.</div>
+                </section>
+                <section>
+                    <div>
+                        Some basic knowledge, but willing to improve:
+                        <ul>
+                            <li><em>Graph databases</em> (<em>Neo4J</em>, <em>HyperGraphDB</em>).</li>
+                            <li>
+                                NoSQL data stores, like <em>CouchDB</em>, <em>MongoDB</em>, <em>Cassandra</em>, <em>riak</em>, ...
+                            </li>
+                            <li><em>Scrum</em>, <em>Extreme Programming</em></li>
+                            <li>Security &amp; penetration testing.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span6">
+                <section>
+                    <h4>Languages</h4>
+                    <dl>
+                        <dt>Dutch</dt>
+                        <dd>Mother tongue</dd>
+                        <dt>English</dt>
+                        <dd>Very fluent</dd>
+                    </dl>
+                </section>
+            </div>
+            <div class="span6">
+                <section>
+                    <h4 style="display: block;">Other skills</h4>
+                    In possession of a drivers license.
+                </section>
+            </div>
+        </div>
+    </div>
 
-        <section>
-            <div>During my secondary education I created a <h4>PHP CMS</h4>, with features as native <em>PHP</em> templates, module in module support (recursion) following a very basic <em>MVC</em> pattern. It was used and expanded by two web agencies to create over 30 websites.</div>
-        </section>
-    </section>
+</section>
 
-    <section class="skills row">
-        <h2>skills</h2>
-    </section>
+<section class="education">
+    <h2>education</h2>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <section>
+                    <dl>
+                        <dt>Period</dt>
+                        <dd>2005 - 2007</dd>
+                        <dt>Institute</dt>
+                        <dd>University of Antwerp</dd>
+                        <dt>Program</dt>
+                        <dd>Social-Economic Sciences</dd>
+                    </dl>
 
-    <section class="education row">
-        <h2>education</h2>
-    </section>
-</div>
+                    <dl>
+                        <dt>Period</dt>
+                        <dd>1999 - 2005</dd>
+                        <dt>Institute</dt>
+                        <dd>Hibernia Steinerschool in Antwerp</dd>
+                        <dt>Program</dt>
+                        <dd>ASO, Higher Secondary education</dd>
+                        <dt>Achieved in</dt>
+                        <dd>2005</dd>
+                    </dl>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/jqcloud/jqcloud-1.0.0.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        var keywords = {};
+
+        var keywordAggregate = function (index) {
+            var keyword = $(this).text();
+            if(!keywords.hasOwnProperty(keyword)) {
+                keywords[keyword] = 0;
+            }
+            keywords[keyword]++;
+        };
+
+        $('em').each(keywordAggregate);
+
+        $('.skills h4').each(keywordAggregate);
+
+
+        var skillWords = [];
+        for (var key in keywords) {
+            skillWords.push({
+                text : key,
+                weight : keywords[key]
+            });
+        }
+
+        $('.skills .wordcloud').jQCloud(skillWords, {
+            'shape' : 'rectangular'
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
