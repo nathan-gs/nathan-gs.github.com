@@ -446,16 +446,18 @@
 
 
             var eventLastTime = 0;
+            var eventLastNameClass;
             var sectionOutEventHandler = function () {
                 var className = $(this).attr('class');
 
                 var currentTime = new Date().getTime();
-                if (currentTime > (eventLastTime +  5000)) {
+                if ((currentTime > (eventLastTime +  5000)) && className != eventLastNameClass) {
                     mixpanel.track('read.'+className);
                     _gaq.push(['_trackPageview', '/read/'+className]);
 
                     //alert(className + 'went over intro' + (currentTime - eventLastTime))
                     eventLastTime = currentTime;
+                    eventLastNameClass = className;
                 }
 
             }
