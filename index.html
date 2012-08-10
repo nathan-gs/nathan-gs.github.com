@@ -452,7 +452,7 @@
                 var currentTime = new Date().getTime();
                 if (currentTime > (eventLastTime +  5000)) {
                     mixpanel.track('read.'+className);
-                    _qag.push(['_trackPageview', '/read/'+className]);
+                    _gaq.push(['_trackPageview', '/read/'+className]);
 
                     //alert(className + 'went over intro' + (currentTime - eventLastTime))
                     eventLastTime = currentTime;
