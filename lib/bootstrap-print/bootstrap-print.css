@@ -1,0 +1,100 @@
+
+section h2 {
+    width: 199mm;
+}
+
+.row {
+    margin-left: -5mm;
+    *zoom: 1;
+}
+.row:before,
+.row:after {
+    display: table;
+    content: "";
+}
+.row:after {
+    clear: both;
+}
+[class*="span"] {
+    float: left;
+    margin-left: 5mm;
+}
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+    width: 199mm;
+}
+.span12 {
+    width: 199mm;
+}
+.span11 {
+    width: 182mm;
+}
+.span10 {
+    width: 165mm;
+}
+.span9 {
+    width: 148mm;
+}
+.span8 {
+    width: 131mm;
+}
+.span7 {
+    width: 114mm;
+}
+.span6 {
+    width: 97mm;
+}
+.span5 {
+    width: 80mm;
+}
+.span4 {
+    width: 63mm;
+}
+.span3 {
+    width: 46mm;
+}
+.span2 {
+    width: 29mm;
+}
+.span1 {
+    width: 12mm;
+}
+.offset12 {
+    margin-left: 209mm;
+}
+.offset11 {
+    margin-left: 192mm;
+}
+.offset10 {
+    margin-left: 175mm;
+}
+.offset9 {
+    margin-left: 158mm;
+}
+.offset8 {
+    margin-left: 141mm;
+}
+.offset7 {
+    margin-left: 124mm;
+}
+.offset6 {
+    margin-left: 107mm;
+}
+.offset5 {
+    margin-left: 90mm;
+}
+.offset4 {
+    margin-left: 73mm;
+}
+.offset3 {
+    margin-left: 56mm;
+}
+.offset2 {
+    margin-left: 39mm;
+}
+.offset1 {
+    margin-left: 22mm;
+}
+
+

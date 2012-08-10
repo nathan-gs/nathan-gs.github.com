@@ -9,8 +9,12 @@
         <!-- Le styles -->
         <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
         <link href="lib/jqcloud/jqcloud-1.0.0.css" rel="stylesheet" />
+
         <link href='http://fonts.googleapis.com/css?family=Maven+Pro:900,500,700' rel='stylesheet' type='text/css' />
+
         <link rel="shortcut icon" href="favicon.ico" />
+
+        <link href="lib/bootstrap-print/bootstrap-print.css" rel="stylesheet" media="print" />
         <style>
             body {
                 padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -23,13 +27,11 @@
                 text-align: center;
             }
 
-
-
             section h2 {
                 text-transform: uppercase;
-                -margin-left: -1000px;
-                -margin-right: -1000px;
                 color: #fff;
+                -webkit-print-color-adjust:exact;
+                float: none;
             }
 
             dt, dd {
@@ -54,6 +56,7 @@
             section {
                 padding-top: 40px;
             }
+
 
             .introduction h2 {
                 background-color: #eb613d;
@@ -152,6 +155,9 @@
             })();
 
         </script>
+        <!-- start Mixpanel --><script type="text/javascript">(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.0.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==
+            typeof f?g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+    mixpanel.init("63e3bcc15c05434cbd4a2f98c4957282");</script><!-- end Mixpanel -->
     </head>
 
     <body>
@@ -191,7 +197,7 @@
 
                 </div>
                 <div class="span6">
-                    <img class="span6" src="nathan-460px.jpg" alt="Nathan Bijnens">
+                    <img src="nathan-460px.jpg" alt="Nathan Bijnens">
                 </div>
 
 
@@ -437,6 +443,27 @@
             $('.skills .wordcloud').jQCloud(skillWords, {
                 'shape' : 'rectangular'
             });
+
+
+            var eventLastTime = 0;
+            var sectionOutEventHandler = function () {
+                var className = $(this).attr('class');
+
+                var currentTime = new Date().getTime();
+                if (currentTime > (eventLastTime +  5000)) {
+                    mixpanel.track('read.'+className);
+                    _qag.push(['_trackPageview', '/read/'+className]);
+
+                    //alert(className + 'went over intro' + (currentTime - eventLastTime))
+                    eventLastTime = currentTime;
+                }
+
+            }
+
+            $('section.introduction').mouseleave(sectionOutEventHandler);
+            $('section.experience').mouseleave(sectionOutEventHandler);
+            $('section.skills').mouseleave(sectionOutEventHandler);
+            $('section.education').mouseleave(sectionOutEventHandler);
 
         });
 
