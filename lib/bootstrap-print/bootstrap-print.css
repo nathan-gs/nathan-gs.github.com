@@ -98,3 +98,10 @@ section h2 {
 }
 
 
+.visible-print {
+    display: block;
+}
+
+.hidden-print {
+    display: none;
+}
