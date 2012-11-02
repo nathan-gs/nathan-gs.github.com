@@ -75,6 +75,25 @@
                 background-color: #6b0094;
             }
 
+            .datacrunchers .introduction h2,
+            .datacrunchers .experience h2,
+            .datacrunchers .skills h2,
+            .datacrunchers .education h2 {
+                background-color: #008CBA;
+            }
+
+            dd.email .datacrunchers {
+                display: none;
+            }
+
+            .datacrunchers dd.email .datacrunchers {
+                display: inline;
+            }
+
+            .datacrunchers dd.email .nathan {
+                display: none;
+            }
+
             section section {
                 padding-top: 10px;
             }
@@ -222,9 +241,12 @@
                            </address>
                        </dd>
                        <dt class="span2">E-mail</dt>
-                       <dd>
-                           <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;">
+                       <dd class="email">
+                           <a class="nathan" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;">
                                &#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;
+                           </a>
+                           <a class="datacrunchers" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#097;&#116;&#104;&#097;&#110;&#064;&#100;&#097;&#116;&#097;&#099;&#114;&#117;&#110;&#099;&#104;&#101;&#114;&#115;&#046;&#101;&#117;">
+                               &#110;&#097;&#116;&#104;&#097;&#110;&#064;&#100;&#097;&#116;&#097;&#099;&#114;&#117;&#110;&#099;&#104;&#101;&#114;&#115;&#046;&#101;&#117;
                            </a>
                        </dd>
                    </dl>
@@ -719,6 +741,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jqcloud/jqcloud-1.0.0.js"></script>
+    <script src="lib/purl/purl.js"></script>
 
     <script>
 
@@ -776,7 +799,10 @@
             $('section.skills').mouseleave(sectionOutEventHandler);
             $('section.education').mouseleave(sectionOutEventHandler);
 
-
+            if ($.url().param('utm_campaign') == 'datacrunchers') {
+                $('body').addClass('datacrunchers');
+                $('dd.email').innerHTML = 'nathan@datacrunchers.eu'
+            }
         });
 
     </script>
