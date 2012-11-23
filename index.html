@@ -82,15 +82,18 @@
                 background-color: #008CBA;
             }
 
-            dd.email .datacrunchers {
+            dd.email .datacrunchers,
+            .photo img.datacrunchers {
                 display: none;
             }
 
-            .datacrunchers dd.email .datacrunchers {
+            .datacrunchers dd.email .datacrunchers,
+            .datacrunchers .photo img.datacrunchers {
                 display: inline;
             }
 
-            .datacrunchers dd.email .nathan {
+            .datacrunchers dd.email .nathan,
+            .datacrunchers .photo img.nathan {
                 display: none;
             }
 
@@ -224,33 +227,34 @@
 
     <h1>Nathan Bijnens</h1>
 
-    <section class="introduction">
+    <section class="introduction" itemscope itemtype="http://schema.org/Person">
 
         <h2>Introduction</h2>
         <div class="container">
             <div class="row">
                 <div class="span6">
                    <dl>
-                       <dt class="span2">Name</dt><dd><h4>Nathan Bijnens</h4></dd>
+                       <dt class="span2">Name</dt><dd><h4 itemprop="name">Nathan Bijnens</h4></dd>
                        <dt class="span2">Address</dt>
                        <dd>
-                           <address>
+                           <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                                On request<br />
-                               9042 Ghent<br />
-                               Belgium
+                               <span itemprop="postalCode">9042</span> <span itemprop="addressLocality">Ghent</span><br />
+                               <span itemprop="addressCountry">Belgium</span>
                            </address>
                        </dd>
                        <dt class="span2">E-mail</dt>
                        <dd class="email">
-                           <a class="nathan" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;">
+                           <a class="nathan" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;" itemprop="email">
                                &#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;
                            </a>
-                           <a class="datacrunchers" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#097;&#116;&#104;&#097;&#110;&#064;&#100;&#097;&#116;&#097;&#099;&#114;&#117;&#110;&#099;&#104;&#101;&#114;&#115;&#046;&#101;&#117;">
+                           <a class="datacrunchers" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#097;&#116;&#104;&#097;&#110;&#064;&#100;&#097;&#116;&#097;&#099;&#114;&#117;&#110;&#099;&#104;&#101;&#114;&#115;&#046;&#101;&#117;" itemprop="email">
                                &#110;&#097;&#116;&#104;&#097;&#110;&#064;&#100;&#097;&#116;&#097;&#099;&#114;&#117;&#110;&#099;&#104;&#101;&#114;&#115;&#046;&#101;&#117;
                            </a>
                        </dd>
                    </dl>
                    <dl>
+                       <dt class="span2">Website</dt><dd><a itemprop="url" href="http://nathan.gs">nathan.gs</a></dd>
                        <dt class="span2">GitHub</dt><dd><a href="https://github.com/nathan-gs">github.com/nathan-gs</a></dd>
                        <dt class="span2">Twitter</dt><dd><a href="http://twitter.com/nathan_gs">@nathan_gs</a></dd>
                        <dt class="span2">LinkedIn</dt><dd><a href="http://linkedin.com/in/nbijnens">linkedin.com/in/nbijnens</a></dd>
@@ -258,8 +262,9 @@
                    </dl>
 
                 </div>
-                <div class="span6">
-                    <img src="nathan-460px.jpg" alt="Nathan Bijnens">
+                <div class="span6 photo">
+                    <img class="nathan" src="nathan-460px.jpg" alt="Nathan Bijnens" itemprop="image" />
+                    <img class="datacrunchers" src="datacrunchers.png" alt="DataCrunchers" />
                 </div>
 
 
@@ -801,6 +806,7 @@
 
             if ($.url().param('utm_campaign') == 'datacrunchers') {
                 $('body').addClass('datacrunchers');
+                $('#datacrunchers-accordion-collapse0').addClass('in');
             }
         });
 
