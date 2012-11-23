@@ -222,12 +222,12 @@
         </script>
     </head>
 
-    <body>
+    <body itemscope itemtype="http://schema.org/Person">
 
 
     <h1>Nathan Bijnens</h1>
 
-    <section class="introduction" itemscope itemtype="http://schema.org/Person">
+    <section class="introduction">
 
         <h2>Introduction</h2>
         <div class="container">
@@ -255,11 +255,14 @@
                    </dl>
                    <dl>
                        <dt class="span2">Website</dt><dd><a itemprop="url" href="http://nathan.gs">nathan.gs</a></dd>
-                       <dt class="span2">GitHub</dt><dd><a href="https://github.com/nathan-gs">github.com/nathan-gs</a></dd>
-                       <dt class="span2">Twitter</dt><dd><a href="http://twitter.com/nathan_gs">@nathan_gs</a></dd>
-                       <dt class="span2">LinkedIn</dt><dd><a href="http://linkedin.com/in/nbijnens">linkedin.com/in/nbijnens</a></dd>
-                       <dt class="span2">Skype</dt><dd><a href="skype:nathan_gs">nathan_gs</a></dd>
+                       <dt class="span2">GitHub</dt><dd><a rel="me" itemprop="url" href="https://github.com/nathan-gs">github.com/nathan-gs</a></dd>
+                       <dt class="span2">Twitter</dt><dd><a rel="me" itemprop="url" href="http://twitter.com/nathan_gs">@nathan_gs</a></dd>
+                       <dt class="span2">LinkedIn</dt><dd><a rel="me" itemprop="url" href="http://linkedin.com/in/nbijnens">linkedin.com/in/nbijnens</a></dd>
+                       <dt class="span2">Skype</dt><dd><a rel="me" itemprop="url" href="skype:nathan_gs">nathan_gs</a></dd>
                    </dl>
+                    <dl>
+                        <dt class="span2">Employment</dt><dd><span itemprop="jobTitle">Hadoop and Big Data Consultant</span> at <span itemprop="worksFor">DataCrunchers</span></dd>
+                    </dl>
 
                 </div>
                 <div class="span6 photo">
@@ -288,18 +291,18 @@
         <div class="container">
             <div class="row">
                 <div class="span12">
-                    <section>
+                    <section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
                         <div class="accordion" id="datacrunchers-accordion">
                             <div class="accordion-group">
                                 <div class="accordion-heading" data-toggle="collapse" data-parent="#datacrunchers-accordion" href="#datacrunchers-accordion-collapse0" onclick="track('experience','datacrunchers')">
-                                    <i class="icon-arrow-down icon-grey"></i> As from April 2012 I work for <h4>DataCrunchers</h4>, as a <h4>Hadoop and Big Data Consultant</h4>. DataCrunchers is the leading Belgian consultancy firm around everything big data. I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em>, I co-presented our <em>Hadoop Ecosystem course</em>, I created a new website using Drupal and I am responsible for our Microsoft big data partnership.
+                                    <i class="icon-arrow-down icon-grey"></i> As from <span itemprop="startDate" datetime="2012-04-27">April 2012</span> I work for <h4 itemprop="name">DataCrunchers</h4>, as a <h4 itemprop="jobTitle">Hadoop and Big Data Consultant</h4>. DataCrunchers is the leading Belgian consultancy firm around everything big data. I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em>, I co-presented our <em>Hadoop Ecosystem course</em>, I created a new website using <em>Drupal</em> and I am responsible for our <span>Microsoft</span> big data partnership.
 
                                 </div>
                                 <div id="datacrunchers-accordion-collapse0" class="accordion-body collapse">
                                     <div class="accordion-inner">
                                         <ul>
-                                            <li>
-                                                <h5>Semantic Analysis Engine</h5>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                                <h5 itemprop="name">Semantic Analysis Engine</h5>
                                                 <p>I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em> and <em>ElasticSearch</em>. The frontend is being written in <em>Jersey</em> &amp; <em>AngularJS</em>.</p>
                                                 <div>
                                                     <button type="button" class="btn disabled" disabled="disabled">Storm</button>
@@ -310,16 +313,16 @@
                                                     <button type="button" class="btn disabled" disabled="disabled">Bootstrap</button>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <h5>Microsoft Big Data Partnership</h5>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                                <h5 itemprop="name">Microsoft Big Data Partnership</h5>
                                                 <p>Responsible for the contact with Microsoft.</p>
                                                 <div>
 
                                                 </div>
                                             </li>
-                                            <li>
-                                                <h5>datacrunchers.eu website</h5>
-                                                <p>Creating a Drupal based website, hosted on Windows Azure. I touched all aspects of creating this website, from designing, implementing to copy writing.</p>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                                <h5 itemprop="name"><a itemprop="url" href="http://datacrunchers.eu">datacrunchers.eu</a> website</h5>
+                                                <p>Creating a <em>Drupal</em> based website, hosted on <em>Windows Azure</em>. I touched all aspects of creating this website, from designing, implementing to copy writing.</p>
                                                 <div>
                                                     <button type="button" class="btn disabled" disabled="disabled">Windows Azure</button>
                                                     <button type="button" class="btn disabled" disabled="disabled">Bootstrap</button>
@@ -330,7 +333,7 @@
                                                     <button type="button" class="btn disabled" disabled="disabled">Drupal</button>
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5>Business cards &amp; various grapic design</h5>
                                                 <p>Designing the DataCrunchers business cards and a company flag.</p>
                                                 <div>
@@ -339,9 +342,9 @@
                                                     <button type="button" class="btn disabled" disabled="disabled">QR</button>
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5>Internal test cluster</h5>
-                                                <p>Setting up an internal <em>Hadoop</em>, <em>ElasticSearch</em> &amp; <em>Storm</em> test cluster using <em>Puppet</em> and <em>Cloudera Manager</em>. I created some <em>Puppet</em></em> modules to manage <a href="https://github.com/nathan-gs/puppet-storm"><em>Storm</em></a>, <a href="https://github.com/nathan-gs/puppet-elasticsearch"><em>ElasticSearch</em></a> and <a href="https://github.com/nathan-gs/puppet-ganglia"><em>Ganglia</em></a>.</p>
+                                                <p>Setting up an internal <em>Hadoop</em>, <em>ElasticSearch</em> &amp; <em>Storm</em> test cluster using <em>Puppet</em> and <em>Cloudera Manager</em>. I created some <em>Puppet</em> modules to manage <a href="https://github.com/nathan-gs/puppet-storm"><em>Storm</em></a>, <a href="https://github.com/nathan-gs/puppet-elasticsearch"><em>ElasticSearch</em></a> and <a href="https://github.com/nathan-gs/puppet-ganglia"><em>Ganglia</em></a>.</p>
                                                 <div>
                                                     <button type="button" class="btn disabled" disabled="disabled">Cloudera Manager</button>
                                                     <button type="button" class="btn disabled" disabled="disabled">Storm</button>
@@ -354,9 +357,9 @@
                                                     <button type="button" class="btn disabled" disabled="disabled">Zentyal</button>
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5>Consulting for a privatly held Transport firm</h5>
-                                                <div class="subtitle">From October 2012 and ongoing.</div>
+                                                <div class="subtitle">From <span itemprop="startDate" datetime="2012-10-01">October 2012</span> and ongoing.</div>
                                                 <p>Developing <em>Oracle</em> database views for integration of <em>Greencat</em> and <em>Crystal Reports</em>.</p>
                                                 <div>
                                                     <button type="button" class="btn disabled" disabled="disabled">Oracle</button>
