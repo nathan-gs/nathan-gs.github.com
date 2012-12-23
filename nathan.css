@@ -1,0 +1,207 @@
+body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+    text-align: justify;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+section h2 {
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-print-color-adjust:exact;
+    float: none;
+}
+
+dt, dd {
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+
+dd address {
+    margin-bottom: inherit;
+}
+
+dt {
+    clear: both;
+}
+
+dl dd:last-of-type, dl dt:last-of-type {
+    margin-bottom: 30px;
+}
+
+
+section {
+    padding-top: 40px;
+}
+
+
+.introduction h2 {
+    background-color: #eb613d;
+    margin-bottom: 30px;
+}
+
+.experience h2 {
+    background-color: #0084d1;
+}
+
+.skills h2 {
+    background-color: #33cc66;
+}
+
+.education h2 {
+    background-color: #6b0094;
+}
+
+.datacrunchers .introduction h2,
+.datacrunchers .experience h2,
+.datacrunchers .skills h2,
+.datacrunchers .education h2 {
+    background-color: #008CBA;
+}
+
+dd.email .datacrunchers,
+.photo img.datacrunchers {
+    display: none;
+}
+
+.datacrunchers dd.email .datacrunchers,
+.datacrunchers .photo img.datacrunchers {
+    display: inline;
+}
+
+.datacrunchers dd.email .nathan,
+.datacrunchers .photo img.nathan {
+    display: none;
+}
+
+section section {
+    padding-top: 10px;
+}
+
+section section h4, section section h5 {
+    display: inline;
+}
+
+section section h5 {
+    font-size: 13px;
+}
+
+.skills .wordcloud {
+    height: 400px;
+}
+
+
+p {
+    margin-bottom: 5px;
+}
+
+/* jQcloud specifics */
+
+div.jqcloud {
+    font-family: inherit;
+    margin-top: -60px;
+    margin-bottom: -60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.jqcloud span.w10 {
+    color: #000;
+}
+div.jqcloud span.w9 {
+    color: #191919;
+}
+div.jqcloud span.w8 {
+    color: #323232;
+}
+div.jqcloud span.w7 {
+    color: #4b4b4b;
+}
+div.jqcloud span.w6 {
+    color: #646464;
+}
+div.jqcloud span.w5 {
+    color: #7d7d7d;
+}
+div.jqcloud span.w4 {
+    color: #969696;
+}
+div.jqcloud span.w3 {
+    color: #afafaf;
+}
+div.jqcloud span.w2 {
+    color: #c8c8c8;
+}
+div.jqcloud span.w1 {
+    color: #e1e1e1;
+}
+
+/* accordion */
+.accordion {
+    margin-bottom: 0;
+}
+
+.accordion .accordion-group, .accordion .accordion-inner {
+    border: 0;
+}
+
+section section .accordion ul h4, section section .accordion ul h5 {
+    display: inline;
+}
+
+.accordion ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.accordion ul li {
+    margin-bottom: 10px;
+}
+
+.accordion ul ol li {
+    margin-bottom: 0;
+}
+
+/* icons */
+
+.icon-grey {
+    background-image: url("lib/icon-grey/glyphicons-halflings-grey.png");
+}
+
+.introduction .text {
+    margin-top: 40px;
+}
+
+@media print {
+    .btn.dropdown {
+        display: none;
+    }
+
+    section h2 {
+        width: 199mm;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    .introduction .text {
+        margin-top: 0;
+    }
+
+}
+
+.accordion-heading {
+    cursor: pointer;
+}
+
+.accordion-inner ul li.span5 {
+    float: left;
+}

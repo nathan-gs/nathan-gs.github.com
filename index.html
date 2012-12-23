@@ -14,181 +14,8 @@
 
         <link rel="shortcut icon" href="favicon.ico" />
 
-        <link href="lib/bootstrap-print/bootstrap-print.css" rel="stylesheet" media="print" />
-        <style>
-            body {
-                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-                font-family: 'Maven Pro', sans-serif;
-                font-weight: 500;
-                text-align: justify;
-            }
-
-            h1, h2 {
-                text-align: center;
-            }
-
-            section h2 {
-                text-transform: uppercase;
-                color: #fff;
-                -webkit-print-color-adjust:exact;
-                float: none;
-            }
-
-            dt, dd {
-                display: block;
-                float: left;
-                margin-top: 5px;
-            }
-
-            dd address {
-                margin-bottom: inherit;
-            }
-
-            dt {
-                clear: both;
-            }
-
-            dl dd:last-of-type, dl dt:last-of-type {
-                margin-bottom: 30px;
-            }
-
-
-            section {
-                padding-top: 40px;
-            }
-
-
-            .introduction h2 {
-                background-color: #eb613d;
-                margin-bottom: 30px;
-            }
-
-            .experience h2 {
-                background-color: #0084d1;
-            }
-
-            .skills h2 {
-                background-color: #33cc66;
-            }
-
-            .education h2 {
-                background-color: #6b0094;
-            }
-
-            .datacrunchers .introduction h2,
-            .datacrunchers .experience h2,
-            .datacrunchers .skills h2,
-            .datacrunchers .education h2 {
-                background-color: #008CBA;
-            }
-
-            dd.email .datacrunchers,
-            .photo img.datacrunchers {
-                display: none;
-            }
-
-            .datacrunchers dd.email .datacrunchers,
-            .datacrunchers .photo img.datacrunchers {
-                display: inline;
-            }
-
-            .datacrunchers dd.email .nathan,
-            .datacrunchers .photo img.nathan {
-                display: none;
-            }
-
-            section section {
-                padding-top: 10px;
-            }
-
-            section section h4, section section h5 {
-                display: inline;
-            }
-
-            section section h5 {
-                font-size: 13px;
-            }
-
-            .skills .wordcloud {
-                height: 400px;
-            }
-
-            p {
-                margin-bottom: 5px;
-            }
-
-            /* jQcloud specifics */
-
-            div.jqcloud {
-                font-family: inherit;
-                margin-top: -60px;
-                margin-bottom: -60px;
-            }
-
-            div.jqcloud span.w10 {
-                color: #000;
-            }
-            div.jqcloud span.w9 {
-                color: #191919;
-            }
-            div.jqcloud span.w8 {
-                color: #323232;
-            }
-            div.jqcloud span.w7 {
-                color: #4b4b4b;
-            }
-            div.jqcloud span.w6 {
-                color: #646464;
-            }
-            div.jqcloud span.w5 {
-                color: #7d7d7d;
-            }
-            div.jqcloud span.w4 {
-                color: #969696;
-            }
-            div.jqcloud span.w3 {
-                color: #afafaf;
-            }
-            div.jqcloud span.w2 {
-                color: #c8c8c8;
-            }
-            div.jqcloud span.w1 {
-                color: #e1e1e1;
-            }
-
-            /* accordion */
-            .accordion {
-                margin-bottom: 0;
-            }
-
-            .accordion .accordion-group, .accordion .accordion-inner {
-                border: 0;
-            }
-
-            section section .accordion ul h4, section section .accordion ul h5 {
-                display: inline;
-            }
-
-            .accordion ul {
-                list-style: none;
-                margin-left: 0;
-            }
-
-            .accordion ul li {
-                margin-bottom: 10px;
-            }
-
-            .accordion ul ol li {
-                margin-bottom: 0;
-            }
-
-            /* icons */
-
-            .icon-grey {
-                background-image: url("lib/icon-grey/glyphicons-halflings-grey.png");
-            }
-
-        </style>
+        <link href="lib/bootstrap-print/bootstrap-print.css" rel="stylesheet" />
+        <link href="nathan.css" rel="stylesheet" />
 
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -210,12 +37,8 @@
             })();
 
         </script>
-        <!-- start Mixpanel --><script type="text/javascript">(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.0.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==
-            typeof f?g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
-    mixpanel.init("63e3bcc15c05434cbd4a2f98c4957282");</script><!-- end Mixpanel -->
         <script type="text/javascript">
             function track (type, name) {
-                mixpanel.track(type+'.'+name);
                 _gaq.push(['_trackPageview', '/'+type+'/'+name]);
             }
 
@@ -223,7 +46,6 @@
     </head>
 
     <body itemscope itemtype="http://schema.org/Person">
-
 
     <h1>Nathan Bijnens</h1>
 
@@ -260,7 +82,7 @@
                        <dt class="span2">LinkedIn</dt><dd><a rel="me" itemprop="url" href="http://linkedin.com/in/nbijnens">linkedin.com/in/nbijnens</a></dd>
                        <dt class="span2">Skype</dt><dd><a rel="me" itemprop="url" href="skype:nathan_gs">nathan_gs</a></dd>
                    </dl>
-                    <dl>
+                    <dl class="hidden-print">
                         <dt class="span2">Employment</dt><dd><span itemprop="jobTitle">Hadoop and Big Data Consultant</span> at <span itemprop="worksFor">DataCrunchers</span></dd>
                     </dl>
 
@@ -272,7 +94,7 @@
 
 
             </div>
-            <div class="row" style="margin-top: 40px">
+            <div class="row text">
                 <div class="span12">
                     <p>I am Nathan Bijnens, a developer with a passion for great <em>code</em>, the <em>web</em> and <em>big data</em>. I am interested in <em>programming</em> and <em>system administration</em>, especially where they meet, from <em>scaling</em> platforms to designing the <em>architecture</em> of new and existing products and everything in between.</p>
                     <p>I am shifting my focus more to <em>data analysis</em> in a big data world, I regularly use <em>Hadoop</em> and <em>Hbase</em>, in combination with <em>Hadoop Pig</em> and <em>Hive</em>. Most of my experience is at the <em>infrastructure</em> side, but I am learning more about <em>Business Intelligence</em> and <em>visualizing big data</em>. I follow the rise of <em>real-time big data</em> closely, actively developing applications on top of <em>Storm</em>.</p>
@@ -295,78 +117,97 @@
                         <div class="accordion" id="datacrunchers-accordion">
                             <div class="accordion-group">
                                 <div class="accordion-heading" data-toggle="collapse" data-parent="#datacrunchers-accordion" href="#datacrunchers-accordion-collapse0" onclick="track('experience','datacrunchers')">
-                                    <i class="icon-arrow-down icon-grey"></i> As from <span itemprop="startDate" datetime="2012-04-27">April 2012</span> I work for <h4 itemprop="name">DataCrunchers</h4>, as a <h4 itemprop="jobTitle">Hadoop and Big Data Consultant</h4>. DataCrunchers is the leading Belgian consultancy firm around everything big data. I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em>, I co-presented our <em>Hadoop Ecosystem course</em>, I created a new website using <em>Drupal</em> and I am responsible for our <span>Microsoft</span> big data partnership.
+                                    <span class="dropdown btn btn-mini"><i class="icon-arrow-down icon-grey"></i></span> As from <span itemprop="startDate" datetime="2012-04-27">April 2012</span> I work for <h4 itemprop="name">DataCrunchers</h4>, as a <h4 itemprop="jobTitle">Hadoop and Big Data Consultant</h4>. DataCrunchers is the leading Belgian consultancy firm around everything big data. I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em>, I co-presented our <em>Hadoop Ecosystem course</em>, I created a new website using <em>Drupal</em> and I am responsible for our <span>Microsoft</span> big data partnership.
 
                                 </div>
                                 <div id="datacrunchers-accordion-collapse0" class="accordion-body collapse">
                                     <div class="accordion-inner">
                                         <ul>
                                             <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                                <h5>HSHMRK</h5>
+                                                <div class="subtitle">From <span itemprop="startDate" datetime="2012-12-08">December 2012</span> and ongoing.</div>
+                                                <p>Defining and implementing the architecture for <a href="http://hshmrk.com">hshmrk</a>, a <em>data visualization</em> startup. The application backend is written as a <em>Jersey</em> <em>REST</em> (<em>Java</em>), service, using <em>ElasticSearch</em> as storage. The frontend is a <em>AngularJS</em> and <em>D3</em> webapplication. This approach allows us to easily scale.</p>
+                                                <div>
+                                                    <span class="skill btn btn-small disabled">Java</span>
+                                                    <span class="skill btn btn-small disabled">ElasticSearch</span>
+                                                    <span class="skill btn btn-small disabled">AngularJS</span>
+                                                    <span class="skill btn btn-small disabled">D3</span>
+                                                    <span class="skill btn btn-small disabled">Jersey</span>
+                                                    <span class="skill btn btn-small disabled">maven</span>
+                                                    <span class="skill btn btn-small disabled">Jackson</span>
+                                                    <span class="skill btn btn-small disabled">Spring DI</span>
+                                                    <span class="skill btn btn-small disabled">jUnit</span>
+                                                    <span class="skill btn btn-small disabled">Data Visualization</span>
+                                                    <span class="skill btn btn-small disabled">Software Architecture</span>
+                                                </div>
+                                            </li>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                                <h5>Ewals Intermodal</h5>
+                                                <div class="subtitle">From <span itemprop="startDate" datetime="2012-10-01">October 2012</span> and ongoing.</div>
+                                                <p>Developing <em>Oracle</em> database views for integration of <em>Greencat</em> and <em>Crystal Reports</em>.</p>
+                                                <div>
+                                                    <span class="skill btn btn-small disabled">Oracle</span>
+                                                    <span class="skill btn btn-small disabled">Greencat</span>
+                                                    <span class="skill btn btn-small disabled">Crystal Reports</span>
+                                                </div>
+                                            </li>
+                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5 itemprop="name">Semantic Analysis Engine</h5>
                                                 <p>I co-develop on our internal <em>Semantic Analysis Engine</em> on top of <em>Storm</em> and <em>ElasticSearch</em>. The frontend is being written in <em>Jersey</em> &amp; <em>AngularJS</em>.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Storm</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Java</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">ElasticSearch</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">AngularJS</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Jersey</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Bootstrap</button>
+                                                    <span class="skill btn btn-small disabled">Storm</span>
+                                                    <span class="skill btn btn-small disabled">Java</span>
+                                                    <span class="skill btn btn-small disabled">ElasticSearch</span>
+                                                    <span class="skill btn btn-small disabled">AngularJS</span>
+                                                    <span class="skill btn btn-small disabled">Jersey</span>
+                                                    <span class="skill btn btn-small disabled">Bootstrap</span>
                                                 </div>
                                             </li>
                                             <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5 itemprop="name">Microsoft Big Data Partnership</h5>
                                                 <p>Responsible for the contact with Microsoft.</p>
                                                 <div>
-
+                                                    Speaker at the Microsoft Inspirience Day about Big Data.
                                                 </div>
                                             </li>
                                             <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5 itemprop="name"><a itemprop="url" href="http://datacrunchers.eu">datacrunchers.eu</a> website</h5>
                                                 <p>Creating a <em>Drupal</em> based website, hosted on <em>Windows Azure</em>. I touched all aspects of creating this website, from designing, implementing to copy writing.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Windows Azure</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Bootstrap</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">CSS</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">HTML5</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Copy Writing</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">IIS Management</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Drupal</button>
+                                                    <span class="skill btn btn-small disabled">Windows Azure</span>
+                                                    <span class="skill btn btn-small disabled">Bootstrap</span>
+                                                    <span class="skill btn btn-small disabled">CSS</span>
+                                                    <span class="skill btn btn-small disabled">HTML5</span>
+                                                    <span class="skill btn btn-small disabled">Copy Writing</span>
+                                                    <span class="skill btn btn-small disabled">IIS Management</span>
+                                                    <span class="skill btn btn-small disabled">Drupal</span>
                                                 </div>
                                             </li>
                                             <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5>Business cards &amp; various grapic design</h5>
                                                 <p>Designing the DataCrunchers business cards and a company flag.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Graphic Design</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Inkscape</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">QR</button>
+                                                    <span class="skill btn btn-small disabled">Graphic Design</span>
+                                                    <span class="skill btn btn-small disabled">Inkscape</span>
+                                                    <span class="skill btn btn-small disabled">QR</span>
                                                 </div>
                                             </li>
                                             <li itemprop="event" itemscope itemtype="http://schema.org/Event">
                                                 <h5>Internal test cluster</h5>
                                                 <p>Setting up an internal <em>Hadoop</em>, <em>ElasticSearch</em> &amp; <em>Storm</em> test cluster using <em>Puppet</em> and <em>Cloudera Manager</em>. I created some <em>Puppet</em> modules to manage <a href="https://github.com/nathan-gs/puppet-storm"><em>Storm</em></a>, <a href="https://github.com/nathan-gs/puppet-elasticsearch"><em>ElasticSearch</em></a> and <a href="https://github.com/nathan-gs/puppet-ganglia"><em>Ganglia</em></a>.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Cloudera Manager</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Storm</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">ElasticSearch</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Puppet</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Hadoop</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Hadoop Pig</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">HDFS</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Ganglia</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Zentyal</button>
+                                                    <span class="skill btn btn-small disabled">Cloudera Manager</span>
+                                                    <span class="skill btn btn-small disabled">Storm</span>
+                                                    <span class="skill btn btn-small disabled">ElasticSearch</span>
+                                                    <span class="skill btn btn-small disabled">Puppet</span>
+                                                    <span class="skill btn btn-small disabled">Hadoop</span>
+                                                    <span class="skill btn btn-small disabled">Hadoop Pig</span>
+                                                    <span class="skill btn btn-small disabled">HDFS</span>
+                                                    <span class="skill btn btn-small disabled">Ganglia</span>
+                                                    <span class="skill btn btn-small disabled">Zentyal</span>
                                                 </div>
                                             </li>
-                                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
-                                                <h5>Consulting for a privatly held Transport firm</h5>
-                                                <div class="subtitle">From <span itemprop="startDate" datetime="2012-10-01">October 2012</span> and ongoing.</div>
-                                                <p>Developing <em>Oracle</em> database views for integration of <em>Greencat</em> and <em>Crystal Reports</em>.</p>
-                                                <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Oracle</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Greencat</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Crystal Reports</button>
-                                                </div>
-                                            </li>
+
                                         </ul>
 
                                     </div>
@@ -378,9 +219,9 @@
 
                     </section>
 
-                    <section>
+                    <section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
                         <div>
-                            Since March 2007 I am the <h4>Consultant, Managing Director and founder</h4> of <h4>Servs</h4> BVBA; mainly active as an IT consultant in the field of <em>big data</em> & <em>hadoop</em>, <em>web applications</em> (<em>PHP</em>, <em>sql</em>, <em>scalability</em>, <em>best practices</em>, …), <em>devops</em> &amp; <em>linux</em> orientated <em>system administration</em> and hosting applications.
+                            Since <span itemprop="startDate" datetime="2007-03-08">March 2007</span> I am the <h4 itemprop="jobTitle">Consultant, Managing Director and founder</h4> of <h4 itemprop="name">Servs</h4> BVBA; mainly active as an IT consultant in the field of <em>big data</em> & <em>hadoop</em>, <em>web applications</em> (<em>PHP</em>, <em>sql</em>, <em>scalability</em>, <em>best practices</em>, …), <em>devops</em> &amp; <em>linux</em> <em>system administration</em> and hosting applications.
                         </div>
                     </section>
 
@@ -389,7 +230,7 @@
                         <div class="accordion" id="icontroller-lead-accordion">
                             <div class="accordion-group">
                                 <div class="accordion-heading" data-toggle="collapse" data-parent="#icontroller-lead-accordion" href="#icontroller-lead-accordion-collapse0" onclick="track('experience','icontroller')">
-                                    <div><i class="icon-arrow-down icon-grey"></i> From March 2011 till April 2012 I worked for <h4>iController</h4>, as <h4>Lead Application and Warehouse Developer</h4>. We build a <em>credit management</em> <em>web application</em>, written in <em>PHP</em>. I managed a small group of developers, took the lead on everything technical and coordinated with the directors, partners and clients.</div>
+                                    <div><span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> From March 2011 till April 2012 I worked for <h4>iController</h4>, as <h4>Lead Application and Warehouse Developer</h4>. We build a <em>credit management</em> <em>web application</em>, written in <em>PHP</em>. I managed a small group of developers, took the lead on everything technical and coordinated with the directors, partners and clients.</div>
                                     <div>My job involved lots of <em>PHP</em>, <em>refactoring</em>, <em>performance tuning</em>, <em>system engineering</em> and bits of <em>data analysis</em>.</div>
                                 </div>
                                 <div id="icontroller-lead-accordion-collapse0" class="accordion-body collapse">
@@ -399,49 +240,49 @@
                                                 <h5>Lead Developer iController</h5>
                                                 <p>I developed our <em>credit management</em> <em>web application</em> in <em>PHP</em>, I managed a small group of developers, took the lead on everything technical and coordinated with the directors, partners and clients.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Requirement Analysis</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHP</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Symfony</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Propel</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHPUnit</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">FPDF</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Jenkins</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">ant</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">git</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">MySQL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">jQuery</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Prototype</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PDO</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">XML</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">XSchema</button>
+                                                    <span class="skill btn btn-small disabled">Requirement Analysis</span>
+                                                    <span class="skill btn btn-small disabled">PHP</span>
+                                                    <span class="skill btn btn-small disabled">Symfony</span>
+                                                    <span class="skill btn btn-small disabled">Propel</span>
+                                                    <span class="skill btn btn-small disabled">PHPUnit</span>
+                                                    <span class="skill btn btn-small disabled">FPDF</span>
+                                                    <span class="skill btn btn-small disabled">Jenkins</span>
+                                                    <span class="skill btn btn-small disabled">ant</span>
+                                                    <span class="skill btn btn-small disabled">git</span>
+                                                    <span class="skill btn btn-small disabled">MySQL</span>
+                                                    <span class="skill btn btn-small disabled">jQuery</span>
+                                                    <span class="skill btn btn-small disabled">Prototype</span>
+                                                    <span class="skill btn btn-small disabled">PDO</span>
+                                                    <span class="skill btn btn-small disabled">XML</span>
+                                                    <span class="skill btn btn-small disabled">XSchema</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <h5>iController Server Setup</h5>
                                                 <p>I virtualized and automated the whole iController server setup using <em>Puppet</em>. I created and extended several open-source <em>Puppet</em> modules.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Puppet</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">libvirt</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">KVM</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Ubuntu</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">MySQL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHP</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Release Management</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Jenkins</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">git</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Amazon S3</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">BIND</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">ssh</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">LVM</button>
+                                                    <span class="skill btn btn-small disabled">Puppet</span>
+                                                    <span class="skill btn btn-small disabled">libvirt</span>
+                                                    <span class="skill btn btn-small disabled">KVM</span>
+                                                    <span class="skill btn btn-small disabled">Ubuntu</span>
+                                                    <span class="skill btn btn-small disabled">MySQL</span>
+                                                    <span class="skill btn btn-small disabled">PHP</span>
+                                                    <span class="skill btn btn-small disabled">Release Management</span>
+                                                    <span class="skill btn btn-small disabled">Jenkins</span>
+                                                    <span class="skill btn btn-small disabled">git</span>
+                                                    <span class="skill btn btn-small disabled">Amazon S3</span>
+                                                    <span class="skill btn btn-small disabled">BIND</span>
+                                                    <span class="skill btn btn-small disabled">ssh</span>
+                                                    <span class="skill btn btn-small disabled">LVM</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <h5>iSubscriber</h5>
                                                 <p>Creating a small <em>web application</em> to organize and input subscriptions into <em>Octopus</em>.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">MySQL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHP</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Symfony</button>
+                                                    <span class="skill btn btn-small disabled">MySQL</span>
+                                                    <span class="skill btn btn-small disabled">PHP</span>
+                                                    <span class="skill btn btn-small disabled">Symfony</span>
                                                 </div>
                                             </li>
                                             <li>
@@ -452,14 +293,14 @@
                                                     <li>Extracting data from various Accounting software to iController.</li>
                                                 </ol>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Accounting Software</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">AS400</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">ETL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">XML</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">XSchema</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Oracle</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">MSSQL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Navision</button>
+                                                    <span class="skill btn btn-small disabled">Accounting Software</span>
+                                                    <span class="skill btn btn-small disabled">AS400</span>
+                                                    <span class="skill btn btn-small disabled">ETL</span>
+                                                    <span class="skill btn btn-small disabled">XML</span>
+                                                    <span class="skill btn btn-small disabled">XSchema</span>
+                                                    <span class="skill btn btn-small disabled">Oracle</span>
+                                                    <span class="skill btn btn-small disabled">MSSQL</span>
+                                                    <span class="skill btn btn-small disabled">Navision</span>
                                                 </div>
                                             </li>
                                             <li>
@@ -471,10 +312,10 @@
                                                     <li>Developing a custom workflow engine.</li>
                                                 </ol>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">SAP FI</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">AS400</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">ETL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">XML</button>
+                                                    <span class="skill btn btn-small disabled">SAP FI</span>
+                                                    <span class="skill btn btn-small disabled">AS400</span>
+                                                    <span class="skill btn btn-small disabled">ETL</span>
+                                                    <span class="skill btn btn-small disabled">XML</span>
                                                 </div>
                                             </li>
                                         </ul>
@@ -491,10 +332,10 @@
 
                     <section>
 
-                        <div class="accordion" id="fosdem-accordion">
+                        <cite class="accordion" id="fosdem-accordion">
                             <div class="accordion-group">
                                 <div class="accordion-heading" data-toggle="collapse" data-parent="#fosdem-accordion" href="#fosdem-accordion-collapse0" onclick="track('experience','fosdem-datadevroom')">
-                                    <i class="icon-arrow-down icon-grey"></i> At the 2011 edition of the <h4>FOSDEM DataDevRoom</h4>, an <em>open source conference</em>, I gave a presentation about <h4><a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">Hadoop Pig: MapReduce the easy way</a></h4>, it was featured on the front page of <a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">slideshare.net</a>.
+                                    <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> At the 2011 edition of the <h4>FOSDEM DataDevRoom</h4>, an <em>open source conference</em>, I gave a presentation about <h4><a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">Hadoop Pig: MapReduce the easy way</a></h4>, it was featured on the front page of <a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">slideshare.net</a>.
 
                                 </div>
                                 <div id="fosdem-accordion-collapse0" class="accordion-body collapse">
@@ -503,14 +344,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </cite>
                     </section>
 
                     <section>
                         <div class="accordion" id="netlog-accordion">
                             <div class="accordion-group">
                                 <div class="accordion-heading" data-toggle="collapse" data-parent="#netlog-accordion" href="#netlog-accordion-collapse0" onclick="track('experience','netlog')">
-                                    <div><i class="icon-arrow-down icon-grey"></i> From September 2010 till February 2011 I was employed at <h4>Netlog</h4> as a <h4>Warehouse and Web Developer</h4>, creating an <em>analytical warehouse</em> based on <em>Hbase</em>. I also created large parts of the <em>processing infrastructure</em> using <em>Hadoop</em> and <em>Hadoop Pig</em>. I also advised on new technologies, <em>GIT</em> migration, <em>best practices</em> &amp; <em>unit tests</em>. Netlog is a social community network, with over 70 million members, mainly active in Europe and the Arabic world.</div>
+                                    <div><span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> From September 2010 till February 2011 I was employed at <h4>Netlog</h4> as a <h4>Warehouse and Web Developer</h4>, creating an <em>analytical warehouse</em> based on <em>Hbase</em>. I also created large parts of the <em>processing infrastructure</em> using <em>Hadoop</em> and <em>Hadoop Pig</em>. I also advised on new technologies, <em>GIT</em> migration, <em>best practices</em> &amp; <em>unit tests</em>. Netlog is a social community network, with over 70 million members, mainly active in Europe and the Arabic world.</div>
                                 </div>
                                 <div id="netlog-accordion-collapse0" class="accordion-body collapse">
                                     <div class="accordion-inner">
@@ -519,56 +360,56 @@
                                                 <h5>Warehouse Developer</h5>
                                                 <p>Setting up the <em>Hadoop</em> infrastructure, analyzing data with <em>Hadoop Pig</em> and creating a dashboard using <em>Symfony2</em> and <em>Hbase</em> &amp; <em>Thrift</em>.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Hadoop</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">HDFS</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Hadoop Pig</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Syslog</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Thrift</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Hive</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Hbase</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">git</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Symfony2</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Google Graphs</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PDO</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Memcached</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">MySQL</button>
+                                                    <span class="skill btn btn-small disabled">Hadoop</span>
+                                                    <span class="skill btn btn-small disabled">HDFS</span>
+                                                    <span class="skill btn btn-small disabled">Hadoop Pig</span>
+                                                    <span class="skill btn btn-small disabled">Syslog</span>
+                                                    <span class="skill btn btn-small disabled">Thrift</span>
+                                                    <span class="skill btn btn-small disabled">Hive</span>
+                                                    <span class="skill btn btn-small disabled">Hbase</span>
+                                                    <span class="skill btn btn-small disabled">git</span>
+                                                    <span class="skill btn btn-small disabled">Symfony2</span>
+                                                    <span class="skill btn btn-small disabled">Google Graphs</span>
+                                                    <span class="skill btn btn-small disabled">PDO</span>
+                                                    <span class="skill btn btn-small disabled">Memcached</span>
+                                                    <span class="skill btn btn-small disabled">MySQL</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <h5>Twoo Core Framework Developer</h5>
                                                 <p>Creating a new <em>PHP</em> Framework (no existing frameworks were allowed) as base for the new dating site Twoo. I advised on <em>Design Patterns</em> and <em>Best Practices</em>. I developed the <em>Security</em> and <em>ACL</em> platform as well.</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHP</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">HTTP</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Request routing</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Security</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">ACL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Design Patterns</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Best Practices</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Unit Tests</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHPUnit</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">git</button>
+                                                    <span class="skill btn btn-small disabled">PHP</span>
+                                                    <span class="skill btn btn-small disabled">HTTP</span>
+                                                    <span class="skill btn btn-small disabled">Request routing</span>
+                                                    <span class="skill btn btn-small disabled">Security</span>
+                                                    <span class="skill btn btn-small disabled">ACL</span>
+                                                    <span class="skill btn btn-small disabled">Design Patterns</span>
+                                                    <span class="skill btn btn-small disabled">Best Practices</span>
+                                                    <span class="skill btn btn-small disabled">Unit Tests</span>
+                                                    <span class="skill btn btn-small disabled">PHPUnit</span>
+                                                    <span class="skill btn btn-small disabled">git</span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <h5>Web Developer (Netlog)</h5>
                                                 <p>I introduced an open source <em>Event framework</em> and presented it to my co-developers. I introduced new application log functionality, for logging to <em>Hadoop</em>. I evangelized <em>Unit tests</em>, including an initial implementation and presentations. I evaluated <em>Redis</em>, <em>Memcached</em> &amp; <em>Membase</em> (now Couchbase).</p>
                                                 <div>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHP</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">PHPUnit</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Unit tests</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Syslog</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Event framework</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">MySQL</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Design Patterns</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Best Practices</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">git</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">svn</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">git-svn</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Memcached</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Redis</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Performance testing</button>
-                                                    <button type="button" class="btn disabled" disabled="disabled">Membase</button>
+                                                    <span class="skill btn btn-small disabled">PHP</span>
+                                                    <span class="skill btn btn-small disabled">PHPUnit</span>
+                                                    <span class="skill btn btn-small disabled">Unit tests</span>
+                                                    <span class="skill btn btn-small disabled">Syslog</span>
+                                                    <span class="skill btn btn-small disabled">Event framework</span>
+                                                    <span class="skill btn btn-small disabled">MySQL</span>
+                                                    <span class="skill btn btn-small disabled">Design Patterns</span>
+                                                    <span class="skill btn btn-small disabled">Best Practices</span>
+                                                    <span class="skill btn btn-small disabled">git</span>
+                                                    <span class="skill btn btn-small disabled">svn</span>
+                                                    <span class="skill btn btn-small disabled">git-svn</span>
+                                                    <span class="skill btn btn-small disabled">Memcached</span>
+                                                    <span class="skill btn btn-small disabled">Redis</span>
+                                                    <span class="skill btn btn-small disabled">Performance testing</span>
+                                                    <span class="skill btn btn-small disabled">Membase</span>
                                                 </div>
                                             </li>
 
@@ -613,9 +454,13 @@
         <h2>skills</h2>
         <div class="container">
             <div class="row">
-                <div class="span12 wordcloud">
+                <div class="span12 hidden-print wordcloud">
 
                 </div>
+                <div class="span12 visible-print">
+                    <img src="skills.png" style="margin-top: 20px" />
+                </div>
+
             </div>
             <div class="row">
                 <div class="span6">
@@ -766,7 +611,6 @@
             };
 
             $('em').each(keywordAggregate);
-            $('button').each(keywordAggregate);
 
             $('.skills h4').each(keywordAggregate);
             $('.skills em').each(keywordAggregate);
@@ -786,6 +630,7 @@
             });
 
 
+
             var eventLastTime = 0;
             var eventLastNameClass;
             var sectionOutEventHandler = function () {
@@ -800,7 +645,7 @@
                     eventLastNameClass = className;
                 }
 
-            }
+            };
 
             $('section.introduction').mouseleave(sectionOutEventHandler);
             $('section.experience').mouseleave(sectionOutEventHandler);
@@ -811,6 +656,21 @@
                 $('body').addClass('datacrunchers');
                 $('#datacrunchers-accordion-collapse0').addClass('in');
             }
+
+            $('.accordion').on('shown', function () {
+                icon = $('span.btn.dropdown i.icon-arrow-down', this);
+
+                icon.removeClass('icon-arrow-down');
+                icon.addClass('icon-arrow-up');
+
+            });
+            $('.accordion').on('hidden', function () {
+                icon = $('span.btn.dropdown i.icon-arrow-up', this);
+
+                icon.removeClass('icon-arrow-up');
+                icon.addClass('icon-arrow-down');
+
+            });
         });
 
     </script>
