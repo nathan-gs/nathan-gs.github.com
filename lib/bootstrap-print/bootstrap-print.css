@@ -122,3 +122,5 @@
         display: none !important;
     }
 }
+
+:root{-webkit-print-color-adjust:exact}
