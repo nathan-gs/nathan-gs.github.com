@@ -205,3 +205,7 @@ section section .accordion ul h4, section section .accordion ul h5 {
 .accordion-inner ul li.span5 {
     float: left;
 }
+
+:root{
+    -webkit-print-color-adjust:exact
+}
