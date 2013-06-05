@@ -41,27 +41,27 @@ section {
 
 
 .introduction h2 {
-    background-color: #eb613d;
+    background-color: #eb613d !important;
     margin-bottom: 30px;
 }
 
 .experience h2 {
-    background-color: #0084d1;
+    background-color: #0084d1 !important;
 }
 
 .skills h2 {
-    background-color: #33cc66;
+    background-color: #33cc66 !important;
 }
 
 .education h2 {
-    background-color: #6b0094;
+    background-color: #6b0094 !important;
 }
 
 .datacrunchers .introduction h2,
 .datacrunchers .experience h2,
 .datacrunchers .skills h2,
 .datacrunchers .education h2 {
-    background-color: #008CBA;
+    background-color: #008CBA !important;
 }
 
 dd.email .datacrunchers,
@@ -186,7 +186,12 @@ section section .accordion ul h4, section section .accordion ul h5 {
         width: 199mm;
         margin-left: 0;
         margin-right: 0;
+        -webkit-print-color-adjust:exact;
+        color: #fff !important;
     }
+
+
+
 
     body {
         padding-top: 0;
@@ -194,6 +199,10 @@ section section .accordion ul h4, section section .accordion ul h5 {
 
     .introduction .text {
         margin-top: 0;
+    }
+
+    .introduction a:link:after, a:visited:after, h4 a:link:after, a:visited:after {
+        content: "";
     }
 
 }
@@ -206,6 +215,3 @@ section section .accordion ul h4, section section .accordion ul h5 {
     float: left;
 }
 
-:root{
-    -webkit-print-color-adjust:exact
-}
