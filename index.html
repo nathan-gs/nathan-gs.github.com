@@ -1001,7 +1001,7 @@
                     <div>
                         Some basic knowledge, but willing to improve:
                         <ul>
-                            <li><em>Graph databases</em> (<em>Neo4J</em>, <em>HyperGraphDB</em>).</li>
+                            <li><em>Graph databases</em>: <em>Neo4J</em>, <em>HyperGraphDB</em> &amp; <em>Titan</em>.</li>
                             <li>
                                 Various NoSQL data stores, like <em>MongoDB</em>, <em>Voldemort</em>, <em>riak</em>, ...
                             </li>
@@ -1054,29 +1054,35 @@
 
                     <div>IBM | 000-28146057 | October 2012</div>
                 </section>
-                <section>
+            </div>
+        </div>
+        <div class="row">
+            <section>
+                <div class="span6">
                     <dl>
-                        <dt>Period</dt>
-                        <dd>2005 - 2007</dd>
                         <dt>Institute</dt>
                         <dd>University of Antwerp</dd>
                         <dt>Program</dt>
                         <dd>Social-Economic Sciences</dd>
-                    </dl>
-
-                    <dl>
                         <dt>Period</dt>
-                        <dd>1999 - 2005</dd>
+                        <dd>2005 - 2007</dd>
+                        <dt>Achieved</dt>
+                        <dd>Not Achieved</dd>
+                    </dl>
+                </div>
+                <div class="span6">
+                    <dl>
                         <dt>Institute</dt>
                         <dd>Hibernia Steinerschool in Antwerp</dd>
                         <dt>Program</dt>
                         <dd>ASO, Higher Secondary education</dd>
-                        <dt>Achieved in</dt>
+                        <dt>Period</dt>
+                        <dd>1999 - 2005</dd>
+                        <dt>Achieved</dt>
                         <dd>2005</dd>
                     </dl>
-
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
     </div>
 </section>
@@ -1110,10 +1116,14 @@
         $('.skills h4').each(keywordAggregate);
         $('.skills em').each(keywordAggregate);
         $('span.skill').each(keywordAggregate);
+        $('span[data-skill]').each(keywordAggregate);
 
 
         var skillWords = [];
         for (var key in keywords) {
+            if(keywords[key] < 2) {
+                continue;
+            }
             skillWords.push({
                 text: key,
                 weight: keywords[key]
