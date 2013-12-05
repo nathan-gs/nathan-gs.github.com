@@ -87,8 +87,21 @@ section section h4, section section h5 {
     display: inline;
 }
 
+section section h4 {
+    font-size: 15.5px;
+}
+
 section section h5 {
     font-size: 13px;
+}
+
+.skill.btn-small {
+    padding: 0px 3px;
+    font-size: 11.9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 4px;
 }
 
 .skills .wordcloud {
@@ -213,5 +226,9 @@ section section .accordion ul h4, section section .accordion ul h5 {
 
 .accordion-inner ul li.span5 {
     float: left;
+}
+
+span[data-skill] {
+    color: #420000;
 }
 
