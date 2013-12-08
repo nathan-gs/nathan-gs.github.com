@@ -95,6 +95,10 @@ section section h5 {
     font-size: 13px;
 }
 
+span[data-skill] {
+    color: #420000;
+}
+
 .skill.btn-small {
     padding: 0px 3px;
     font-size: 11.9px;
@@ -218,6 +222,11 @@ section section .accordion ul h4, section section .accordion ul h5 {
         content: "";
     }
 
+    span[data-skill] {
+        color: #000;
+    }
+
+
 }
 
 .accordion-heading {
@@ -228,7 +237,4 @@ section section .accordion ul h4, section section .accordion ul h5 {
     float: left;
 }
 
-span[data-skill] {
-    color: #420000;
-}
 
