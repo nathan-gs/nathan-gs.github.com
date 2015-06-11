@@ -9,6 +9,7 @@
     <meta name="p:domain_verify" content="77d6a2df29213b417fd2fa0a75051cd5"/>
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" rel="stylesheet"/>
     <link href="//cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud.css" rel="stylesheet"/>
 
     <link href='//fonts.googleapis.com/css?family=Maven+Pro:900,500,700' rel='stylesheet' type='text/css'/>
@@ -23,64 +24,51 @@
     <script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script type="text/javascript">
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-12327464-1']);
-        _gaq.push(['_setDomainName', 'nathan.gs']);
-        _gaq.push(['_trackPageview']);
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
+ga('create', 'UA-12327464-1', 'auto');  // Replace with your property ID.
+ga('send', 'pageview');
 
-    </script>
-    <script type="text/javascript">
-        function track(type, name) {
-            _gaq.push(['_trackPageview', '/' + type + '/' + name]);
-        }
+function track(type, name) {
+    ga('send', 'pageview',  '/' + type + '/' + name);
+}   
 
-    </script>
+</script>
 </head>
 
 <body itemscope itemtype="http://schema.org/Person">
 
-<h1>Nathan Bijnens</h1>
+    <h1>Nathan Bijnens</h1>
 
-<section class="introduction">
+    <section class="introduction">
 
-    <h2>Introduction</h2>
+        <h2>Introduction</h2>
 
-    <div class="container">
-        <div class="row">
-            <div class="span6">
-                <dl>
-                    <dt class="span2">Name</dt>
-                    <dd><h4 itemprop="name">Nathan Bijnens</h4></dd>
-                    <dt class="span2">Address</dt>
-                    <dd>
-                        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            On request<br/>
-                            <span itemprop="postalCode">9042</span> <span itemprop="addressLocality">Ghent</span><br/>
-                            <span itemprop="addressCountry">Belgium</span>
-                        </address>
-                    </dd>
-                    <dt class="span2">E-mail</dt>
-                    <dd class="email">
-                        <a class="nathan"
-                           href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;"
-                           itemprop="email">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <dl>
+                        <dt class="span2">Name</dt>
+                        <dd><h4 itemprop="name">Nathan Bijnens</h4></dd>
+                        <dt class="span2">Address</dt>
+                        <dd>
+                            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                On request<br/>
+                                <span itemprop="postalCode">9042</span> <span itemprop="addressLocality">Ghent</span><br/>
+                                <span itemprop="addressCountry">Belgium</span>
+                            </address>
+                        </dd>
+                        <dt class="span2">E-mail</dt>
+                        <dd class="email">
+                            <a class="nathan"
+                            href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;"
+                            itemprop="email">
                             &#110;&#97;&#116;&#104;&#97;&#110;&#64;&#110;&#97;&#116;&#104;&#97;&#110;&#46;&#103;&#115;
-                        </a>
-                        <a class="datacrunchers"
-                           href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#097;&#116;&#104;&#097;&#110;&#064;&#100;&#097;&#116;&#097;&#099;&#114;&#117;&#110;&#099;&#104;&#101;&#114;&#115;&#046;&#101;&#117;"
-                           itemprop="email">
-                            &#110;&#097;&#116;&#104;&#097;&#110;&#064;&#100;&#097;&#116;&#097;&#099;&#114;&#117;&#110;&#099;&#104;&#101;&#114;&#115;&#046;&#101;&#117;
                         </a>
                     </dd>
                 </dl>
@@ -97,16 +85,15 @@
                     <dt class="span2">Skype</dt>
                     <dd><a rel="me" itemprop="url" href="skype:nathan_gs">nathan_gs</a></dd>
                 </dl>
-                <dl style="display: none;">
+                <!--<dl>
                     <dt class="span2">Employment</dt>
-                    <dd><span itemprop="jobTitle">Hadoop and Big Data Consultant</span> at <span itemprop="worksFor">DataCrunchers</span>
+                    <dd><span itemprop="jobTitle">sr. <span data-skill="Big Data">Big Data</span> &amp; <span data-skill="IoT">IoT</span> Developer</span> at <span itemprop="worksFor">Virdata, Technicolor</span>
                     </dd>
-                </dl>
+                </dl>-->
 
             </div>
             <div class="span6 photo">
                 <img class="nathan" src="nathan-460px.jpg" alt="Nathan Bijnens" itemprop="image"/>
-                <img class="datacrunchers" src="datacrunchers.png" alt="DataCrunchers"/>
             </div>
 
 
@@ -114,482 +101,196 @@
         <div class="row text">
             <div class="span12">
                 <p>I am Nathan Bijnens, a developer with a passion for great <span data-skill="Software Engineering">code</span>,
-                    the
-                    <span data-skill="Web Applications">web</span> and <span data-skill="Big Data">Big
-                        Data</span>. I am interested in <span data-skill="Software Engineering">programming</span>
-                    and <span
-                            data-skill="System Engineering">system administration</span>, especially
+                    <span data-skill="Big Data">Big Data</span> and the <span data-skill="IoT">Internet of Things</span>. I am interested 
+                    in <span data-skill="Software Engineering">programming</span> and <span data-skill="System Engineering">system administration</span>, especially
                     where they meet, from <span data-skill="Scalability">scaling</span> platforms to designing the <span
-                            data-skill="Software Architecture">architecture</span> of new and
-                    existing products and everything in between.</p>
-
-                <p>I am focused on <span data-skill="Data Analysis">data analysis</span> and building <span
-                        data-skill="Lambda Architecture">Big Data Applications</span>. Using
-                    <span data-skill="Hadoop">Hadoop</span>, in combination with <span data-skill="Hadoop Pig">Hadoop Pig</span>,
-                    <span data-skill="Hive">Hive</span> and <span data-skill="Cascading">Cascading</span>. I
-                    follow the rise of <span data-skill="real-time">real-time big data</span> closely, actively
-                    developing applications on top of
-                    <span data-skill="Storm">Storm</span>. And designing <span
-                            data-skill="Lambda Architecture">Lambda</span>-like
-                    <span data-skill="Software Architecture">architectures</span>. The <span
-                            data-skill="System Engineering">infrastructure</span> side
-                    interests me as well, and I am learning more about <span data-skill="Business Intelligence">Business Intelligence</span>
-                    and <span data-skill="Data Visualization">visualizing
-                        big data</span>. I advise on <span data-skill="Business Strategy">Big Data Strategies</span> and
-                    <span data-skill="Technology Evangelism">evangelise</span> <span data-skill="Big Data">Big Data</span> to
-                    clients and at conferences.</p>
-
-                <p>I have a lot of experience with <span data-skill="PHP">PHP</span>, <span
-                        data-skill="Java">Java</span> and other related technologies like <span
-                        data-skill="MySQL">MySQL</span>,
-                    <span data-skill="nosql">nosql</span>, <span data-skill="Memcached">memcached</span>, <span
-                            data-skill="Nginx">nginx</span> and a lot more. I strongly believe in <span
-                            data-skill="Unit Testing">unit tests</span> and <span data-skill="Design Patterns">design patterns</span>,
-                    to write precise and
-                    easy maintainable code that works.</p>
-
-                <p>I am a passionate <span data-skill="Linux">linux</span> system engineer, follower of the <span
-                        data-skill="DevOps">devops</span> movement. Using
-                    <span data-skill="Puppet">Puppet</span> and <span data-skill="Ganglia">Ganglia</span> to automate
-                    and monitor deployments.</p>
-
-                <p>I enjoy working with <span data-skill="Client & Partner Relationships">clients and partners</span>,
-                    from giving <span data-skill="Client & Partner Relationships">advice</span>, talking about the
-                    <span data-skill="Business Strategy">Business</span> and <span data-skill="Technology Evangelism">Technological</span> value of
-                    <span data-skill="Big Data">Big Data</span>, to
-                    <span data-skill="Requirement Analysis">Requirement Analysis</span>.
+                    data-skill="Software Architecture">architecture</span> of new and existing products and everything in between.<br />
+                    I am a <span data-skill="Technology Evangelism">passionate speaker and evangelist</span>, on <span data-skill="Big Data">Big Data</span> and 
+                    <span data-skill="IoT">IoT</span>.
                 </p>
 
-                <p>I am <span data-skill="inquisitive">inquisitive</span>, I love learning about new things and
-                    improving what I know. I am very <span data-skill="passionate">passionate</span>
-                    about what I do, and I have strong <span data-skill="analytical">analytical</span> skills.</p>
+                <p>
+                    I am focused on <span data-skill="Data Analysis">data analysis</span> and building <span data-skill="Lambda Architecture">Big Data applications</span>. 
 
-            </div>
+                    Using <span data-skill="Spark">Spark</span>, <span data-skill="Storm">Storm</span>, <span data-skill="Hadoop">Hadoop</span>, <span data-skill="Cassandra">Cassandra</span> and <span data-skill="Kafka">Kafka</span>. 
 
-        </div>
-    </div>
-</section>
+                    I am especially  interested in <span data-skill="Stream Processing">real-time</span> <span data-skill="Big Data">Big Data</span>, actively developing applications on top of <span>Spark Streaming</span> and <span data-skill="Storm">Storm</span>, 
+                    designing <span data-skill="Lambda Architecture">Lambda</span>-like <span data-skill="Software Architecture">architectures</span>. 
+                    I advise on <span data-skill="Business Strategy">Big Data Strategies</span> and <span data-skill="Technology Evangelism">evangelize</span> <span data-skill="Big Data">Big Data</span> and <span data-skill="IoT">IoT</span> to clients and at conferences.
+                </p>
 
-<section class="experience">
-<h2>experience</h2>
+                <p>
+                    I have a lot of experience with <span data-skill="Java">Java</span>, <span data-skill="Scala">Scala</span> 
+                    and a general interest in <span data-skill="Functional Programming">Functional Programming</span>.
 
-<div class="container">
-<div class="row">
-<div class="span12">
-<section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-<div class="accordion" id="datacrunchers-accordion">
-<div class="accordion-group">
-<div class="accordion-heading" data-toggle="collapse" data-parent="#datacrunchers-accordion"
-     href="#datacrunchers-accordion-collapse0" onclick="track('experience','datacrunchers')">
-    <div><span class="dropdown btn btn-mini"><i class="icon-arrow-down icon-grey"></i></span> As from <span
-            itemprop="startDate" datetime="2012-04-27">April 2012</span> I work for <h4 itemprop="name">
-        DataCrunchers</h4>, as a <h4 itemprop="jobTitle">Hadoop and Big Data Consultant</h4>. DataCrunchers
-        is the leading Belgian consultancy firm around everything <span data-skill="Big Data">Big Data</span>. I
-        co-develop on our
-        internal <span data-skill="Machine Learning">Semantic Analysis Engine</span> on top of <span
-                data-skill="Storm">Storm</span>, in <span data-skill="Java">Java</span>, I
-        co-presented our <span data-skill="Hadoop">Hadoop Ecosystem course</span>, I created a new
-        website using <span data-skill="Drupal">Drupal</span> and
-        I am responsible for our <span>Microsoft</span> <span data-skill="Big Data">Big Data</span> partnership.
-    </div>
-    <div>I have been working for the following clients: <a href="#dc-technicolor">Technicolor</a>, <a
-            href="#dc-macq-awv">Flemish Government, AWV (Macq)</a>, <a href="#dc-octopin">Octopin</a>, <a
-            href="#dc-hshmrk">HSHMRK</a> &amp; <a href="#dc-ewals">Ewals Intermodal</a>.
-    </div>
-</div>
-<div id="datacrunchers-accordion-collapse0" class="accordion-body collapse">
-<div class="accordion-inner">
-<ul>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5><span class="skill">Big Data</span> &amp; <span class="skill">DevOps</span> Engineer,
-        Technicolor</h5>
+                    <p>
+                        I am a passionate <span data-skill="Linux">Linux</span> system engineer, follower of the <span
+                        data-skill="DevOps">DevOps</span> movement, with experience in
+                        <span data-skill="Puppet">Puppet</span>, <span data-skill="Chef">Chef</span>, 
+                        <span data-skill="NixOS">NixOS</span> and the <span data-skill="Cloud">Cloud</span>.
 
-    <div class="subtitle">From <span itemprop="startDate"
-                                     datetime="2013-10-01">October 2013</span>.
-    </div>
-    <p>As a <span data-skill="Big Data">Big Data</span> and <span data-skill="DevOps">DevOps Engineer</span>, I am
-        responsible
-        for the <span data-skill="Scalability">scalability</span>, <span
-                data-skill="Continuous Ingegration">quality</span> and <span
-                data-skill="Operational Intelligence">Operational Intelligence</span> of
-        a new platform. I introduced the <span data-skill="Continuous Integration">Continuous Integration</span>
-        platform, using <span data-skill="Jenkins">Jenkins</span>,
-        added <span data-skill="Unit Testing">unit tests</span>. The platform is build using <span
-                data-skill="Chef">Chef</span>,
-        tries to be <span data-skill="Cloud">cloud independent</span> (runs on <span
-                data-skill="Amazon AWS">Amazon AWS</span>,
-        <span data-skill="Softlayer">Softlayer</span>, ...).</p>
+                    </p>
 
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="DevOps">DevOps</span>
-        <span class="skill btn btn-small disabled" data-skill="Big Data">Big Data</span>
-        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
-        <span class="skill btn btn-small disabled" data-skill="jUnit">jUnit</span>
-        <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
-        <span class="skill btn btn-small disabled" data-skill="Jenkins">Jenkins</span>
+                    <p>I enjoy working with <span data-skill="Client &amp; Partner Relationships">clients and partners</span>,
+                        from giving <span data-skill="Client &amp; Partner Relationships">advice</span>, talking about the
+                        <span data-skill="Business Strategy">Business</span> and <span data-skill="Technology Evangelism">Technological</span> value of
+                        <span data-skill="Big Data">Big Data</span> and <span data-skill="IoT">Internet of Things</span>, to
+                        <span data-skill="Requirement Analysis">Requirement Analysis</span>.
+                    </p>
 
-        <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
+                    <p>I am <span data-skill="inquisitive">inquisitive</span>, I love learning about new things and
+                        improving what I know. I am very <span data-skill="passionate">passionate</span>
+                        about what I do, and I have strong <span data-skill="analytical">analytical</span> skills.</p>
 
-        <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
-        <span class="skill btn btn-small disabled" data-skill="Spark">Spark</span>
-        <span class="skill btn btn-small disabled" data-skill="Hadoop">HDFS</span>
+                    </div>
 
-        <span class="skill btn btn-small disabled" data-skill="Ruby">Ruby</span>
-
-        <span class="skill btn btn-small disabled" data-skill="Chef">Chef</span>
-        <span class="skill btn btn-small disabled" data-skill="Chef">Ironfan</span>
-        <span class="skill btn btn-small disabled" data-skill="Chef">Fog</span>
-        <span class="skill btn btn-small disabled" data-skill="Scalability">Scalability</span>
-        <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon AWS</span>
-        <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon IAM</span>
-        <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon EC2</span>
-        <span class="skill btn btn-small disabled" data-skill="Softlayer">Softlayer</span>
-        <span class="skill btn btn-small disabled" data-skill="Vagrant">Vagrant</span>
-        <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5>Project Manager ABBAMelda, Flemish Government (Macq)</h5>
-
-    <div class="subtitle">From <span itemprop="startDate" datetime="2013-06-25">June 2013</span>
-        till <span itemprop="endDate" datetime="2013-09-30">October 2013.</span></div>
-    <p><span data-skill="Project Management">Project Manager</span> and <span
-            data-skill="Lead Developer">Lead Developer</span>
-        of
-        ABBAMelda, a ticket and maintenance management system, originally developed by Siemens.
-        ABBAMelda consists of a <span data-skill="Java">Java</span> <span data-skill="Java EE">EE</span> backend,
-        an <span
-                data-skill="Informix">Informix</span>
-        database, with a <span data-skill="PHP">PHP</span>/<span data-skill="jQuery">jQuery</span> frontend. Under my
-        lead, we created an
-        enhanced <span data-skill="Mobile Development">Tablet</span> intranet site, improved the
-        bulk upload possibilities, additional <span data-skill="REST">REST</span> services, introduced <span
-                data-skill="Unit Testing">unit
-            testing</span> and switched to <span data-skill="git">git</span>. I was responsible for <span
-                data-skill="Project Management">coordinating</span> with different teams within
-        the Flemish Government, as well as the contractor (Macq).</p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Software Architecture">Software Architecture</span>
-        <span class="skill btn btn-small disabled" data-skill="Project Management">Project Management</span>
-        <span class="skill btn btn-small disabled" data-skill="Project Management">Agile</span>
-        <span class="skill btn btn-small disabled" data-skill="Project Management">Scrum</span>
-        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
-        <span class="skill btn btn-small disabled" data-skill="JPA">JPA3</span>
-        <span class="skill btn btn-small disabled" data-skill="JPA">EclipseLink</span>
-        <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
-        <span class="skill btn btn-small disabled" data-skill="jUnit">jUnit</span>
-        <span class="skill btn btn-small disabled" data-skill="Informix">Informix</span>
-        <span class="skill btn btn-small disabled" data-skill="REST">REST</span>
-        <span class="skill btn btn-small disabled" data-skill="SOAP">SOAP</span>
-        <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
-        <span class="skill btn btn-small disabled" data-skill="jQuery">jQuery</span>
-        <span class="skill btn btn-small disabled" data-skill="Refactoring">Refactoring</span>
-        <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
-        <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
-        <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
-        <span class="skill btn btn-small disabled" data-skill="Mobile Development">Mobile Development</span>
-
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5>Octopin</h5>
-
-    <div class="subtitle">From <span itemprop="startDate"
-                                     datetime="2013-01-31">February 2013</span> till <span
-            itemprop="endDate" datetime="2013-06-15">June 2013.</span></div>
-    <p>Defining and implementing the <span data-skill="Software Architecture">architecture</span>
-        for Octopin, a Pinterest <span class="skill">social media</span> <span
-                data-skill="Data Analysis">analytics</span>
-        startup. I designed and implented a <span data-skill="Lambda Architecture">Lambda Architecture</span> (in <span
-                data-skill="Java">Java</span>), on
-        top of <span data-skill="Storm">Storm</span> and <span data-skill="Hadoop">Hadoop</span>, using <span
-                data-skill="Redis">Redis</span>, <span data-skill="Voldemort">Voldemort</span>,
-        <span data-skill="Cascading">Cascading</span> as well as <span data-skill="Thrift">Thrift</span>.</p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
-        <span class="skill btn btn-small disabled" data-skill="Spring">Spring DI</span>
-        <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
-        <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
-        <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
-        <span class="skill btn btn-small disabled" data-skill="Thrift">Thrift</span>
-        <span class="skill btn btn-small disabled" data-skill="Pail">Pail</span>
-        <span class="skill btn btn-small disabled" data-skill="Cascading">Cascading</span>
-        <span class="skill btn btn-small disabled" data-skill="Kafka">Kafka</span>
-        <span class="skill btn btn-small disabled" data-skill="Zookeeper">Zookeeper</span>
-        <span class="skill btn btn-small disabled" data-skill="Voldemort">Voldemort</span>
-        <span class="skill btn btn-small disabled" data-skill="Redis">Redis</span>
-        <span class="skill btn btn-small disabled" data-skill="JSoup">JSoup</span>
-        <span class="skill btn btn-small disabled" data-skill="Guava">Guava</span>
-        <span class="skill btn btn-small disabled" data-skill="jUnit">jUnit</span>
-        <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
-        <span class="skill btn btn-small disabled" data-skill="Nagios">Nagios</span>
-        <span class="skill btn btn-small disabled" data-skill="Logstash">Logstash</span>
-        <span class="skill btn btn-small disabled" data-skill="Ganglia">Ganglia</span>
-        <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
-        <span class="skill btn btn-small disabled" data-skill="Software Architecture">Software Architecture</span>
-        <span class="skill btn btn-small disabled" data-skill="Lambda Architecture">Lambda Architecture</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5>HSHMRK</h5>
-
-    <div class="subtitle">From <span itemprop="startDate"
-                                     datetime="2012-12-08">December 2012</span> to <span
-            itemprop="endDate" datetime="2013-01-31"> January 2013</span>.
-    </div>
-    <p>Defining and implementing the architecture for <a href="http://hshmrk.com">hshmrk</a>, a
-        <span data-skill="Data Visualization">data visualization</span> startup. The application backend is written as a
-        <span data-skill="Jersey">Jersey</span> <span data-skill="REST">REST</span> (<span data-skill="Java">Java</span>),
-        service, using <span data-skill="ElasticSearch">ElasticSearch</span> as
-        storage. The frontend is a <span data-skill="AngularJS">AngularJS</span> and <span data-skill="D3">D3</span>
-        webapplication. This
-        approach allows us to easily scale.</p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
-        <span class="skill btn btn-small disabled" data-skill="ElasticSearch">ElasticSearch</span>
-        <span class="skill btn btn-small disabled" data-skill="AngularJS">AngularJS</span>
-        <span class="skill btn btn-small disabled" data-skill="Data Visualization">D3</span>
-        <span class="skill btn btn-small disabled" data-skill="Jersey">Jersey</span>
-        <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
-        <span class="skill btn btn-small disabled" data-skill="Jackson">Jackson</span>
-        <span class="skill btn btn-small disabled" data-skill="Spring">Spring DI</span>
-        <span class="skill btn btn-small disabled" data-skill="jUnit">jUnit</span>
-        <span class="skill btn btn-small disabled" data-skill="Data Visualization">Data Visualization</span>
-        <span class="skill btn btn-small disabled" data-skill="Software Architecture">Software Architecture</span>
-        <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5>Ewals Intermodal</h5>
-
-    <div class="subtitle">From <span itemprop="startDate"
-                                     datetime="2012-10-01">October 2012</span> and ongoing.
-    </div>
-    <p>Developing <span data-skill="Oracle">Oracle</span> database views for integration of <span data-skill="Greencat">Greencat</span>
-        and <span data-skill="Crystal Reports">Crystal
-            Reports</span>.</p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Oracle">Oracle</span>
-        <span class="skill btn btn-small disabled" data-skill="Greencat">Greencat</span>
-        <span class="skill btn btn-small disabled" data-skill="Crystal Reports">Crystal Reports</span>
-        <span class="skill btn btn-small disabled" data-skill="SQL">SQL</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5 itemprop="name">IHarvest</h5>
-
-    <p>I co-develop and I am the current lead on the <span data-skill="IHarvest">IHarvest</span> project. It is a <span
-            data-skill="Scalability">distributed</span>
-        <span data-skill="HTTP">HTTP</span> <em>Fetcher &amp; Parser</em> on top
-        of <span data-skill="Storm">Storm</span>, writen in <span data-skill="Java">Java</span>, the
-        results are stored on <span data-skill="HDFS">HDFS</span> for more extensive querying using <span
-                data-skill="Hadoop">Hadoop</span>.
-    </p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
-        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
-        <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
-        <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5 itemprop="name" data-skill="Machine Learning">Semantic Analysis Engine</h5>
-
-    <p>I co-develop on our internal <span data-skill="Machine Learning">Semantic Analysis Engine</span> on top
-        of <span data-skill="Storm">Storm</span>
-        and <span data-skill="ElasticSearch">ElasticSearch</span>. The web interface is build around a <span
-                data-skill="Java">Java</span>,
-        <span data-skill="Jersey">Jersey</span> backend and a frontend in <span data-skill="AngularJS">AngularJS</span>.
-    </p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
-        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
-        <span class="skill btn btn-small disabled" data-skill="ElasticSearch">ElasticSearch</span>
-        <span class="skill btn btn-small disabled" data-skill="AngularJS">AngularJS</span>
-        <span class="skill btn btn-small disabled" data-skill="Jersey">Jersey</span>
-        <span class="skill btn btn-small disabled" data-skill="HTML5">Bootstrap</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5 itemprop="name">Microsoft Big Data Partnership</h5>
-
-    <p>Responsible for the contact with Microsoft.</p>
-
-    <div>
-        Speaker at the Microsoft Inspirience Day about <span data-skill="Big Data">Big Data</span>.
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5 itemprop="name"><a itemprop="url" href="http://datacrunchers.eu">datacrunchers.eu</a>
-        website</h5>
-
-    <p>Creating a <span data-skill="Drupal">Drupal</span> based website, hosted on <span data-skill="Azure">Windows Azure</span>.
-        I touched all
-        aspects of creating this website, from designing, implementing to copy writing.</p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Azure">Windows Azure</span>
-        <span class="skill btn btn-small disabled" data-skill="HTML5">Bootstrap</span>
-        <span class="skill btn btn-small disabled" data-skill="CSS">CSS</span>
-        <span class="skill btn btn-small disabled" data-skill="HTML5">HTML5</span>
-        <span class="skill btn btn-small disabled" data-skill="Copy Writing">Copy Writing</span>
-        <span class="skill btn btn-small disabled" data-skill="IIS">IIS Management</span>
-        <span class="skill btn btn-small disabled" data-skill="Drupal">Drupal</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5>Business cards &amp; various grapic design</h5>
-
-    <p>Designing the DataCrunchers business cards and a company flag.</p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Graphic Design">Graphic Design</span>
-        <span class="skill btn btn-small disabled" data-skill="Graphic Design">Inkscape</span>
-        <span class="skill btn btn-small disabled" data-skill="QR">QR</span>
-    </div>
-</li>
-<li itemprop="event" itemscope itemtype="http://schema.org/Event">
-    <h5>Internal test cluster</h5>
-
-    <p>Setting up an internal <span data-skill="Hadoop">Hadoop</span>, <span
-            data-skill="ElasticSearch">ElasticSearch</span> &amp; <span data-skill="Storm">Storm</span> test
-        cluster using <span data-skill="Puppet">Puppet</span> and <span
-                data-skill="Cloudera Manager">Cloudera Manager</span>. I created some
-        <span data-skill="Puppet">Puppet</span> modules to manage <a
-                href="https://github.com/nathan-gs/puppet-storm"><span data-skill="Storm">Storm</span></a>, <a
-                href="https://github.com/nathan-gs/puppet-elasticsearch"><span
-                data-skill="ElasticSearch">ElasticSearch</span></a>
-        and <a href="https://github.com/nathan-gs/puppet-ganglia"><span data-skill="Ganglia">Ganglia</span></a>.</p>
-
-    <div>
-        <span class="skill btn btn-small disabled" data-skill="Cloudera Manager">Cloudera Manager</span>
-        <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
-        <span class="skill btn btn-small disabled" data-skill="ElasticSearch">ElasticSearch</span>
-        <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
-        <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
-        <span class="skill btn btn-small disabled" data-skill="Hadoop Pig">Hadoop Pig</span>
-        <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
-        <span class="skill btn btn-small disabled" data-skill="Ganglia">Ganglia</span>
-        <span class="skill btn btn-small disabled" data-skill="Networking">Zentyal</span>
-    </div>
-</li>
-
-</ul>
-
-</div>
-</div>
-</div>
-</div>
-
-
-</section>
-
-<section>
-
-    <cite class="accordion" id="devoxx13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-        <div class="accordion-group">
-            <div class="accordion-heading" data-toggle="collapse" data-parent="#devoxx13-accordion"
-                 href="#devoxx13-accordion-collapse0" onclick="track('experience','devoxx13-lambda')">
-                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> At <h4>Devoxx
-                <span itemprop="startDate" datetime="2013-11-14">'13</span></h4>, the biggest European <span
-                    data-skill="Java">Java</span>
-                conference, I presented <h4>A <span data-skill="real-time">real-time</span> <span
-                    data-skill="Software Architecture">architecture</span>
-                using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4>.
-
-            </div>
-            <div id="devoxx13-accordion-collapse0" class="accordion-body collapse">
-                <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                    <iframe src="http://www.slideshare.net/slideshow/embed_code/28272077" width="638" height="359"
-                            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                            style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                            allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-    </cite>
-</section>
+        </section>
 
-<section>
+        <section class="presentations">
+            <h2>Presentations</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
 
-    <cite class="accordion" id="jax13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-        <div class="accordion-group">
-            <div class="accordion-heading" data-toggle="collapse" data-parent="#jax13-accordion"
-                 href="#jax13-accordion-collapse0" onclick="track('experience','jax13-lambda')">
-                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> At <h4>JAX
-                London <span itemprop="startDate" datetime="2013-10-29">'13</span></h4>, a <em data-skill="Java">Java
-                Enterprise</em> and <span data-skill="Big Data">Big Data</span>
-                conference, I presented
-                <h4>A <span data-skill="real-time">real-time</span> <span data-skill="Software Architecture">architecture</span>
-                    using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4>.
+                        <section>
 
-            </div>
-            <div id="jax13-accordion-collapse0" class="accordion-body collapse">
-                <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                    <iframe src="http://www.slideshare.net/slideshow/embed_code/28211578" width="597" height="486"
-                            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                            style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                            allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </cite>
-</section>
+                            <cite class="accordion" id="ibm-bigdatadev14-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading" data-toggle="collapse" data-parent="#ibm-bigdatadev14-accordion"
+                                    href="#ibm-bigdatadev14-accordion-collapse0" onclick="track('experience','ibm-bigdatadev14')">
 
-<section>
+                                    <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>Virdata: lessons learned from the <span data-skill="IoT">Internet of Things</span> and <span data-skill="IoT">M2M</span> <span data-skill="Cloud">Cloud Services</span></h4> <span data-skill="Public Speaking">at the</span> <h4>IBM Big Data Developers (San Jose, CA) Meetup of 
+                                    <span itemprop="startDate" datetime="2014-06-05">June '14</span></h4>.
 
-    <cite class="accordion" id="sqlug13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-        <div class="accordion-group">
-            <div class="accordion-heading" data-toggle="collapse" data-parent="#sqlug13-accordion"
-                 href="#sqlug13-accordion-collapse0" onclick="track('experience','sqlug13-bigdata')">
-                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> At the <h4>SQLUser
-                Group Belgium</h4> meetup of </em><span itemprop="startDate" datetime="2013-02-27">February 2013</span>
-                I presented about <h4><span data-skill="Big Data">Big Data</span>, <span
-                    data-skill="Hadoop">Hadoop</span> and <span data-skill="Hadoop">HDInsight</span></h4>, together
-                with
-                Wesley Backelant of Microsoft Belgium.
+                                </div>
+                                <div id="ibm-bigdatadev14-accordion-collapse0" class="accordion-body collapse">
+                                    <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
+                                        <iframe src="http://www.slideshare.net/slideshow/embed_code/36584973" width="638" height="359"
+                                        frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                                        style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+                                        allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </cite> 
+                    </section>
 
-            </div>
-            <div id="sqlug13-accordion-collapse0" class="accordion-body collapse">
-                <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                    <iframe src="http://www.slideshare.net/slideshow/embed_code/18190171" width="597" height="486"
+                    <section>
+
+                        <cite class="accordion" id="nosql14-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
+                            <div class="accordion-group">
+                                <div class="accordion-heading" data-toggle="collapse" data-parent="#nosql14-accordion"
+                                href="#nosql14-accordion-collapse0" onclick="track('experience','nosql14-lambda')">
+
+                                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>A <span data-skill="Stream Processing">real-time</span> (<span data-skill="Lambda Architecture">Lambda</span>) architecture using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4> <span data-skill="Public Speaking">at</span> <h4>NoSQL Matters Cologne <span itemprop="startDate" datetime="2014-04-39">'14</span></h4>.
+
+                            </div>
+                            <div id="nosql14-accordion-collapse0" class="accordion-body collapse">
+                                <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
+                                    <iframe src="http://www.slideshare.net/slideshow/embed_code/34077117" width="638" height="359"
+                                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                                    style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+                                    allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </cite> 
+                </section>
+
+                <section>
+
+                    <cite class="accordion" id="devoxx13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
+                        <div class="accordion-group">
+                            <div class="accordion-heading" data-toggle="collapse" data-parent="#devoxx13-accordion"
+                            href="#devoxx13-accordion-collapse0" onclick="track('experience','devoxx13-lambda')">
+                            <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>A <span data-skill="Stream Processing">real-time</span> <span
+                            data-skill="Software Architecture">architecture</span>
+                            using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4> <span data-skill="Public Speaking">at</span> <h4>Devoxx <span itemprop="startDate" datetime="2013-11-14">'13</span></h4>, the biggest European <span data-skill="Java">Java</span> conference.
+
+                        </div>
+                        <div id="devoxx13-accordion-collapse0" class="accordion-body collapse">
+                            <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
+                                <iframe src="http://www.slideshare.net/slideshow/embed_code/28272077" width="638" height="359"
+                                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                                style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </cite>
+            </section>
+
+            <section>
+
+                <cite class="accordion" id="jax13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
+                    <div class="accordion-group">
+                        <div class="accordion-heading" data-toggle="collapse" data-parent="#jax13-accordion"
+                        href="#jax13-accordion-collapse0" onclick="track('experience','jax13-lambda')">
+                        <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>A <span data-skill="Stream Processing">real-time</span> <span data-skill="Software Architecture">architecture</span>
+                            using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4> <span data-skill="Public Speaking">at</span> <h4>JAX
+                        London <span itemprop="startDate" datetime="2013-10-29">'13</span></h4>, a <em data-skill="Java">Java
+                        Enterprise</em> and <span data-skill="Big Data">Big Data</span> conference.
+
+                        </div>
+                        <div id="jax13-accordion-collapse0" class="accordion-body collapse">
+                            <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
+                                <iframe src="http://www.slideshare.net/slideshow/embed_code/28211578" width="597" height="486"
+                                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                                style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </cite>
+            </section>
+
+            <section>
+
+                <cite class="accordion" id="sqlug13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
+                    <div class="accordion-group">
+                        <div class="accordion-heading" data-toggle="collapse" data-parent="#sqlug13-accordion"
+                        href="#sqlug13-accordion-collapse0" onclick="track('experience','sqlug13-bigdata')">
+                        <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4><span data-skill="Big Data">Big Data</span>, <span
+                        data-skill="Hadoop">Hadoop</span> and <span data-skill="Hadoop">HDInsight</span></h4>, together with Wesley Backelant of Microsoft Belgium 
+                        <span data-skill="Public Speaking">at the</span> <h4>SQLUser
+                        Group Belgium</h4> meetup of </em><span itemprop="startDate" datetime="2013-02-27">February 2013</span>.
+
+                    </div>
+                    <div id="sqlug13-accordion-collapse0" class="accordion-body collapse">
+                        <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
+                            <iframe src="http://www.slideshare.net/slideshow/embed_code/18190171" width="597" height="486"
                             frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
                             style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen
                             webkitallowfullscreen mozallowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </cite>
-</section>
+            </cite>
+        </section>
 
-<section>
+        <section>
 
-    <cite class="accordion" id="fosdem13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-        <div class="accordion-group">
-            <div class="accordion-heading" data-toggle="collapse" data-parent="#fosdem13-accordion"
-                 href="#fosdem13-accordion-collapse0" onclick="track('experience','fosdem13-nosqlroom')">
-                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> At the <span
+            <cite class="accordion" id="fosdem13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
+                <div class="accordion-group">
+                    <div class="accordion-heading" data-toggle="collapse" data-parent="#fosdem13-accordion"
+                    href="#fosdem13-accordion-collapse0" onclick="track('experience','fosdem13-nosqlroom')">
+                    <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> 
+                    <h4>A
+                    <span data-skill="Stream Processing">real-time</span> architecture using <span data-skill="Hadoop">Hadoop</span> &amp; <span data-skill="Storm">Storm</span></h4>
+                    <span data-skill="Public Speaking">at the</span> 
+                    <span
                     itemprop="startDate" datetime="2013-02-03">2013</span> edition of the <h4 itemprop="name">FOSDEM
-                NoSqlRoom</h4>, an <span data-skill="Technology Evangelism">open source conference</span>, I gave a
-                presentation about <h4><a
-                    href="http://www.slideshare.net/nathan_gs/a-real-time-architecture-using-hadoop-and-storm">A
-                real-time architecture using <span data-skill="Hadoop">Hadoop</span> &amp; <span data-skill="Storm">Storm</span></a>
-            </h4>, and has been viewed over
-                9500 times.
+                    NoSqlRoom</h4>, an <span data-skill="Technology Evangelism">open source conference</span>, it has been viewed over 24500+ times.
 
             </div>
             <div id="fosdem13-accordion-collapse0" class="accordion-body collapse">
                 <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
                     <iframe src="http://www.slideshare.net/slideshow/embed_code/16325561" width="597" height="486"
-                            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                            style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                            allowfullscreen></iframe>
+                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+                    allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -600,646 +301,1050 @@
 
     <cite itemprop="event" itemscope itemtype="http://schema.org/Event">
         <div>
-            At the <span itemprop="startDate" datetime="2013-01-26">2013</span> <h4 itemprop="name">Big Data &amp;
-            Security Conference</h4> of <h4>LSEC</h4>, I gave a presentation about <h4>A Vision on Data</h4>.
+            <h4>A Vision on Data</h4> 
+            <span data-skill="Public Speaking">at the</span> 
+            <span itemprop="startDate" datetime="2013-01-26">2013</span> <h4 itemprop="name">Big Data &amp;
+            Security Conference</h4> of <h4>LSEC</h4>.
         </div>
     </cite>
 </section>
 
-
-<section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-    <div>
-        Since <span itemprop="startDate" datetime="2007-03-08">March 2007</span> I am the <h4 itemprop="jobTitle">
-        Consultant, Managing Director and founder</h4> of <h4 itemprop="name">Servs</h4> BVBA; mainly active as an IT
-        consultant in the field of <span data-skill="Big Data">Big Data</span> &amp; <span
-            data-skill="Hadoop">hadoop</span>,
-        <span data-skill="Web Applications">web applications</span> (<span data-skill="PHP">PHP</span>,
-        <span data-skill="SQL">sql</span>, <span data-skill="Scalability">scalability</span>, <span
-            data-skill="Best Practices">best practices</span>, …), <span data-skill="DevOps">devops</span> &amp; <span
-            data-skill="Linux">linux</span> <span data-skill="System Engineering">system
-        administration</span> and hosting applications.
-    </div>
-</section>
-
 <section>
 
-    <div class="accordion" id="icontroller-lead-accordion">
+    <cite class="accordion" id="ms12-accordion">
         <div class="accordion-group">
-            <div class="accordion-heading" data-toggle="collapse" data-parent="#icontroller-lead-accordion"
-                 href="#icontroller-lead-accordion-collapse0" onclick="track('experience','icontroller')">
-                <div><span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> From March
-                    2011 till April 2012 I worked for <h4>iController</h4>, as <h4>Lead Application and Warehouse
-                        Developer</h4>. We build a <span data-skill="credit management">credit management</span> <span
-                            data-skill="Web Applications">web application</span>, written in <span
-                            data-skill="PHP">PHP</span>.
-                    I managed a small group of developers, took the lead on everything technical and coordinated with
-                    the directors, partners and clients.
-                </div>
-                <div>My job involved lots of <span data-skill="PHP">PHP</span>, <span data-skill="Refactoring">refactoring</span>,
-                    <span data-skill="Scalability">performance tuning</span>, <span data-skill="System Engineering">system
-                        engineering</span> and bits of <span data-skill="Data Analysis">data analysis</span>.
-                </div>
+            <div class="accordion-heading" data-toggle="collapse" data-parent="#ms12-accordion"
+            href="#ms12-accordion-collapse0" onclick="track('experience','ms12-datadevroom')">
+                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> 
+                <h4>Getting More out of Your <span data-skill="Big Data">Big Data</span></h4>
+                <span data-skill="Public Speaking">at</span> <h4>Microsoft Inspirience the Future 2012</h4>.
             </div>
-            <div id="icontroller-lead-accordion-collapse0" class="accordion-body collapse">
-                <div class="accordion-inner">
-                    <ul>
-                        <li>
-                            <h5>Lead Developer iController</h5>
-
-                            <p>I developed our <span data-skill="credit management">credit management</span> <span
-                                    data-skill="Web Applications">web application</span> in <span
-                                    data-skill="PHP">PHP</span>, I
-                                <span data-skill="Project Management">managed</span> a small group of developers, took
-                                the <span data-skill="Software Architecture">lead on everything technical</span> and
-                                coordinated with the directors, partners and clients.</p>
-
-                            <div>
-                                <span class="skill btn btn-small disabled" data-skill="Project Management">Project Management</span>
-                                <span class="skill btn btn-small disabled" data-skill="Requirement Analysis">Requirement Analysis</span>
-                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
-                                <span class="skill btn btn-small disabled" data-skill="symfony">symfony</span>
-                                <span class="skill btn btn-small disabled" data-skill="ORM">Propel</span>
-                                <span class="skill btn btn-small disabled" data-skill="PHPUnit">PHPUnit</span>
-                                <span class="skill btn btn-small disabled" data-skill="FPDF">FPDF</span>
-                                <span class="skill btn btn-small disabled" data-skill="Jenkins">Jenkins</span>
-                                <span class="skill btn btn-small disabled" data-skill="ant">ant</span>
-                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
-                                <span class="skill btn btn-small disabled" data-skill="MySQL">MySQL</span>
-                                <span class="skill btn btn-small disabled" data-skill="SQL">SQL</span>
-                                <span class="skill btn btn-small disabled" data-skill="jQuery">jQuery</span>
-                                <span class="skill btn btn-small disabled" data-skill="JavaScript">Prototype</span>
-                                <span class="skill btn btn-small disabled" data-skill="PDO">PDO</span>
-                                <span class="skill btn btn-small disabled" data-skill="XML">XML</span>
-                                <span class="skill btn btn-small disabled" data-skill="XML">XSchema</span>
-                            </div>
-                        </li>
-                        <li>
-                            <h5>iController Server Setup</h5>
-
-                            <p>I <span data-skill="Virtualisation">virtualized</span> and automated the whole
-                                iController server setup using <span
-                                        data-skill="Puppet">Puppet</span>. I
-                                created and extended several open-source <span data-skill="Puppet">Puppet</span>
-                                modules.</p>
-
-                            <div>
-                                <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
-                                <span class="skill btn btn-small disabled" data-skill="Virtualisation">libvirt</span>
-                                <span class="skill btn btn-small disabled" data-skill="Virtualisation">KVM</span>
-                                <span class="skill btn btn-small disabled" data-skill="Linux">Ubuntu</span>
-                                <span class="skill btn btn-small disabled" data-skill="MySQL">MySQL</span>
-                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
-                                <span class="skill btn btn-small disabled" data-skill="Release Management">Release Management</span>
-                                <span class="skill btn btn-small disabled" data-skill="Jenkins">Jenkins</span>
-                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
-                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon S3</span>
-                                <span class="skill btn btn-small disabled" data-skill="DNS">BIND</span>
-                                <span class="skill btn btn-small disabled" data-skill="ssh">ssh</span>
-                                <span class="skill btn btn-small disabled" data-skill="LVM">LVM</span>
-                            </div>
-                        </li>
-                        <li>
-                            <h5>iSubscriber</h5>
-
-                            <p>Creating a small <span data-skill="Web Applications">web application</span> to organize
-                                and input subscriptions into <span data-skill="Accountancy Software">Octopus</span>.
-                            </p>
-
-                            <div>
-                                <span class="skill btn btn-small disabled" data-skill="MySQL">MySQL</span>
-                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
-                                <span class="skill btn btn-small disabled" data-skill="symfony">symfony</span>
-                            </div>
-                        </li>
-                        <li>
-                            <h5>Various clients</h5>
-
-                            <div class="subtitle">From July till November 2011.</div>
-                            <ol>
-                                <li>Analyzing the requirements, estimating and taking the lead.</li>
-                                <li><span data-skill="ETL">Extracting</span> data from various Accounting software to
-                                    iController.
-                                </li>
-                            </ol>
-                            <div>
-                                <span class="skill btn btn-small disabled" data-skill="Accountancy Software">Accounting Software</span>
-                                <span class="skill btn btn-small disabled" data-skill="AS400">AS400</span>
-                                <span class="skill btn btn-small disabled" data-skill="ETL">ETL</span>
-                                <span class="skill btn btn-small disabled" data-skill="XML">XML</span>
-                                <span class="skill btn btn-small disabled" data-skill="XML">XSchema</span>
-                                <span class="skill btn btn-small disabled" data-skill="Oracle">Oracle</span>
-                                <span class="skill btn btn-small disabled" data-skill="SQL">SQL</span>
-                                <span class="skill btn btn-small disabled" data-skill="MSSQL">MSSQL</span>
-                                <span class="skill btn btn-small disabled"
-                                      data-skill="Accountancy Software">Navision</span>
-                            </div>
-                        </li>
-                        <li>
-                            <h5>LeasePlan</h5>
-
-                            <div class="subtitle">From July till November 2011.</div>
-                            <ol>
-                                <li>Analyzing the requirements, coaching my co-developers and coordinating with the
-                                    client.
-                                </li>
-                                <li><span data-skill="ETL">Extracting</span> data from and linking <span
-                                        data-skill="SAP FI">SAP FI</span> to
-                                    iController.
-                                </li>
-                                <li>Developing a custom workflow engine.</li>
-                            </ol>
-                            <div>
-                                <span class="skill btn btn-small disabled" data-skill="SAP FI">SAP FI</span>
-                                <span class="skill btn btn-small disabled" data-skill="AS400">AS400</span>
-                                <span class="skill btn btn-small disabled" data-skill="ETL">ETL</span>
-                                <span class="skill btn btn-small disabled" data-skill="XML">XML</span>
-                                <span class="skill btn btn-small disabled" data-skill="SQL">SQL</span>
-                            </div>
-                        </li>
-                    </ul>
-
+            <div id="ms12-accordion-collapse0" class="accordion-body collapse">
+                <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
+                    <iframe src="http://www.slideshare.net/slideshow/embed_code/15311868" width="597" height="486"
+                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+                    allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </div>
+    </cite>
 </section>
 
-<section>
-    <div>From April till August 2011 I worked as a consultant for <h4>Truvo</h4>, the Belgian yellow pages, doing a <h4>
-        hadoop deduplication</h4> job. I used <span data-skill="Hadoop">Hadoop</span> &amp; <span
-            data-skill="Hadoop Pig">Hadoop Pig</span>, wrote custom <span data-skill="Hadoop Pig">UDFs</span> in
-        <span data-skill="Java">Java</span> for <span data-skill="Machine Learning">Ngram</span> matching and solved
-        performance
-        issues. At first <span data-skill="Amazon AWS">Amazon Elastic
-            MapReduce</span> was used, later I setup a <span data-skill="Hadoop">Hadoop</span> cluster.
-    </div>
-</section>
 
 <section>
 
     <cite class="accordion" id="fosdem-accordion">
         <div class="accordion-group">
             <div class="accordion-heading" data-toggle="collapse" data-parent="#fosdem-accordion"
-                 href="#fosdem-accordion-collapse0" onclick="track('experience','fosdem-datadevroom')">
-                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> At the 2011 edition
-                of the <h4>FOSDEM DataDevRoom</h4>, an <span
-                    data-skill="Technology Evangelism">open source conference</span>, I gave a presentation about <h4>
-                <a href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">Hadoop Pig: MapReduce
-                    the easy way</a></h4>, it was featured on the front page of <a
-                    href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">slideshare.net</a> and
-                has been viewed over 13000 times.
+            href="#fosdem-accordion-collapse0" onclick="track('experience','fosdem-datadevroom')">
+            <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> 
+            <h4>Hadoop Pig: MapReduce the easy way</h4>
+            <span data-skill="Public Speaking">at the</span> 2011 edition
+            of the <h4>FOSDEM DataDevRoom</h4>, an <span data-skill="Technology Evangelism">open source conference</span>, it was featured on the front page of <a
+                href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">slideshare.net</a> and
+                has been viewed over 18000 times.
 
             </div>
             <div id="fosdem-accordion-collapse0" class="accordion-body collapse">
                 <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
                     <iframe src="http://www.slideshare.net/slideshow/embed_code/6842393" width="597" height="486"
-                            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                            style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                            allowfullscreen></iframe>
+                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
+                    allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </cite>
 </section>
 
-<section>
-    <div class="accordion" id="netlog-accordion">
-        <div class="accordion-group">
-            <div class="accordion-heading" data-toggle="collapse" data-parent="#netlog-accordion"
-                 href="#netlog-accordion-collapse0" onclick="track('experience','netlog')">
-                <div><span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> From September
-                    2010 till February 2011 I was employed at <h4>Netlog</h4> as a <h4>Warehouse and Web Developer</h4>,
-                    creating an <span data-skill="Big Data">analytical warehouse</span> based on <span
-                            data-skill="Hbase">Hbase</span>. I also created large parts of the
-                    <span data-skill="Big Data">processing infrastructure</span> using <span
-                            data-skill="Hadoop">Hadoop</span> and <span data-skill="Hadoop Pig">Hadoop Pig</span>. I
-                    also advised on
-                    new technologies, <span data-skill="git">git</span> migration, <span data-skill="Best Practices">best practices</span>
-                    &amp; <span
-                            data-skill="Unit Testing">unit tests</span>. Netlog is a social community network, with over
-                    70 million members, mainly active in Europe and the Arabic world.
-                </div>
-            </div>
-            <div id="netlog-accordion-collapse0" class="accordion-body collapse">
-                <div class="accordion-inner">
-                    <ul>
-                        <li>
-                            <h5>Warehouse Developer</h5>
 
-                            <p>Setting up the <span data-skill="Hadoop">Hadoop</span> infrastructure, <span
-                                    data-skill="Data Analysis">analyzing data</span>
-                                with <span data-skill="Hadoop Pig">Hadoop Pig</span>
-                                and creating a dashboard using <span data-skill="Symfony2">Symfony2</span> and <span
-                                        data-skill="Hbase">Hbase</span> &amp;
-                                <span data-skill="Thrift">Thrift</span>.</p>
+</div>
+</div>                
+</div>                
+</section>
 
+<section class="experience">
+    <h2>experience</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="span12">                        
+                <section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                    <div class="accordion" id="virdata-accordion">
+                        <div class="accordion-group">
+                            <div class="accordion-heading" data-toggle="collapse" data-parent="#virdata-accordion"
+                            href="#virdata-accordion-collapse0" onclick="track('experience','virdata')">
+                            <div><span class="dropdown btn btn-mini"><i class="icon-arrow-down icon-grey"></i></span> As from <span
+                                itemprop="startDate" datetime="2013-10-01">October 2013</span> I work for <h4 itemprop="name">
+                                Virdata</h4> a start-up funded by <h4>Technicolor</h4>, as a <h4 itemprop="jobTitle">sr. Big Data and IoT Engineer</h4>, previously as a <h4>DevOps Engineer</h4>. Virdata is an <span data-skill="IoT">Internet of Things</span> <span data-skill="Cloud">Cloud</span> platform, scalable to millions of devices, from tiny sensors to TVs to Cars.
+                            </div>
                             <div>
-                                <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
+                                I work on our <span data-skill="Big Data">Data Processing</span> stack, on top of <span data-skill="Spark">Spark</span> and <span data-skill="Spark Streaming">Spark Streaming</span>, mostly in <span data-skill="Scala">Scala</span>. I also worked as the lead on our <span data-skill="Spark">Spark</span> <span data-skill="Cloud">as a Service</span> <span data-skill="Cloud">Infrastructure</span>.
+                            </div>
+                        </div>
+                        <div id="virdata-accordion-collapse0" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <ul>
+                                    <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                        <h5><span data-skill="Big Data">Data</span> Engineer</h5>
+
+                                        <div class="subtitle">From <span itemprop="startDate"
+                                           datetime="2014-01-01">January 2014</span>.
+                                       </div>
+                                       <p>
+                                        As a <span data-skill="Big Data">Big Data</span> Engineer, I am working on our <span data-skill="Big Data">Data Processing</span> and <span data-skill="Analytics">Analytics</span> stack, creating a <span data-skill="Lambda Architecture">Lambda Architecture</span>. Working with <span data-skill="Spark">Spark</span>, <span data-skill="Spark Streaming">Spark Streaming</span>, <span data-skill="Storm">Storm</span>, <span data-skill="Cassandra">Cassandra</span>, <span data-skill="Kafka">Kafka</span> and <span data-skill="HDFS">HDFS</span>. We mostly use <span data-skill="Scala">Scala</span> and bits of <span data-skill="Java">Java</span>. We deploy using <span data-skill="Chef">Chef</span> on <span data-skill="Mesos">Mesos</span> in the <span data-skill="Cloud">cloud</span>. 
+                                    </p>
+
+                                    <div>
+                                        <span class="skill btn btn-small disabled" data-skill="IoT">IoT</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Big Data">Big Data</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Analytics">Analytics</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Lambda Architecture">Lamdba Architecture</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Software Architecture">Software Architecture</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Scala">Scala</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Spark">Spark</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Spark Streaming">Spark Streaming</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
+
+                                        <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Cassandra">Cassandra</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Mongo">Mongo</span>
+
+                                        <span class="skill btn btn-small disabled" data-skill="Mesos">Mesos</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Docker">Docker</span>                                                   
+                                    </div>
+                                </li>
+
+                                <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                    <h5><span data-skill="Spark">Spark</span> <span data-skill="Cloud">as a Service</span> Lead</h5>
+
+                                    <div class="subtitle">From <span itemprop="startDate"
+                                       datetime="2014-05-01">May 2014</span> till <span itemprop="endDate" datetime="2014-12-31">December 2014</span>.
+                                   </div>
+                                   <p>
+                                    We created a <span data-skill="Spark">Spark</span> <span data-skill="Cloud">as a Service</span>,
+                                    where Data Scientists can on demand request a <span data-skill="Spark">Spark</span> and <span data-skill="Mesos">Mesos</span> cluster in the <span data-skill="Cloud">Cloud</span>.
+                                    We leveraged our existing <span data-skill="Chef">Chef</span> &amp; <span data-skill="Mesos">Mesos</span> architecture. We also added tools for ad hoc <span data-skill="Analytics">analytics</span>, like <span data-skill="IPython">IPython</span> <span data-skill="Spark">PySpark</span> &amp; <span data-skill="Scala">Scala</span> 
+                                    <span data-skill="Spark">Spark</span> notebooks. It is also possible to launch <span data-skill="Docker">Docker</span> containers.
+
+                                </p>
+
+                                <div>                                                    
+                                    <span class="skill btn btn-small disabled" data-skill="IoT">IoT</span>
+                                    <span class="skill btn btn-small disabled" data-skill="DevOps">DevOps</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Big Data">Big Data</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Analytics">Analytics</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Scala">Scala</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Python">Python</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Spark">Spark</span>
+                                    <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
+
+                                    <span class="skill btn btn-small disabled" data-skill="Chef">Chef</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Mesos">Mesos</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon EC2</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Softlayer">Softlayer</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
+                                    <span class="skill btn btn-small disabled" data-skill="Docker">Docker</span>
+
+                                    <span class="skill btn btn-small disabled" data-skill="Project Management">Project Management</span>                                                        
+                                </div>
+                            </li>
+
+                            <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                <h5><span data-skill="Cloud">Cloud</span> &amp; <span class="skill">DevOps</span> Engineer</h5>
+
+                                <div class="subtitle">From <span itemprop="startDate"
+                                   datetime="2013-10-01">October 2013</span> till <span itemprop="endDate" datetime="2013-12-31">December 2013</span>.
+                               </div>
+                               <p>
+                                   As a <span data-skill="Big Data">Big Data</span> and <span data-skill="DevOps">DevOps Engineer</span>, I was responsible for the <span data-skill="Scalability">scalability</span>, <span data-skill="Continuous Ingegration">quality</span> and <span data-skill="Operational Intelligence">Operational Intelligence</span> of a new platform. I introduced the <span data-skill="Continuous Integration">Continuous Integration</span>
+                                   platform, using <span data-skill="Jenkins">Jenkins</span>,
+                                   added <span data-skill="Unit Testing">unit tests</span>. The platform is build using <span
+                                   data-skill="Chef">Chef</span>,
+                                   tries to be <span data-skill="Cloud">cloud independent</span> (runs on <span
+                                   data-skill="Amazon AWS">Amazon AWS</span>,
+                                   <span data-skill="Softlayer">Softlayer</span>, ...).
+                               </p>
+
+                               <div>
+                                <span class="skill btn btn-small disabled" data-skill="DevOps">DevOps</span>
+                                <span class="skill btn btn-small disabled" data-skill="IoT">IoT</span>
+                                <span class="skill btn btn-small disabled" data-skill="Big Data">Big Data</span>
+                                <span class="skill btn btn-small disabled" data-skill="Scala">Scala</span>
+                                <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
+                                <span class="skill btn btn-small disabled" data-skill="Jenkins">Jenkins</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
+                                <span class="skill btn btn-small disabled" data-skill="Spark">Spark</span>
                                 <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
-                                <span class="skill btn btn-small disabled" data-skill="Hadoop Pig">Hadoop Pig</span>
-                                <span class="skill btn btn-small disabled" data-skill="Syslog">Syslog</span>
-                                <span class="skill btn btn-small disabled" data-skill="Thrift">Thrift</span>
-                                <span class="skill btn btn-small disabled" data-skill="Hive">Hive</span>
-                                <span class="skill btn btn-small disabled" data-skill="Hbase">Hbase</span>
-                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
-                                <span class="skill btn btn-small disabled" data-skill="Symfony2">Symfony2</span>
-                                <span class="skill btn btn-small disabled"
-                                      data-skill="Data Visualization">Google Graphs</span>
-                                <span class="skill btn btn-small disabled" data-skill="PDO">PDO</span>
-                                <span class="skill btn btn-small disabled" data-skill="Memcached">Memcached</span>
-                                <span class="skill btn btn-small disabled" data-skill="Redis">Redis</span>
-                                <span class="skill btn btn-small disabled" data-skill="MySQL">MySQL</span>
-                                <span class="skill btn btn-small disabled" data-skill="SQL">SQL</span>
+                                <span class="skill btn btn-small disabled" data-skill="ElasticSearch">ElasticSearch</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Ruby">Ruby</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Chef">Chef</span>
+                                <span class="skill btn btn-small disabled" data-skill="Mesos">Mesos</span>
+                                <span class="skill btn btn-small disabled" data-skill="Scalability">Scalability</span>
+                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon AWS</span>
+                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon IAM</span>
+                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon EC2</span>
+                                <span class="skill btn btn-small disabled" data-skill="Softlayer">Softlayer</span>
+                                <span class="skill btn btn-small disabled" data-skill="Vagrant">Vagrant</span>
+                                <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
+                                <span class="skill btn btn-small disabled" data-skill="Docker">Docker</span>
                             </div>
                         </li>
-                        <li>
-                            <h5>Twoo Core Framework Developer</h5>
-
-                            <p>Creating a new <span data-skill="PHP">PHP</span> Framework (no existing frameworks were
-                                allowed) as base for
-                                the new dating site Twoo. I advised on <span data-skill="Design Patterns">Design Patterns</span>
-                                and <span data-skill="Best Practices">Best
-                                    Practices</span>. I developed the <span data-skill="Security">Security</span> and
-                                <span data-skill="Security">ACL</span> platform as well.
-                            </p>
-
-                            <div>
-                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
-                                <span class="skill btn btn-small disabled" data-skill="HTTP">HTTP</span>
-                                <span class="skill btn btn-small disabled"
-                                      data-skill="Web Applications">Request routing</span>
-                                <span class="skill btn btn-small disabled" data-skill="Security">Security</span>
-                                <span class="skill btn btn-small disabled" data-skill="Security">ACL</span>
-                                <span class="skill btn btn-small disabled"
-                                      data-skill="Design Patterns">Design Patterns</span>
-                                <span class="skill btn btn-small disabled"
-                                      data-skill="Best Practices">Best Practices</span>
-                                <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
-                                <span class="skill btn btn-small disabled" data-skill="PHPUnit">PHPUnit</span>
-                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
-                            </div>
-                        </li>
-                        <li>
-                            <h5>Web Developer (Netlog)</h5>
-
-                            <p>I introduced an open source <span data-skill="Event Processing">Event framework</span>
-                                and
-                                presented it to my
-                                co-developers. I introduced new application log functionality, for logging to
-                                <span data-skill="Hadoop">Hadoop</span>. I <span data-skill="Technology Evangelism">evangelized</span>
-                                <span data-skill="Unit Testing">Unit tests</span>,
-                                including an initial implementation
-                                and presentations. I evaluated <span data-skill="Redis">Redis</span>, <span
-                                        data-skill="Memcached">Memcached</span> &amp; <span
-                                        data-skill="Membase">Membase</span>
-                                (now Couchbase).</p>
-
-                            <div>
-                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
-                                <span class="skill btn btn-small disabled" data-skill="PHPUnit">PHPUnit</span>
-                                <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
-                                <span class="skill btn btn-small disabled" data-skill="Syslog">Syslog</span>
-                                <span class="skill btn btn-small disabled" data-skill="Event Processing">Event Processing</span>
-                                <span class="skill btn btn-small disabled" data-skill="MySQL">MySQL</span>
-                                <span class="skill btn btn-small disabled"
-                                      data-skill="Design Patterns">Design Patterns</span>
-                                <span class="skill btn btn-small disabled"
-                                      data-skill="Best Practices">Best Practices</span>
-                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
-                                <span class="skill btn btn-small disabled" data-skill="svn">svn</span>
-                                <span class="skill btn btn-small disabled" data-skill="git">git-svn</span>
-                                <span class="skill btn btn-small disabled" data-skill="Memcached">Memcached</span>
-                                <span class="skill btn btn-small disabled" data-skill="Redis">Redis</span>
-                                <span class="skill btn btn-small disabled" data-skill="Performance testing">Performance testing</span>
-                                <span class="skill btn btn-small disabled" data-skill="Membase">Membase</span>
-                            </div>
-                        </li>
-
-                    </ul>
-
+                    </ul>                        
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
-<section>
-    <div>From October 2009 to August 2010 I started working at <h4>iController</h4>, a small SME in Ghent, as <h4>web
-        application developer</h4>. I developed a new, greatly improved debtor & credit management web application. We
-        used the <span data-skill="symfony">symfony</span> framework as a starting point to create a stable and easy to
-        maintain
-        application.
-    </div>
-</section>
 
-<section>
-    <div>In 2009 I was active as a consultant to a Dutch services organization. The assignment mainly consisted of <h4>
-        creating a link between existing systems and a new website</h4>.
-    </div>
-</section>
+<section itemprop="event" itemscope itemtype="http://schema.org/Event">
+    At the <span itemprop="startDate" datetime="2013-12-01">end of 2013</span> I co-founded <a href="http://lambda-architecture.net">lambda-architecture.net</a>, a website about the <h4 data-skill="Lambda Architecture">Lambda Architecture</h4>. The <span data-skill="Lambda Architecture">Lambda Architecture</span> is a <span data-skill="Software Engineering">data-processing architecture</span> designed to handle <span data-skill="Big Data">Big Data</span> by combining both batch- and <span data-skill="Stream Processing">stream-processing</span>, while attempting to balance latency, throughput, and fault-tolerance. Batch Processing is used to provide comprehensive and accurate (although slightly out of date) views, while simultaneously using <span data-skill="Stream Processing">real-time</span> <span data-skill="Stream Processing">stream processing</span> to bridge the gap.
+</section>      
 
-<section>
-    <div>
-        From 2008 till present I perform various <h4>short term consultancy</h4> tasks commissioned by <h4>Sinergio</h4>
-        . For a <h5>semi government organisation</h5> I set up a new <span data-skill="Java">tomcat</span> server and
-        did a general check up
-        on their <span data-skill="Linux">Linux</span> servers. For another company I configured an <span
-            data-skill="ASP.Net">ASP.Net</span> application and installed
-        an <span data-skill="IIS">IIS</span> server. For <h5>Sio Hosting</h5> (Formerly Sinergio Hosting) I planned and
-        executed the move
-        from traditional servers to a <span data-skill="Virtualisation">virtualized</span> <span
-            data-skill="Virtualisation">xen cluster</span>.
-        I also check the integrity and <span data-skill="Security">security</span>
-        of their <span data-skill="Web Hosting">hosting platform</span> on a regular basis. I advise them on
-        strategic planning.
-    </div>
-</section>
+<section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+    <div class="accordion" id="datacrunchers-accordion">
+        <div class="accordion-group">
+            <div class="accordion-heading" data-toggle="collapse" data-parent="#datacrunchers-accordion"
+            href="#datacrunchers-accordion-collapse0" onclick="track('experience','datacrunchers')">
+            <div><span class="dropdown btn btn-mini"><i class="icon-arrow-down icon-grey"></i></span> As from <span
+                itemprop="startDate" datetime="2012-04-27">April 2012</span> till <span
+                itemprop="startDate" datetime="2012-04-27">March 2014</span> I worked for <h4 itemprop="name">
+                DataCrunchers</h4>, as a <h4 itemprop="jobTitle">Hadoop and Big Data Consultant</h4>. DataCrunchers
+                is the leading Belgian consultancy firm around everything <span data-skill="Big Data">Big Data</span>. I
+                co-developed on our internal <span data-skill="Machine Learning">Semantic Analysis Engine</span> on top of <span data-skill="Storm">Storm</span>, in <span data-skill="Java">Java</span>, I
+                <span data-skill="Public Speaking">co-presented</span> our <span data-skill="Hadoop">Hadoop Ecosystem course</span>, I created a new
+                website using <span data-skill="Drupal">Drupal</span> and I was responsible for our <span>Microsoft</span> <span data-skill="Big Data">Big Data</span> partnership.
+            </div>
+            <div>I have been working for the following clients: <a href="#dc-technicolor">Technicolor</a>, <a
+                href="#dc-macq-awv">Flemish Government, AWV (Macq)</a>, <a href="#dc-sms">a social media startup</a>, <a
+                href="#dc-hshmrk">HSHMRK</a> &amp; <a href="#dc-ewals">Ewals Intermodal</a>.
+            </div>
+        </div>
+        <div id="datacrunchers-accordion-collapse0" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <ul>
+                    <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                        <h5><span class="skill">Big Data</span> &amp; <span class="skill">DevOps</span> Engineer,
+                            Technicolor</h5>
 
-<section>
-    <div>
-        <div>During 2004 – 2010 I advised on and co-developed for <h4>4levels</h4> several websites, backend systems and
-            <span data-skill="Web Applications">web applications</span>.
+                            <div class="subtitle">From <span itemprop="startDate"
+                               datetime="2013-10-01">October 2013</span>.
+                           </div>
+                           <p>As a <span data-skill="Big Data">Big Data</span> and <span data-skill="DevOps">DevOps Engineer</span>, I was responsible for the <span data-skill="Scalability">scalability</span>, <span data-skill="Continuous Ingegration">quality</span> and <span data-skill="Operational Intelligence">Operational Intelligence</span> of a new platform. I introduced the <span data-skill="Continuous Integration">Continuous Integration</span>
+                            platform, using <span data-skill="Jenkins">Jenkins</span>,
+                            added <span data-skill="Unit Testing">unit tests</span>. The platform is build using <span
+                            data-skill="Chef">Chef</span>,
+                            tries to be <span data-skill="Cloud">cloud independent</span> (runs on <span
+                            data-skill="Amazon AWS">Amazon AWS</span>,
+                            <span data-skill="Softlayer">Softlayer</span>, ...).</p>
+
+                            <div>
+                                <span class="skill btn btn-small disabled" data-skill="DevOps">DevOps</span>
+                                <span class="skill btn btn-small disabled" data-skill="IoT">IoT</span>
+                                <span class="skill btn btn-small disabled" data-skill="Big Data">Big Data</span>
+                                <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
+                                <span class="skill btn btn-small disabled" data-skill="Scala">Scala</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
+                                <span class="skill btn btn-small disabled" data-skill="Jenkins">Jenkins</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
+                                <span class="skill btn btn-small disabled" data-skill="Spark">Spark</span>
+                                <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Ruby">Ruby</span>
+
+                                <span class="skill btn btn-small disabled" data-skill="Chef">Chef</span>
+                                <span class="skill btn btn-small disabled" data-skill="Scalability">Scalability</span>
+                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon AWS</span>
+                                <span class="skill btn btn-small disabled" data-skill="Cloud">Amazon EC2</span>
+                                <span class="skill btn btn-small disabled" data-skill="Softlayer">Softlayer</span>
+                                <span class="skill btn btn-small disabled" data-skill="Vagrant">Vagrant</span>
+                                <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
+                            </div>
+                        </li>
+                        <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                            <h5>Project Manager ABBAMelda, Flemish Government (Macq)</h5>
+
+                            <div class="subtitle">From <span itemprop="startDate" datetime="2013-06-25">June 2013</span>
+                                till <span itemprop="endDate" datetime="2013-09-30">October 2013.</span></div>
+                                <p><span data-skill="Project Management">Project Manager</span> and <span
+                                    data-skill="Lead Developer">Lead Developer</span> of ABBAMelda, a ticket and maintenance management system, originally developed by Siemens.
+                                    ABBAMelda consists of a <span data-skill="Java">Java</span> <span data-skill="Java">EE</span> backend, an <span data-skill="SQL">Informix</span>
+                                    database, with a <span data-skill="PHP">PHP</span>/<span data-skill="jQuery">jQuery</span> frontend. Under my lead, we created an enhanced <span data-skill="Mobile Development">Tablet</span> intranet site, improved the
+                                    bulk upload possibilities, additional <span data-skill="REST">REST</span> services, introduced <span
+                                    data-skill="Unit Testing">unit
+                                    testing</span> and switched to <span data-skill="git">git</span>. I was responsible for <span
+                                    data-skill="Project Management">coordinating</span> with different teams within
+                                    the Flemish Government, as well as the contractor (Macq).</p>
+
+                                    <div>
+                                        <span class="skill btn btn-small disabled" data-skill="Software Architecture">Software Architecture</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Project Management">Project Management</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Project Management">Agile</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Project Management">Scrum</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
+                                        <span class="skill btn btn-small disabled" data-skill="JPA">JPA3</span>
+                                        <span class="skill btn btn-small disabled" data-skill="JPA">EclipseLink</span>
+                                        <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
+
+                                        <span class="skill btn btn-small disabled" data-skill="SQL">Informix</span>
+                                        <span class="skill btn btn-small disabled" data-skill="REST">REST</span>
+                                        <span class="skill btn btn-small disabled" data-skill="SOAP">SOAP</span>
+                                        <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
+                                        <span class="skill btn btn-small disabled" data-skill="jQuery">jQuery</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Refactoring">Refactoring</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
+                                        <span class="skill btn btn-small disabled" data-skill="Mobile Development">Mobile Development</span>
+                                        <span class="skill btn btn-small disabled" data-skill="ETL">ETL</span>
+
+                                    </div>
+                                </li>
+                                <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                    <h5>A social media startup</h5>
+
+                                    <div class="subtitle">From <span itemprop="startDate"
+                                       datetime="2013-01-31">February 2013</span> till <span
+                                       itemprop="endDate" datetime="2013-06-15">June 2013.</span></div>
+                                       <p>Defining and implementing the <span data-skill="Software Architecture">architecture</span>
+                                        for a <span class="skill">social media</span> <span
+                                        data-skill="Data Analysis">analytics</span>
+                                        startup. I designed and implemented a <span data-skill="Lambda Architecture">Lambda Architecture</span> (in <span
+                                        data-skill="Java">Java</span>), on
+                                        top of <span data-skill="Storm">Storm</span> and <span data-skill="Hadoop">Hadoop</span>, using <span
+                                        data-skill="Redis">Redis</span>, <span data-skill="NoSQL">Voldemort</span> as well as <span data-skill="Thrift">Thrift</span>.</p>
+
+                                        <div>
+                                            <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Spring">Spring DI</span>
+                                            <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Thrift">Thrift</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Kafka">Kafka</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Zookeeper">Zookeeper</span>
+                                            <span class="skill btn btn-small disabled" data-skill="NoSQL">Voldemort</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Redis">Redis</span>
+                                            <span class="skill btn btn-small disabled" data-skill="JSoup">JSoup</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Guava">Guava</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Unit Testing">jUnit</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
+                                            <span class="skill btn btn-small disabled" data-skill="DevOps">Nagios</span>
+                                            <span class="skill btn btn-small disabled" data-skill="DevOps">Logstash</span>
+                                            <span class="skill btn btn-small disabled" data-skill="DevOps">Ganglia</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Linux">Linux</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Software Architecture">Software Architecture</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Lambda Architecture">Lambda Architecture</span>
+                                        </div>
+                                    </li>
+                                    <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                        <h5>HSHMRK</h5>
+
+                                        <div class="subtitle">From <span itemprop="startDate"
+                                           datetime="2012-12-08">December 2012</span> till <span
+                                           itemprop="endDate" datetime="2013-01-31"> January 2013</span>.
+                                       </div>
+                                       <p>Defining and implementing the architecture for hshmrk, a
+                                        <span data-skill="Data Visualization">data visualization</span> startup. The application backend is written as a
+                                        <span data-skill="Jersey">Jersey</span> <span data-skill="REST">REST</span> (<span data-skill="Java">Java</span>),
+                                        service, using <span data-skill="ElasticSearch">ElasticSearch</span> as
+                                        storage. The frontend is an <span data-skill="AngularJS">AngularJS</span> and <span data-skill="D3">D3</span>
+                                        web application. This approach allowed us to easily scale.</p>
+
+                                        <div>
+                                            <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
+                                            <span class="skill btn btn-small disabled" data-skill="ElasticSearch">ElasticSearch</span>
+                                            <span class="skill btn btn-small disabled" data-skill="AngularJS">AngularJS</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Data Visualization">D3</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Jersey">Jersey</span>
+                                            <span class="skill btn btn-small disabled" data-skill="maven">maven</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Spring">Spring DI</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Unit Testing">jUnit</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Data Visualization">Data Visualization</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Software Architecture">Software Architecture</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
+                                        </div>
+                                    </li>
+                                    <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                        <h5>Ewals Intermodal</h5>
+
+                                        <div class="subtitle">From <span itemprop="startDate"
+                                           datetime="2012-10-01">October 2012</span> till <span itemprop="endDate" datetime="2013-06-01">June 2013</span>.
+                                       </div>
+                                       <p>Developing <span data-skill="Oracle">Oracle</span> database views for integration of <span data-skill="Greencat">Greencat</span>
+                                        and <span data-skill="Crystal Reports">Crystal
+                                        Reports</span>.</p>
+
+                                        <div>
+                                            <span class="skill btn btn-small disabled" data-skill="SQL">Oracle</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Greencat">Greencat</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Data Visualization">Crystal Reports</span>
+                                            <span class="skill btn btn-small disabled" data-skill="ETL">ETL</span>
+                                        </div>
+                                    </li>
+                                    <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                        <h5 itemprop="name">Microsoft Big Data Partnership</h5>
+
+                                        <div>
+                                            <span data-skill="Client &amp; Partner Relationships">Responsible for the contact</span> with Microsoft. <span data-skill="Public Speaking">Speaker</span> at the Microsoft Inspirience Day about <span data-skill="Big Data">Big Data</span>.
+                                        </div>
+                                        <div>
+                                            <span class="skill btn btn-small disabled" data-skill="Client &amp; Partner Relationships">Client &amp; Partner Relationships</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Public Speaking">Public Speaking</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Business Strategy">Business Strategy</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Technology Evangelism">Technology Evangelism</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Big Data">Big Data</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Azure">Azure</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
+                                        </div>
+                                    </li>
+                                    <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                        <h5 itemprop="name">Solution Architect</h5>
+
+                                        <p>
+                                            Discussions, <span data-skill="Public Speaking">presentations</span> and conversations with <span data-skill="Client &amp; Partner Relationships">prospects</span>, <span data-skill="Client &amp; Partner Relationships">clients</span> and <span data-skill="Client &amp; Partner Relationships">partners</span>, discussing potential <span data-skill="Business Strategy">Business Ideas</span> and <span data-skill="Software Architecture">architectures</span>. <span data-skill="Technology Evangelism">Evangelizing</span> the Belgium market for <span data-skill="Big Data">Big Data</span>.
+                                        </p>
+                                        <div>
+                                            <span class="skill btn btn-small disabled" data-skill="Client &amp; Partner Relationships">Client &amp; Partner Relationships</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Public Speaking">Public Speaking</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Business Strategy">Business Strategy</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Technology Evangelism">Technology Evangelism</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Big Data">Big Data</span>
+                                            <span class="skill btn btn-small disabled" data-skill="IoT">IoT</span>
+                                        </div>
+                                    </li>
+                                    <li itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                        <h5>Internal Projects</h5>
+                                        <ol>
+                                            <li>
+                                                I co-developed on our internal <span data-skill="Machine Learning">Semantic Analysis Engine</span> on top of <span data-skill="Storm">Storm</span>
+                                                and <span data-skill="ElasticSearch">ElasticSearch</span>. The web interface is build around a <span
+                                                data-skill="Java">Java</span>,
+                                                <span data-skill="Jersey">Jersey</span> backend and a frontend in <span data-skill="AngularJS">AngularJS</span>.
+                                            </li>
+
+                                            <li>Setting up an internal <span data-skill="Hadoop">Hadoop</span>, <span
+                                                data-skill="ElasticSearch">ElasticSearch</span> &amp; <span data-skill="Storm">Storm</span> test
+                                                cluster using <span data-skill="Puppet">Puppet</span> and <span
+                                                data-skill="Cloudera Manager">Cloudera Manager</span>. I created some
+                                                <span data-skill="Puppet">Puppet</span> modules to manage <a
+                                                href="https://github.com/nathan-gs/puppet-storm"><span data-skill="Storm">Storm</span></a>, <a
+                                                href="https://github.com/nathan-gs/puppet-elasticsearch"><span
+                                                data-skill="ElasticSearch">ElasticSearch</span></a>
+                                                and <a href="https://github.com/nathan-gs/puppet-ganglia"><span data-skill="Ganglia">Ganglia</span></a>.
+                                            </li>
+                                            <li>I co-developed on <span data-skill="IHarvest">IHarvest</span> project. It is a <span
+                                                data-skill="Scalability">distributed</span>
+                                                <span data-skill="HTTP">HTTP</span> <em>Fetcher &amp; Parser</em> on top
+                                                of <span data-skill="Storm">Storm</span>, written in <span data-skill="Java">Java</span>, the
+                                                results are stored on <span data-skill="HDFS">HDFS</span> for more extensive querying using <span
+                                                data-skill="Hadoop">Hadoop</span>.
+                                            </li>                                    
+                                        </ol>
+
+                                        <div>
+                                            <span class="skill btn btn-small disabled" data-skill="Cloudera Manager">Cloudera Manager</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Storm">Storm</span>
+                                            <span class="skill btn btn-small disabled" data-skill="ElasticSearch">ElasticSearch</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Hadoop Pig">Hadoop Pig</span>
+                                            <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Ganglia">Ganglia</span>
+
+                                            <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
+                                            <span class="skill btn btn-small disabled" data-skill="AngularJS">AngularJS</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Jersey">Jersey</span>
+                                            <span class="skill btn btn-small disabled" data-skill="HTML5">Bootstrap</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </section>        
+
+            <section>
+
+                <div class="accordion" id="icontroller-lead-accordion">
+                    <div class="accordion-group">
+                        <div class="accordion-heading" data-toggle="collapse" data-parent="#icontroller-lead-accordion"
+                        href="#icontroller-lead-accordion-collapse0" onclick="track('experience','icontroller')">
+                        <div><span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> From March
+                            2011 till April 2012 I worked for <h4>iController</h4>, as <h4>Lead Application and Warehouse
+                            Developer</h4>. We build a <span data-skill="credit management">credit management</span> <span
+                            data-skill="Web Applications">web application</span>, written in <span
+                            data-skill="PHP">PHP</span>.
+                            I managed a small group of developers, took the lead on everything technical and coordinated with
+                            the directors, partners and clients.
+                        </div>
+                        <div>My job involved lots of <span data-skill="PHP">PHP</span>, <span data-skill="Refactoring">refactoring</span>,
+                            <span data-skill="Scalability">performance tuning</span>, <span data-skill="System Engineering">system
+                            engineering</span> and bits of <span data-skill="Data Analysis">data analysis</span>.
+                        </div>
+                    </div>
+                    <div id="icontroller-lead-accordion-collapse0" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <ul>
+                                <li>
+                                    <h5>Lead Developer iController</h5>
+
+                                    <p>I developed our <span data-skill="credit management">credit management</span> <span
+                                        data-skill="Web Applications">web application</span> in <span
+                                        data-skill="PHP">PHP</span>, I
+                                        <span data-skill="Project Management">managed</span> a small group of developers, took
+                                        the <span data-skill="Software Architecture">lead on everything technical</span> and
+                                        coordinated with the directors, partners and clients.</p>
+
+                                        <div>
+                                            <span class="skill btn btn-small disabled" data-skill="Project Management">Project Management</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Requirement Analysis">Requirement Analysis</span>
+                                            <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
+                                            <span class="skill btn btn-small disabled" data-skill="symfony">symfony</span>
+                                            <span class="skill btn btn-small disabled" data-skill="ORM">Propel</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Unit Testing">PHPUnit</span>
+                                            <span class="skill btn btn-small disabled" data-skill="FPDF">FPDF</span>
+                                            <span class="skill btn btn-small disabled" data-skill="Jenkins">Jenkins</span>
+                                            <span class="skill btn btn-small disabled" data-skill="ant">ant</span>
+                                            <span class="skill btn btn-small disabled" data-skill="git">git</span>
+                                            <span class="skill btn btn-small disabled" data-skill="SQL">MySQL</span>
+                                            <span class="skill btn btn-small disabled" data-skill="jQuery">jQuery</span>
+                                            <span class="skill btn btn-small disabled" data-skill="JavaScript">Prototype</span>
+                                            <span class="skill btn btn-small disabled" data-skill="PDO">PDO</span>
+                                            <span class="skill btn btn-small disabled" data-skill="XML">XML</span>
+                                            <span class="skill btn btn-small disabled" data-skill="XML">XSchema</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h5>iController Server Setup</h5>
+
+                                        <p>I <span data-skill="Virtualisation">virtualized</span> and automated the whole
+                                            iController server setup using <span
+                                            data-skill="Puppet">Puppet</span>. I
+                                            created and extended several open-source <span data-skill="Puppet">Puppet</span>
+                                            modules.</p>
+
+                                            <div>
+                                                <span class="skill btn btn-small disabled" data-skill="Puppet">Puppet</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Cloud">libvirt</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Virtualisation">KVM</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Linux">Ubuntu</span>
+                                                <span class="skill btn btn-small disabled" data-skill="SQL">MySQL</span>
+                                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Release Management">Release Management</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Jenkins">Jenkins</span>
+                                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon S3</span>
+                                                <span class="skill btn btn-small disabled" data-skill="DNS">BIND</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Linux">LVM</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5>iSubscriber</h5>
+
+                                            <p>Creating a small <span data-skill="Web Applications">web application</span> to organize
+                                                and input subscriptions into <span data-skill="Accountancy Software">Octopus</span>.
+                                            </p>
+
+                                            <div>
+                                                <span class="skill btn btn-small disabled" data-skill="SQL">MySQL</span>
+                                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
+                                                <span class="skill btn btn-small disabled" data-skill="symfony">symfony</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5>Various clients</h5>
+
+                                            <div class="subtitle">From July till November 2011.</div>
+                                            <ol>
+                                                <li>Analyzing the requirements, estimating and taking the lead.</li>
+                                                <li><span data-skill="ETL">Extracting</span> data from various Accounting software to
+                                                    iController.
+                                                </li>
+                                            </ol>
+                                            <div>
+                                                <span class="skill btn btn-small disabled" data-skill="Accountancy Software">Accounting Software</span>
+                                                <span class="skill btn btn-small disabled" data-skill="AS400">AS400</span>
+                                                <span class="skill btn btn-small disabled" data-skill="ETL">ETL</span>
+                                                <span class="skill btn btn-small disabled" data-skill="XML">XML</span>
+                                                <span class="skill btn btn-small disabled" data-skill="XML">XSchema</span>
+                                                <span class="skill btn btn-small disabled" data-skill="SQL">Oracle</span>
+                                                <span class="skill btn btn-small disabled" data-skill="SQL">MSSQL</span>
+                                                <span class="skill btn btn-small disabled"
+                                                data-skill="Accountancy Software">Navision</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5>LeasePlan</h5>
+
+                                            <div class="subtitle">From July till November 2011.</div>
+                                            <ol>
+                                                <li>Analyzing the requirements, coaching my co-developers and coordinating with the
+                                                    client.
+                                                </li>
+                                                <li><span data-skill="ETL">Extracting</span> data from and linking <span
+                                                    data-skill="SAP FI">SAP FI</span> to
+                                                    iController.
+                                                </li>
+                                                <li>Developing a custom workflow engine.</li>
+                                            </ol>
+                                            <div>
+                                                <span class="skill btn btn-small disabled" data-skill="SAP FI">SAP FI</span>
+                                                <span class="skill btn btn-small disabled" data-skill="AS400">AS400</span>
+                                                <span class="skill btn btn-small disabled" data-skill="ETL">ETL</span>
+                                                <span class="skill btn btn-small disabled" data-skill="XML">XML</span>
+                                                <span class="skill btn btn-small disabled" data-skill="SQL">SQL</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="accordion" id="netlog-accordion">
+                        <div class="accordion-group">
+                            <div class="accordion-heading" data-toggle="collapse" data-parent="#netlog-accordion"
+                            href="#netlog-accordion-collapse0" onclick="track('experience','netlog')">
+                            <div><span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> From September
+                                2010 till February 2011 I was employed at <h4>Netlog</h4> as a <h4>Warehouse and Web Developer</h4>,
+                                creating an <span data-skill="Big Data">analytical warehouse</span> based on <span
+                                data-skill="Hbase">Hbase</span>. I also created large parts of the
+                                <span data-skill="Big Data">processing infrastructure</span> using <span
+                                data-skill="Hadoop">Hadoop</span> and <span data-skill="Hadoop Pig">Hadoop Pig</span>. I
+                                also advised on
+                                new technologies, <span data-skill="git">git</span> migration, <span data-skill="Best Practices">best practices</span>
+                                &amp; <span
+                                data-skill="Unit Testing">unit tests</span>. Netlog is a social community network, with over
+                                70 million members, mainly active in Europe and the Arabic world.
+                            </div>
+                        </div>
+                        <div id="netlog-accordion-collapse0" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <ul>
+                                    <li>
+                                        <h5>Warehouse Developer</h5>
+
+                                        <p>Setting up the <span data-skill="Hadoop">Hadoop</span> infrastructure, <span
+                                            data-skill="Data Analysis">analyzing data</span>
+                                            with <span data-skill="Hadoop Pig">Hadoop Pig</span>
+                                            and creating a dashboard using <span data-skill="Symfony2">Symfony2</span> and <span
+                                            data-skill="Hbase">Hbase</span> &amp;
+                                            <span data-skill="Thrift">Thrift</span>.</p>
+
+                                            <div>
+                                                <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
+                                                <span class="skill btn btn-small disabled" data-skill="HDFS">HDFS</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Hadoop Pig">Hadoop Pig</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Syslog">Syslog</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Thrift">Thrift</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Hive">Hive</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Hbase">Hbase</span>
+                                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Symfony2">Symfony2</span>
+                                                <span class="skill btn btn-small disabled"
+                                                data-skill="Data Visualization">Google Graphs</span>
+                                                <span class="skill btn btn-small disabled" data-skill="PDO">PDO</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Memcached">Memcached</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Redis">Redis</span>
+                                                <span class="skill btn btn-small disabled" data-skill="SQL">MySQL</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5>Twoo Core Framework Developer</h5>
+
+                                            <p>Creating a new <span data-skill="PHP">PHP</span> Framework (no existing frameworks were
+                                                allowed) as base for
+                                                the new dating site Twoo. I advised on <span data-skill="Design Patterns">Design Patterns</span>
+                                                and <span data-skill="Best Practices">Best
+                                                Practices</span>. I developed the <span data-skill="Security">Security</span> and
+                                                <span data-skill="Security">ACL</span> platform as well.
+                                            </p>
+
+                                            <div>
+                                                <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
+                                                <span class="skill btn btn-small disabled" data-skill="HTTP">HTTP</span>
+                                                <span class="skill btn btn-small disabled"
+                                                data-skill="Web Applications">Request routing</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Security">Security</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Security">ACL</span>
+                                                <span class="skill btn btn-small disabled"
+                                                data-skill="Design Patterns">Design Patterns</span>
+                                                <span class="skill btn btn-small disabled"
+                                                data-skill="Best Practices">Best Practices</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Unit Testing">PHPUnit</span>
+                                                <span class="skill btn btn-small disabled" data-skill="git">git</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h5>Web Developer (Netlog)</h5>
+
+                                            <p>I introduced an open source <span data-skill="Event Processing">Event framework</span>
+                                                and
+                                                <span data-skill="Public Speaking">presented</span> it to my
+                                                co-developers. I introduced new application log functionality, for logging to
+                                                <span data-skill="Hadoop">Hadoop</span>. I <span data-skill="Technology Evangelism">evangelized</span>
+                                                <span data-skill="Unit Testing">Unit tests</span>,
+                                                including an initial implementation
+                                                and <span data-skill="Public Speaking">presentations</span>. I evaluated <span data-skill="Redis">Redis</span>, <span
+                                                data-skill="NoSQL">Memcached</span> &amp; <span
+                                                data-skill="NoSQL">Membase</span>
+                                                (now Couchbase).</p>
+
+                                                <div>
+                                                    <span class="skill btn btn-small disabled" data-skill="PHP">PHP</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="Unit Testing">PHPUnit</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="Unit Testing">Unit Testing</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="Syslog">Syslog</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="Event Processing">Event Processing</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="SQL">MySQL</span>
+                                                    <span class="skill btn btn-small disabled"
+                                                    data-skill="Design Patterns">Design Patterns</span>
+                                                    <span class="skill btn btn-small disabled"
+                                                    data-skill="Best Practices">Best Practices</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="git">git</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="svn">svn</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="NoSQL">Memcached</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="Redis">Redis</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="Performance testing">Performance testing</span>
+                                                    <span class="skill btn btn-small disabled" data-skill="NoSQL">Membase</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <div>From October 2009 to August 2010 I started working at <h4>iController</h4>, a small SME in Ghent, as <h4>web
+                            application developer</h4>. I developed a new, greatly improved debtor &amp; credit management web application. We
+                            used the <span data-skill="symfony">symfony</span> framework as a starting point to create a stable and easy to
+                            maintain
+                            application.
+                        </div>
+                    </section>
+
+                    <section>
+
+                        <div class="accordion" id="servs-accordion">
+                            <div class="accordion-group">
+                                <div class="accordion-heading" data-toggle="collapse" data-parent="#servs-accordion"
+                                href="#servs-accordion-collapse0" onclick="track('experience','icontroller')">
+                                <div>
+                                    <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> 
+                                    From <span itemprop="startDate" datetime="2007-03-08">March 2007</span> till <span itemprop="endDate" datetime="2014-12-22">December 2014</span> I was the 
+                                    <h4 itemprop="jobTitle"> Consultant, Managing Director and founder</h4> of <h4 itemprop="name">Servs</h4> BVBA; mainly active as a (part-time) IT
+                                    consultant in the field of <span data-skill="Big Data">Big Data</span> &amp; <span
+                                    data-skill="Spark">Spark</span>, <span data-skill="Scala">Scala</span>,
+                                    <span data-skill="Web Applications">web applications</span> (<span data-skill="PHP">PHP</span>,
+                                    <span data-skill="SQL">sql</span>, <span data-skill="Scalability">scalability</span>, <span data-skill="Scala">…</span>), <span data-skill="DevOps">DevOps</span> &amp; <span
+                                    data-skill="Linux">Linux</span> <span data-skill="System Engineering">system
+                                    administration</span> and <span data-skill="Cloud">hosting applications</span>.
+                                </div>
+                            </div>
+                            <div id="servs-accordion-collapse0" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <ul>
+                                        <li>
+
+                                            <div>
+                                                From April till August 2011 I worked as a consultant for <h4>Truvo</h4>, the Belgian yellow pages, doing a <h4>
+                                                hadoop deduplication</h4> job. I used <span data-skill="Hadoop">Hadoop</span> &amp; <span
+                                                data-skill="Hadoop Pig">Hadoop Pig</span>, wrote custom <span data-skill="Hadoop Pig">UDFs</span> in
+                                                <span data-skill="Java">Java</span> for <span data-skill="Machine Learning">Ngram</span> matching and solved
+                                                performance
+                                                issues. At first <span data-skill="Amazon AWS">Amazon Elastic
+                                                MapReduce</span> was used, later I setup a <span data-skill="Hadoop">Hadoop</span> cluster.
+                                            </div>
+
+                                            <div>
+                                                <span class="skill btn btn-small disabled" data-skill="Hadoop">Hadoop</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Hadoop Pig">Hadoop Pig</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Cloud">Cloud</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon EC2</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Amazon AWS">Amazon Elastic MR</span>
+                                                <span class="skill btn btn-small disabled" data-skill="Java">Java</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            In 2009 I was active as a consultant to a Dutch services organization. The assignment mainly consisted of <h4>creating a link between existing systems and a new website</h4>.
+                                        </li>
+                                        <li>
+                                            From 2008 till present I perform various <h4>short term consultancy</h4> tasks commissioned by <h4>Sinergio</h4>
+                                            . For a <h5>semi government organization</h5> I set up a new <span data-skill="Java">tomcat</span> server and
+                                            did a general check up
+                                            on their <span data-skill="Linux">Linux</span> servers. For another company I configured an <span
+                                            data-skill="ASP.Net">ASP.Net</span> application and installed
+                                            an <span data-skill="IIS">IIS</span> server. For <h5>Sio Hosting</h5> (Formerly Sinergio Hosting) I planned and
+                                            executed the move
+                                            from traditional servers to a <span data-skill="Virtualisation">virtualized</span> <span
+                                            data-skill="Virtualisation">xen cluster</span>.
+                                            I also checked the integrity and <span data-skill="Security">security</span>
+                                            of their <span data-skill="Web Hosting">hosting platform</span> on a regular basis. I <span data-skill="Business Strategy">advised</span> them on
+                                            strategic planning.
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div>During my secondary education I created a <h4>PHP CMS</h4>, with features as native <span
+                        data-skill="PHP">PHP</span> templates,
+                        module in module support (recursion) following a very basic <span data-skill="MVC">MVC</span> pattern. It was
+                        used and expanded by
+                        two web agencies to create over 30 websites.
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
-</section>
-
-<section>
-    <div>During my secondary education I created a <h4>PHP CMS</h4>, with features as native <span
-            data-skill="PHP">PHP</span> templates,
-        module in module support (recursion) following a very basic <span data-skill="MVC">MVC</span> pattern. It was
-        used and expanded by
-        two web agencies to create over 30 websites.
-    </div>
-</section>
-</div>
-</div>
-</div>
 </section>
 
 <section class="skills">
-<h2>skills</h2>
+    <h2>skills</h2>
 
-<div class="container">
-<div class="row">
-    <div class="span12 hidden-print wordcloud">
+    <div class="container">
+        <div class="row">
+            <div class="span12 hidden-print wordcloud">
 
-    </div>
-    <div class="span12 visible-print">
-        <img src="skills.png" style="margin-top: 20px"/>
-    </div>
+            </div>
+            <div class="span12 visible-print">
+                <img class="wordcloud-print" src="skills.png" style="margin-top: 20px"/>
+            </div>
 
-</div>
-<div class="row">
-<div class="span6">
-    <section>
-        <div>I am very interested in <h4 data-skill="Big Data">Big Data</h4>, from the processing and storage of large
-            volumes, to
-            <span data-skill="real-time">real-time</span> <span data-skill="Event Processing">stream
-                        processing</span>, and <span data-skill="Machine Learning">machine learning</span>. I read,
-            tweet, and
-            try out as much as I can about new <span data-skill="Big Data">Big Data</span> technologies,
-            like <span data-skill="Spark">Spark</span> and <span data-skill="Storm">Storm</span>,
-            as well as more established technologies like <span data-skill="Hadoop">Hadoop</span>, <span
-                    data-skill="Hadoop">MapReduce</span> and learning
-            as
-            much as I can in the process. I program in <span data-skill="Cascading">Cascading</span>, <span
-                    data-skill="Hadoop Pig">Hadoop Pig</span> Latin and
-            write queries in <span data-skill="Hive">Hive</span> regularly. Also the setup, administration
-            and monitoring of <span data-skill="Hadoop">Hadoop</span>,
-            <span data-skill="Hbase">Hbase</span>, <span data-skill="Storm">Storm</span> &amp; <span
-                    data-skill="Zookeeper">Zookeeper</span> clusters interests me a lot.
         </div>
-        <div>
-            <span data-skill="Hadoop">Hadoop</span> &amp; <span data-skill="Big Data">Big Data</span>
-            related skills:
-            <ul>
-                <li>
-                    Using &amp; administrating <span data-skill="Hadoop">Hadoop</span> clusters, including
-                    <span data-skill="Storm">Storm</span>, <span
-                        data-skill="ElasticSearch">ElasticSearch</span>,
-                    <span data-skill="Cassandra">Cassandra</span>, <span data-skill="Hbase">Hbase</span> and
-                    <span data-skill="Zookeeper">Zookeeper</span>.
+        <div class="row">
+            <div class="span6">
+                <section>
+                    <div>I am very interested in and work with <h4 data-skill="Big Data">Big Data</h4>, from the processing and storage of large
+                        volumes, to
+                        <span data-skill="Stream Processing">real-time</span> <span data-skill="Event Processing">stream
+                        processing</span>, and <span data-skill="Machine Learning">machine learning</span>. I read,
+                        tweet, and
+                        try out as much as I can about new <span data-skill="Big Data">Big Data</span> technologies,
+                        like <span data-skill="Spark">Spark</span>, <span data-skill="Samza">Samza</span>, <span data-skill="Storm">Storm</span> and <span data-skill="Kafka">Kafka</span>,
+                        as well as more established technologies like <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Cassandra">Cassandra</span> and learning as
+                        much as I can in the process. 
+                        I use <span data-skill="Scala">Scala</span>, <span data-skill="Java">Java</span> and bits of <span data-skill="Python">Python</span> and <span data-skill="Hadoop Pig">Hadoop Pig</span> Latin. I setup, administered and monitored <span data-skill="Hadoop">Hadoop</span>,
+                        <span data-skill="Mesos">Mesos</span>, <span data-skill="Storm">Storm</span>, <span data-skill="Cassandra">Cassandra</span> &amp; <span data-skill="Zookeeper">Zookeeper</span> clusters.
+                    </div>
+                    <div>
+                        <span data-skill="Big Data">Big Data</span> related skills:
+                        <ul>
+                            <li>
+                                Do interactive ad-hoc <span data-skill="Analytics">analytics</span> using <span data-skill="Python">Python</span> based <span data-skill="IPython">IPython</span> Notebooks, as well as <span data-skill="Scala">Scala</span> based notebooks, combined with <span data-skill="Spark SQL">Spark SQL</span>.
+                            </li>
+                            <li>Query the data with <span data-skill="Spark">Spark</span>, <span data-skill="Spark SQL">Spark SQL</span>, <span
+                                data-skill="Hadoop Pig">Hadoop Pig</span> &amp; <span data-skill="Hive">Hive</span>.
+                            </li>
+                            <li>
+                                Using &amp; administrating <span data-skill="Spark">Spark</span>, <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Mesos">Mesos</span> clusters, including
+                                <span data-skill="Storm">Storm</span>, <span data-skill="ElasticSearch">ElasticSearch</span>,
+                                <span data-skill="Cassandra">Cassandra</span>, <span data-skill="Kafka">Kafka</span> and
+                                <span data-skill="Zookeeper">Zookeeper</span>.
+                                <ul>
+                                    <li>Deploying <span data-skill="Hadoop">Hadoop</span> on <span data-skill="Azure">Azure</span>,
+                                        <span data-skill="Amazon AWS">Amazon</span> &amp;
+                                        <span data-skill="Softlayer">Softlayer</span>.
+                                    </li>
+                                    <li>Using <span data-skill="Amazon AWS">Amazon Elastic MapReduce</span>.
+                                    </li>
+                                    <li>
+                                        <span data-skill="Chef">Chef</span>, <span data-skill="Puppet">Puppet</span> and <span data-skill="NixOS">NixOps</span> to deploy <span data-skill="Mesos">Mesos</span> and <span
+                                        data-skill="Hadoop">Hadoop</span> to the <span data-skill="Cloud">Cloud</span>.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Developing solutions for <span data-skill="Stream Processing">real-time</span> <span data-skill="Big Data">Big Data</span> using <span data-skill="Spark Streaming">Spark Streaming</span>, <span data-skill="Storm">Storm</span> and <span data-skill="Kafka">Kafka</span>.
+                            </li>
+                            <li>
+                                Combining batch and <span data-skill="Stream Processing">real-time</span>
+                                technologies to create a <span data-skill="Lambda Architecture">Lambda</span>
+                                architecture (of <a href="http://nathanmarz.com/">Nathan Marz</a>), that is <span
+                                data-skill="Fault Tolerance">resilient to failure</span>, <span data-skill="Scalability">scalable</span>
+                                and <span data-skill="Velocity">fast</span>.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div>Next to <span data-skill="Software Engineering">programming</span> I have always been passionate about <h4
+                        data-skill="Linux">Linux</h4> and open source. I have
+                        used over the last 10+ years several distributions from <span data-skill="Linux">Debian</span>
+                        &amp; <span data-skill="Linux">Ubuntu</span>,
+                        <span data-skill="Linux">CentOS</span> over <span data-skill="Linux">Gentoo</span> to <span
+                        data-skill="Linux">Linux From Scratch</span>, lately I am very interested in <span data-skill="NixOS">NixOS</span>. <span data-skill="NixOS">NixOS</span> is a purely <span data-skill="Functional Programming">functional</span> Linux. I have setup countless
+                        servers from <span data-skill="Cloud">Cloud</span> to <span data-skill="Virtualisation">virtualized</span> to bare metal servers.
+                    </div>
+                    <p>
+                        I am following the <span data-skill="DevOps">DevOps</span> movement. I am using <span
+                        data-skill="Puppet">Puppet</span>, <span data-skill="Chef">Chef</span> and <span data-skill="NixOS">NixOps</span> to automate and <span data-skill="Ganglia">Ganglia</span> to monitor critical <span
+                        data-skill="System Engineering">infrastructure</span>. I have open sourced
+                        and contributed to several <span data-skill="NixOS">NixOS</span> and <span data-skill="Puppet">Puppet</span> modules.
+                    </p>
+
+                    <p>
+                        I follow and try out with great interest <span data-skill="Cloud">Cloud</span> related techniques
+                        and technologies, in all its forms: <span data-skill="Cloud">IaaS</span>, <span data-skill="Cloud">PaaS</span>, <span data-skill="Cloud">MaaS</span>, … I have used as test or in production <span data-skill="OpenStack">OpenStack</span>, <span data-skill="Amazon AWS">Amazon S3</span>, <span data-skill="Amazon AWS">Amazon EC2</span>,
+                        <span data-skill="Amazon AWS">Amazon MapReduce</span>, <span data-skill="Amazon AWS">Amazon
+                        IAM</span>, <span data-skill="Google BigQuery">Google
+                        BigQuery2</span> (private beta tester), <span data-skill="Azure">Windows Azure</span>
+                        Platform and <span data-skill="Azure">Hadoop on Azure</span> (private beta tester) and <span data-skill="Softlayer">Softlayer</span>.
+                    </p>
+                </section>
+            </div>
+            <div class="span6">
+                <section>
+                    I currently mostly develop using <h4 data-skill="Scala">Scala</h4>. <span data-skill="Scala">Scala</span> is a JVM-based language, with both full support for OO as well as <span data-skill="Functional Programming">Functional</span> Programming approach. I started with <span data-skill="Scala">Scala</span> at the end of 2013.
                     <ul>
-                        <li>Deploying <span data-skill="Hadoop">Hadoop</span> on <span data-skill="Azure">Azure</span>,
-                            <span data-skill="Amazon AWS">Amazon</span> &amp;
-                            <span data-skill="Softlayer">Softlayer</span>.
+                        <li>
+                            Using <span data-skill="Scala">Scala</span> to create <span data-skill="Spark">Spark</span> and <span data-skill="Spark Streaming">Spark Streaming</span> jobs.
                         </li>
-                        <li>Using <span
-                                data-skill="Amazon AWS">Amazon Elastic MapReduce</span>.
+                        <li>
+                            Using <span data-skill="Akka">Akka</span> and <span data-skill="Akka">Akka Persistence</span> to create a <span data-skill="CQRS">CQRS</span> application, in <span data-skill="Scala">Scala</span>
                         </li>
-                        <li><span data-skill="Whirr">Whirr</span> or <span data-skill="Chef">Chef</span>
-                            (<span data-skill="Chef">fog</span>) to deploy <span
-                                    data-skill="Hadoop">Hadoop</span> to <span data-skill="Amazon AWS">Amazon
-                                            EC2</span>.
+                        <li>
+                            Creating <span data-skill="Thrift">Thrift</span> based services, using <span data-skill="Finagle">Finagle</span>.
+                        </li>
+                        <li>
+                            <span data-skill="Cucumber">Unit testing</span> using <span data-skill="Scala">Scalatest</span> and <span data-skill="Cucumber">Cucumber</span>.
                         </li>
                     </ul>
-                </li>
-                <li>Query the data with <span data-skill="Cascading">Cascading</span>, <span
-                        data-skill="Hadoop Pig">Hadoop Pig</span> &amp; <span data-skill="Hive">Hive</span>.
-                </li>
-                <li>Write <span data-skill="Hadoop Pig">Pig UDFs</span> in <span data-skill="Java">Java</span>.
-                </li>
-                <li>Developing solutions for <span data-skill="real-time">real-time</span> <span
-                        data-skill="Big Data">Big Data</span> using <span data-skill="Storm">Storm</span>
-                    and
-                    <span data-skill="Kafka">Kafka</span>.
-                </li>
-                <li>Combining <span data-skill="batch">batch</span> and <span data-skill="real-time">real-time</span>
-                    technologies to create a <span data-skill="Lambda Architecture">Lambda</span>
-                    architecture (of Nathan Marz), that is <span
-                            data-skill="Fault Tolerance">resilient to failure</span>, <span
-                            data-skill="Scalability">scalable</span>
-                    and <span data-skill="Velocity">fast</span>.
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section>
-        <div>Next to <span data-skill="Software Engineering">programming</span> I have always been passionate about <h4
-                data-skill="Linux">Linux</h4> and open source. I have
-            used over the last 10 years several distributions from <span data-skill="Linux">Debian</span>
-            &amp; <span data-skill="Linux">Ubuntu</span>,
-            <span data-skill="Linux">CentOS</span> over <span data-skill="Linux">Gentoo</span> to <span
-                    data-skill="Linux">Linux From Scratch</span>. I have setup countless
-            servers from <span data-skill="Virtualisation">virtualized</span> (<span
-                    data-skill="Virtualisation">Xen</span>, <span data-skill="Virtualisation">VirtualBox</span>, <span
-                    data-skill="Virtualisation">libvirt</span>, <span data-skill="Vagrant">Vagrant</span>)
-            to
-            almost bare metal web servers. I administrated <span data-skill="Apache">Apache</span>, <span
-                    data-skill="Nginx">Nginx</span> servers,
-            configured and tuned <span data-skill="MySQL">MySQL</span> and played with <span
-                    data-skill="Postfix">Postfix</span> extensively. As well
-            configured and monitored <span data-skill="Cassandra">Cassandra</span>, <span
-                    data-skill="Redis">Redis</span>, <span data-skill="Voldemort">Voldemort</span>, <span
-                    data-skill="ElasticSearch">ElasticSearch</span>,
-            <span data-skill="Hbase">Hbase</span> clusters.
-        </div>
-        <p>I am following the <span data-skill="DevOps">DevOps</span> movement. I am both using <span
-                data-skill="Puppet">Puppet</span> and <span data-skill="Chef">Chef</span> to
-            automate and <span data-skill="Ganglia">Ganglia</span> to monitor critical <span
-                    data-skill="System Engineering">infrastructure</span>. I have open sourced
-            and contributed to several <span data-skill="Puppet">Puppet</span> modules.</p>
+                </section>
+                <section>
+                    I am interested in <h4 data-skill="Functional Programming">Functional Programming</h4>, mostly looking at <span
+                    data-skill="Scala">Scala</span>, and a bit at <span data-skill="Clojure">Clojure</span>.
+                    <br />
+                    Especially <span data-skill="Functional Programming">functional programming</span> in relation to
+                    <span data-skill="Big Data">Big Data</span> has my focus.
+                </section>
+                <section>
+                        I am using <h4 data-skill="Java">Java</h4>, mostly using <span data-skill="Spring">Spring</span>, <span data-skill="maven">maven</span> and <span data-skill="Jersey">Jersey</span> in
+                        combination with the <span data-skill="JavaScript">JavaScript</span> MVC framework <span data-skill="AngularJS">AngularJS</span>.
+                        <ul>
+                            <li>Developing a <span data-skill="Java EE">Java EE</span> application, with <span data-skill="Java">Glassfish</span>, using
+                                <span data-skill="JPA">JPA</span> with <span data-skill="JPA">EclipseLink</span>.
+                            </li>
+                            <li>Creating <span data-skill="Concurrent Programming">Threaded</span> servers, using <span data-skill="Thrift">Thrift</span>.
+                            </li>
+                            <li>Autowiring &amp; <span data-skill="Design Patterns">Dependency Injection</span> using <span data-skill="Spring">Spring</span>.
+                            </li>
+                            <li>Consuming the <span data-skill="API">Twitter</span> &amp; <span data-skill="API">LinkedIn</span>
+                                <span data-skill="API">APIs</span>, using
+                                <span data-skill="OAuth">OAuth</span>.
+                            </li>
+                            <li>Creating a <span data-skill="REST">REST</span> and <span data-skill="SOAP">SOAP</span> based
+                                services, using <span data-skill="Jersey">Jersey</span> or <span data-skill="JAX-WS">JAX-WS</span>.
+                            </li>
+                            <li>Using the common libraries like <span data-skill="Guava">Guava</span>, <span data-skill="Apache Commons">Apache Commons</span>, <span data-skill="Joda Time">Joda Time</span>
+                                &amp; <span data-skill="slf4j">slf4j</span>.
+                            </li>
+                            <li><span data-skill="Unit Testing">Unit testing</span> using JUnit and Mockito.
+                            </li>
+                        </ul>
+                    </section>
 
-        <p>In this context I also took my first steps with <span data-skill="Ruby">Ruby</span>.</p>
+                <section>
+                    I have used <h4 data-skill="PHP">PHP</h4> and <h4 data-skill="JavaScript">JavaScript</h4> for over 10 years, 
+                    mostly in a combination with the <span
+                    data-skill="symfony">symfony</span> &amp; <span data-skill="Symfony2">Symfony2</span>
+                    frameworks as well as a multitude of <span data-skill="SQL">SQL</span> and <span data-skill="NoSQL">NoSQL</span> databases, as 
+                    <span data-skill="SQL">MySQL</span>, <span data-skill="SQL">PostgreSQL</span>, <span data-skill="SQL">Oracle</span>, 
+                    <span data-skill="SQL">Informix</span> 
+                    and <span data-skill="">Redis</span>, <span data-skill="NoSQL">Membase</span>, <span data-skill="NoSQL">Memcached</span> and ...
+                    <ul>
+                        <li>
+                            <span data-skill="HTML5">html5</span>, <span data-skill="HTML5">CSS</span> &amp; jQuery
+                        </li>
+                        <li>
+                            Creating a <span data-skill="PHP">Drupal</span> site, using <span data-skill="HTML5">Bootstrap</span> and deploying on <span data-skill="Azure">Windows Azure</span>.
+                        </li>
+                        <li>
+                            Creating <span data-skill="JavaScript">browser based</span> applications using <span data-skill="AngularJS">AngularJS</span>.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <div>
+                        Some basic knowledge, but willing to improve:
+                        <ul>
+                            <li><span data-skill="Graph Processing">Graph databases</span>: <span data-skill="Graph Processing">Neo4J</span>,
+                                <span data-skill="Graph Processing">HyperGraphDB</span> &amp; <span
+                                data-skill="Graph Processing">Titan</span>.
+                            </li>
+                            <li>
+                                Various <span data-skill="NoSQL">NoSQL</span> data stores, like <span data-skill="NoSQL">MongoDB</span>, <span
+                                data-skill="NoSQL">Voldemort</span>, <span data-skill="NoSQL">riak</span>, ...
+                            </li>
+                            <li><span data-skill="Clojure">Clojure</span>, <span data-skill="Ruby">Ruby</span> and <span
+                                data-skill="Python">Python</span>.
+                            </li>
+                            <li><span data-skill="Project Management">Scrum</span>, <span data-skill="Project Management">Extreme Programming</span>
+                            </li>
+                            <li><span data-skill="Security">Security</span> &amp; <span data-skill="Security">penetration testing</span>.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span6">
+                <section>
+                    <h4>Languages</h4>
+                    <dl>
+                        <dt>Dutch</dt>
+                        <dd>Mother tongue</dd>
+                        <dt>English</dt>
+                        <dd>Very fluent</dd>
+                    </dl>
+                </section>
+            </div>
+            <div class="span6">
+                <section>
+                    <h4>Other skills</h4>
 
-        <p>Developing a <span data-skill="Continuous Integration">Continuous Integration</span> strategy,
-            with related tools like <span data-skill="Jenkins">Jenkins</span>.
-        </p>
-
-        <p>I follow and try out with great interest <span data-skill="Cloud">Cloud</span> related techniques
-            and technologies, in
-            all its forms: <span data-skill="Cloud">IaaS</span>, <span data-skill="Cloud">PaaS</span>, <span
-                    data-skill="Cloud">MaaS</span>, … I have used as test or in
-            production <span data-skill="Amazon AWS">Amazon S3</span>, <span data-skill="Amazon AWS">Amazon EC2</span>,
-            <span data-skill="Amazon AWS">Amazon MapReduce</span>, <span data-skill="Amazon AWS">Amazon
-                            IAM</span>, <span data-skill="Google BigQuery">Google
-                            BigQuery2</span> (private beta tester), <span data-skill="Azure">Windows Azure</span>
-            Platform and
-                        <span data-skill="Azure">Hadoop on
-                            Azure</span> (private beta tester) and <span data-skill="Softlayer">Softlayer</span>.</p>
-    </section>
-</div>
-<div class="span6">
-    <section>
-        I am using <h4 data-skill="Java">Java</h4>, mostly using <span data-skill="Spring">Spring</span>, <span
-            data-skill="maven">maven</span> and <span data-skill="Jersey">Jersey</span> in
-        combination with the <span data-skill="JavaScript">JavaScript</span> MVC framework <span
-            data-skill="AngularJS">AngularJS</span>.
-        <ul>
-            <li>Developing a <span data-skill="Java EE">Java EE</span> application, with <span
-                    data-skill="Java">Glassfish</span>, using
-                <span data-skill="JPA">JPA</span> with <span data-skill="JPA">EclipseLink</span>.
-            </li>
-            <li>Creating <span data-skill="Concurrent Programming">Threaded</span> servers, using <span
-                    data-skill="Thrift">Thrift</span>.
-            </li>
-            <li>Autowiring & <span data-skill="Design Patterns">Dependency Injection</span> using <span
-                    data-skill="Spring">Spring</span>.
-            </li>
-            <li>Consuming the <span data-skill="API">Twitter</span> &amp; <span data-skill="API">LinkedIn</span>
-                <span data-skill="API">APIs</span>, using
-                <span data-skill="OAuth">OAuth</span>.
-            </li>
-            <li>Creating a <span data-skill="REST">REST</span> and <span data-skill="SOAP">SOAP</span> based
-                services, using <span data-skill="Jersey">Jersey</span> or <span
-                        data-skill="JAX-WS">JAX-WS</span>.
-            </li>
-            <li>Using the common libraries like <span data-skill="Guava">Guava</span>, <span
-                    data-skill="Apache Commons">Apache Commons</span>, <span data-skill="Joda Time">Joda Time</span>
-                &amp; <span data-skill="slf4j">slf4j</span>.
-            </li>
-            <li><span data-skill="Unit Testing">Unit testing</span> using <span
-                    data-skill="jUnit">JUnit</span> and <span data-skill="Unit Testing">Mockito</span>.
-            </li>
-        </ul>
-    </section>
-    <section>
-        I am interested in <h4 data-skill="Functional Programming">Functional Programming</h4>, mostly looking at <span
-            data-skill="Clojure">Clojure</span>.
-        Especially <span data-skill="Functional Programming">functional programming</span> in relation to
-        <span data-skill="Big Data">Big Data</span> has my focus.
-    </section>
-    <section>
-        <div>I have used <h4 data-skill="PHP">PHP</h4> for over 10 years, from <span
-                data-skill="namespaces">namespaces</span>, <span data-skill="closures">closures</span>
-            over <span data-skill="Iterators">Iterators</span> to <span data-skill="PDO">PDO</span>, as well
-            as some more exotic <span data-skill="UTF8">multibyte</span> &amp;
-            <span data-skill="UTF8">UTF8</span> functions, <span data-skill="XML">xml</span> &amp; <span
-                    data-skill="XML">xslt</span> and <span data-skill="pecl">pecl</span> extensions. The
-            last
-            five years I've been using <span data-skill="PHP">PHP</span> in a combination with the <span
-                    data-skill="symfony">symfony</span> & <span data-skill="Symfony2">Symfony2</span>
-            frameworks. I use <span data-skill="PHPUnit">PHPUnit</span> extensively, integrated with <span
-                    data-skill="Jenkins">Jenkins</span>, to assure that
-            what I write works and keeps on working.
+                    <p>In possession of a driver's license.</p>
+                </section>
+            </div>
         </div>
-        <div>
-            Some <span data-skill="PHP">PHP</span> related skills:
-            <ul>
-                <li><span data-skill="MySQL">MySQL</span>, but also various other databases, like <span
-                        data-skill="Oracle">Oracle</span>, <span data-skill="MSSQL">MSSQL</span>,
-                    <span data-skill="Sybase">Sybase</span>, <span data-skill="ODBC">ODBC</span> using plain
-                    <span data-skill="PDO">PDO</span>, the <span data-skill="ORM">Doctrine</span> &
-                    <span data-skill="ORM">Doctrine2</span>
-                    ORM and <span data-skill="ORM">Propel</span>.
-                </li>
-                <li><span data-skill="Memcached">Memcached</span> &amp; <span
-                        data-skill="Redis">Redis</span>.
-                </li>
-                <li><span data-skill="HTML5">html5</span>, <span data-skill="CSS">CSS</span> &amp; <span
-                        data-skill="jQuery">jQuery</span></li>
-                <li>Creating a <span data-skill="Drupal">Drupal</span> site, using <span
-                        data-skill="HTML5">Bootstrap</span> and deploying on <span
-                        data-skill="Azure">Windows
-                                Azure</span>.
-                </li>
-                <li><span data-skill="git">git</span>, <span data-skill="Mercurial">Mercurial</span> &amp;
-                    <span data-skill="svn">svn</span>.
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section>
-        <div>I am setting my first steps into the <h4 data-skill="Python">Python</h4> world. I used <span
-                data-skill="Python">Python</span>
-            to create a
-            <span data-skill="Ganglia">Ganglia</span> proxy and aggregator, I consumed <span
-                    data-skill="REST">REST</span> and <span data-skill="SOAP">SOAP</span> <span
-                    data-skill="API">API</span>'s,
-            wrote <span data-skill="Concurrent Programming">Threaded</span> applications and deployed to the <span
-                    data-skill="Google App Engine">Google App Engine</span>.
-        </div>
-    </section>
-    <section>
-        <div>
-            Some basic knowledge, but willing to improve:
-            <ul>
-                <li><span data-skill="Graph Processing">Graph databases</span>: <span data-skill="Graph Processing">Neo4J</span>,
-                    <span data-skill="Graph Processing">HyperGraphDB</span> &amp; <span
-                            data-skill="Graph Processing">Titan</span>.
-                </li>
-                <li>
-                    Various NoSQL data stores, like <span data-skill="MongoDB">MongoDB</span>, <span
-                        data-skill="Voldemort">Voldemort</span>, <span data-skill="riak">riak</span>, ...
-                </li>
-                <li><span data-skill="Ruby">Ruby</span>, <span data-skill="Clojure">Clojure</span> and <span
-                        data-skill="Scala">Scala</span>.
-                </li>
-                <li><span data-skill="Project Management">Scrum</span>, <span data-skill="Project Management">Extreme Programming</span>
-                </li>
-                <li>Security &amp; penetration testing.</li>
-            </ul>
-        </div>
-    </section>
-</div>
-</div>
-<div class="row">
-    <div class="span6">
-        <section>
-            <h4>Languages</h4>
-            <dl>
-                <dt>Dutch</dt>
-                <dd>Mother tongue</dd>
-                <dt>English</dt>
-                <dd>Very fluent</dd>
-            </dl>
-        </section>
     </div>
-    <div class="span6">
-        <section>
-            <h4>Other skills</h4>
-
-            <p>In possession of a drivers license.</p>
-        </section>
-    </div>
-</div>
-</div>
 
 </section>
 
 <section class="education">
-    <h2>education</h2>
+    <h2>Education</h2>
 
     <div class="container">
 
@@ -1252,90 +1357,90 @@
                 </section>
                 <section>
                     <h4>IBM InfoSphere <span data-skill="Hadoop">BigInsights</span> (<span
-                            data-skill="Hadoop">Hadoop</span> &amp;
+                        data-skill="Hadoop">Hadoop</span> &amp;
                         <span data-skill="Big Data">Big Data</span>) Technical Professional</h4>
 
-                    <div>IBM | 000-28146057 | October 2012</div>
+                        <div>IBM | 000-28146057 | October 2012</div>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <section>
+                    <div class="span6">
+                        <dl>
+                            <dt>Institute</dt>
+                            <dd>University of Antwerp</dd>
+                            <dt>Program</dt>
+                            <dd>Social-Economic Sciences</dd>
+                            <dt>Period</dt>
+                            <dd>2005 - 2007</dd>
+                            <dt>Achieved</dt>
+                            <dd>Not Achieved</dd>
+                        </dl>
+                    </div>
+                    <div class="span6">
+                        <dl>
+                            <dt>Institute</dt>
+                            <dd>Hibernia Steinerschool in Antwerp</dd>
+                            <dt>Program</dt>
+                            <dd>ASO, Higher Secondary education</dd>
+                            <dt>Period</dt>
+                            <dd>1999 - 2005</dd>
+                            <dt>Achieved</dt>
+                            <dd>2005</dd>
+                        </dl>
+                    </div>
                 </section>
             </div>
         </div>
-        <div class="row">
-            <section>
-                <div class="span6">
-                    <dl>
-                        <dt>Institute</dt>
-                        <dd>University of Antwerp</dd>
-                        <dt>Program</dt>
-                        <dd>Social-Economic Sciences</dd>
-                        <dt>Period</dt>
-                        <dd>2005 - 2007</dd>
-                        <dt>Achieved</dt>
-                        <dd>Not Achieved</dd>
-                    </dl>
-                </div>
-                <div class="span6">
-                    <dl>
-                        <dt>Institute</dt>
-                        <dd>Hibernia Steinerschool in Antwerp</dd>
-                        <dt>Program</dt>
-                        <dd>ASO, Higher Secondary education</dd>
-                        <dt>Period</dt>
-                        <dd>1999 - 2005</dd>
-                        <dt>Achieved</dt>
-                        <dd>2005</dd>
-                    </dl>
-                </div>
-            </section>
-        </div>
-    </div>
-</section>
+    </section>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
 
-<script>
+    <script>
 
-    $(document).ready(function () {
+        $(document).ready(function () {
 
-        var keywords = {};
+            var keywords = {};
 
-        var keywordAggregate = function (index, data) {
-            var keyword = data.getAttribute("data-skill");
-            if (!keywords.hasOwnProperty(keyword)) {
-                keywords[keyword] = 0;
+            var keywordAggregate = function (index, data) {
+                var keyword = data.getAttribute("data-skill");
+                if (!keywords.hasOwnProperty(keyword)) {
+                    keywords[keyword] = 0;
+                }
+                keywords[keyword]++;
+            };
+
+            $('[data-skill]').each(keywordAggregate);
+
+
+            var skillWords = [];
+            for (var key in keywords) {
+                if (keywords[key] < 2) {
+                    continue;
+                }
+                skillWords.push({
+                    text: key,
+                    weight: keywords[key]
+                });
             }
-            keywords[keyword]++;
-        };
 
-        $('[data-skill]').each(keywordAggregate);
-
-
-        var skillWords = [];
-        for (var key in keywords) {
-            if (keywords[key] < 2) {
-                continue;
-            }
-            skillWords.push({
-                text: key,
-                weight: keywords[key]
+            $('.skills .wordcloud').jQCloud(skillWords, {
+                'shape': 'rectangular'
             });
-        }
-
-        $('.skills .wordcloud').jQCloud(skillWords, {
-            'shape': 'rectangular'
-        });
 
 
-        var eventLastTime = 0;
-        var eventLastNameClass;
-        var sectionOutEventHandler = function () {
-            var className = $(this).attr('class');
+            var eventLastTime = 0;
+            var eventLastNameClass;
+            var sectionOutEventHandler = function () {
+                var className = $(this).attr('class');
 
-            var currentTime = new Date().getTime();
-            if ((currentTime > (eventLastTime + 5000)) && className != eventLastNameClass) {
-                track('read', className);
+                var currentTime = new Date().getTime();
+                if ((currentTime > (eventLastTime + 5000)) && className != eventLastNameClass) {
+                    track('read', className);
 
                 //alert(className + 'went over intro' + (currentTime - eventLastTime))
                 eventLastTime = currentTime;
@@ -1348,11 +1453,6 @@
         $('section.experience').mouseleave(sectionOutEventHandler);
         $('section.skills').mouseleave(sectionOutEventHandler);
         $('section.education').mouseleave(sectionOutEventHandler);
-
-        if ($.url().param('utm_campaign') == 'datacrunchers') {
-            $('body').addClass('datacrunchers');
-            $('#datacrunchers-accordion-collapse0').addClass('in');
-        }
 
         $('.accordion').on('shown', function () {
             icon = $('span.btn.dropdown i.icon-arrow-down', this);
