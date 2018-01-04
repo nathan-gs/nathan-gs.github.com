@@ -14,3 +14,12 @@ p.rss-subscribe {
 .twitter-tweet {
     margin: auto;
 }
+
+.highlight {
+    pre,code {
+        background-color: #fff;        
+    }
+    pre.lineno {
+        border: 0px solid #fff;
+    }
+}
