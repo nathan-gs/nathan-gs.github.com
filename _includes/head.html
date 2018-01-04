@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
     <script defer src="//use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     {% if jekyll.environment == 'production' and site.google_analytics %}
         {% include google-analytics.html %}
-    {% endif %}
-    {% if page.header_color %}
+    {% endif %}    
     <style>
+        {% if page.header_color %}
         .site-header {
             border-top-color: {{ page.header_color }};
         }
+        {% elsif page.layout == 'post' %}
+        .site-header {
+            border-top-color: {{ site.post_header_color }};
+        }
+        {% endif %}
     </style>
-    {% endif %}
 </head>

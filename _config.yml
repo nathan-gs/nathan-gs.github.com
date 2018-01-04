@@ -22,6 +22,8 @@ header_pages:
  - about.md
  - cv/index.html
 
+post_header_color: \#0084d1
+
 # Build settings
 markdown: kramdown
 theme: minima
@@ -30,6 +32,8 @@ exclude:
   - Gemfile.lock
 
 google_analytics: UA-12327464-1
+
+permalink: pretty
 
 plugins:
   - jekyll-seo-tag
