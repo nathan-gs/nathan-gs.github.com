@@ -42,7 +42,7 @@ maml.mapOutputPort("data.set")
 
 The data now looks like:
 
-{% include post_img.html img="1.png"  %}
+{% include post_img img="1.png"  %}
 
 #### Converting querytime to DateTime
 
@@ -77,11 +77,11 @@ I used the following:
 
 One of the advantages of using Azure ML is quickly looking at how the data looks like. Seeing the distributions inside an individual column, etc.
 
-{% include post_img.html img="2.png"  %}
+{% include post_img img="2.png"  %}
 
 The flow of our operations, should now look similar to this:
 
-{% include post_img.html img="3.png"  %}
+{% include post_img img="3.png"  %}
 
 
 ## Training a classification model
@@ -95,25 +95,25 @@ Using the [Split Data](https://msdn.microsoft.com/en-us/library/azure/dn905969.a
 
 I first tried with a [Multiclass Decision Forest](https://msdn.microsoft.com/en-us/library/azure/dn906015.aspx), and I've left all the options to the defaults. Next step I added [Train Model](https://msdn.microsoft.com/en-us/library/azure/dn906044.aspx), as input I use the training set and the model, I also selected the *label* column as the label. We can visualize the trees that are constructed, by selecting *Visualize*.
 
-{% include post_img.html img="4.png"  %}
+{% include post_img img="4.png"  %}
 
 #### Score the model
 
 Now we are going to apply our model, using [Score Model](https://msdn.microsoft.com/en-us/library/azure/dn905995.aspx). Here we combine the *Trained Model*, with the *test dataset*. We can now see what’s Azure ML classifying:
 
-{% include post_img.html img="5.png"  %}
+{% include post_img img="5.png"  %}
 
 #### As final step we are going to measure the performance of the model
 
 Using [Evaluate Model](https://msdn.microsoft.com/en-us/library/azure/dn905915.aspx) we can quickly measure the performance of our models, and even compare multiple algorithms.
 
-{% include post_img.html img="6.png"  %}
+{% include post_img img="6.png"  %}
 
 It doesn't look like we are able to accurately predict occupancy yet. Let’s see if we use a different algorithm we get better results.
 
 #### Our flow looks now like this
 
-{% include post_img.html img="7.png" alt="Azure ML flow"  %}
+{% include post_img img="7.png" alt="Azure ML flow"  %}
 
 ## Comparing Models and Algorithms
 
@@ -129,11 +129,11 @@ Connect the algorithm to the second *Train Model* block, that’s it.
 
 We can now quickly compare the accuracies of both models.
 
-{% include post_img.html img="8.png" alt="Azure ML model comparisons"  %}
+{% include post_img img="8.png" alt="Azure ML model comparisons"  %}
 
 ## Our pipeline now looks as follows
 
-{% include post_img.html img="9.png" alt="Azure ML pipeline"  %}
+{% include post_img img="9.png" alt="Azure ML pipeline"  %}
 
 ## Bonus: a REST api
 
@@ -148,7 +148,7 @@ Select the *Train Model* block you want to use, and click on *SET UP WEB SERVICE
 Add a *Web service input*, and connect it to the first *Edit Metadata* block. 
 Add a *Web service output* to the *Score Model* block.
 
-{% include post_img.html img="10.png" alt="Azure ML REST service"  %}
+{% include post_img img="10.png" alt="Azure ML REST service"  %}
 
 **You now have a web service.**
 
