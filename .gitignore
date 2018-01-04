@@ -37,3 +37,5 @@ node_modules
 dist
 
 *.iml
+
+/_site/
