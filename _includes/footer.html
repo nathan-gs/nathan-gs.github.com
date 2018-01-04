@@ -1,0 +1,49 @@
+<footer class="site-footer h-card">
+        <data class="u-url" href="{{ "/" | relative_url }}"></data>
+      
+        <div class="wrapper">
+      
+          <h2 class="footer-heading">{{ site.title | escape }}</h2>
+      
+          <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-2">
+              <img src="{{ "/" | relative_url }}assets/nathan-circle.png" />
+            </div>
+      
+            <div class="footer-col footer-col-1">
+              <ul class="social-media-list">
+                <li>
+                    <a class="u-email" href="mailto:{{ site.email }}">
+                        <i class="fas fa-envelope fa-fw"></i>
+                        {{ site.email }}
+                    </a>
+                </li>
+                <li>
+                    <a class="u-url" rel="me" href="https://github.com/{{ site.github_username }}">
+                        <i class="fab fa-github fa-fw"></i>
+                        {{ site.github_username }}
+                    </a>
+                </li>
+                <li>
+                    <a class="u-url" rel="me" href="https://twitter.com/{{ site.twitter_username }}">
+                        <i class="fab fa-twitter fa-fw"></i>
+                        @{{ site.twitter_username }}
+                    </a>                    
+                </li>
+                <li>
+                    <a class="u-url" rel="me" href="https://linkedin.com/in/nbijnens">
+                        <i class="fab fa-linkedin fa-fw"></i>
+                        Nathan Bijnens
+                    </a>                    
+                </li>
+              </ul>
+            </div>
+      
+            <div class="footer-col footer-col-3">
+              <p>{{ site.description | escape }}</p>
+            </div>
+          </div>
+      
+        </div>
+      
+      </footer>

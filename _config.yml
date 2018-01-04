@@ -1,11 +1,11 @@
 title: Nathan Bijnens
-author: Nathan
+author: Nathan Bijnens
 email: nathan@nathan.gs
 
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: > # this means to ignore newlines
+  Fascinated with Big Data & IoT. Speaker on IoT, 
+  Big Data and the Kappa & Lambda Architecture and Spark. 
+  Cloud Solution Architect, Advanced Analytics + AI @ Microsoft.
 
 twitter_username: nathan_gs
 github_username:  nathan-gs
@@ -18,8 +18,8 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.html
+header_pages:
+ - about.md
 
 # Build settings
 markdown: kramdown
@@ -27,3 +27,8 @@ theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
+
+google_analytics: UA-12327464-1
+
+plugins:
+  - jekyll-seo-tag
