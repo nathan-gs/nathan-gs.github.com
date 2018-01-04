@@ -1,0 +1,3 @@
+<div class="slideshare-{{ include.aspect_ratio  | replace: ':', 'x' }}">    
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/{{ include.code }}" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" class="slideshare-inner" allowfullscreen> </iframe>
+</div>
