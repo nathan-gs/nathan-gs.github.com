@@ -20,6 +20,7 @@ minima:
 # this and add the path to the pages in order as they should show up
 header_pages:
  - about.md
+ - cv/index.html
 
 # Build settings
 markdown: kramdown
@@ -32,3 +33,4 @@ google_analytics: UA-12327464-1
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
