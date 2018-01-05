@@ -18,16 +18,24 @@
     width:         calc(60% - (#{$spacing-unit} / 2));
 }
 
+// Twitter
 .twitter-tweet {
     margin: auto;
 }
 
+// Highlighting
 .highlight {
+    width: 100%;
+
     pre,code {
         background-color: #fff;        
     }
     pre.lineno {
         border: 0px solid #fff;
+    }
+
+    td.code {
+        width: 100%;
     }
 }
 
