@@ -3,21 +3,15 @@
       
         <div class="wrapper">
       
-          <h2 class="footer-heading">{{ site.title | escape }}</h2>
+          
       
           <div class="footer-col-wrapper">
-            <div class="footer-col footer-col-2">
+            <div class="footer-col footer-col-1">
               <img src="{{ "/assets/nathan-circle-200.png" | relative_url }}" />
             </div>
       
-            <div class="footer-col footer-col-1">
-              <ul class="social-media-list">
-                <li>
-                    <a class="u-email" href="mailto:{{ site.email }}">
-                        <i class="fas fa-envelope fa-fw"></i>
-                        {{ site.email }}
-                    </a>
-                </li>
+            <div class="footer-col footer-col-2">
+              <ul class="social-media-list">                
                 <li>
                     <a class="u-url" rel="me" href="https://github.com/{{ site.github_username }}">
                         <i class="fab fa-github fa-fw"></i>
@@ -42,11 +36,18 @@
                         RSS
                     </a>                    
                 </li>
+                <li>
+                    <a class="u-url" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <i class="fab fa-creative-commons fa-fw"></i>     
+                        BY-NC-SA 4.0                                      
+                    </a>
+                </li>
               </ul>
             </div>
       
             <div class="footer-col footer-col-3">
-              <p>{{ site.description | escape }}</p>
+                <h2 class="footer-heading">{{ site.title | escape }}</h2>
+              <p>{{ site.description | markdownify }}</p>
             </div>
           </div>
       

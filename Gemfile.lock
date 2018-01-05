@@ -233,6 +233,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-paginate
   jekyll-seo-tag
   minima
 

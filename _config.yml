@@ -1,11 +1,11 @@
 title: Nathan Bijnens
 author: Nathan Bijnens
-email: nathan@nathan.gs
 
+# Edit _includes/snippers/description
 description: > # this means to ignore newlines
-  Fascinated with Big Data & IoT. Speaker on IoT, 
-  Big Data and the Kappa & Lambda Architecture and Spark. 
-  Cloud Solution Architect, Advanced Analytics + AI @ Microsoft.
+  Fascinated with Big Data & IoT. [Speaker](/presentations/)
+  on IoT, Big Data and the Kappa & Lambda Architecture and Spark. 
+  <br/>Cloud Solution Architect, Advanced Analytics + AI @ Microsoft.
 
 twitter_username: nathan_gs
 github_username:  nathan-gs
@@ -19,10 +19,8 @@ minima:
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 header_pages:
- - about.md
+ - presentations.html
  - cv/index.html
-
-post_header_color: \#0084d1
 
 # Build settings
 markdown: kramdown
@@ -38,3 +36,7 @@ permalink: pretty
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: /page:num/

@@ -11,14 +11,15 @@
         {% include google-analytics.html %}
     {% endif %}    
     <style>
-        {% if page.header_color %}
+{% if page.categories contains 'presentations' %}
+    {% assign header_color = '#fca311' %}
+{% elsif page.layout == 'post' %}
+    {% assign header_color = '#0084d1' %}
+{% else %}
+    {% assign header_color = '#eb613d' %}
+{% endif %}
         .site-header {
-            border-top-color: {{ page.header_color }};
+            border-top-color: {{ header_color }};
         }
-        {% elsif page.layout == 'post' %}
-        .site-header {
-            border-top-color: {{ site.post_header_color }};
-        }
-        {% endif %}
     </style>
 </head>

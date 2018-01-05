@@ -1,0 +1,4 @@
+<div class="iframe-youtube-{{ include.aspect_ratio  | replace: ':', 'x' }}">    
+    <iframe src="https://www.youtube.com/embed/{{ include.code }}?rel=0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" class="iframe-inner" gesture="media" allow="encrypted-media" allowfullscreen> </iframe>
+</div>
+
