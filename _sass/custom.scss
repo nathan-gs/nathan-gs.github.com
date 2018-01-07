@@ -22,6 +22,17 @@ $accentColor: #ac9999;
     width:         calc(60% - (#{$spacing-unit} / 2));
 }
 
+
+@include media-query($on-palm) {
+    .footer-col {
+      float: none;
+      width: 60%;
+      line-break: auto;
+
+    }
+  
+  }
+
 // Twitter
 .twitter-tweet {
     margin: auto;
