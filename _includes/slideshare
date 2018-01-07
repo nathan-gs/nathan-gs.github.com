@@ -1,4 +1,4 @@
 <div class="iframe-slideshare-{{ include.aspect_ratio  | replace: ':', 'x' }}">    
-    <iframe src="//www.slideshare.net/slideshow/embed_code/key/{{ include.code }}" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" class="iframe-inner" allowfullscreen> </iframe>
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/{{ include.code }}" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen> </iframe>
 </div>
 <br />

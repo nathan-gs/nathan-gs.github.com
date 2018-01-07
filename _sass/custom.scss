@@ -1,6 +1,10 @@
+// Colors
+$lightAccentColor: #faf5f5;
+$accentColor: #ac9999;
+
 // Footer
 .site-footer {
-    background-color: #faf5f5;
+    background-color: $lightAccentColor;
 }
 
 .footer-col-1 {
@@ -28,15 +32,39 @@
     width: 100%;
 
     pre,code {
-        background-color: #fff;        
+        background-color: #fff;      
+        font-size: 12px;  
     }
-    pre.lineno {
-        border: 0px solid #fff;
-    }
+    
 
     td.code {
         width: 100%;
     }
+
+    pre {
+        border: 1px solid $lightAccentColor;
+
+        table.rouge-table {
+            pre {
+                border: 0;
+            }
+
+            pre.lineno {
+                border: 0px;
+                color: $accentColor;
+            }
+        }
+    }
+    
+    
+}
+
+code.highlighter-rouge {
+    font-size: 14px;
+}
+
+pre, code {
+    background-color: $lightAccentColor;
 }
 
 // slideshare
@@ -69,7 +97,10 @@
     height: 0;
 }
 
-.iframe-inner {
+.iframe-slideshare-16x9 iframe,
+.iframe-slideshare-4x3 iframe,
+.iframe-youtube-4x3 iframe,
+.iframe-youtube-16x9 iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -77,11 +108,32 @@
     height: 100%;
     border:1px solid #CCC; 
     //border-width:1px;
-    //margin-bottom:5px; 
-    max-width: 100%;
+    margin-bottom:5px; 
 }
 
 // Pagination
 .pagination {
     float: right;
 }
+
+// Markdown tables
+.page-content {
+
+    table:not(.rouge-table) {
+        table-layout: fixed;
+        width: 100%;
+
+        thead tr th {
+            border-bottom: 1px solid $accentColor;
+        }
+    
+        tbody {
+            tr:nth-child(odd) {
+                background-color: $lightAccentColor;
+            }
+        }
+    }
+    
+
+} 
+
