@@ -1,0 +1,9 @@
+---
+permalink: /robots.txt
+---
+
+
+User-agent: *
+Disallow: /cv/Nathan%20Bijnens.pdf
+
+Sitemap: {{ site.url }}/sitemap.xml

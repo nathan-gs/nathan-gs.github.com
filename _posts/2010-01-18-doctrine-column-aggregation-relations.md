@@ -5,7 +5,8 @@ categories:
 excerpt: >
     Solving a SQL STATE access violation error, when generating doctrine table structures.
 tags: [php]
-    
+redirect_from: 
+  - /post/340691908/doctrine-column-aggregation-relations    
 ---
 
 Suppose we have this structure:

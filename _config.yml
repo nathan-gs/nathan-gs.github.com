@@ -30,6 +30,7 @@ theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
+  - 'cv/Nathan Bijnens.pdf'
 
 google_analytics: UA-12327464-1
 
@@ -39,9 +40,16 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-redirect-from
 
 paginate: 5
 paginate_path: /page:num/
 
 disqus:
   shortname: nathan
+
+defaults:
+  - scope:
+      path: "cv/*.pdf"
+    values:
+      sitemap: false

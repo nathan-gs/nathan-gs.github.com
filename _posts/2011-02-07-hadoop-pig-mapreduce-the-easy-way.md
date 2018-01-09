@@ -4,6 +4,9 @@ title: 'Hadoop Pig: Map Reduce the Easy Way @ FOSDEM 2011'
 categories: [presentations]
 excerpt: >
     My presentation about Hadoop and Pig during the Fosdem 2011 [Data Dev Room](https://archive.fosdem.org/2011/schedule/track/data_analytics_devroom.html).
+redirect_from:
+  - /post/3167949735/hadoop-pig-mapreduce-the-easy-way
+  - /post/3250859679/presenting-hadoop-pig-mapreduce-the-easy-way
 ---
 
 My presentation about Hadoop and Pig during the Fosdem 2011 [Data Dev Room](https://archive.fosdem.org/2011/schedule/track/data_analytics_devroom.html).
