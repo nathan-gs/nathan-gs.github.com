@@ -154,6 +154,11 @@ nixos-rebuild --rollback
 {% endhighlight %}
 
 ## Conclusion
+#### Warning
+
+We are using an open-source, unoffical OneDrive client. Which might break, delete your data, corrupt your data, etc... Also trusting a third party docker container can come with risks, it might steal your credentials, etc.
+
+#### Conclusion
 
 Running Docker containers on [NixOS](http://nixos.org) works as a charm, using a few steps they are managed as if they were native systemd services. NixOS allows quick rollbacks and makes configuration management tools unnecessary.
 
