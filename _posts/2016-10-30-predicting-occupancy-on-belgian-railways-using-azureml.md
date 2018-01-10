@@ -176,6 +176,10 @@ We can improve this model in a few ways:
     
 Do let me know if you improve the performance, and how. I might do a follow up myself.
 
+#### Update
 
+* I just saw that [@Gillesvdwiele](https://twitter.com/Gillesvdwiele) [blogged on it](https://medium.com/@gillesvandewiele/very-nice-read-nathan-51b4f3b8dfba) as well. He added _weather_ and _vehicle_ type and reached better results.
+* [@peeterskris](https://twitter.com/peeterskris) from [dataminded.be](https://dataminded.be) also created a [blog post](https://dataminded.be/blog/predicting-occupancy-nmbs-trains).
+* Apperantly even a [kaggle competition](https://www.kaggle.com/c/train-occupancy-prediction/discussion/27549) exists.
 
 
