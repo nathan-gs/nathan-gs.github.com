@@ -89,8 +89,6 @@ function track(type, name) {
                     <dt class="span2">LinkedIn</dt>
                     <dd><a rel="me" itemprop="url" href="http://linkedin.com/in/nbijnens">linkedin.com/in/nbijnens</a>
                     </dd>
-                    <dt class="span2">Skype</dt>
-                    <dd><a rel="me" itemprop="url" href="skype:nathan_gs">nathan_gs</a></dd>
                 </dl>
                 <!--<dl>
                     <dt class="span2">Employment</dt>
@@ -100,7 +98,7 @@ function track(type, name) {
 
             </div>
             <div class="span6 photo">
-                <img class="nathan" src="nathan-460px.jpg" alt="Nathan Bijnens" itemprop="image"/>
+                <img class="nathan" src="{{ "/assets/" | relative_url }}/nathan-circle-200.png" alt="Nathan Bijnens" itemprop="image"/>
             </div>
 
 
@@ -186,248 +184,22 @@ function track(type, name) {
                             </cite>
                         </section>
 
-                        <section>
+                        
+                        {% for post in site.categories.presentations %}
+                            <section>
+                                <cite itemprop="event" itemscope itemtype="http://schema.org/Event">
+                                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                                            on <span itemprop="startDate" datetime="{{ post.date | date: "%b %-d, %Y" }}">
+                                                {{ post.date | date: "%B %Y" }}
+                                    </span>
+                                </cite>
+                            </section>
 
-                            <cite itemprop="event" itemscope itemtype="http://schema.org/Event">
-                                 <h4>The <span data-skill="IoT">Internet of Things</span>: Things, 
-                                 <span data-skill="Azure IoT">Connectivity</span>, <span data-skill="Big Data">Data</span> and <span data-skill="Cortana Intelligence">Insight</span>, 
-                                 bringing it all together</h4> <span data-skill="Public Speaking">at the</span> <h4>Microsoft Services Day  
-                                    <span itemprop="startDate" datetime="2017-03-21">March '17</span></h4>.
-                        </cite> 
-                    </section>
-                    <section>
+                        {% endfor %}
+                    
 
-                            <cite itemprop="event" itemscope itemtype="http://schema.org/Event">
-                                 <h4><span data-skill="Cortana Intelligence">Microsoft Advanced Analytics</span></h4>, with a special focus on 
-                                 <span data-skill="Cognitive Services">Cognitive Services</span> and <span data-skill="Azure ML">Azure Machine Learning</span> 
-                                 <span data-skill="Public Speaking">at the</span> <h4>Data Science Belgium Bootcamp  
-                                    <span itemprop="startDate" datetime="2016-10-18">October '16</span></h4>.
-                        </cite> 
-                    </section>
-
-                    <section>
-
-                            <cite itemprop="event" itemscope itemtype="http://schema.org/Event">
-                                 <h4><span data-skill="Cortana Intelligence">Advanced Analytics</span> with <span data-skill="Cortana Intelligence">Cortana Intelligence</span></h4> 
-                                 <span data-skill="Public Speaking">at the</span> <h4>Data Science Ghent Meetup  
-                                    <span itemprop="startDate" datetime="2016-04-14">April '16</span></h4>.
-                        </cite> 
-                    </section>
-
-                        <section>
-
-                            <cite class="accordion" id="ibm-bigdatadev14-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-                                <div class="accordion-group">
-                                    <div class="accordion-heading" data-toggle="collapse" data-parent="#ibm-bigdatadev14-accordion"
-                                    href="#ibm-bigdatadev14-accordion-collapse0" onclick="track('presentations','ibm-bigdatadev14')">
-
-                                    <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>Virdata: lessons learned from the <span data-skill="IoT">Internet of Things</span> and <span data-skill="IoT">M2M</span> <span data-skill="Cloud">Cloud Services</span></h4> <span data-skill="Public Speaking">at the</span> <h4>IBM Big Data Developers (San Jose, CA) Meetup of 
-                                    <span itemprop="startDate" datetime="2014-06-05">June '14</span></h4>.
-
-                                </div>
-                                <div id="ibm-bigdatadev14-accordion-collapse0" class="accordion-body collapse">
-                                    <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                                        <iframe src="http://www.slideshare.net/slideshow/embed_code/36584973" width="638" height="359"
-                                        frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                                        style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                                        allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </cite> 
-                    </section>
-
-                    <section>
-
-                        <cite class="accordion" id="nosql14-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-                            <div class="accordion-group">
-                                <div class="accordion-heading" data-toggle="collapse" data-parent="#nosql14-accordion"
-                                href="#nosql14-accordion-collapse0" onclick="track('presentations','nosql14-lambda')">
-
-                                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>A <span data-skill="Stream Processing">real-time</span> (<span data-skill="Kappa &amp; Lambda Architecture">Lambda</span>) architecture using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4> <span data-skill="Public Speaking">at</span> <h4>NoSQL Matters Cologne <span itemprop="startDate" datetime="2014-04-39">'14</span></h4>.
-
-                            </div>
-                            <div id="nosql14-accordion-collapse0" class="accordion-body collapse">
-                                <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                                    <iframe src="http://www.slideshare.net/slideshow/embed_code/34077117" width="638" height="359"
-                                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                                    style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                                    allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </cite> 
-                </section>
-
-                <section>
-
-                    <cite class="accordion" id="devoxx13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-                        <div class="accordion-group">
-                            <div class="accordion-heading" data-toggle="collapse" data-parent="#devoxx13-accordion"
-                            href="#devoxx13-accordion-collapse0" onclick="track('presentations','devoxx13-lambda')">
-                            <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>A <span data-skill="Stream Processing">real-time</span> <span
-                            data-skill="Software Architecture">architecture</span>
-                            using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4> <span data-skill="Public Speaking">at</span> <h4>Devoxx <span itemprop="startDate" datetime="2013-11-14">'13</span></h4>, the biggest European <span data-skill="Java">Java</span> conference.
-
-                        </div>
-                        <div id="devoxx13-accordion-collapse0" class="accordion-body collapse">
-                            <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                                <iframe src="http://www.slideshare.net/slideshow/embed_code/28272077" width="638" height="359"
-                                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                                style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                                allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </cite>
-            </section>
-
-            <section>
-
-                <cite class="accordion" id="jax13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-                    <div class="accordion-group">
-                        <div class="accordion-heading" data-toggle="collapse" data-parent="#jax13-accordion"
-                        href="#jax13-accordion-collapse0" onclick="track('presentations','jax13-lambda')">
-                        <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4>A <span data-skill="Stream Processing">real-time</span> <span data-skill="Software Architecture">architecture</span>
-                        using <span data-skill="Hadoop">Hadoop</span> and <span data-skill="Storm">Storm</span></h4> <span data-skill="Public Speaking">at</span> <h4>JAX
-                        London <span itemprop="startDate" datetime="2013-10-29">'13</span></h4>, a <em data-skill="Java">Java
-                        Enterprise</em> and <span data-skill="Big Data">Big Data</span> conference.
-
-                    </div>
-                    <div id="jax13-accordion-collapse0" class="accordion-body collapse">
-                        <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                            <iframe src="http://www.slideshare.net/slideshow/embed_code/28211578" width="597" height="486"
-                            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                            style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                            allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </cite>
-        </section>
-
-        <section>
-
-            <cite class="accordion" id="sqlug13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-                <div class="accordion-group">
-                    <div class="accordion-heading" data-toggle="collapse" data-parent="#sqlug13-accordion"
-                    href="#sqlug13-accordion-collapse0" onclick="track('presentations','sqlug13-bigdata')">
-                    <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> <h4><span data-skill="Big Data">Big Data</span>, <span
-                    data-skill="Hadoop">Hadoop</span> and <span data-skill="Hadoop">HDInsight</span></h4>, together with Wesley Backelant of Microsoft Belgium 
-                    <span data-skill="Public Speaking">at the</span> <h4>SQLUser
-                    Group Belgium</h4> meetup of </em><span itemprop="startDate" datetime="2013-02-27">February 2013</span>.
-
-                </div>
-                <div id="sqlug13-accordion-collapse0" class="accordion-body collapse">
-                    <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                        <iframe src="http://www.slideshare.net/slideshow/embed_code/18190171" width="597" height="486"
-                        frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                        style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen
-                        webkitallowfullscreen mozallowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </cite>
-    </section>
-
-    <section>
-
-        <cite class="accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-            <div>
-                A Series of 3 <h4>Apache <span data-skill="Storm">Storm</span> <span data-skill="Teaching">Workshops</span></h4> 
-                <span data-skill="Public Speaking">in the context of</span> <h4 itemprop="name">BigData.be</h4>, during <span itemprop="startDate" datetime="2013-05-30">2013</span>.
-            </div>
-        </cite>
-    </section>
-
-    <section>
-
-        <cite class="accordion" id="fosdem13-accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
-            <div class="accordion-group">
-                <div class="accordion-heading" data-toggle="collapse" data-parent="#fosdem13-accordion"
-                href="#fosdem13-accordion-collapse0" onclick="track('presentations','fosdem13-nosqlroom')">
-                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> 
-                <h4>A
-                    <span data-skill="Stream Processing">real-time</span> architecture using <span data-skill="Hadoop">Hadoop</span> &amp; <span data-skill="Storm">Storm</span></h4>
-                    <span data-skill="Public Speaking">at the</span> 
-                    <span
-                    itemprop="startDate" datetime="2013-02-03">2013</span> edition of the <h4 itemprop="name">FOSDEM
-                    NoSqlRoom</h4>, an <span data-skill="Technology Evangelism">open source conference</span>, it has been viewed over 24500+ times.
-
-                </div>
-                <div id="fosdem13-accordion-collapse0" class="accordion-body collapse">
-                    <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                        <iframe src="http://www.slideshare.net/slideshow/embed_code/16325561" width="597" height="486"
-                        frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                        style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                        allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </cite>
-    </section>
-
-    <section>
-
-        <cite itemprop="event" itemscope itemtype="http://schema.org/Event">
-            <div>
-                <h4>A Vision on Data</h4> 
-                <span data-skill="Public Speaking">at the</span> 
-                <span itemprop="startDate" datetime="2013-01-26">2013</span> <h4 itemprop="name">Big Data &amp;
-                Security Conference</h4> of <h4>LSEC</h4>.
-            </div>
-        </cite>
-    </section>
-
-    <section>
-
-        <cite class="accordion" id="ms12-accordion">
-            <div class="accordion-group">
-                <div class="accordion-heading" data-toggle="collapse" data-parent="#ms12-accordion"
-                href="#ms12-accordion-collapse0" onclick="track('presentations','ms12-inspirience')">
-                <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> 
-                <h4>Getting More out of Your <span data-skill="Big Data">Big Data</span></h4>
-                <span data-skill="Public Speaking">at</span> <h4>Microsoft Inspirience the Future 2012</h4>.
-            </div>
-            <div id="ms12-accordion-collapse0" class="accordion-body collapse">
-                <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                    <iframe src="http://www.slideshare.net/slideshow/embed_code/15311868" width="597" height="486"
-                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                    style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                    allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </cite>
-</section>
-
-
-<section>
-
-    <cite class="accordion" id="fosdem-accordion">
-        <div class="accordion-group">
-            <div class="accordion-heading" data-toggle="collapse" data-parent="#fosdem-accordion"
-            href="#fosdem-accordion-collapse0" onclick="track('presentations','fosdem-datadevroom')">
-            <span class="btn btn-mini dropdown"><i class="icon-arrow-down icon-grey"></i></span> 
-            <h4>Hadoop Pig: MapReduce the easy way</h4>
-            <span data-skill="Public Speaking">at the</span> 2011 edition
-            of the <h4>FOSDEM DataDevRoom</h4>, an <span data-skill="Technology Evangelism">open source conference</span>, it was featured on the front page of <a
-            href="http://www.slideshare.net/nathan_gs/hadoop-pig-mapreduce-the-easy-way">slideshare.net</a> and
-            has been viewed over 18000 times.
-
-        </div>
-        <div id="fosdem-accordion-collapse0" class="accordion-body collapse">
-            <div class="accordion-inner hidden-print visible-desktop" style="text-align: center">
-                <iframe src="http://www.slideshare.net/slideshow/embed_code/6842393" width="597" height="486"
-                frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px"
-                allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</cite>
-</section>
-
+                       
+                    
 
 </div>
 </div>                
@@ -443,7 +215,9 @@ function track(type, name) {
 
         <section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
     On <span itemprop="startDate" datetime="2016-02-01">February 2016</span> I joined <h4 itemprop="name">Microsoft</h4> as a 
-     <h4 itemprop="jobTitle"><span data-skill="Big Data">Data</span> <span data-skill="Solution Selling">Solution</span> <span data-skill="Business To Technology Strategy">Architect</span></h4>.
+     <h4 itemprop="jobTitle">
+        Cloud Solution Architect, Advanced Analytics + AI</h4>, formerly known as <h4> 
+        <span data-skill="Big Data">Data</span> <span data-skill="Solution Selling">Solution</span> <span data-skill="Business To Technology Strategy">Architect</span></h4>.
       As a DSA I <span data-skill="Solution Selling">drive</span> high priority <span data-skill="Client &amp; Partner Relationships">customer</span> initiatives, 
       leveraging <span data-skill="Cortana Intelligence">Cortana Intelligence</span> on <span data-skill="Cloud"><span data-skill="Azure">Azure</span></span> 
       to solve <span data-skill="Digital Transformation">the biggest</span> and <span data-skill="Data Driven">most complex</span> 
@@ -1472,7 +1246,24 @@ function track(type, name) {
         <div class="row">
             <div class="span12">
                 <section>
-                    <h4>Microsoft Design and Implement <span data-skill="Big Data">Big Data</span> Analytics Solutions (70-475)</h4>
+                    <h4>Perform Big Data Engineering on Microsoft Cloud Services (70-776)</h4>
+                    <div>Microsoft | Feb 2018</div>
+                </section>
+                <section>
+                    <h4>Insight Selling</h4>
+                    <div>Microsoft | Dec 2017</div>
+                </section>  
+                <section>
+                    <h4>MCSA Cloud Platform  2017</h4>
+                    <div>Microsoft | May 2017</div>
+                </section>   
+                <section>
+                    <h4>Designing and Implementing <span data-skill="Cloud">Cloud</span> (70-473)</h4>
+
+                    <div>Microsoft | May 2017</div>
+                </section>                
+                <section>
+                    <h4>Design and Implement <span data-skill="Big Data">Big Data</span> Analytics Solutions (70-475)</h4>
 
                     <div>Microsoft | February 2016</div>
                 </section>
