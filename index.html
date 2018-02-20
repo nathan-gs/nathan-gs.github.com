@@ -32,7 +32,7 @@ title: Home
         {% if p == paginator.page %}
           <strong>{{ p }}</strong>
         {% elsif p == 1 %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ p }}</a>
+          <a href="{{ "/" | relative_url }}">{{ p }}</a>
         {% else %}
           <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', p }}">{{ p }}</a>
         {% endif %}
