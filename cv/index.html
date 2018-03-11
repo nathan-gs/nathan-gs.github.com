@@ -58,7 +58,7 @@ function track(type, name) {
         {% include_relative _skills.html %}
         {% include_relative _education.html %}
         
-
+        
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js"></script>
@@ -68,29 +68,14 @@ function track(type, name) {
 
         $(document).ready(function () {
 
-            var keywords = {};
-
-            var keywordAggregate = function (index, data) {
-                var keyword = data.getAttribute("data-skill");
-                if (!keywords.hasOwnProperty(keyword)) {
-                    keywords[keyword] = 0;
-                }
-                keywords[keyword]++;
-            };
-
-            $('[data-skill]').each(keywordAggregate);
-
-
             var skillWords = [];
-            for (var key in keywords) {
-                if (keywords[key] < 2) {
-                    continue;
-                }
+            {% for i in site.data.cv_skills %}
                 skillWords.push({
-                    text: key,
-                    weight: keywords[key]
-                });
-            }
+                    text: "{{ i.skill }}",
+                    weight: {{i.weight}}
+                });                
+            {% endfor %}
+                        
 
             $('.skills .wordcloud').jQCloud(skillWords, {
                 'shape': 'rectangular'

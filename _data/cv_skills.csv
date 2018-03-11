@@ -1,0 +1,147 @@
+skill,weight
+Accountancy Software, 3
+Akka, 2
+Amazon AWS, 13
+Analytics, 5
+AngularJS, 6
+ant, 1
+API, 3
+AS400, 2
+ASP.Net, 1
+Azure, 25
+Azure Data Lake, 3
+Azure EventHubs, 3
+Azure IoT, 4
+Azure ML, 4
+Azure SQL, 1
+Azure SQL DataWarehouse, 2
+Azure Stream Analytics, 3
+Best Practices, 4
+Big Data, 36
+Business Strategy, 2
+Business To Technology Strategy, 9
+Cassandra, 6
+Chef, 10
+Client & Partner Relationships, 12
+Clojure, 2
+Cloud, 28
+Cloudera Manager, 2
+Cognitive Services, 3
+Concurrent Programming, 1
+Continuous Ingegration, 2
+Continuous Integration, 2
+Cortana Intelligence, 6
+CQRS, 1
+credit management, 2
+Crystal Reports, 1
+Cucumber, 2
+D3, 1
+Data Analysis, 3
+Data Analytics, 1
+Data Driven, 3
+Data Visualization, 5
+Design Patterns, 4
+DevOps, 11
+Digital Transformation, 4
+DNS, 1
+Docker, 4
+Drupal, 1
+ElasticSearch, 8
+ETL, 6
+Event Processing, 3
+Fault Tolerance, 1
+Finagle, 1
+FPDF, 1
+Functional Programming, 5
+Ganglia, 3
+git, 7
+Google BigQuery, 1
+Graph Processing, 4
+Greencat, 2
+Guava, 1
+Hadoop, 23
+Hadoop Pig, 9
+Hbase, 3
+HDFS, 8
+HDInsight, 2
+Hive, 2
+HTML5, 4
+HTTP, 2
+IHarvest, 1
+IIS, 1
+IoT, 13
+IPython, 1
+Java, 21
+Java EE, 1
+JavaScript, 4
+JAX-WS, 1
+Jenkins, 6
+Jersey, 6
+JPA, 4
+jQuery, 3
+JSoup, 1
+Kafka, 6
+Kappa & Lambda Architecture, 12
+Lead Developer, 1
+Linux, 16
+Machine Learning, 4
+maven, 6
+Memcached, 1
+Mesos, 9
+Mobile Development, 2
+Mongo, 1
+MVC, 1
+NixOS, 6
+NoSQL, 13
+OAuth, 1
+OpenStack, 1
+Operational Intelligence, 2
+Oracle, 1
+ORM, 1
+PDO, 2
+Performance testing, 1
+PHP, 15
+Power BI, 1
+Project Management, 10
+Public Speaking, 8
+Puppet, 13
+Python, 5
+Redis, 5
+Refactoring, 2
+Release Management, 1
+Requirement Analysis, 1
+REST, 4
+Ruby, 3
+Samza, 1
+SAP FI, 2
+Scala, 19
+Scalability, 9
+Security, 7
+SOAP, 2
+Softlayer, 7
+Software Architecture, 9
+Software Engineering, 4
+Solution Selling, 4
+Spark, 19
+Spark SQL, 2
+Spark Streaming, 5
+Spring, 4
+SQL, 17
+Storm, 18
+Stream Processing, 8
+svn, 1
+symfony, 4
+Symfony2, 3
+Syslog, 2
+System Engineering, 4
+Teaching, 1
+Technology Evangelism, 7
+Thrift, 6
+Unit Testing, 16
+Vagrant, 2
+Velocity, 1
+Virtualisation, 5
+Web Applications, 5
+Web Hosting, 1
+XML, 5
+Zookeeper, 3
