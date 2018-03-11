@@ -39,3 +39,4 @@ dist
 *.iml
 
 /_site/
+/.vscode/settings.json

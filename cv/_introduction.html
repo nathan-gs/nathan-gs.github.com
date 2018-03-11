@@ -10,8 +10,7 @@
                     <dd><h4 itemprop="name">Nathan Bijnens</h4></dd>
                     <dt class="span2">Address</dt>
                     <dd>
-                        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            On request<br/>
+                        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">                            
                             <span itemprop="postalCode">9042</span> <span itemprop="addressLocality">Ghent</span><br/>
                             <span itemprop="addressCountry">Belgium</span>
                         </address>
@@ -27,7 +26,7 @@
             </dl>
             <dl>
                 <dt class="span2">Website</dt>
-                <dd><a itemprop="url" href="http://nathan.gs">nathan.gs</a></dd>
+                <dd><a itemprop="url" href="https://nathan.gs">nathan.gs</a></dd>
                 <dt class="span2">GitHub</dt>
                 <dd><a rel="me" itemprop="url" href="https://github.com/nathan-gs">github.com/nathan-gs</a></dd>
                 <dt class="span2">Twitter</dt>
@@ -51,49 +50,8 @@
     </div>
     <div class="row text">
         <div class="span12">
-            <p>I am Nathan Bijnens, a developer turned <span data-skill="Business To Technology Strategy">Solution Architect</span> with a passion for great <span data-skill="Software Engineering">code</span>,
-                <span data-skill="Big Data">Big Data</span> and the <span data-skill="IoT">Internet of Things</span>. I am interested 
-                in <span data-skill="Software Engineering">programming</span> and <span data-skill="System Engineering">system administration</span>, especially
-                where they meet, from <span data-skill="Scalability">scaling</span> platforms to designing the <span
-                data-skill="Software Architecture">architecture</span> of new and existing products and everything in between.<br />
-                I am a <span data-skill="Technology Evangelism">passionate speaker and evangelist</span>, on <span data-skill="Big Data">Big Data</span>, 
-                <span data-skill="IoT">IoT</span> and <span data-skill="Cloud">Cloud</span>. 
-                I am <span data-skill="Business To Technology Strategy">helping my customers</span> 
-                with <span data-skill="Digital Transformation">Digital Transformation</span> 
-                and becoming <span data-skill="Data Driven">Data Driven</span>, as well as all their 
-                <span data-skill="Big Data">data</span> in the <span data-skill="Azure"><span data-skill="Cloud">Cloud</span></span> needs.
-            </p>
-
-            <p>
-                My focus is on <span data-skill="Data Analytics">data analytics</span> and building <span data-skill="Kappa &amp; Lambda Architecture"><span data-skill="Kappa &amp; Lambda Architecture">Big Data applications</span></span>. 
-
-                Using <span data-skill="Spark">Spark</span>, <span data-skill="Storm">Storm</span>, 
-                <span data-skill="Hadoop">Hadoop</span>, <span data-skill="Cassandra">Cassandra</span>, 
-                <span data-skill="Azure Data Lake">Azure Data Lake</span>, <span data-skill="Azure SQL DataWarehouse">Azure SQL Data Warehouse</span>,
-                <span data-skill="Azure Stream Analytics">Stream Analytics</span>, <span data-skill="Azure EventHubs">EventHubs</span>,
-                <span data-skill="Kafka">Kafka</span> and <span data-skill="Azure IoT">Azure IoT Hub</span>. 
-
-                I am especially  interested in <span data-skill="Stream Processing">real-time</span> <span data-skill="Big Data">Big Data</span>, actively developing applications on top of <span>Spark Streaming</span> and <span data-skill="Storm">Storm</span>, 
-                designing <span data-skill="Kappa &amp; Lambda Architecture">Lambda</span> and <span data-skill="Kappa &amp; Lambda Architecture">Kappa</span>-like <span data-skill="Software Architecture">architectures</span>. 
-                I advise on <span data-skill="Business To Technology Strategy">Big Data Strategies</span> and <span data-skill="Technology Evangelism">evangelize</span> <span data-skill="Cloud">Cloud</span>, <span data-skill="Big Data">Big Data</span> and <span data-skill="IoT">IoT</span> to clients and at conferences.
-            </p>
-
-            <p>
-                I am experienced with <span data-skill="Java">Java</span>, <span data-skill="Scala">Scala</span> 
-                and have a general interest in <span data-skill="Functional Programming">Functional Programming</span>. 
-                    I am also a passionate <span data-skill="Linux">Linux</span> system engineer, follower of the <span
-                    data-skill="DevOps">DevOps</span> movement, with experience in
-                    <span data-skill="Puppet">Puppet</span>, <span data-skill="Chef">Chef</span>, 
-                    <span data-skill="NixOS">NixOS</span> and the <span data-skill="Cloud"><span data-skill="Azure">Cloud</span></span>.
-
-            </p>
-
-            <p>I enjoy working with <span data-skill="Solution Selling"><span data-skill="Client &amp; Partner Relationships">clients and partners</span></span>,
-                    from giving <span data-skill="Client &amp; Partner Relationships">advice</span>, talking about the
-                    <span data-skill="Business To Technology Strategy">Business</span> and <span data-skill="Technology Evangelism">Technological</span> value of
-                    <span data-skill="Big Data">Big Data</span> and <span data-skill="IoT">Internet of Things</span>, to
-                    <span data-skill="Business To Technology Strategy">Requirement Analysis</span>.
-            </p>
+            {% capture introduction_text %}{% include_relative _introduction_text.md %}{% endcapture %}
+            {{ introduction_text | markdownify }}                        
         </div>
             </div>
 
