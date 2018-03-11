@@ -1,1 +1,5 @@
-Nathan Bijnens is a developer with a passion for great code, IoT and Big Data. He is focused on data analysis and building Big Data applications, especially in the IoT world. He follows the rise of (real-time) big data closely, actively developing applications on top of Spark, Hadoop and Storm. He is a huge fan and evangelist of the Lambda Architecture and co-founded lambda-architecture.net to blog and share experience. He advises on Big Data Strategies and evangelizes Big Data to clients and at conferences. Nathan works for Virdata, at the Data Processing Team, creating an IoT platform.
+---
+layout: null
+---
+{% capture introduction_text %}{% include_relative _introduction_text.md %}{% endcapture %}
+{{ introduction_text | markdownify | strip_html }}    
