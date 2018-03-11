@@ -1,0 +1,50 @@
+<section class="presentations">
+    <h2>Presentations</h2>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <section>
+
+                    <cite class="accordion" itemprop="event" itemscope itemtype="http://schema.org/Event">
+                        <div>
+                           Many <h4><span data-skill="Public Speaking">presentations</span> to <span data-skill="Solution Selling"><span data-skill="Client &amp; Partner Relationships">clients and partners</span></span></h4>, typically on:
+                           <ul style="list-style: disc inside none;">
+                               <li>
+                                   <span data-skill="Digital Transformation">Digital Transformation</span>
+                                </li>
+                               <li>
+                                   <span data-skill="Cortana Intelligence">Cortana Intelligence</span> and <span data-skill="Cognitive Services">Cognitive Services</span>
+                               </li>
+                               <li>
+                                   The <span data-skill="IoT">Internet of Things</span>
+                               </li>
+                               <li>
+                                   <span data-skill="Azure">Azure</span> and <span data-skill="Cloud">Cloud</span>
+                               </li>
+
+                           </ul>
+                        </div>
+                    </cite>
+                </section>
+
+                
+                {% for post in site.categories.presentations %}
+                    <section>
+                        <cite itemprop="event" itemscope itemtype="http://schema.org/Event">
+                            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                                    on <span itemprop="startDate" datetime="{{ post.date | date: "%b %-d, %Y" }}">
+                                        {{ post.date | date: "%B %Y" }}
+                            </span>
+                        </cite>
+                    </section>
+
+                {% endfor %}
+            
+
+               
+            
+
+</div>
+</div>                
+</div>                
+</section>
