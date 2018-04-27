@@ -35,3 +35,6 @@ The Intelligent Kiosk can be found at the [Windows Store](https://www.microsoft.
 
 There is a very nice [blog post](https://blogs.msdn.microsoft.com/premier_developer/2017/05/13/facial-recognition-and-the-intelligent-kiosk-app/) by [Rich Maines](https://www.linkedin.com/in/richmaines/), on [Facial recognition and the Intelligent Kiosk](https://blogs.msdn.microsoft.com/premier_developer/2017/05/13/facial-recognition-and-the-intelligent-kiosk-app/).
 
+#### Tweakers.net Interview
+
+ An interview on **AI** and **Ethics** with **[@WesleyBackelant](https://twitter.com/WesleyBackelant)** and **[me](https://nathan.gs)** was published at [tweakers.net](/2018/04/04/tweakers-interview-on-ai/).
