@@ -1,2 +1,1 @@
-<a href="{{ "/assets/post" | relative_url }}{{ page.url }}{{ include.img }}"><img src="{{ "/assets/post" | relative_url }}{{ page.url }}{{ include.img }}" alt="{{ include.alt }}"/></a>
-
+<a href="{% if include.url %}{{ include.url }}{% else %}{{ "/assets/post" | relative_url }}{{ page.url }}{{ include.img }}{% endif %}"><img src="{{ "/assets/post" | relative_url }}{{ page.url }}{{ include.img }}" alt="{{ include.alt }}" width="{{include.width}}"/></a>
