@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "#48 on Grey\'s The 150 Most Influential People in Big Data & Hadoop"
+title: "#48 on Grey's The 150 Most Influential People in Big Data & Hadoop"
 
 tags: [bigdata, hadoop]
 ---
