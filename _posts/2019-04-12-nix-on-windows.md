@@ -14,6 +14,8 @@ excerpt: >
    
    <br />
    <img src="/assets/post/2019/04/12/nix-on-windows/nix-on-windows.png" alt="Nix on Windows 10" />
+
+image: /assets/post/2019/04/12/nix-on-windows/nixos.png
 ---
 
 <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" />  Using [nix](https://nixos.org/nix), the _functional_ package manager on the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) is fairly easy, however a couple of additional steps need to be done. 

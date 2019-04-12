@@ -13,6 +13,14 @@ twitter:
   username: nathan_gs
 github_username:  nathan-gs
 
+social:
+  name: Nathan Bijnens
+  links:
+    - https://twitter.com/nathan_gs
+    - https://www.facebook.com/nathan.gs
+    - https://www.linkedin.com/in/nbijnens
+    - https://github.com/nathan-gs
+
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
