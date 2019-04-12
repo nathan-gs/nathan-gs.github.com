@@ -40,3 +40,4 @@ dist
 
 /_site/
 /.vscode/settings.json
+/vendor/
