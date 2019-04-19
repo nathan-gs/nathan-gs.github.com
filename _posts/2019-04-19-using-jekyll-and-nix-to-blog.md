@@ -7,6 +7,22 @@ tags:
  - nix
  - github pages
  - github
+
+excerpt: >
+   For my blogging I use [Jekyll](https://jekyllrb.com) and [Nix](https://nixos.org/nix), hosted on [Github Pages](https://pages.github.com/). Now that we have a [working Nix on Windows setup]({% post_url 2019-04-12-nix-on-windows %}), we can start to blog. 
+
+    ### Gemfile
+
+    It all starts with a simple, [Gemfile](https://github.com/nathan-gs/nathan-gs.github.com/blob/master/Gemfile) where I specify the dependencies needed. 
+    It should look something like this:
+
+    ```ruby
+    source 'https://rubygems.org'
+    gem 'github-pages', group: :jekyll_plugins
+    gem "minima"
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-paginate'
+    ```
 ---
 
 For my blogging I use [Jekyll](https://jekyllrb.com) and [Nix](https://nixos.org/nix), hosted on [Github Pages](https://pages.github.com/). Now that we have a [working Nix on Windows setup]({% post_url 2019-04-12-nix-on-windows %}), we can start to blog. 
