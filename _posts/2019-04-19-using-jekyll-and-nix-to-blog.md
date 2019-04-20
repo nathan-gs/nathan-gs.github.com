@@ -9,9 +9,9 @@ tags:
  - github
 
 excerpt: >
-   For my blogging I use [Jekyll](https://jekyllrb.com) and [Nix](https://nixos.org/nix), hosted on [Github Pages](https://pages.github.com/). Now that we have a [working Nix on Windows setup]({% post_url 2019-04-12-nix-on-windows %}), we can start to blog. 
+   For my blogging I use [Jekyll](https://jekyllrb.com) and [Nix](https://nixos.org/nix), hosted on [Github Pages](https://pages.github.com/). Now that we have a working Nix on Windows setup, we can start to blog. 
 
-    ### Gemfile
+    <h3>Gemfile</h3>
 
     It all starts with a simple, [Gemfile](https://github.com/nathan-gs/nathan-gs.github.com/blob/master/Gemfile) where I specify the dependencies needed. 
     It should look something like this:
