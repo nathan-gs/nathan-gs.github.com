@@ -46,7 +46,7 @@ gem 'jekyll-paginate'
 1. Lock `Gemfile.lock`, using `bundler lock`
 1. Package all dependencies: `bundler package --no-install --path vendor`
 1. Apply [bundix](https://github.com/manveru/bundix): `bundix`
-    Bundix is going to generate a `gemset.nix`, and mode the gems into the _nix store_.
+    Bundix is going to generate a `gemset.nix`, and move the gems into the _nix store_.
 1. Cleanup: `rm -rf vendor/*`
 
 Bringing this all together into a [simple script](https://github.com/nathan-gs/nathan-gs.github.com/blob/master/bin/initialize-or-update.sh):
