@@ -26,3 +26,4 @@ steps:
     target: '$(Build.SourceVersion)'
     tagSource: 'auto'
     title: 'test'
+    gitHubConnection: nbgithubgrant
