@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: GitHubRelease@0
+  inputs:
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'auto'
+    title: 'test'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
