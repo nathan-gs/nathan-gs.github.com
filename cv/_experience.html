@@ -20,7 +20,7 @@
                     </div>
                 </section>
 
-                <section itemprop="event" itemscope itemtype="http://schema.org/Event">
+                <section itemprop="event" itemscope itemtype="http://schema.org/Event" class="noprint">
                     {% include_relative _experience_lambda.html %}
                 </section>
 
@@ -48,7 +48,7 @@
                     </div>
                 </section>
 
-                <section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                <section itemprop="worksFor" itemscope itemtype="http://schema.org/Organization" class="noprint">
                     {% include_relative _experience_icontroller.html %}
                 </section>
 
@@ -60,10 +60,16 @@
                     </div>
                 </section>
 
+                <section class="only-print">
+                    <p>
+                        For the full details, see <a href="https://nathan.gs/cv">nathan.gs/cv</a>.
+                    </p>
+                </section>
+                {% comment %}
                 <section itemprop="event" itemscope itemtype="http://schema.org/Event">
                     {% include_relative _experience_cms.html %}
                 </section>
-
+                {% endcomment %}
             </div>
         </div>
     </div>
