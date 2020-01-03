@@ -3,3 +3,4 @@ gem 'github-pages', group: :jekyll_plugins
 gem "minima"
 gem 'jekyll-seo-tag'
 gem 'jekyll-paginate'
+gem 'faraday', '0.17.3'
