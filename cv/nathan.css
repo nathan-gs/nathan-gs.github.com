@@ -243,6 +243,16 @@ section section .accordion ul h4, section section .accordion ul h5 {
         display: none;
     }
 
+    .only-print {
+        display: inherit;
+    }
+
+}
+
+@media screen {
+    .only-print {
+        display: none;
+    }
 }
 
 .accordion-heading {
