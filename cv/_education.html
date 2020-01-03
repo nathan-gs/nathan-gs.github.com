@@ -2,51 +2,33 @@
     <h2>Education</h2>
 
     <div class="container">
+        <div class="row">
+            <div class="span12"><h3>Certificates</h3></div>            
+        </div>
 
         <div class="row">
-            <div class="span12">
-                <section>
-                    <h4>Perform Big Data Engineering on Microsoft Cloud Services (70-776)</h4>
-                    <div>Microsoft | Feb 2018</div>
-                </section>
-                <section>
-                    <h4>Insight Selling</h4>
-                    <div>Microsoft | Dec 2017</div>
-                </section>  
-                <section>
-                    <h4>MCSA Cloud Platform  2017</h4>
-                    <div>Microsoft | May 2017</div>
-                </section>   
-                <section>
-                    <h4>Designing and Implementing Cloud (70-473)</h4>
-
-                    <div>Microsoft | May 2017</div>
-                </section>                
-                <section>
-                    <h4>Design and Implement Big Data Analytics Solutions (70-475)</h4>
-
-                    <div>Microsoft | February 2016</div>
-                </section>
-                <section>
-                    <h4>IBM Big Data Fundamentals Technical Mastery (N32)</h4>
-
-                    <div>IBM | 000-28363001 | January 2013</div>
-                </section>
-                <section>
-                    <h4>IBM InfoSphere BigInsights (Hadoop &amp;
-                        Big Data) Technical Professional
-                    </h4>
-
-                    <div>IBM | 000-28146057 | October 2012</div>
-                </section>
-                <section>
-                    <h4>
-                        SARA Hadoop workshop
-                    </h4>
-
-                    <div>SURF SARA, Amsterdam | December 2010</div>
-                </section>
+            {% for c in site.data.cv_certificate %}
+               
+                <div class="span4 certificate">
+                    {% if c.acclaim_id %}
+                    <a href="https://www.youracclaim.com/badges/{{ c.acclaim_id }}">
+                        <img src="https://images.youracclaim.com/size/70x70/images/{{ c.logo }}" height="70" width="70" alt="{{c.description}}">
+                    </a>
+                    {% else %}
+                    <img src="{{ c.logo }}"  height="70" width="70" alt="{{c.description}}">
+                    {% endif %}
+                    <h5>{{c.description}}</h5>
+                    {{c.issuer}} | {{c.when}}
+                </div>
+                {% assign mod = forloop.index | modulo: 3 %}
+                {% if mod == 0 %}
+                </div>
+                <div class="row">
+                {% endif %}
+            {% endfor %}        
             </div>
+            <div class="row">
+                <div class="span12"><h3>Education</h3></div>            
             </div>
             <div class="row">
                 <section>

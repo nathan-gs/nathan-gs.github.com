@@ -62,6 +62,30 @@ section {
     background-color: #6b0094 !important;
 }
 
+.education .certificate {
+    text-align: center;
+    font-size: smaller;
+    height: 100px;
+}
+
+.education .certificate img {
+    float: left;
+    display: block;
+
+}
+
+/* @media print {
+    .education .certificate {
+        height: 120px;
+    }
+    .education .certificate h5 {
+        font-weight: bolder;
+    }
+    .education .certificate img {
+        display: none;
+    }
+}
+ */
 section section {
     padding-top: 10px;
 }
