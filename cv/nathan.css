@@ -71,21 +71,26 @@ section {
 .education .certificate img {
     float: left;
     display: block;
-
+    height: 70px;
+    width: 70px;
 }
 
-/* @media print {
+@media print {
     .education .certificate {
-        height: 120px;
+        text-align: left;
+        height: 80px;     
+        line-height: 5px;   
     }
+
     .education .certificate h5 {
-        font-weight: bolder;
+        font-weight: bolder;        
+        font-size: small;
     }
     .education .certificate img {
         display: none;
     }
 }
- */
+
 section section {
     padding-top: 10px;
 }
@@ -100,10 +105,6 @@ section section h4 {
 
 section section h5 {
     font-size: 13px;
-}
-
-span[data-skill]:hover {
-    color: #420000;
 }
 
 .skill.btn-small {
@@ -211,8 +212,7 @@ section section .accordion ul h4, section section .accordion ul h5 {
         display: none;
     }
 
-    section h2 {
-        width: 199mm;
+    section h2 {        
         margin-left: 0;
         margin-right: 0;
         -webkit-print-color-adjust:exact;
@@ -235,6 +235,13 @@ section section .accordion ul h4, section section .accordion ul h5 {
         color: #08c !important;
     }
 
+    .presentations {
+        display: none;
+    }
+
+    .noprint {
+        display: none;
+    }
 
 }
 

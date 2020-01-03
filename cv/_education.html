@@ -9,22 +9,17 @@
         <div class="row">
             {% for c in site.data.cv_certificate %}
                
-                <div class="span4 certificate">
+                <div class="span4 certificate {{c.css_class}}">
                     {% if c.acclaim_id %}
                     <a href="https://www.youracclaim.com/badges/{{ c.acclaim_id }}">
-                        <img src="https://images.youracclaim.com/size/70x70/images/{{ c.logo }}" height="70" width="70" alt="{{c.description}}">
+                        <img src="https://images.youracclaim.com/size/70x70/images/{{ c.logo }}" alt="{{c.description}}">
                     </a>
                     {% else %}
-                    <img src="{{ c.logo }}"  height="70" width="70" alt="{{c.description}}">
+                    <img src="{{ c.logo }}" alt="{{c.description}}">
                     {% endif %}
                     <h5>{{c.description}}</h5>
                     {{c.issuer}} | {{c.when}}
                 </div>
-                {% assign mod = forloop.index | modulo: 3 %}
-                {% if mod == 0 %}
-                </div>
-                <div class="row">
-                {% endif %}
             {% endfor %}        
             </div>
             <div class="row">
