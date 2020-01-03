@@ -1,27 +1,29 @@
 skill,weight
 Big Data, 50
 Cloud, 40
+Coaching, 40
 Azure, 35
 AI, 30
 Spark, 30
+Strategy, 25
 Scala, 25
+Public Speaking, 25
 Java, 21
 IoT, 20
 Trusted Advisor, 20
-Public Speaking, 20
 Business, 20
+Stakeholder Management, 20
+Project Management, 20
 Hadoop, 19
 Storm, 18
 SQL, 17
 Linux, 16
-Unit Testing, 16
-Project Management, 15
 Software Architecture, 15
+Go-to-Market, 15
 PHP, 15
 Amazon AWS, 13
 NoSQL, 13
 Puppet, 13
-Client & Partner Relationships, 12
 Kappa & Lambda Architecture, 12
 DevOps, 11
 Chef, 10
@@ -30,12 +32,12 @@ Business To Technology Strategy, 9
 Hadoop Pig, 9
 Mesos, 9
 Scalability, 9
+Unit Testing, 8
 ElasticSearch, 8
 HDFS, 8
 Stream Processing, 8
 git, 7
 Security, 7
-Softlayer, 7
 Technology Evangelism, 7
 AngularJS, 6
 Cassandra, 6
@@ -44,7 +46,6 @@ ETL, 6
 TDD, 6
 Jenkins, 6
 Kafka, 6
-maven, 6
 NixOS, 6
 Thrift, 6
 Analytics, 5
@@ -85,9 +86,7 @@ jQuery, 3
 Ruby, 3
 Symfony2, 3
 Zookeeper, 3
-Akka, 2
 Azure SQL DataWarehouse, 2
-Business Strategy, 2
 Clojure, 2
 Cloudera Manager, 2
 Continuous Integration, 2
