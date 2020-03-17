@@ -1,4 +1,5 @@
 shortcode,acclaim_id,logo,description,issuer,when,css_class
+OpenHackMDWCoach,daf86cd2-d134-4c53-80a2-5705028fde5b,7840ba73-64ff-44cd-8671-b5e2ca14d846/Modern_Data_Warehousing_Coach.png,OpenHack: Modern Data Warehousing Coach,Microsoft OpenHack,March 2020,
 AzureDataEngineer,72e613e9-8d0b-4a89-9217-1bffe8f7669b,61542181-0e8d-496c-a17c-3d4bf590eda1/azure-data-engineer-associate-600x600.png,Azure Data Engineer Associate,Microsoft,September 2019,
 DP-201,2fad567f-1161-4af1-99c7-fecc7adcd3cd,c4671de2-68f7-4219-952d-2e955e25f453/exam-dp201-600x600.png,DP-201 Designing an Azure Data Solution,Microsoft,September 2019,noprint
 DP-200,fd4a9c5b-2558-4070-8b00-0d19b4a946ab,af626bbe-ed13-472f-9e72-d4808474acb5/exam-dp200-600x600.png,DP-200 Implementing an Azure Data Solution,Microsoft,September 2019,noprint
@@ -11,5 +12,6 @@ MCSA,afa280e6-43c1-48d3-bf66-da3cf5bb7d18,4d17192b-894b-407e-b747-e800852b709a/M
 70-473,7f0d43b0-3d72-49a1-9d2e-015b927a0fd4,988b280b-ae5f-469c-8de5-4c972b3a3a0d/Microsoft_Exam473.png,Designing and Implementing Cloud Data Platform Solutions (70-473),Microsoft,May 2017,noprint
 70-475,93be2f10-bed3-445e-b11d-5271ec776c88,17e584ae-3c6e-466c-abf4-8d5537de5ab6/Microsoft_Exam475.png,Design and Implement Big Data Analytics Solutions (70-475),Microsoft,February 2016,
 IBM-N32,,/assets/ibm.png,IBM Big Data Fundamentals Technical Mastery (N32),IBM,January 2013,noprint
+BedrijfsBeheer,,/assets/fod-economie.png,Certificate on Basic Knowledge of Business Management,FOD Economie, January 2013,noprint
 IBM-BigInsights,,/assets/ibm.png,IBM InfoSphere BigInsights (Hadoop & Big Data) Technical Professional,IBM,October 2012,noprint
 SARA,,/assets/surf-sara.jpg,SARA Hadoop Workshop,SURF SARA,December 2010,noprint
