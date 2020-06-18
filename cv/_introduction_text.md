@@ -1,5 +1,5 @@
 I am Nathan Bijnens, a software developer turned __Solution Architect__ with a passion for Business, Cloud, 
-the Internet of Things, Big Data and Artificial Intelligence. As the __Lead Cloud Solution Architect__ for the __European Union Institutions and NATO__ at __Microsoft__ I help the European Union and NATO become a _Data Driven Government_. I drive customers initiatives, leveraging Microsoft AI on Azure to solve the biggest and most complex data and IoT challenges faced by Microsoft's strategic public sector. 
+the Internet of Things, Big Data and Artificial Intelligence. As the __Lead Cloud Solution Architect__ for the __European Union Institutions__ and __NATO__ at __Microsoft__ I help the European Union and NATO become a _Data Driven Government_. I drive customers initiatives, leveraging Microsoft AI on Azure to solve the biggest and most complex data and IoT challenges faced by Microsoft's strategic public sector. 
 
 As a solution architect I help my customers on their Digital Transformation journey. I guide my clients to 
 Artificial Intelligence, share data more efficiently, and to become Data Driven.
