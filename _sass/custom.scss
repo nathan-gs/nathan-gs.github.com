@@ -127,15 +127,18 @@ pre, code {
     float: right;
 }
 
-// Markdown tables
 .page-content {
 
     table:not(.rouge-table) {
         table-layout: fixed;
         width: 100%;
 
+        td,th {
+            vertical-align: top;
+        }
+
         thead tr th {
-            border-bottom: 1px solid $accentColor;
+            border-bottom: 1px solid $accentColor;            
         }
     
         tbody {
@@ -148,3 +151,33 @@ pre, code {
 
 } 
 
+.folder-structure + ul {
+    list-style: none;
+ 
+    ul {
+        list-style: none;
+        //margin-left: 1.3em;
+    }
+
+    
+    font-size: 90%;
+
+    > li:before, 
+    > li > ul > li:before, 
+    > li > ul > li > ul > li:before, 
+    > li > ul > li > ul > li > ul > li:before,
+    > li > ul > li > ul > li > ul > li > ul > li:before {
+        content: "\f07b"; /* FontAwesome Unicode */
+        font-family: "Font Awesome 5 Free";
+        color: $accentColor;
+        display: inline-block;
+        margin-left: -1.3em; /* same as padding-left set on li */
+        width: 1.3em; /* same as padding-left set on li */
+        font-weight: 900;
+    }
+
+    .fas {
+        color: $accentColor;
+        margin-left: -1.3em;
+    }
+}

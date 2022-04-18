@@ -223,6 +223,11 @@ section section .accordion ul h4, section section .accordion ul h5 {
         padding-top: 0;
     }
 
+    section  div.container {
+        margin-left: 30px;
+        padding-right: 90px;
+    }
+
     .introduction .text {
         margin-top: 0;
     }
