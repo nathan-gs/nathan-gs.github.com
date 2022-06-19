@@ -1,4 +1,4 @@
-<h4>People Manager</h4> with an extensive __Data & AI__ background. 
+<div><h4>People Manager</h4> with an extensive <strong>Data & AI</strong> background.</div>
 
 - Coaching & Mentoring
 - Business Understanding
