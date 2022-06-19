@@ -130,47 +130,6 @@ p {
     height: auto;
 }
 
-/* jQcloud specifics */
-
-div.jqcloud {
-    font-family: inherit;
-    margin-top: -60px;
-    margin-bottom: -60px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div.jqcloud span.w10 {
-    color: #000;
-}
-div.jqcloud span.w9 {
-    color: #191919;
-}
-div.jqcloud span.w8 {
-    color: #323232;
-}
-div.jqcloud span.w7 {
-    color: #4b4b4b;
-}
-div.jqcloud span.w6 {
-    color: #646464;
-}
-div.jqcloud span.w5 {
-    color: #7d7d7d;
-}
-div.jqcloud span.w4 {
-    color: #969696;
-}
-div.jqcloud span.w3 {
-    color: #afafaf;
-}
-div.jqcloud span.w2 {
-    color: #c8c8c8;
-}
-div.jqcloud span.w1 {
-    color: #e1e1e1;
-}
-
 /* accordion */
 .accordion {
     margin-bottom: 0;
