@@ -11,199 +11,27 @@
         <div class="row noprint">
             <div class="span6">
                 <section>
-                    <div><!-- TODO: fill in Solution Architecture --></div>
-                    <div>I am very interested in and work with <h4>Big Data</h4>, from the processing and storage of large
-                        volumes, to
-                        real-time stream
-                        processing, and machine learning. I read,
-                        tweet, and
-                        try out as much as I can about new Big Data technologies,
-                        like Spark, Samza, Storm and Kafka,
-                        as well as more established technologies like Hadoop and Cassandra and learning as
-                        much as I can in the process. 
-                        I use Scala, Java and bits of Python and Hadoop Pig Latin. I setup, administered and monitored Hadoop,
-                        Mesos, Storm, Cassandra &amp; Zookeeper clusters.
-                    </div>
-                    <div>
-                        Big Data related skills:
-                        <ul>
-                            <li>
-                                Do interactive ad-hoc analytics using Python based Jupyter Notebooks, as well as Scala based notebooks, combined with Spark SQL.
-                            </li>
-                            <li>Query the data with Spark, Spark SQL, Hadoop Pig &amp; Hive.
-                            </li>
-                            <li>
-                                Using &amp; administrating Spark, Hadoop and Mesos clusters, including
-                                Storm, ElasticSearch,
-                                Cassandra, Kafka and
-                                Zookeeper.
-                                <ul>
-                                    <li>Deploying Hadoop on Azure,
-                                        Amazon &amp;
-                                        Softlayer.
-                                    </li>
-                                    <li>
-                                        Using HDInsight, combined with 
-                                        Azure Data Lake
-                                        
-                                    </li>
-                                    <li>
-                                        Azure Machine Learning, 
-                                        Azure Notebooks 
-                                        and Cognitive Services
-                                    </li>
-                                    <li>
-                                        Chef, Puppet and NixOps to deploy Mesos and Hadoop to the Cloud.
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                Developing solutions for real-time Big Data 
-                                using Spark Streaming, 
-                                Storm,
-                                Azure Stream Analytics,
-                                EventHubs, 
-                                Azure IoT Hub
-                                 and Kafka.
-                            </li>
-                            <li>
-                                Combining batch and real-time technologies to create a Lambda Architecture (of <a href="http://nathanmarz.com/">Nathan Marz</a>), 
-                                that is resilient to failure, scalable and fast. <br />
-                                As well as using only Stream Processing to build a 
-                                Kappa Architecture. 
-                            </li>
-                        </ul>
-                    </div>
+                    {% capture management_text %}{% include_relative _skills/management.md %}{% endcapture %}
+                    {{ management_text | markdownify }}
                 </section>
                 <section>
-                    <div>Next to programming I have always been passionate about <h4>Linux</h4> and open source. I have
-                        used over the last 10+ years several distributions from Debian
-                        &amp; Ubuntu,
-                        CentOS over Gentoo to Linux From Scratch, lately I am very interested in NixOS. NixOS is a purely functional Linux. I have setup countless
-                        servers from Cloud to virtualized to bare metal servers.
-                    </div>
-                    <p>
-                        I am following the DevOps movement. I am using Puppet, Chef and NixOps to automate and Ganglia to monitor critical infrastructure. I have open sourced
-                        and contributed to several NixOS and Puppet modules.
-                    </p>
-
-                    <p>
-                        I follow and try out with great interest Cloud related techniques
-                        and technologies, in all its forms: IaaS, PaaS, SaaS, … 
-                        I have used as test or in production Azure, 
-                        OpenStack, Amazon AWS, Google
-                        BigQuery (private beta tester) and Softlayer.
-                    </p>
+                    {% include_relative _skills/bigdata.html %}                    
+                </section>
+                <section>
+                    {% include_relative _skills/linux_devops_cloud.html %}                    
                 </section>
             </div>
             <div class="span6">
                 <section>
-                    I have extensive exposure to <h4>Azure</h4> and <h4>Cortana Intelligence</h4>, including, but not limited to:
-                    <div class="row">
-                        <div class="span3">
-                            <ul>
-                                <li>Azure Data Lake</li>
-                                <li>HDInsight</li>
-                                <li>Azure Machine Learning</li>
-                                <li>Azure Notebooks</li>
-                                <li>Cognitive Services</li>
-                                <li>Azure EventHubs</li>
-                            </ul>
-                        </div>
-                        <div class="span3">
-                            <ul>
-                                <li>Azure IoT Hub</li>
-                                <li>Azure Stream Analytics</li>
-                                <li>Azure SQL DataWarehouse</li>
-                                <li>Azure SQL</li>
-                                <li>Power BI</li>
-                                <li>...</li>
-                        
-                            </ul>
-                        </div>
-                    </div> 
+                    {% include_relative _skills/scala.html %}                    
                 </section>
                 <section>
-                    I currently mostly develop using <h4>Scala</h4>. Scala is a JVM-based language, with both full support for OO as well as Functional Programming approach. I started with Scala at the end of 2013.
-                    <ul>
-                        <li>
-                            Using Scala to create Spark and Spark Streaming jobs.
-                        </li>
-                        <li>
-                            Using Akka and Akka Persistence to create a CQRS application, in Scala.
-                        </li>
-                        <li>
-                            Creating Thrift based services, using Finagle.
-                        </li>
-                        <li>
-                            Unit testing using Scalatest and Cucumber.
-                        </li>
-                    </ul>
+                    {% include_relative _skills/programming.html %}
                 </section>
                 <section>
-                    I am interested in <h4>Functional Programming</h4>, mostly looking at Scala, and a bit at Clojure. Especially functional programming in relation to
-                    Big Data has my focus.
+                    {% include_relative _skills/interests.html %}
                 </section>
-                <section>
-                    I am using <h4>Java</h4>, mostly using Spring, maven and Jersey in
-                    combination with the JavaScript MVC framework AngularJS.
-                    <ul>
-                        <li>Developing a Java EE application, with Glassfish, using
-                            JPA with EclipseLink.
-                        </li>
-                        <li>Creating Threaded servers, using Thrift.
-                        </li>
-                        <li>Autowiring &amp; Dependency Injection using Spring.
-                        </li>
-                        <li>Consuming the Twitter &amp; LinkedIn
-                            APIs, using
-                            OAuth.
-                        </li>
-                        <li>Creating a REST and SOAP based
-                            services, using Jersey or JAX-WS.
-                        </li>
-                        <li>Unit testing using JUnit and Mockito.
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                    I have used <h4>PHP</h4> and <h4>JavaScript</h4> for over 10 years, 
-                    mostly in a combination with the symfony &amp; Symfony2
-                    frameworks as well as a multitude of SQL and NoSQL databases, as 
-                    MySQL, PostgreSQL, Oracle, 
-                    Informix 
-                    and Redis, Membase, Memcached and ...
-                    <ul>
-                        <li>
-                            html5, CSS &amp; jQuery
-                        </li>
-                        <li>
-                            Creating a Drupal site, using Bootstrap and deploying on Azure.
-                        </li>
-                        <li>
-                            Creating browser based applications using AngularJS.
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <div>
-                        Some basic knowledge, but willing to improve:
-                        <ul>
-                            <li>Graph databases: Neo4J,
-                                HyperGraphDB &amp; Titan.
-                            </li>
-                            <li>
-                                Various NoSQL data stores, like MongoDB, Voldemort, riak, ...
-                            </li>
-                            <li>Clojure, Ruby and Python.
-                            </li>
-                            <li>Scrum, Extreme Programming
-                            </li>
-                            <li>Security &amp; penetration testing.</li>
-                        </ul>
-                    </div>
-                </section>
+                    
             </div>
         </div>
         <div class="row">
