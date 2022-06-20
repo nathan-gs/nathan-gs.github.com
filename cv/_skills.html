@@ -23,10 +23,6 @@
         </div>
         <div class="row noprint">
             <div class="span6">
-                <section>
-                    {% capture management_text %}{% include_relative _skills/management.md %}{% endcapture %}
-                    {{ management_text | markdownify }}
-                </section>
                 {% comment %}
                 <section>                    
                     {% include_relative _skills/bigdata.html %}                                        
@@ -37,9 +33,6 @@
                 {% endcomment %}
             </div>
             <div class="span6">
-                <section>
-                    {% include_relative _skills/technology.html %}                    
-                </section>
                 {% comment %}
                 <section>
                     {% include_relative _skills/scala.html %}                    
