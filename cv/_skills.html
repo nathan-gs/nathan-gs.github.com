@@ -8,6 +8,19 @@
             </div>
 
         </div>
+        <div class="row">
+            <div class="span6">
+                <section>
+                    {% capture management_text %}{% include_relative _skills/management.md %}{% endcapture %}
+                    {{ management_text | markdownify }}
+                </section>
+            </div>
+            <div class="span6">
+                <section>
+                    {% include_relative _skills/technology.html %}                    
+                </section>
+            </div>
+        </div>
         <div class="row noprint">
             <div class="span6">
                 <section>
