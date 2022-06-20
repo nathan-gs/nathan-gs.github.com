@@ -14,14 +14,20 @@
                     {% capture management_text %}{% include_relative _skills/management.md %}{% endcapture %}
                     {{ management_text | markdownify }}
                 </section>
-                <section>
-                    {% include_relative _skills/bigdata.html %}                    
+                {% comment %}
+                <section>                    
+                    {% include_relative _skills/bigdata.html %}                                        
                 </section>
                 <section>
                     {% include_relative _skills/linux_devops_cloud.html %}                    
                 </section>
+                {% endcomment %}
             </div>
             <div class="span6">
+                <section>
+                    {% include_relative _skills/technology.html %}                    
+                </section>
+                {% comment %}
                 <section>
                     {% include_relative _skills/scala.html %}                    
                 </section>
@@ -31,7 +37,7 @@
                 <section>
                     {% include_relative _skills/interests.html %}
                 </section>
-                    
+                {% endcomment %}                    
             </div>
         </div>
         <div class="row">
