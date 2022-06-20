@@ -5,4 +5,10 @@
 - Go to market strategy
 - Analytical Mindset
 - Business Management
+- Relationship building
+- Engaging and influencing
+- Presentation skills
+- Thought Leader
+- Trusted Advisor
 - Scaling people and organizations
+
