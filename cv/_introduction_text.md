@@ -6,6 +6,6 @@ In a previous role I was the __Lead Cloud Solution Architect__ for the __Europea
 With a successful track record of building innovative systems in highly political and complex environments, 
 I not only help on envisioning what data can do for business, I analyze, give recommendations, design architectures and inspire teams. I build on my background and experience with data analytics and building Big Data systems, especially real-time Big Data and messaging-based systems. 
 
-I enjoy working with clients and partners, from giving advice, talking about the Business and Technological value of Big Data and AI, to imaginging solutions. Working in an entrepreneurial, data driven, innovative environment gives me energy.  
+I enjoy working with clients and partners, from giving advice, talking about the Business and Technological value of Big Data and AI, to imagining solutions. Working in an entrepreneurial, data driven, innovative environment gives me energy.  
 
 I am a passionate speaker and evangelist, on AI, Big Data, IoT and Cloud. 
