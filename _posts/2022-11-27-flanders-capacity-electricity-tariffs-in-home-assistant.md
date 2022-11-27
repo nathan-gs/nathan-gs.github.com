@@ -17,6 +17,7 @@ I'm tracking my Electricty / Gas / Water in [Home Assistant](https://home-assist
 We will be using the [statistics](https://www.home-assistant.io/integrations/statistics/) integration to generate these values:
 
 ```yaml
+{% raw %}
 sensor:
   - platform: statistics
     name: electricity_delivery_power_rolling_15m
@@ -26,6 +27,7 @@ sensor:
       minutes: 15
     sampling_size: 30
     precision: 1
+{% raw %}
 ```
 
 ### Calculate the maximum for 15m, day and month
@@ -33,6 +35,7 @@ sensor:
 To calculate the peak of the month, we are going to use the [statistics](https://www.home-assistant.io/integrations/statistics) integration:
 
 ```yaml
+{% raw %}
 template:
   sensor:
     - name: electricity_delivery_power_daily_15m_max
@@ -62,6 +65,7 @@ unit_of_measurement: 'kW'
     - name: electricity_delivery_power_15m
       state: "{{ states('sensor.electricity_delivery_power_rolling_15m') }}"
       unit_of_measurement: 'kW'
+{% raw %}
 ```
 
 ### Visualizing
