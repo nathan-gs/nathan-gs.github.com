@@ -27,7 +27,7 @@ sensor:
       minutes: 15
     sampling_size: 30
     precision: 1
-{% raw %}
+{% endraw %}
 ```
 
 ### Calculate the maximum for 15m, day and month
@@ -42,7 +42,7 @@ template:
       state: >
         {% if ((now().hour == 1) and (now().minute < 15)) %}
           {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
-        {% elif (states('sensor.electricity_delivery_power_daily_15m_max') or 0 | float < states('sensor.electricity_delivery_power_15m') or 0 | float) %}
+        {% elif ((states('sensor.electricity_delivery_power_daily_15m_max') or 0) | float < (states('sensor.electricity_delivery_power_15m') or 0) | float) %}
           {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
         {% else %}
           {{ states('sensor.electricity_delivery_power_daily_15m_max') or 0 | float }} 
@@ -52,7 +52,7 @@ template:
       state: >
         {% if ((now().day == 1) and (now().hour == 1) and (now().minute < 15)) %}
           {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
-        {% elif (states('sensor.electricity_delivery_power_monthly_15m_max') or 0 | float < states('sensor.electricity_delivery_power_15m') or 0 | float) %}
+        {% elif ((states('sensor.electricity_delivery_power_monthly_15m_max') or 0) | float < (states('sensor.electricity_delivery_power_15m') or 0) | float) %}
           {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
         {% else %}
           {{ states('sensor.electricity_delivery_power_monthly_15m_max') or 0 | float }} 
@@ -65,7 +65,7 @@ unit_of_measurement: 'kW'
     - name: electricity_delivery_power_15m
       state: "{{ states('sensor.electricity_delivery_power_rolling_15m') }}"
       unit_of_measurement: 'kW'
-{% raw %}
+{% endraw %}
 ```
 
 ### Visualizing
@@ -121,7 +121,7 @@ cards:
         unit: W
         type: line
         transform: return x * 1000;
-        name: 15m
+        name: rolling
         show:
           datalabels: false
           extremas: false
