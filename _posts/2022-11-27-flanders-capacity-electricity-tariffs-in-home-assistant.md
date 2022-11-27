@@ -12,7 +12,7 @@ Flanders will reform the [nettariffs](https://www.vreg.be/nl/wat-zijn-de-nieuwe-
 
 I'm tracking my Electricity / Gas / Water in [Home Assistant](https://home-assistant.io/) already, so let's take a look what we need to do.
 
-### Track quarterly values
+### Track 15m rolling values
 
 We will be using the [statistics](https://www.home-assistant.io/integrations/statistics/) integration to generate these values:
 
@@ -32,7 +32,7 @@ sensor:
 
 This was inspired on a post by *NuKeM* at [Capaciteitstarief maandpiek zichtbaar maken in home assistant (userbase.be)](https://userbase.be/forum/viewtopic.php?p=945740#p945740).
 
-### Calculate the maximum for 15m, day and month
+### Calculate for 15m, day and month
 
 To calculate the 15m bucket, we are using the following template, with a time_pattern trigger.
 
