@@ -10,7 +10,7 @@ tags:
 
 Flanders will reform the [nettariffs](https://www.vreg.be/nl/wat-zijn-de-nieuwe-nettarieven-en-hoe-worden-ze-berekend) for electricity transport, shifting a larger cost to peak usage. They do this by measuring your average consumption per 15m and the maximum quarter of the month counts as your tariff. Currently information and dashboards from Fluvius are cumbersome to use (CSV export and then leveraging Excel to spot the highest quarter).
 
-I'm tracking my Electricty / Gas / Water in [Home Assistant](https://home-assistant.io/) already, so let's take a look what we need to do.
+I'm tracking my Electricity / Gas / Water in [Home Assistant](https://home-assistant.io/) already, so let's take a look what we need to do.
 
 ### Track quarterly values
 
@@ -30,9 +30,26 @@ sensor:
 {% endraw %}
 ```
 
+This was inspired on a post by *NuKeM* at [Capaciteitstarief maandpiek zichtbaar maken in home assistant (userbase.be)](https://userbase.be/forum/viewtopic.php?p=945740#p945740).
+
 ### Calculate the maximum for 15m, day and month
 
-To calculate the peak of the month, we are going to use the [statistics](https://www.home-assistant.io/integrations/statistics) integration:
+To calculate the 15m bucket, we are using the following template, with a time_pattern trigger.
+
+```yaml
+{% raw %}
+template:
+  trigger:
+    platform: time_pattern
+    minutes: "/15"
+  sensor:
+    - name: electricity_delivery_power_15m
+      state: "{{ states('sensor.electricity_delivery_power_rolling_15m') }}"
+      unit_of_measurement: 'kW'
+{% endraw %}
+```
+
+To calculate the peak of the month, we are going to use some templates with state:
 
 ```yaml
 {% raw %}
@@ -57,13 +74,6 @@ template:
         {% else %}
           {{ states('sensor.electricity_delivery_power_monthly_15m_max') or 0 | float }} 
         {% endif %}
-unit_of_measurement: 'kW'
-  trigger:
-    platform: time_pattern
-    minutes: "/15"
-  sensor:
-    - name: electricity_delivery_power_15m
-      state: "{{ states('sensor.electricity_delivery_power_rolling_15m') }}"
       unit_of_measurement: 'kW'
 {% endraw %}
 ```
