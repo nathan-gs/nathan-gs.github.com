@@ -141,6 +141,7 @@ cards:
         type: column
         name: 15m
         stroke_width: 2
+        transform: return x * 1000;
         group_by:
           duration: 15m
           func: last
@@ -151,16 +152,18 @@ cards:
         unit: W
         type: line
         name: monthly
+        transform: return x * 1000;
         group_by:
           duration: 15m
           func: last
         show:
           datalabels: false
           extremas: false
-      - entity: sensor.electricity_delivery_power_rolling_15m
+      - entity: sensor.dsmr_reading_electricity_currently_delivered
         unit: W
         type: line
         name: rolling
+        transform: return x * 4 * 1000;
         group_by:
           duration: 15m
           func: last
@@ -189,6 +192,7 @@ cards:
         type: column
         name: day
         stroke_width: 4
+        transform: return x * 1000;
         group_by:
           duration: 1d
           func: max
@@ -199,6 +203,7 @@ cards:
         unit: W
         type: line
         name: monthly
+        transform: return x * 1000;
         group_by:
           duration: 15m
           func: last
