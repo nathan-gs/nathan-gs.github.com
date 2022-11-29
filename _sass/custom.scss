@@ -74,6 +74,9 @@ code.highlighter-rouge {
     font-size: 14px;
 }
 
+code table th, code table td {
+    padding: 0;
+}
 pre, code {
     background-color: $lightAccentColor;
 }
