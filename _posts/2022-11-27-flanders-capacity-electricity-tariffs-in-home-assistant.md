@@ -14,11 +14,13 @@ Flanders will reform the [nettariffs](https://www.vreg.be/nl/wat-zijn-de-nieuwe-
 
 I'm tracking my Electricity / Gas / Water in [Home Assistant](https://home-assistant.io/) already, so let's take a look what we need to do. This was inspired by a Forum thread at [Capaciteitstarief maandpiek zichtbaar maken in home assistant (userbase.be)](https://userbase.be/forum/viewtopic.php?p=945740#p945740).
 
+
+
 ### Track 15m values
 
 We will be using the [utility_meter](https://www.home-assistant.io/integrations/utility_meter/) integration to generate these values:
 
-```yaml
+{% highlight yaml linenos %}
 {% raw %}
 utility_meter:
   electricity_delivery_15m:
@@ -26,12 +28,12 @@ utility_meter:
     cron: "*/15 * * * *"
 
 {% endraw %}
-```
+{% endhighlight %}
 
-##### Sidenote for Peak & Offpeak
+#### Sidenote for Peak & Offpeak
 
 If you receive data in `peak` & `offpeak` measurements; best to sum them before:
-```yaml
+{% highlight yaml linenos %}
 {% raw %}
 template:
 - sensor:
@@ -39,27 +41,27 @@ template:
   unit_of_measurement: "kWh"
   state: "{{ ( states('sensor.electricity_peak_delivery') | float ) + ( states('sensor.electricity_offpeak_delivery') | float ) }}";
 {% endraw %}
-```
+{% endhighlight %}
 
 ### Calculate the 15m power
 
 We now have the numbers in kWh (energy) but we need to convert to kW (power); we do this by multiplying by 4 (1h per quarter).
 
-```yaml
+{% highlight yaml linenos %}
 {% raw %}
 template:
 - sensor:
   - name: electricity_delivery_power_15m
-  unit_of_measurement: "kW"
+  unit_of_measurement: "W"
   state: "{{ states('sensor.electricity_delivery_15m')  * 4 | float }}";
 {% endraw %}
-```
+{% endhighlight %}
 
 ### Calculate the daily and monthly max
 
 To calculate the 15m max for the day & month, we are using the following template, with a time_pattern trigger.
 
-```yaml
+{% highlight yaml linenos %}
 {% raw %}
 template:
   trigger:
@@ -68,33 +70,45 @@ template:
   sensor:
   - name: electricity_delivery_power_daily_15m_max
     state: >
-      {% if ((now().hour == 1) and (now().minute < 15)) or (states('sensor.electricity_delivery_power_daily_15m_max') in ["unavailable", "unknown"]) %}
-        {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
-      {% elif ((states('sensor.electricity_delivery_power_daily_15m_max') | float) < (states('sensor.electricity_delivery_power_15m') or 0) | float) %}
-        {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
+      {% if is_number(states('sensor.electricity_delivery_power_daily_15m_max')) %}
+        {% if ((now().hour == 1) and (now().minute < 15)) %}
+          {{ states('sensor.electricity_delivery_power_15m') | float }}
+        {% else %}
+          {% if ((states('sensor.electricity_delivery_power_daily_15m_max') | float) < (states('sensor.electricity_delivery_power_15m')) | float) %}
+            {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
+          {% else %}
+            {{ states('sensor.electricity_delivery_power_daily_15m_max') | float }} 
+          {% endif %}
+        {% endif %}
       {% else %}
-        {{ states('sensor.electricity_delivery_power_daily_15m_max') or 0 | float }} 
+        0
       {% endif %}
-    unit_of_measurement: 'kW'
+    unit_of_measurement: 'W'
   - name: electricity_delivery_power_monthly_15m_max
     state: >
-      {% if ((now().day == 1) and (now().hour == 1) and (now().minute < 15)) or (states('sensor.electricity_delivery_power_monthly_15m_max') in ["unavailable", "unknown"]) %}
-        {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
-      {% elif ((states('sensor.electricity_delivery_power_monthly_15m_max') | float) < (states('sensor.electricity_delivery_power_15m') or 0) | float) %}
-        {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
+      {% if is_number(states('sensor.electricity_delivery_power_monthly_15m_max')) %}
+        {% if ((now().hour == 1) and (now().minute < 15)) %}
+          {{ states('sensor.electricity_delivery_power_15m') | float }}
+        {% else %}
+          {% if ((states('sensor.electricity_delivery_power_monthly_15m_max') | float) < (states('sensor.electricity_delivery_power_15m')) | float) %}
+            {{ states('sensor.electricity_delivery_power_15m') or 0 | float }}
+          {% else %}
+            {{ states('sensor.electricity_delivery_power_monthly_15m_max') | float }} 
+          {% endif %}
+        {% endif %}
       {% else %}
-        {{ states('sensor.electricity_delivery_power_monthly_15m_max') or 0 | float }} 
+        0
       {% endif %}
-    unit_of_measurement: 'kW'
+    unit_of_measurement: 'W'
     
 {% endraw %}
-```
+{% endhighlight %}
 
 ### Visualizing
 
 Making use of [Apexcharts Card](https://github.com/RomRider/apexcharts-card), visualizing some elements 
 
-```yaml
+{% highlight yaml linenos %}
 type: vertical-stack
 cards:
   - type: entities
@@ -125,7 +139,6 @@ cards:
       - entity: sensor.electricity_delivery_power_15m
         unit: W
         type: column
-        transform: return x * 1000;
         name: 15m
         stroke_width: 2
         group_by:
@@ -138,7 +151,6 @@ cards:
         unit: W
         type: line
         name: monthly
-        transform: return x * 1000;
         group_by:
           duration: 15m
           func: last
@@ -148,7 +160,6 @@ cards:
       - entity: sensor.electricity_delivery_power_rolling_15m
         unit: W
         type: line
-        transform: return x * 1000;
         name: rolling
         group_by:
           duration: 15m
@@ -176,7 +187,6 @@ cards:
       - entity: sensor.electricity_delivery_power_daily_15m_max
         unit: W
         type: column
-        transform: return x * 1000;
         name: day
         stroke_width: 4
         group_by:
@@ -189,15 +199,33 @@ cards:
         unit: W
         type: line
         name: monthly
-        transform: return x * 1000;
         group_by:
           duration: 15m
           func: last
         show:
           datalabels: false
           extremas: false
-```
+{% endhighlight %}
 
 {% include post_img img="measurements1.png" alt="Measurements inside Home Assistant" %}
 {% include post_img img="measurements-day.png" alt="Measurements inside Home Assistant" %}
 {% include post_img img="measurements-month.png" alt="Measurements inside Home Assistant" %}
+
+### Triggering a warning on too much power use
+
+Let's create a binary_sensor to trigger if we are using too much power. The following code will trigger if we consume more than 2800W for more than 2m.
+
+{% highlight yaml linenos %}
+{% raw %}
+template:
+- binary_sensor:
+  - name: electricity_delivery_power_max_threshold_reached
+    delay_on: 00:02:00
+    delay_off: 00:01:00
+    state: "{{ states('sensor.electricity_delivery') | float > 2800 }}";
+{% endraw %}
+{% endhighlight %}
+
+### Final notes
+
+Initially I started using the statistics model, however using `utility_meter` is likely more accurate.
