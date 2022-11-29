@@ -52,7 +52,7 @@ We now have the numbers in kWh (energy) but we need to convert to kW (power); we
 template:
 - sensor:
   - name: electricity_delivery_power_15m
-  unit_of_measurement: "W"
+  unit_of_measurement: "kW"
   state: "{{ states('sensor.electricity_delivery_15m')  * 4 | float }}";
 {% endraw %}
 {% endhighlight %}
@@ -83,7 +83,7 @@ template:
       {% else %}
         0
       {% endif %}
-    unit_of_measurement: 'W'
+    unit_of_measurement: 'kW'
   - name: electricity_delivery_power_monthly_15m_max
     state: >
       {% if is_number(states('sensor.electricity_delivery_power_monthly_15m_max')) %}
@@ -99,7 +99,7 @@ template:
       {% else %}
         0
       {% endif %}
-    unit_of_measurement: 'W'
+    unit_of_measurement: 'kW'
     
 {% endraw %}
 {% endhighlight %}
