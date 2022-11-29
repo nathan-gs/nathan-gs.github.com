@@ -159,17 +159,6 @@ cards:
         show:
           datalabels: false
           extremas: false
-      - entity: sensor.dsmr_reading_electricity_currently_delivered
-        unit: W
-        type: line
-        name: rolling
-        transform: return x * 4 * 1000;
-        group_by:
-          duration: 15m
-          func: last
-        show:
-          datalabels: false
-          extremas: false
   - type: custom:apexcharts-card
     graph_span: 31d
     span:
