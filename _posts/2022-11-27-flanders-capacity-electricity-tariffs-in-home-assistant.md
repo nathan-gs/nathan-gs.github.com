@@ -87,7 +87,7 @@ template:
   - name: electricity_delivery_power_monthly_15m_max
     state: >
       {% if is_number(states('sensor.electricity_delivery_power_monthly_15m_max')) %}
-        {% if ((now().hour == 0) and (now().minute < 15)) %}
+        {% if ((now().day == 1) and (now().hour == 0) and (now().minute < 15)) %}
           {{ states('sensor.electricity_delivery_power_15m') | float }}
         {% else %}
           {% if ((states('sensor.electricity_delivery_power_monthly_15m_max') | float) < (states('sensor.electricity_delivery_power_15m')) | float) %}
