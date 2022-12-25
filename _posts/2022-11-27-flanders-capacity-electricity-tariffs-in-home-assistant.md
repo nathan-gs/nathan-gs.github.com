@@ -39,7 +39,7 @@ template:
 - sensor:
   - name: electricity_delivery
   unit_of_measurement: "kWh"
-  state: "{{ ( states('sensor.electricity_peak_delivery') | float ) + ( states('sensor.electricity_offpeak_delivery') | float ) }}";
+  state: "{{ ( states('sensor.electricity_peak_delivery') | float ) + ( states('sensor.electricity_offpeak_delivery') | float ) }}"
 {% endraw %}
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ template:
 - sensor:
   - name: electricity_delivery_power_15m
   unit_of_measurement: "kW"
-  state: "{{ states('sensor.electricity_delivery_15m')  * 4 | float }}";
+  state: "{{ states('sensor.electricity_delivery_15m')  * 4 | float }}"
 {% endraw %}
 {% endhighlight %}
 
