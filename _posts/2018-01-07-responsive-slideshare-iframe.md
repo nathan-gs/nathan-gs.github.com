@@ -42,11 +42,11 @@ You need to add an outer `<div>`, with `0 height`, and `100% width`, and a `padd
 
 {% highlight css linenos %}
 .iframe-slideshare-4x3 {
-    padding-bottom: calc(75% + 38px);
+    padding-bottom: calc(75% + 51px);
 }
 
 .iframe-slideshare-16x9 {
-    padding-bottom: calc(56.25% + 38px);
+    padding-bottom: calc(56.25% + 51px);
 }
 
 .iframe-slideshare-16x9,
@@ -88,6 +88,11 @@ The CSS `calc()` function is according to [w3schools](https://www.w3schools.com/
 
 Using plain CSS it is very easy to make responsive iframes that keep the aspect ratio, on mobile, tablet and desktop.
 
-## Update 12/12/2021
+## Updates
+### December 2021
 
 Slideshare changed their layout, so instead of a `38px` extra margin, use `58px`. 
+
+### December 2022
+
+Slideshare changed their layout, so instead of a `38px` extra margin, use `51px`. 
