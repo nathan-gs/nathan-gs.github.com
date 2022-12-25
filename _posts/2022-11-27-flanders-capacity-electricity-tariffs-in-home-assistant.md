@@ -201,9 +201,9 @@ cards:
           extremas: false
 {% endhighlight %}
 
-{% include post_img img="measurements1.png" alt="Measurements inside Home Assistant" %}
-{% include post_img img="measurements-day.png" alt="Measurements inside Home Assistant" %}
-{% include post_img img="measurements-month.png" alt="Measurements inside Home Assistant" %}
+{% include post_img img="measurements1.png" alt="Measurements inside Home Assistant" width="30%" %}
+{% include post_img img="measurements-day.png" alt="Measurements inside Home Assistant" width="30%" %}
+{% include post_img img="measurements-month.png" alt="Measurements inside Home Assistant" width="30%" %}
 
 ### Triggering a warning on too much power use
 
@@ -216,7 +216,7 @@ template:
   - name: electricity_delivery_power_max_threshold_reached
     delay_on: 00:02:00
     delay_off: 00:01:00
-    state: "{{ states('sensor.electricity_delivery') | float > 2800 }}";
+    state: "{{ states('sensor.electricity_delivery') | float > 2800 }}"
 {% endraw %}
 {% endhighlight %}
 
