@@ -226,19 +226,19 @@ As automation:
 {% highlight yaml linenos %}
 {% raw %}
 automations:
-  - id: electricity_delivery_power_max_threshold_reached_send_notification
-    alias: electricity_delivery_power_max_threshold_reached_send_notification
-    trigger:
-      - platform: state
-        entity_id: binary_sensor.electricity_delivery_power_max_threshold_reached
-        to: on
-    condition:
-    action:
-      - service: notify.notify
-        data:
-          title: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
-          message: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
-    mode: single
+- id: electricity_delivery_power_max_threshold_reached_send_notification
+  alias: electricity_delivery_power_max_threshold_reached_send_notification
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.electricity_delivery_power_max_threshold_reached
+    to: on
+  condition:
+  action:
+  - service: notify.notify
+    data:
+      title: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
+      message: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
+  mode: single
 {% endraw %}
 {% endhighlight %}
 
