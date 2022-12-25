@@ -7,8 +7,8 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.13.1/css/all.css">
     <meta name="p:domain_verify" content="77d6a2df29213b417fd2fa0a75051cd5"/>
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-        {% include google-analytics.html %}
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
     {% endif %}    
     <style>
 {% if page.categories contains 'presentations' %}
