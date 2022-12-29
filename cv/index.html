@@ -32,11 +32,6 @@ redirect_from:
 
 
     {% include analytics.html %}
-    <script>
-function track(type, name) {
-}   
-
-</script>
 </head>
 
 <body itemscope itemtype="http://schema.org/Person">
@@ -65,26 +60,17 @@ function track(type, name) {
         $(document).ready(function () {
             
 
-            var eventLastTime = 0;
-            var eventLastNameClass;
-            var sectionOutEventHandler = function () {
-                var className = $(this).attr('class');
 
-                var currentTime = new Date().getTime();
-                if ((currentTime > (eventLastTime + 5000)) && className != eventLastNameClass) {
-                    track('read', className);
+        var sectionOutEventHandler = function () {
+            var className = $(this).attr('class');
+            window.location.hash = "#" + className
+        }        
 
-                //alert(className + 'went over intro' + (currentTime - eventLastTime))
-                eventLastTime = currentTime;
-                eventLastNameClass = className;
-            }
-
-        };
-
-        $('section.introduction').mouseleave(sectionOutEventHandler);
+        //$('section.introduction').mouseleave(sectionOutEventHandler);
         $('section.experience').mouseleave(sectionOutEventHandler);
         $('section.skills').mouseleave(sectionOutEventHandler);
         $('section.education').mouseleave(sectionOutEventHandler);
+        $('section.presentations').mouseleave(sectionOutEventHandler);
 
         $('.accordion').on('shown', function () {
             icon = $('span.btn.dropdown i.icon-arrow-down', this);
