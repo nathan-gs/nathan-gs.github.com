@@ -31,11 +31,14 @@ redirect_from:
     <![endif]-->
 
 
-    {% include google-analytics.html %}
+    {% include analytics.html %}
     <script>
 function track(type, name) {
-    if (ga && typeof(ga) == "function") {
+    if (_paq && typeof(_paq) == "function") {
         ga('send', 'pageview',  '/cv/' + type + '/' + name);
+        _paq.push(['setCustomUrl', "https://nathan.gs/cv"]);
+  		_paq.push(['setDocumentTitle', name]);
+ 		_paq.push(['trackPageView']);
     }
 }   
 
