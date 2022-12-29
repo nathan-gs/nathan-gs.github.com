@@ -78,7 +78,11 @@ redirect_from:
       $("section h2 a[name]").each(function (idx, el) {
         if ( isElementInViewport(el) ) {
             var className = $(this).attr('name');
-            window.location.hash = className;        
+            if (className == "#introduction") {
+                history.replaceState(null, null, location);
+            } else {
+                history.replaceState(null, null, location + className);
+            }
         }
       });
     });
