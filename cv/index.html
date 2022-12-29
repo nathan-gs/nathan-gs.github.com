@@ -65,13 +65,16 @@ redirect_from:
         document.addEventListener('scroll', (e) => {
             headings.forEach(ha => {
                 const rect = ha.getBoundingClientRect();
-                if(rect.top > 0 && rect.top < 150) {
+                if(rect.top > 0 && rect.top < 220) {                    
                     const location = window.location.toString().split('#')[0];
+                    const oldHash = window.location.hash
                     hash = '#' + ha.name;
                     if (ha.name == "introduction") {
                         hash = "";
                     } 
-                    history.replaceState(null, null, location + hash);
+                    if (hash != oldHash) {
+                        history.replaceState(null, null, location + hash);
+                    }
                 }
             });
         });
