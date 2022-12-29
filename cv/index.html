@@ -57,20 +57,33 @@ redirect_from:
 
     <script>
 
-        $(document).ready(function () {
-            
 
+    // https://gist.github.com/JoeSz/48743c0d898bf6e6735064cc3d564a9d
+    function isElementInViewport (el) {
+      //special bonus for those using jQuery
+      if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+      }
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+      );
+    }
 
-        var sectionOutEventHandler = function () {
-            var className = $(this).attr('class');
-            window.location.hash = "#" + className
-        }        
+    $(document).on("scroll", function() {
+      // check if the anchor elements are visible
+      $("section h2 a[name]").each(function (idx, el) {
+        if ( isElementInViewport(el) ) {
+            var className = $(this).attr('name');
+            window.location.hash = className;        
+        }
+      });
+    });
 
-        //$('section.introduction').mouseleave(sectionOutEventHandler);
-        $('section.experience').mouseleave(sectionOutEventHandler);
-        $('section.skills').mouseleave(sectionOutEventHandler);
-        $('section.education').mouseleave(sectionOutEventHandler);
-        $('section.presentations').mouseleave(sectionOutEventHandler);
+    $(document).ready(function () {
 
         $('.accordion').on('shown', function () {
             icon = $('span.btn.dropdown i.icon-arrow-down', this);
