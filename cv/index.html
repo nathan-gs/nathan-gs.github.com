@@ -78,6 +78,7 @@ redirect_from:
       $("section h2 a[name]").each(function (idx, el) {
         if ( isElementInViewport(el) ) {
             var className = $(this).attr('name');
+            const location = window.location.toString().split('#')[0];
             if (className == "#introduction") {
                 history.replaceState(null, null, location);
             } else {
