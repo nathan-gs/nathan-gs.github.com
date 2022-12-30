@@ -16,6 +16,7 @@ This configuration is using the [Home Assistant](https://home-assistant.io) plat
 
 Both sensors are triggered to update at the same time, 23:59:01 and 23:59:59 respectively, which corresponds to the end of the day. 
 
+<!--more-->
 
 {% highlight yaml linenos %}
 {% raw %}
