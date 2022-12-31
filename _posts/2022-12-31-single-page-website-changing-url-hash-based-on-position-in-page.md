@@ -9,25 +9,28 @@ redirect_from:
   - /2022/12/31/single-page-website-changing-location-hash-based-on-position-in-page
 ---
 
-While switching from **Google Analytics** to [PiWik](https://piwik.pro/) I wanted to improve tracking of my [cv](/cv) page, a _single page website_ or _single page application_. I want to switch the `#` hash of the `url` while scrolling through the page. I was inspired by [How To Update URL Hash On Scroll (With Table Of Contents) on Stackoverflow](https://stackoverflow.com/questions/58127310/how-to-update-url-hash-on-scroll-with-table-of-contents).
+While switching from **Google Analytics** to [PiWik](https://piwik.pro/) I wanted to improve tracking of my [cv](/cv) page, a _single page website_ or _single page application_. I want to switch the `#` hash of the `url` while scrolling through the page. I was inspired by [How To Update URL Hash On Scroll (With Table Of Contents) on Stackoverflow](https://stackoverflow.com/questions/58127310/how-to-update-url-hash-on-scroll-with-table-of-contents) and by [ChatGPT](https://chat.openai.com) suggesting the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) api.
 
 Within the page, I have several sections with anchors usign `<a name="">`, eg: `<section><h2><a name="experience"></a>Experience</h2> ... </section>`. 
 
-Let's take a look at the code:
+We will implement smooth scrolling anchor links using the _Intersection Observer API_.
 
 {% highlight javascript linenos %}
 {% raw %}
 window.addEventListener('load', () => {
     const headings = document.querySelectorAll('section h2 a[name]');
 
-    document.addEventListener('scroll', (e) => {
-        headings.forEach(ha => {
-            const rect = ha.getBoundingClientRect();
-            if(rect.top > 0 && rect.top < 450) {                    
+    const ioOptions = {
+        threshold: 0.75
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
                 const location = window.location.toString().split('#')[0];
                 const oldHash = window.location.hash;
-                hash = '#' + ha.name;
-                if (ha.name == "introduction") {
+                hash = '#' + entry.target.name;
+                if (entry.target.name == "introduction") {
                     hash = "";
                 } 
                 if (hash != oldHash) {
@@ -35,6 +38,10 @@ window.addEventListener('load', () => {
                 }
             }
         });
+    }, ioOptions);
+
+    headings.forEach(ha => {
+        observer.observe(ha);
     });
 });
 {% endraw %}
@@ -42,11 +49,13 @@ window.addEventListener('load', () => {
 
 This code listens for the `load` event on the window object, which is fired when the whole page has finished loading. When the event is fired, the code selects all the `a[name]` elements that are children of h2 elements that are children of section elements on the page. These `a[name]` elements will be used as the anchor links for our smooth scrolling.
 
-Next, the code sets up a `scroll` event listener on the document object, which is fired whenever the user scrolls the page. When the event is fired, the code iterates over each of the `a[name]` elements that were selected earlier and gets the bounding client rectangle for each element. The bounding client rectangle is an object that represents the size and position of an element relative to the viewport.
+Next, the code creates an `options` object with a `threshold` property, which specifies the percentage of the element's size that must be in view before the `IntersectionObserver` callback is triggered. In this case, the callback will be triggered when the element is at least 75% in view.
 
-If the top of the bounding client rectangle is greater than `0` and less than `450`, the code updates the URL hash to match the name attribute of the current `a[name]` element. The hash is the part of the URL that comes after the `#` symbol. 
+The code then creates a new `IntersectionObserver` instance, passing in a callback function and the options object as arguments. The callback function is executed whenever an element being observed by the observer enters or leaves the viewport.
 
-If the name attribute is `"introduction"`, we are at the top, so let's set an empty hash. 
+The code then iterates over each of the `a[name]` elements that were selected earlier and calls the `observe` method on the `IntersectionObserver` instance, passing in each element as an argument. This tells the observer to start watching the element for intersection events.
+
+When an element is intersecting the viewport, the `IntersectionObserver` callback is triggered and the code updates the URL hash to match the name attribute of the current `a[name]` element. The hash is the part of the URL that comes after the `#` symbol. Updating the hash causes the browser to scroll to the corresponding element on the page. If the name attribute is `"introduction"`, the code sets the hash to an empty string instead (because we are at the top of the page).
 
 Finally, the code replaces the current entry in the browser's history with the updated URL, using the `replaceState` method of the `history` object. This updates the URL in the address bar without creating a new entry in the history.
 
