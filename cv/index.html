@@ -63,15 +63,18 @@ redirect_from:
 
     window.addEventListener('load', () => {
         const headings = document.querySelectorAll('section h2 a[name]');
-    
-        document.addEventListener('scroll', (e) => {
-            headings.forEach(ha => {
-                const rect = ha.getBoundingClientRect();
-                if(rect.top > 0 && rect.top < 450) {                    
+
+        const ioOptions = {
+            threshold: 0.75
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
                     const location = window.location.toString().split('#')[0];
                     const oldHash = window.location.hash;
-                    hash = '#' + ha.name;
-                    if (ha.name == "introduction") {
+                    hash = '#' + entry.target.name;
+                    if (entry.target.name == "introduction") {
                         hash = "";
                     } 
                     if (hash != oldHash) {
@@ -79,6 +82,10 @@ redirect_from:
                     }
                 }
             });
+        }, ioOptions);
+
+        headings.forEach(ha => {
+            observer.observe(ha.parentNode.parentNode);
         });
     });
 
