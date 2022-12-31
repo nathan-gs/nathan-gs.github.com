@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Single Page Website: changing the location hash based on the position in the page"
+title: "Single Page Website: changing the url hash based on the position in the page"
 categories: 
 tags:
  - Javascript
  - Website
+redirect_from:
+  - /2022/12/31/single-page-website-changing-location-hash-based-on-position-in-page
 ---
 
 While switching from **Google Analytics** to [PiWik](https://piwik.pro/) I wanted to improve tracking of my [cv](/cv) page, a _single page website_ or _single page application_. I want to switch the `#` hash of the `url` while scrolling through the page. 
