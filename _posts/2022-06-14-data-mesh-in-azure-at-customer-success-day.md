@@ -2,10 +2,6 @@
 layout: post
 title: "Data Mesh in Azure at Microsoft Customer Success Day"
 categories: [presentations]
-excerpt: >
-  During Microsoft Belgium & Luxembourg's Customer Success Day we presented a session on **Data Mesh**.
-
-  {% include slideshare code='3h4t3jk71URu4Y' aspect_ratio='16:9' %}
 tags:
   - Azure
   - Data Mesh
