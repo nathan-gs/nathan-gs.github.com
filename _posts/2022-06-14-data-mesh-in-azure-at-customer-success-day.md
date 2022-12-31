@@ -2,6 +2,10 @@
 layout: post
 title: "Data Mesh in Azure at Microsoft Customer Success Day"
 categories: [presentations]
+excerpt: >
+  During Microsoft Belgium & Luxembourg's Customer Success Day we presented a session on **Data Mesh**.
+
+  {% include slideshare code='3h4t3jk71URu4Y' aspect_ratio='16:9' %}
 tags:
   - Azure
   - Data Mesh
@@ -15,7 +19,7 @@ Data Mesh is a new decentralized socio-technical approach to managing data, desi
 
 <!--more-->
 
-Data mesh is a design pattern that emphasizes the importance of data governance and data ownership in an organization. It is based on the idea that data should be treated as a first-class citizen in the same way that traditional software applications are. This approach borrows a lot from Domain Driven Design (DDD), a software development methodology that focuses on creating a shared understanding of the business domain and using that understanding to inform the design of software systems.
+Data Mesh is a design pattern that emphasizes the importance of data governance and data ownership in an organization. It is based on the idea that data should be treated as a first-class citizen in the same way that traditional software applications are. This approach borrows a lot from Domain Driven Design (DDD), a software development methodology that focuses on creating a shared understanding of the business domain and using that understanding to inform the design of software systems.
 
 One way that data mesh can be linked to DDD is by using the concepts of bounded contexts and strategic design. In DDD, a bounded context is a boundary within which a specific domain model applies. This helps to create a clear separation of concerns within the system and ensures that different parts of the system are not unnecessarily coupled.
 
