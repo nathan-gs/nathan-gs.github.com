@@ -9,7 +9,7 @@ redirect_from:
   - /2022/12/31/single-page-website-changing-location-hash-based-on-position-in-page
 ---
 
-While switching from **Google Analytics** to [PiWik](https://piwik.pro/) I wanted to improve tracking of my [cv](/cv) page, a _single page website_ or _single page application_. I want to switch the `#` hash of the `url` while scrolling through the page. 
+While switching from **Google Analytics** to [PiWik](https://piwik.pro/) I wanted to improve tracking of my [cv](/cv) page, a _single page website_ or _single page application_. I want to switch the `#` hash of the `url` while scrolling through the page. I was inspired by [How To Update URL Hash On Scroll (With Table Of Contents) on Stackoverflow](https://stackoverflow.com/questions/58127310/how-to-update-url-hash-on-scroll-with-table-of-contents).
 
 Within the page, I have several sections with anchors usign `<a name="">`, eg: `<section><h2><a name="experience"></a>Experience</h2> ... </section>`. 
 
