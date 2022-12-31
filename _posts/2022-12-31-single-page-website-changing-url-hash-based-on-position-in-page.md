@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
     const headings = document.querySelectorAll('section > a[name]');
 
     const ioOptions = {
-        threshold: 0.75
+        threshold: 0.85
     };
 
     const observer = new IntersectionObserver((entries) => {
