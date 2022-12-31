@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Google Gsuite/Gmail to Outlook.com"
+title: Migrating from Google Gsuite/Gmail to Outlook.com
 categories: []
 tags:
  - Google
