@@ -107,6 +107,3 @@ Optionally you can add `--subfolder2 gmail` to keep it in a seperate mailbox.
 If using a mode modern version of imapsync, you can use `--gmail1`. 
 
 Now wait, the sync will take days (mostly due to the [Gmail limits](https://support.google.com/a/answer/1071518?product_name=UnuFlow&hl=en&visit_id=637858154342472551-3444109678&rd=1&src=supportwidget0&hl=en)). 
-
-## Migrating Contacts & Calendar
-
