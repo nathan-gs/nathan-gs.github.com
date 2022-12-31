@@ -7,11 +7,13 @@ tags:
   - Data Mesh
 ---
 
-During Microsoft Belgium & Luxembourg's Customer Success Day we presented a session on Data Mesh.
+During Microsoft Belgium & Luxembourg's Customer Success Day we presented a session on **Data Mesh**.
+
+Data Mesh is a new decentralized socio-technical approach to managing data, designed to work with organizational complexity and continuous growth. It enables large organizations to get value from their data, at scale, through reusability, analytics and ML. It is building on the **Domain Driven Design (DDD)** methodology
 
 {% include slideshare code='3h4t3jk71URu4Y' aspect_ratio='16:9' %}
 
-Data Mesh is a new decentralized socio-technical approach to managing data, designed to work with organizational complexity and continuous growth. It enables large organizations to get value from their data, at scale, through reusability, analytics and ML. It is building on the **Domain Driven Design (DDD)** methodology
+<!--more-->
 
 Data mesh is a design pattern that emphasizes the importance of data governance and data ownership in an organization. It is based on the idea that data should be treated as a first-class citizen in the same way that traditional software applications are. This approach borrows a lot from Domain Driven Design (DDD), a software development methodology that focuses on creating a shared understanding of the business domain and using that understanding to inform the design of software systems.
 
