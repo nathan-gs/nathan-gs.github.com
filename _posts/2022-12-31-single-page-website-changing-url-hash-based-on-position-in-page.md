@@ -18,7 +18,7 @@ We will implement smooth scrolling anchor links using the _Intersection Observer
 {% highlight javascript linenos %}
 {% raw %}
 window.addEventListener('load', () => {
-    const headings = document.querySelectorAll('section h2 a[name]');
+    const headings = document.querySelectorAll('section > a[name]');
 
     const ioOptions = {
         threshold: 0.75
@@ -29,8 +29,10 @@ window.addEventListener('load', () => {
             if (entry.isIntersecting) {
                 const location = window.location.toString().split('#')[0];
                 const oldHash = window.location.hash;
-                hash = '#' + entry.target.name;
-                if (entry.target.name == "introduction") {
+
+                aEntry = entry.target.querySelector('a[name]');
+                hash = '#' + aEntry.name;
+                if (aEntry.name == "introduction") {
                     hash = "";
                 } 
                 if (hash != oldHash) {
@@ -41,13 +43,13 @@ window.addEventListener('load', () => {
     }, ioOptions);
 
     headings.forEach(ha => {
-        observer.observe(ha);
+        observer.observe(ha.parentElement);
     });
 });
 {% endraw %}
 {% endhighlight %}
 
-This code listens for the `load` event on the window object, which is fired when the whole page has finished loading. When the event is fired, the code selects all the `a[name]` elements that are children of h2 elements that are children of section elements on the page. These `a[name]` elements will be used as the anchor links for our smooth scrolling.
+This code listens for the `load` event on the window object, which is fired when the whole page has finished loading. When the event is fired, the code selects all the `a[name]` elements that are immediate children of section elements. These `a[name]` elements will be used as the anchor links for our smooth scrolling.
 
 Next, the code creates an `options` object with a `threshold` property, which specifies the percentage of the element's size that must be in view before the `IntersectionObserver` callback is triggered. In this case, the callback will be triggered when the element is at least 75% in view.
 
@@ -55,7 +57,7 @@ The code then creates a new `IntersectionObserver` instance, passing in a callba
 
 The code then iterates over each of the `a[name]` elements that were selected earlier and calls the `observe` method on the `IntersectionObserver` instance, passing in each element as an argument. This tells the observer to start watching the element for intersection events.
 
-When an element is intersecting the viewport, the `IntersectionObserver` callback is triggered and the code updates the URL hash to match the name attribute of the current `a[name]` element. The hash is the part of the URL that comes after the `#` symbol. Updating the hash causes the browser to scroll to the corresponding element on the page. If the name attribute is `"introduction"`, the code sets the hash to an empty string instead (because we are at the top of the page).
+When an element is intersecting the viewport, the `IntersectionObserver` callback is triggered and the code selects the first `a[name]` element within the `entry.target` element using the `querySelector` method. The code then updates the URL hash to match the name attribute of the `a[name]` element. The hash is the part of the URL that comes after the `#` symbol. If the name attribute is `"introduction"`, the code sets the hash to an empty string instead (because we are at the top of the page).
 
 Finally, the code replaces the current entry in the browser's history with the updated URL, using the `replaceState` method of the `history` object. This updates the URL in the address bar without creating a new entry in the history.
 
