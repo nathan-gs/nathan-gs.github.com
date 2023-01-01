@@ -53,10 +53,13 @@ redirect_from:
             <br>
         </p>
         
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
     <script>
     
+    // https://stackoverflow.com/questions/58127310/how-to-update-url-hash-on-scroll-with-table-of-contents
+
     window.addEventListener('load', () => {
         const headings = document.querySelectorAll('section > a[name]');
 
@@ -86,20 +89,23 @@ redirect_from:
 
             observer.observe(ha.parentElement);
         });
+    });
 
-        var accordions = document.querySelectorAll('.accordion');
+    $(document).ready(function () {
 
-        accordions.forEach(function(accordion) {
-            accordion.addEventListener('shown', function () {
-            var icon = this.querySelector('span.btn.dropdown i.icon-arrow-down');
-            icon.classList.remove('icon-arrow-down');
-            icon.classList.add('icon-arrow-up');
-            });
-            accordion.addEventListener('hidden', function () {
-            var icon = this.querySelector('span.btn.dropdown i.icon-arrow-up');
-            icon.classList.remove('icon-arrow-up');
-            icon.classList.add('icon-arrow-down');
-            });
+        $('.accordion').on('shown', function () {
+            icon = $('span.btn.dropdown i.icon-arrow-down', this);
+
+            icon.removeClass('icon-arrow-down');
+            icon.addClass('icon-arrow-up');
+
+        });
+        $('.accordion').on('hidden', function () {
+            icon = $('span.btn.dropdown i.icon-arrow-up', this);
+
+            icon.removeClass('icon-arrow-up');
+            icon.addClass('icon-arrow-down');
+
         });
     });
 
