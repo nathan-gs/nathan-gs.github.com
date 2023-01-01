@@ -4,8 +4,8 @@ author: Nathan Bijnens
 url: https://nathan.gs
 
 description: > # this means to ignore newlines
-  [Sr. Cloud Solution Architect Manager, Data & AI at Microsoft Belux](/cv/),
-  fascinated with Big Data, AI, Event Driven Systems, NixOS and home automation. [Speaker](/presentations/)
+  [Sr. Cloud Solution Architect Manager, Data & AI](/cv/) at [Microsoft Belux](/cv/),
+  fascinated with Big Data, AI, Data Mesh, Event Driven Systems, NixOS and home automation. [Speaker](/presentations/)
   on Big Data, AI and Spark. 
 
 twitter_username: nathan_gs
@@ -61,6 +61,6 @@ disqus:
 
 defaults:
   - scope:
-      path: "cv/*.pdf"
+      path: "cv/Nathan Bijnens.pdf"
     values:
       sitemap: false

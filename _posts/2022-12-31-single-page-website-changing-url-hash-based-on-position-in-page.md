@@ -11,7 +11,7 @@ redirect_from:
 
 While switching from **Google Analytics** to [PiWik](https://piwik.pro/) I wanted to improve tracking of my [cv](/cv) page, a _single page website_ or _single page application_. I want to switch the `#` hash of the `url` while scrolling through the page. I was inspired by [How To Update URL Hash On Scroll (With Table Of Contents) on Stackoverflow](https://stackoverflow.com/questions/58127310/how-to-update-url-hash-on-scroll-with-table-of-contents) and by [ChatGPT](https://chat.openai.com) suggesting the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) api.
 
-Within the page, I have several sections with anchors usign `<a name="">`, eg: `<section><h2><a name="experience"></a>Experience</h2> ... </section>`. 
+Within the page, I have several sections with anchors usign `<a name="">`, eg: `<section><a name="experience"></a><h2>Experience</h2> ... </section>`. 
 
 We will implement smooth scrolling anchor links using the _Intersection Observer API_.
 
