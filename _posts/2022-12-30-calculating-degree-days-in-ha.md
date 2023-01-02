@@ -16,7 +16,12 @@ tags:
 
 Calculating [Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark gas consumption in relation to temperature. The formula is quite simple, it uses as reference temperature 18°C minus the average temperature of the day, minimalized on 0°C. The concept is based on the idea that the amount of energy needed to maintain a comfortable indoor temperature increases as the difference between the indoor temperature and the outdoor temperature increases. By tracking the degree days, it is possible to estimate how much energy is needed to heat or cool a building and compare it to the actual energy usage.
 
-This configuration is using the [Home Assistant](https://home-assistant.io) platform to define two sensors: `degree_day_daily` and `gas_m3_per_degree_day`. The `degree_day_daily` sensor calculates the difference between a regularized temperature (18.0°C in this case) and the average temperature reported by the `sensor.garden_garden_temperature_noordkant_temperature` sensor over the past 24 hours. The `gas_m3_per_degree_day` sensor calculates the gas usage (as reported by the `sensor.gas_delivery_daily` sensor) per degree day, which is defined as the difference between the regularized temperature and the average/mean temperature.
+This configuration is using the [Home Assistant](https://home-assistant.io) platform to define three sensors: `outside_temperature_avg`, `degree_day_daily` and `gas_m3_per_degree_day`. 
+
+1.  The `outside_temperature_avg` sensor, based on the [statistics](https://www.home-assistant.io/integrations/statistics) module calculates the average temperature over the past 24h. 
+    It's important to note `max_age` and `sampling_size` need to both specified, see the [HA Community: Statistics max_age and sampling_size](https://community.home-assistant.io/t/statistics-max-age-and-sampling-size/424166) for more info.
+2.  The `degree_day_daily` sensor calculates the difference between a regularized temperature (18.0°C in this case) and the average temperature reported by the `sensor.outside_temperature_avg` sensor over the past 24 hours. 
+3.  The `gas_m3_per_degree_day` sensor calculates the gas usage (as reported by the `sensor.gas_delivery_daily` sensor) per degree day, which is defined as the difference between the regularized temperature and the average/mean temperature.
 
 Both sensors are triggered to update at the same time, 23:59:01 and 23:59:59 respectively, which corresponds to the end of the day. 
 
@@ -29,6 +34,7 @@ sensor:
     state_characteristic: mean
     max_age:
       hours: 24
+    sampling_size: 1440
 
 template:
   - trigger:
