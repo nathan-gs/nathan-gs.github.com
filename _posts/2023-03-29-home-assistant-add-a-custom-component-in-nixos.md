@@ -46,11 +46,11 @@ We can leverage an `activationScript` to install and symlink the package:
 ```nix
   system.activationScripts.ha-solis.text = ''
     mkdir -p "/var/lib/hass/custom_components"
-    ln -sf "${(pkgs.callPackage ./apps/ha-solis-sensor.nix {})}" "/var/lib/hass/custom_components/solis"
+    ln -sfn "${(pkgs.callPackage ./apps/ha-solis-sensor.nix {})}" "/var/lib/hass/custom_components/solis"
   '';  
 ```
 
-We directly use `callPackage` to make sure it's available, this will behind the scenes download and install the package in the nix store under `/nix/store`. 
+We directly use `callPackage` to make sure it's available, this will behind the scenes download and install the package in the nix store under `/nix/store`. Do note the `ln -sfn`, otherwise [we won't overwrite the symlink](https://unix.stackexchange.com/questions/207294/create-symlink-overwrite-if-one-exists/207296#207296) but add it to the directory.
 
 ### Conclusions 
 
