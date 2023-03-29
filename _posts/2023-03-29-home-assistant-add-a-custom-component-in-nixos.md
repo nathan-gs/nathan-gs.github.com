@@ -1,0 +1,63 @@
+---
+layout: post
+title: "Home Assistant: Adding a custom_component in NixOS"
+categories: 
+tags:
+ - NixOs
+ - Home Assistant
+ - IoT
+---
+
+If you're looking for a way to add custom components to your [Home Assistant](https://home-assistant.io/) setup, then NixOS has a good solution. [NixOS](https://nixos.org) is an open source Linux distribution that is designed to be _functional_. This can be a good alternative to have a more declarative configuration in contrast to [HACS](https://hacs.xyz/). 
+
+I'm using the [hultnevp/solis-sensor](https://github.com/hultenvp/solis-sensor) HA component as an example here.
+
+### First of all declare a `package`
+
+```nix
+{ stdenv, pkgs, fetchFromGitHub }:
+
+stdenv.mkDerivation rec {
+  name = "ha-solis-sensor";
+  src = fetchFromGitHub {
+    owner = "hultenvp";
+    repo = "solis-sensor";
+    rev = "v3.3.2";
+    sha256 = "uPGqK6qyglz9aIU3iV/VQbwXXsaBw4HyW7LqtP/xnMg=";
+  };
+
+  
+  installPhase = ''cp -a custom_components/solis $out'';
+}
+```
+
+This package setup is very basic, it uses `fetchFromGitHub` to retrieve the latest release. We can retrieve the `sha256` hash using the following cli `nix-shell -p nix-prefetch-github --run "nix-prefetch-github --rev v3.3.2 hultenvp solis-sensor"` which fetches the git repo, and figures out the sha256 of the repo. 
+
+By default the nix package will run `make install` to install to the correct location, however since we just want to copy the right files we can override this: 
+
+`installPhase = ''cp -a custom_components/solis $out'';`
+
+### Import the package
+
+Home Assistant expects custom packages to be installed under `/var/lib/hass/custom_components/{component_name}`. 
+
+We can leverage an `activationScript` to install and symlink the package:
+
+```nix
+  system.activationScripts.ha-solis.text = ''
+    mkdir -p "/var/lib/hass/custom_components"
+    ln -sf "${(pkgs.callPackage ./apps/ha-solis-sensor.nix {})}" "/var/lib/hass/custom_components/solis"
+  '';  
+```
+
+We directly use `callPackage` to make sure it's available, this will behind the scenes download and install the package in the nix store under `/nix/store`. 
+
+### Conclusions 
+
+Finally we apply our config using `nixos-rebuild switch` and we reload Home Assistant. 
+
+Your Home Assistant `custom_component` is now ready for use. 
+
+#### In the future
+
+In the future this functionality will likely be fully integrated in the [Home Assistant](https://search.nixos.org/options?channel=22.11&from=0&size=50&sort=relevance&type=packages&query=home-assistant) NixOs module, see the following PR [NixOs/nixpkgs/pull/160346](https://github.com/NixOS/nixpkgs/pull/160346).
