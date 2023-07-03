@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Home Assistant: Adding a custom_component in NixOS"
+title: "Home Assistant: Adding a custom_component in NixOS - part 1"
 categories: 
 tags:
  - NixOs
@@ -57,6 +57,11 @@ We directly use `callPackage` to make sure it's available, this will behind the 
 Finally we apply our config using `nixos-rebuild switch` and we reload Home Assistant. 
 
 Your Home Assistant `custom_component` is now ready for use. 
+
+#### Part 2
+
+In [Part 2]({% post_url 2023-07-03-home-assistant-add-a-custom-component-in-nixos-part2.md%}) we will take a look at adding an extra dependency which hasn't been packed yet. 
+) we will take a look at adding an extra dependency which hasn't been packed yet. 
 
 #### In the future
 
