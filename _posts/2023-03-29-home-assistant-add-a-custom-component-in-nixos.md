@@ -60,7 +60,7 @@ Your Home Assistant `custom_component` is now ready for use.
 
 #### Part 2
 
-In [Part 2]({% post_url 2023-07-03-home-assistant-add-a-custom-component-in-nixos-part2.md%}) we will take a look at adding an extra dependency which hasn't been packed yet. 
+In [Part 2]({% post_url 2023-07-03-home-assistant-add-a-custom-component-in-nixos-part2 %}) we will take a look at adding an extra dependency which hasn't been packed yet. 
 ) we will take a look at adding an extra dependency which hasn't been packed yet. 
 
 #### In the future
