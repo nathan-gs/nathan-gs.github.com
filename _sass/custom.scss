@@ -39,9 +39,9 @@ $accentColor: #ac9999;
 }
 
 // Highlighting
-.highligher-rouge .highlight {
+.highlighter-rouge .highlight {
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8 !important;
 
     pre,code {
         background-color: #fff;      
@@ -57,11 +57,11 @@ $accentColor: #ac9999;
         border: 1px solid $lightAccentColor;
 
         table.rouge-table {
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
 
             pre {
                 border: 0;
-                margin-bottom: 0;
+                margin-bottom: 0 !important;
             }
 
             pre.lineno {
@@ -83,9 +83,6 @@ code.highlighter-rouge {
 
 code table th, code table td {
     padding: 0;
-}
-pre, code {
-    background-color: $lightAccentColor;
 }
 
 // slideshare
