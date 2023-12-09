@@ -3,7 +3,7 @@ layout: post
 title: "Home Assistant: Adding a custom_component in NixOS - part 2"
 categories: 
 tags:
- - NixOs
+ - NixOS
  - Home Assistant
  - IoT
 ---

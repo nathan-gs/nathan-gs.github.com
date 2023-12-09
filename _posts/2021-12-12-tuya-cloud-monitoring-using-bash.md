@@ -5,7 +5,7 @@ categories: []
 tags:
  - Tuya
  - IoT
- - NixOs
+ - NixOS
 ---
 
 Connecting to the [Tuya Cloud](https://iot.tuya.com/), to monitor a set of home IoT devices. Recently I bought a set of Silvercrest/Lidl Homesmart devices. 

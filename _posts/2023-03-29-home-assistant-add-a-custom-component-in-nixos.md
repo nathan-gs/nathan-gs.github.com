@@ -3,7 +3,7 @@ layout: post
 title: "Home Assistant: Adding a custom_component in NixOS - part 1"
 categories: 
 tags:
- - NixOs
+ - NixOS
  - Home Assistant
  - IoT
 ---
@@ -65,4 +65,4 @@ In [Part 2]({% post_url 2023-07-03-home-assistant-add-a-custom-component-in-nixo
 
 #### In the future
 
-In the future this functionality will likely be fully integrated in the [Home Assistant](https://search.nixos.org/options?channel=22.11&from=0&size=50&sort=relevance&type=packages&query=home-assistant) NixOs module, see the following PR [NixOs/nixpkgs/pull/160346](https://github.com/NixOS/nixpkgs/pull/160346).
+In the future this functionality will likely be fully integrated in the [Home Assistant](https://search.nixos.org/options?channel=22.11&from=0&size=50&sort=relevance&type=packages&query=home-assistant) NixOS module, see the following PR [NixOS/nixpkgs/pull/160346](https://github.com/NixOS/nixpkgs/pull/160346).
