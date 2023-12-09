@@ -23,7 +23,7 @@ I just add the following to any spot in `configuration.nix`:
  _module.args.ha = import ../lib/ha.nix { lib = lib; };
 ```
 
-The result I can use my [lib/ha.nix](https://github.com/nathan-gs/nix-conf/blob/main/lib/ha.nix). 
+The result I can use my [lib/ha.nix](https://github.com/nathan-gs/nix-conf/blob/main/lib/ha.nix) helper functions inside any module, as if it were native. 
 
 A small word of warning, this works with NixOS 23.11, but it uses the internal `_module` which is _internal_ and _fragile_, as you can read in the [NixOS/nixpkgs](https://github.com/NixOS/nixpkgs/blob/695027f61c702ea0de6baa3122b282d672fede09/lib/modules.nix#L43).
 
