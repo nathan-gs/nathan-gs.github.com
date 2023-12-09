@@ -41,6 +41,7 @@ $accentColor: #ac9999;
 // Highlighting
 .highlight {
     width: 100%;
+    background-color: $accentColor;
 
     pre,code {
         background-color: #fff;      
@@ -56,6 +57,8 @@ $accentColor: #ac9999;
         border: 1px solid $lightAccentColor;
 
         table.rouge-table {
+            margin-bottom: 0;
+
             pre {
                 border: 0;
             }
@@ -64,7 +67,15 @@ $accentColor: #ac9999;
                 border: 0px;
                 color: $accentColor;
             }
+
+            td.rouge-gutter {
+                width: 20px;
+            }
         }
+    }
+
+    table {
+        
     }
     
     
