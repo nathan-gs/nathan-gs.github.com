@@ -15,8 +15,7 @@ Within the page, I have several sections with anchors usign `<a name="">`, eg: `
 
 We will implement smooth scrolling anchor links using the _Intersection Observer API_.
 
-{% highlight javascript linenos %}
-{% raw %}
+```javascript
 window.addEventListener('load', () => {
     const headings = document.querySelectorAll('section > a[name]');
 
@@ -46,8 +45,7 @@ window.addEventListener('load', () => {
         observer.observe(ha.parentElement);
     });
 });
-{% endraw %}
-{% endhighlight %}
+```
 
 This code listens for the `load` event on the window object, which is fired when the whole page has finished loading. When the event is fired, the code selects all the `a[name]` elements that are immediate children of section elements. These `a[name]` elements will be used as the anchor links for our smooth scrolling.
 
