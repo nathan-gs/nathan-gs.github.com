@@ -4,6 +4,14 @@ title: "NixOS: adding a set of helper functions to Nix and importing these"
 categories: 
 tags:
  - NixOS
+excerpt: >
+    In my HomeAssistant setup, I rely on NixOS to streamline configuration management. To enhance the efficiency of writing Home Assistant YAML files, I sought a way to integrate custom helper functions seamlessly. My objective was to include 'ha' as an argument at the beginning of my configuration files, allowing for a more modular and organized setup.
+
+    My goal is to be able to include `ha` as argument at the top of my file:
+    ```nix
+    { config, lib, pkgs, ha, ... }:
+    ```
+    
 ---
 
 In my HomeAssistant setup, I rely on NixOS to streamline configuration management. To enhance the efficiency of writing Home Assistant YAML files, I sought a way to integrate custom helper functions seamlessly. My objective was to include 'ha' as an argument at the beginning of my configuration files, allowing for a more modular and organized setup.

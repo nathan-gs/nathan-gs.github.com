@@ -32,6 +32,10 @@
             td.rouge-gutter {
                 width: 20px;
             }
+
+            th, td {
+                padding: 0;
+            }
         }
     }
     
@@ -39,9 +43,6 @@
 
 code.highlighter-rouge {
     font-size: 14px;
-    background: #f8f8f8;
+    background-color: #f8f8f8;
 }
 
-code table th, code table td {
-    padding: 0;
-}
