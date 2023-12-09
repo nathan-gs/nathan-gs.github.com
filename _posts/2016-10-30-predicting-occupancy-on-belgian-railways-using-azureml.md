@@ -37,7 +37,7 @@ Pieter made available a [json dataset](https://gtfs.irail.be/nmbs/feedback/occup
 
 To read in the data I am going to use an simple R script, because it’s a json, that we also need to flatten. Just add [Execute R Script](https://msdn.microsoft.com/en-us/library/azure/dn905952.aspx) as the first block. The json is not a valid json, it’s [ndjson](http://ndjson.org/) so we need to use the stream_in method of jsonlite.
 
-{% highlight r linenos %}
+```r
 library(jsonlite)
 library(plyr)
 
@@ -46,7 +46,7 @@ mydata <- flatten(jsonlite::stream_in(con), recursive=TRUE)
 data.set = mydata
 
 maml.mapOutputPort("data.set")
-{% endhighlight %}
+```
 
 The data now looks like:
 
@@ -60,14 +60,14 @@ We are going to convert the querytime to a DateTime, using [Edit Metadata](https
 
 Using [Apply SQL Transformation](https://msdn.microsoft.com/en-us/library/azure/dn905914.aspx), which allows you to use the full SQLite syntax to do transformations, aggregations on your data. We use following script, unfortunately we need to do a [few tricks](http://stackoverflow.com/a/35060424) because there is no LPAD in SQLite.
 
-{% highlight sql linenos %}
+```sql
 select 
 time(strftime('%H', ts) || ':' || substr((cast(strftime('%M', ts) / 15 as int) * 15) || '0', 1, 2)) as [time],
 strftime('%w', ts) as [day_of_week],
 substr([post.occupancy], 27) as [label],
  * 
 from t1;
-{% endhighlight %}
+```
 
 We are converting the DateTime to a Hour:Quarter combination, because we want to have more overlap. We also extract the day of week, because weekend vs non-weekend might have a big impact.
 

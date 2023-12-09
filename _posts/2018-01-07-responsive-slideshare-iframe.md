@@ -5,7 +5,7 @@ title: "Making SlideShare iframes responsive, using CSS"
 While reviving my blog I wanted a way to embed my [presentations]({% link presentations.html %}), by default the SlideShare embed code uses a fixed width and height.
 
 eg. 
-{% highlight html linenos %}
+```html
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/h1Fw1vmfv5uVlM" 
     width="595" 
     height="485" 
@@ -16,7 +16,7 @@ eg.
     style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" 
     allowfullscreen> 
 </iframe> 
-{% endhighlight %}
+```
 
 Unfortunately using a fixed `width` and `height` does not work well on a responsive website. Luckily I found [a solution for Youtube videos](https://stackoverflow.com/a/17465040), using pure css.
 
@@ -26,7 +26,7 @@ You need to add an outer `<div>`, with `0 height`, and `100% width`, and a `padd
 
 #### The embed code now looks like this
 
-{% highlight html linenos %}
+```html
 <div class="iframe-slideshare-16x9">    
     <iframe src="//www.slideshare.net/slideshow/embed_code/key/h1Fw1vmfv5uVlM" 
         frameborder="0" 
@@ -36,11 +36,11 @@ You need to add an outer `<div>`, with `0 height`, and `100% width`, and a `padd
         allowfullscreen> 
     </iframe>
 </div>
-{% endhighlight %}
+```
 
 #### The CSS looks like this
 
-{% highlight css linenos %}
+```css
 .iframe-slideshare-4x3 {
     padding-bottom: calc(75% + 51px);
 }
@@ -67,7 +67,7 @@ You need to add an outer `<div>`, with `0 height`, and `100% width`, and a `padd
     border:1px solid #CCC; 
 }
 
-{% endhighlight %} 
+```
 
 I added two variations because I have slides in `16:9` and `4:3` aspect ratio's.
 

@@ -11,7 +11,7 @@ redirect_from:
 
 Suppose we have this structure:
 
-{% highlight yaml linenos %}
+```yaml
 Person:
   columns:
     name: string(63)
@@ -33,10 +33,10 @@ Student:
     type: column_aggregation
     keyField: type
     keyValue: student
-{% endhighlight %}
+```
 
 When you run the `symfony:build —all` task you get a really annoying error:
-{% highlight sql linenos %}
+```sql
 SQLSTATE[42000]: Syntax error or access violation: 1072 Key column ‘faculty_id’ doesn’t exist in table. 
 
 Failing Query: 
@@ -46,11 +46,11 @@ Failing Query:
     type VARCHAR(31), 
     INDEX faculty_id_idx (faculty_id), 
     PRIMARY KEY(id)) ENGINE = INNODB”.
-{% endhighlight %}
+```
 
 The problem: the Doctrine CLI task tries to insert multiple CREATE TABLE queries (one for each child + for the parant).
 
 Luckily you can circumvent this behavior by calling (in the setUp method):
-{% highlight php linenos %}
+```php
 $this->setAttribute(Doctrine_Core::ATTR_EXPORT, Doctrine_Core::EXPORT_NONE);
-{% endhighlight %}
+```

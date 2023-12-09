@@ -16,7 +16,7 @@ It’s possible to set a cookie domain for your sessions. Instead of the default
 You can set the cookie domain, using [session_set_cookie_params()](http://php.net/manual/en/function.session-set-cookie-params.php). It needs to happen before the `session_start()`.
 
 eg. Put this at the top of your php pages that need to have shared sessions.
-{% highlight php linenos %}
+```php
 <?php
 session_set_cookie_params ( 
     time() + 3600,      // $lifetime
@@ -24,6 +24,5 @@ session_set_cookie_params (
     '.example.org'
 );
 session_start();
-
-{% endhighlight %}
+```
 

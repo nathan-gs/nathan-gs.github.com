@@ -16,20 +16,20 @@ I was a bit lazy and also wanted to experiment with [docker](https://docker.com)
 
 Enabling Docker on NixOS is as easy as adding the following to `/etc/nixos/configuration.nix`:
 
-{% highlight nix linenos %}
+```nix
 # Enable Docker
 virtualisation.docker.enable = true;
 
 # Allow my regular user to control docker.
 users.extraUsers.USER.extraGroups = [ "docker" ];
-{% endhighlight %}
+```
 
 ## Setting up _croc/onedrive_
 #### Finding the right Docker Image
 First of all I had to find the right docker image on [Docker Hub](https://hub.docker.com), the most popular image [kukki/docker-onedrive](https://hub.docker.com/r/kukki/docker-onedrive/) is out of date, luckily [croc/onedrive](https://hub.docker.com/r/croc/onedrive/) is more up to date.
 
 #### Initialize the container
-{% highlight bash linenos %}
+```bash
 # All these commands are as USER, not root.
 # Create some directories, where we going to store our data and some state & config
 mkdir -p /home/USER/onedrive
@@ -37,11 +37,11 @@ mkdir -p /home/USER/onedrive-config
 
 # Pull the image
 docker pull croc/onedrive
-{% endhighlight %}
+```
 
 #### Acquiring the access token
 
-{% highlight bash linenos %}
+```bash
 # Run it once, to acquire the access token
 docker run -ti \
     --name onedrive \
@@ -50,7 +50,7 @@ docker run -ti \
     -v /home/USER/onedrive:/onedrive \
     croc/onedrive
 # Line 4 is important to run the container under our own user, instead of root.
-{% endhighlight %}
+```
 
 The container will start, authorize the application by:
 
@@ -66,7 +66,7 @@ The application will start syncing, as soon as it starts, you can quit the synch
 Following some guidance of running [Docker Containers on SystemD](https://container-solutions.com/running-docker-containers-with-systemd/) I adapted this to NixOS.
 
 
-{% highlight nix linenos %}
+```nix
 systemd.services.docker-onedrive-USER = {
     # Make sure docker is started. 
     after = [ "docker.service" ];
@@ -112,7 +112,7 @@ ${pkgs.docker}/bin/docker kill docker-onedrive-USER
     '';
 };
 
-{% endhighlight %}
+```
 
 __L31__ `${pkgs.docker}` refers to the Nix docker package. <br />
 __L32__ `--name docker-onedrive-USER` Give the running container a name. <br />
@@ -126,32 +126,32 @@ __L37__ `croc/onedrive` the container name. <br />
 
 NixOS configuration needs to be applied to take affect.
 
-{% highlight bash linenos %}
+```bash
 nixos-rebuild --switch
-{% endhighlight %}
+```
 
 You can monitor the newly created service.
-{% highlight bash linenos %}
+```bash
 # Will show status, the latest log lines
 systemd status docker-onedrive-USER.service 
 
 # The journal contains the full history
 journalctl -u docker-onedrive-USER.service 
-{% endhighlight %}
+```
 
 {% include post_img img='terminal-systemd.png' alt="systemd status in action." %}
 
 Restarting the service is no different than any other systemd service
-{% highlight bash linenos %}
+```bash
 systemd restart docker-onedrive-USER.service 
 systemd stop docker-onedrive-USER.service 
-{% endhighlight %}
+```
 
 
 If we made a mistake, it's very easy to revert to the previous NixOS _generation_.
-{% highlight bash linenos %}
+```bash
 nixos-rebuild --rollback
-{% endhighlight %}
+```
 
 ## Conclusion
 #### Warning
