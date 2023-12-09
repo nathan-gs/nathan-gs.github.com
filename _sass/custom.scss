@@ -1,6 +1,3 @@
-// Colors
-$lightAccentColor: #faf5f5;
-$accentColor: #ac9999;
 $spacing-unit: 30px;
 
 // Footer
@@ -31,60 +28,14 @@ $spacing-unit: 30px;
       line-break: auto;
 
     }
-  
-  }
+}
 
 // Twitter
 .twitter-tweet {
     margin: auto;
 }
 
-// Highlighting
-.highlighter-rouge .highlight {
-    width: 100%;
-    background: #f8f8f8 !important;
 
-    pre,code {
-        background-color: #fff;      
-        font-size: 12px;  
-    }
-    
-
-    td.code {
-        width: 100%;
-    }
-
-    pre {
-        border: 1px solid $lightAccentColor;
-
-        table.rouge-table {
-            margin-bottom: 0 !important;
-
-            pre {
-                border: 0;
-                margin-bottom: 0 !important;
-            }
-
-            pre.lineno {
-                border: 0px;
-                color: $accentColor;
-            }
-
-            td.rouge-gutter {
-                width: 20px;
-            }
-        }
-    }
-    
-}
-
-code.highlighter-rouge {
-    font-size: 14px;
-}
-
-code table th, code table td {
-    padding: 0;
-}
 
 // slideshare
 .iframe-slideshare-4x3 {

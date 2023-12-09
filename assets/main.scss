@@ -2,5 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "custom";
+// Colors
+$lightAccentColor: #faf5f5;
+$accentColor: #ac9999;
+
+@import "highlighter";
 @import "minima";
+@import "custom";
