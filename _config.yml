@@ -64,3 +64,18 @@ defaults:
       path: "cv/Nathan Bijnens.pdf"
     values:
       sitemap: false
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+  # https://github.com/jekyll/jekyll/issues/4619#issuecomment-191267346
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
