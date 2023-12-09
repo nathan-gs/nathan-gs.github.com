@@ -32,11 +32,13 @@ utility_meter:
 
 If you receive data in `peak` & `offpeak` measurements; best to sum them before:
 ```yaml
+{% raw %}
 template:
 - sensor:
   - name: electricity_delivery
   unit_of_measurement: "kWh"
   state: "{{ ( states('sensor.electricity_peak_delivery') | float ) + ( states('sensor.electricity_offpeak_delivery') | float ) }}"
+{% endraw %}
 ```
 
 ### Calculate the 15m power
@@ -44,11 +46,13 @@ template:
 We now have the numbers in kWh (energy) but we need to convert to kW (power); we do this by multiplying by 4 (1h per quarter).
 
 ```yaml
+{% raw %}
 template:
 - sensor:
   - name: electricity_delivery_power_15m
   unit_of_measurement: "kW"
   state: "{{ (states('sensor.electricity_delivery_15m') | float(0)) * 4 | float }}"
+{% endraw %}  
 ```
 
 ### Calculate the daily and monthly max
@@ -56,6 +60,7 @@ template:
 To calculate the 15m max for the day & month, we are using the following template, with a time_pattern trigger.
 
 ```yaml
+{% raw %}
 template:
   trigger:
     platform: time_pattern
@@ -93,7 +98,7 @@ template:
         0
       {% endif %}
     unit_of_measurement: 'kW'
-    
+{% endraw %}    
 ```
 
 ### Visualizing
@@ -202,18 +207,21 @@ cards:
 Let's create a binary_sensor to trigger if we are using too much power. The following code will trigger if we consume more than 2800W for more than 2m.
 
 ```yaml
+{% raw %}
 template:
 - binary_sensor:
   - name: electricity_delivery_power_max_threshold_reached
     delay_on: 00:02:00
     delay_off: 00:01:00
     state: "{{ states('sensor.electricity_delivery') | float > 2800 }}"
+{% endraw %}
 ```
 
 #### A notification to the Home Assistant mobile apps
 
 As automation:
 ```yaml
+{% raw %}
 automations:
 - id: electricity_delivery_power_max_threshold_reached_send_notification
   alias: electricity_delivery_power_max_threshold_reached_send_notification
@@ -228,6 +236,7 @@ automations:
       title: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
       message: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
   mode: single
+{% endraw %}
 ```
 
 ### Final notes

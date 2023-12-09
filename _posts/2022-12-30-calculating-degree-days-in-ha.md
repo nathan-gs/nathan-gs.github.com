@@ -26,6 +26,7 @@ This configuration is using the [Home Assistant](https://home-assistant.io) plat
 Both sensors are triggered to update at the same time, 23:59:01 and 23:59:59 respectively, which corresponds to the end of the day. 
 
 ```yaml
+{% raw %}
 sensor:
   - platform: statistics
     name: "outside_temperature_avg"
@@ -65,7 +66,7 @@ template:
           0
         {% endif %}      
       unit_of_measurement: 'm³/DD'
-
+{% endraw %}
 ```
 
 You can find the implementation in my NixOS config [nathan-gs/nix-conf](https://github.com/nathan-gs/nix-conf/blob/main/smarthome/energy.nix#L379-L436) as well.
