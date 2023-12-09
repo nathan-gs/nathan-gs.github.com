@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NixOS: adding a set of helper functions to Nix and importing these at "
+title: "NixOS: adding a set of helper functions to Nix and importing these"
 categories: 
 tags:
  - NixOS
