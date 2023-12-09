@@ -13,6 +13,8 @@ My goal is to be able to include `ha` as argument at the top of my file:
 { config, lib, pkgs, ha, ... }:
 ```
 
+<!--more-->
+
 ### Exploring some options
 
 After exploring some capabilities in `flake.nix` (and failing), seeing [What’s the best way to add my own utility functions? on Nixos Discourse](https://discourse.nixos.org/t/whats-the-best-way-to-add-my-own-utility-functions/11576).
