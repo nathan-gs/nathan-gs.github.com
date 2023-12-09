@@ -20,49 +20,42 @@ I'm tracking my Electricity / Gas / Water in [Home Assistant](https://home-assis
 
 We will be using the [utility_meter](https://www.home-assistant.io/integrations/utility_meter/) integration to generate these values:
 
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 utility_meter:
   electricity_delivery_15m:
     source: sensor.electricity_delivery
     cron: "*/15 * * * *"
 
-{% endraw %}
-{% endhighlight %}
+```
 
 #### Sidenote for Peak & Offpeak
 
 If you receive data in `peak` & `offpeak` measurements; best to sum them before:
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 template:
 - sensor:
   - name: electricity_delivery
   unit_of_measurement: "kWh"
   state: "{{ ( states('sensor.electricity_peak_delivery') | float ) + ( states('sensor.electricity_offpeak_delivery') | float ) }}"
-{% endraw %}
-{% endhighlight %}
+```
 
 ### Calculate the 15m power
 
 We now have the numbers in kWh (energy) but we need to convert to kW (power); we do this by multiplying by 4 (1h per quarter).
 
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 template:
 - sensor:
   - name: electricity_delivery_power_15m
   unit_of_measurement: "kW"
   state: "{{ (states('sensor.electricity_delivery_15m') | float(0)) * 4 | float }}"
-{% endraw %}
-{% endhighlight %}
+```
 
 ### Calculate the daily and monthly max
 
 To calculate the 15m max for the day & month, we are using the following template, with a time_pattern trigger.
 
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 template:
   trigger:
     platform: time_pattern
@@ -101,14 +94,13 @@ template:
       {% endif %}
     unit_of_measurement: 'kW'
     
-{% endraw %}
-{% endhighlight %}
+```
 
 ### Visualizing
 
 Making use of [Apexcharts Card](https://github.com/RomRider/apexcharts-card), visualizing some elements 
 
-{% highlight yaml linenos %}
+```yaml
 type: vertical-stack
 cards:
   - type: entities
@@ -199,7 +191,7 @@ cards:
         show:
           datalabels: false
           extremas: false
-{% endhighlight %}
+```
 
 {% include post_img img="measurements1.png" alt="Measurements inside Home Assistant" width="30%" %}
 {% include post_img img="measurements-day.png" alt="Measurements inside Home Assistant" width="30%" %}
@@ -209,22 +201,19 @@ cards:
 
 Let's create a binary_sensor to trigger if we are using too much power. The following code will trigger if we consume more than 2800W for more than 2m.
 
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 template:
 - binary_sensor:
   - name: electricity_delivery_power_max_threshold_reached
     delay_on: 00:02:00
     delay_off: 00:01:00
     state: "{{ states('sensor.electricity_delivery') | float > 2800 }}"
-{% endraw %}
-{% endhighlight %}
+```
 
 #### A notification to the Home Assistant mobile apps
 
 As automation:
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 automations:
 - id: electricity_delivery_power_max_threshold_reached_send_notification
   alias: electricity_delivery_power_max_threshold_reached_send_notification
@@ -239,9 +228,7 @@ automations:
       title: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
       message: "Electricity Peak; ({{  (states('sensor.dsmr_reading_electricity_currently_delivered') | float * 1000) }}W (max 2800w)"
   mode: single
-{% endraw %}
-{% endhighlight %}
-
+```
 
 ### Final notes
 

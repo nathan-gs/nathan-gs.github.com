@@ -25,8 +25,7 @@ This configuration is using the [Home Assistant](https://home-assistant.io) plat
 
 Both sensors are triggered to update at the same time, 23:59:01 and 23:59:59 respectively, which corresponds to the end of the day. 
 
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 sensor:
   - platform: statistics
     name: "outside_temperature_avg"
@@ -67,16 +66,14 @@ template:
         {% endif %}      
       unit_of_measurement: 'm³/DD'
 
-{% endraw %}
-{% endhighlight %}
+```
 
 You can find the implementation in my NixOS config [nathan-gs/nix-conf](https://github.com/nathan-gs/nix-conf/blob/main/smarthome/energy.nix#L379-L436) as well.
 
 ### Dashboard
 
 Let's add a basic dashboard using [ApexCharts Card](https://github.com/RomRider/apexcharts-card): 
-{% highlight yaml linenos %}
-{% raw %}
+```yaml
 type: custom:apexcharts-card
 graph_span: 31d
 span:
@@ -123,7 +120,6 @@ series:
     stroke_width: 2
     yaxis_id: gas_per_dd
 
-{% endraw %}
-{% endhighlight %}
+```
 
 {% include post_img img="degreedays.png" alt="Degree Days inside Home Assistant" %}
