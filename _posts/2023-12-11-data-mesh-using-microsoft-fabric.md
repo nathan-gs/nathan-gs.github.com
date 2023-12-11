@@ -5,6 +5,7 @@ categories: [presentations]
 tags:
   - Azure
   - Data Mesh
+  - Microsoft Fabric
 excerpt: >
     In the ever-evolving landscape of data management, organizations are constantly seeking innovative solutions to overcome the challenges posed by traditional centralized data architectures. Enter the concept of Data Mesh, a paradigm shift that decentralizes data ownership and processing, allowing organizations to scale efficiently and unlock the true potential of their data. In this presentation, we explore how Microsoft Fabric can be a game-changer in implementing a Data Mesh.
     
@@ -17,7 +18,7 @@ In the ever-evolving landscape of data management, organizations are constantly 
 {% include slideshare code='rlWxPqh74EJc3j' aspect_ratio='16:9' %}
 
 ### Understanding Data Mesh:
-Data Mesh is an architectural approach that treats `Data as a Product` ` and applies principles of domain-oriented decentralized data ownership and architecture. Unlike the traditional centralized data warehouses, Data Mesh encourages the distribution of data responsibilities across different domains within an organization. This approach promotes autonomy, scalability, and agility in managing data.
+Data Mesh is a socio-technical approach that treats `Data as a Product` and applies principles of domain-oriented decentralized data ownership and architecture. Unlike the traditional centralized data warehouses, Data Mesh encourages the distribution of data responsibilities across different domains within an organization. This approach promotes autonomy, scalability, and agility in managing data.
 
 ### Microsoft Fabric Overview
 Microsoft Fabric is an all-in-one analytics solution for enterprises that covers everything from data movement to data science, Real-Time Analytics, and business intelligence. It offers a comprehensive suite of services, including data lake, data engineering, and data integration, all in one place.
