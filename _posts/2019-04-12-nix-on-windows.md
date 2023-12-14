@@ -18,6 +18,9 @@ excerpt: >
 image: /assets/post/2019/04/12/nix-on-windows/nixos.png
 ---
 
+| :exclamation: [An update is published, using wsl2 & NixOS](/2023/12/14/nixos-on-windows) |
+|------------------------------------------------------------------------------------------|
+
 <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" />  Using [nix](https://nixos.org/nix), the _functional_ package manager on the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) is fairly easy, however a couple of additional steps need to be done. 
 
 1. Enable WSL, see [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
