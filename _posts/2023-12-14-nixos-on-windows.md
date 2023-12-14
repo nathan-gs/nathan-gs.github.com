@@ -32,7 +32,6 @@ There are a couple of steps to enable NixOS on top of the [Windows Subsystem for
 wsl --install --no-distribution
 ```
 The `--no-distribution` just activates wsl2.
-
 Reboot your pc.
 
 2. We are going to use the [nix-community/NixOS-WSL](https://github.com/nix-community/NixOS-WSL) base.
@@ -68,7 +67,9 @@ Reboot your pc.
       ```
 
     2. You can start using NixOS
+
       e.g. `nix-shell -p htop`
 
     3. Definitely check 
+    
       - [nixos.org quickstart](https://nixos.org/manual/nix/stable/quick-start.html)
