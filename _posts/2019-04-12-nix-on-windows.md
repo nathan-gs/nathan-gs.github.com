@@ -18,8 +18,9 @@ excerpt: >
 image: /assets/post/2019/04/12/nix-on-windows/nixos.png
 ---
 
-> [!WARNING]  
-> [An update is published, using wsl2 & NixOS](/2023/12/14/nixos-on-windows)
+> [!WARNING]
+> An update is published, [using wsl2 & NixOS](/2023/12/14/nixos-on-windows)
+
 
 <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" />  Using [nix](https://nixos.org/nix), the _functional_ package manager on the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) is fairly easy, however a couple of additional steps need to be done. 
 

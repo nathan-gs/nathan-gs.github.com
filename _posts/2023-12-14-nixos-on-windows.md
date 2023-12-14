@@ -11,12 +11,15 @@ excerpt: >
   <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" /> [NixOS](https://nixos.org) is my go-to Linux distribution, providing a Functional approach to packaging & configuration management. 
 
   There are a couple of steps to enable NixOS on top of the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/).
+  <p style="page-break-after: always;">&nbsp;</p>
 
 image: /assets/post/2019/04/12/nix-on-windows/nixos.png
 ---
 
+
 > [!NOTE]
 > An earlier version was published as [Nix on Windows 10 (2019)](/2019/04/12/nix-on-windows).
+
 
 <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" /> [NixOS](https://nixos.org) is my go-to Linux distribution, providing a Functional approach to packaging & configuration management. 
 
