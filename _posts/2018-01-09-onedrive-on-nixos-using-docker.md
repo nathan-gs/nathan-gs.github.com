@@ -12,7 +12,7 @@ My NAS is a Atom based Thecus running [NixOS](https://nixos.org). NixOS is a Lin
 Unfortunately [skilion/onedrive](https://github.com/skilion/onedrive), a [D-lang](http://dlang.org) based [OneDrive](https://onedrive.live.com/) client, is not available on NixOS and building it required a different version of the DMD compiler. <br />
 I was a bit lazy and also wanted to experiment with [docker](https://docker.com) on NixOS so I decided to run _skilion/onedrive_ as _docker_ container on _NixOS_.
 
-> ##### WARNING
+> ##### NATIVE PACKAGE AVAILABLE
 >
 > Onedrive is now available as a native [NixOS package](https://search.nixos.org/packages?channel=23.11&show=onedrive&from=0&size=50&sort=relevance&type=packages&query=onedrive).
 {: .block-warning }
