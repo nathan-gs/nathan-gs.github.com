@@ -14,7 +14,10 @@ Flanders will reform the [nettariffs](https://www.vreg.be/nl/wat-zijn-de-nieuwe-
 
 I'm tracking my Electricity / Gas / Water in [Home Assistant](https://home-assistant.io/) already, so let's take a look what we need to do. This was inspired by a Forum thread at [Capaciteitstarief maandpiek zichtbaar maken in home assistant (userbase.be)](https://userbase.be/forum/viewtopic.php?p=945740#p945740).
 
-
+> ###### TIP
+>
+> Likely with the latest firmwares your DSMR/P1 meter includes the `electricity_delivery_power_15m` and the `electricity_delivery_power_monthly_15m_max` sensors.
+{: .block-tip }
 
 ### Track 15m values
 
