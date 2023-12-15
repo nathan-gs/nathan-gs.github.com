@@ -6,8 +6,12 @@ code.highlighter-rouge {
 }
 
 .highlighter-rouge .highlight {
-    width: 100%;
+    width: calc(100% - 15px);
     background: #f8f8f8 !important;
+
+    border-left-color: $accentColor;
+    border-left-width: 5px;
+    border-left-style: solid;
 
     pre,code {
         background-color: #fff;      
