@@ -1,4 +1,4 @@
-.markdown-section blockquote.block-note {
+blockquote.block-note {
     border-color: $accentColor;
     background-color: $lightAccentColor;
 
@@ -8,7 +8,7 @@
     
 }
 
-.markdown-section blockquote.block-tip {
+blockquote.block-tip {
     border-color: #42b983;
     background-color: #e2f5ec;
     color: #215d42;
@@ -19,7 +19,7 @@
 }
 
 
-.markdown-section blockquote.block-warning {
+blockquote.block-warning {
     border-color:  #e7c000;
     background-color: rgba(255, 229, 100, .25);
     color: #6b5900;
@@ -29,7 +29,7 @@
     }
 }
 
-.markdown-section blockquote.block-danger {
+blockquote.block-danger {
     border-color:  #c00;
     background-color: #ffe0e0;
     color: #600;

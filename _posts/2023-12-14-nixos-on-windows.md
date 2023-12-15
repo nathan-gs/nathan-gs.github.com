@@ -18,7 +18,7 @@ image: /assets/post/2019/04/12/nix-on-windows/nixos.png
 
 > ##### NOTE
 >
-> An earlier version was published as [Nix on Windows 10 (2019)](/2019/04/12/nix-on-windows).
+> An earlier version was published as [Nix on Windows 10](/2019/04/12/nix-on-windows) in 2019.
 {: .block-note }
 
 <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" /> [NixOS](https://nixos.org) is my go-to Linux distribution, providing a Functional approach to packaging & configuration management. 
@@ -32,7 +32,8 @@ There are a couple of steps to enable NixOS on top of the [Windows Subsystem for
 ```powershell
 wsl --install --no-distribution
 ```
-The `--no-distribution` just activates wsl2.
+The `--no-distribution` just activates wsl2, see [wsl docs](https://learn.microsoft.com/en-us/windows/wsl/basic-commands#install).
+
 Reboot your pc.
 
 #### Import & Install NixOS on WSL2
