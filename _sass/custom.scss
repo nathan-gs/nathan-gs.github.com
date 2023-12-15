@@ -140,3 +140,7 @@ $spacing-unit: 30px;
         margin-left: -1.3em;
     }
 }
+
+.home ul.post-list li {
+    page-break-after: always;
+}
