@@ -17,9 +17,8 @@ image: /assets/post/2019/04/12/nix-on-windows/nixos.png
 
 <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" /> [NixOS](https://nixos.org) is my go-to Linux distribution, providing a Functional approach to packaging & configuration management. 
 
-There are a couple of steps to enable NixOS on top of the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/).
-
-<p style="clear: both;">&nbsp;</p>
+There are a couple of steps to enable NixOS on top of the [Windows Subsystem for Linux 2](https://learn.microsoft.com/en-us/windows/wsl/). Running native NixOS is a better approach then to use Nix on Windows (using Ubuntu).
+<br style="clear: both;">
 
 > ##### NOTE
 >
@@ -49,9 +48,9 @@ We are going to use the [nix-community/NixOS-WSL](https://github.com/nix-communi
 
 3. Run NixOS 
   
-      ```powershell
-      wsl -d NixOS
-      ```
+    ```powershell
+    wsl -d NixOS
+    ```
 
 4. Optionally make NixOS the default
 

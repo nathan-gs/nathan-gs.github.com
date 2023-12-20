@@ -2,16 +2,17 @@
 
 code.highlighter-rouge {
     font-size: 14px;
-    background-color: #f8f8f8;
+    background-color: $codeBackground;
 }
 
 .highlighter-rouge .highlight {
     width: auto;
-    background: #f8f8f8 !important;
+    background: $codeBackground !important;
 
     border-left-color: $accentColor;
     border-left-width: 5px;
     border-left-style: solid;
+    border-radius: 3px;
 
     pre,code {
         background-color: #fff;      
@@ -26,16 +27,19 @@ code.highlighter-rouge {
     pre {
         border: 1px solid $lightAccentColor;
 
+        padding: 8px 12px;
+
         table.rouge-table {
             margin-bottom: 0 !important;
 
             pre {
                 border: 0;
                 margin-bottom: 0 !important;
+                vertical-align: top;
             }
 
             pre.lineno {
-                border: 0px;
+                border: 0;
                 color: $accentColor;
             }
 
@@ -45,11 +49,11 @@ code.highlighter-rouge {
 
             th, td {
                 padding: 0;
+                vertical-align: top;
+                background-color: #fff;
             }
         }
     }
     
 }
-
-
 

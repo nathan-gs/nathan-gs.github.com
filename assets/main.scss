@@ -5,8 +5,10 @@
 // Colors
 $lightAccentColor: #faf5f5;
 $accentColor: #ac9999;
+$codeBackground: #f8f8f8;
 
 @import "highlighter";
 @import "notes";
+@import "mermaid";
 @import "minima";
 @import "custom";

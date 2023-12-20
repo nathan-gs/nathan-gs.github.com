@@ -1,0 +1,27 @@
+<script>
+    var config = {
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+            'primaryColor': '#ac9999',
+            'primaryTextColor': '#fff',
+            'lineColor': '#000',
+            fontSize: '14px',
+            fontFamily: '"Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+        },
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    };
+    mermaid.initialize(config);
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+
+    /*
+
+                secondaryColor: '#faf5f5',
+            secondaryTextColor: '#000000',
+            'tertiaryColor': '#fff',
+
+            */
+</script>
