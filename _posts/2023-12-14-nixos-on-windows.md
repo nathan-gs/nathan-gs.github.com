@@ -73,4 +73,4 @@ We are going to use the [nix-community/NixOS-WSL](https://github.com/nix-communi
 
 Definitely check 
     
-  - [nixos.org quickstart](https://nixos.org/manual/nix/stable/quick-start.html)
+  - [nixos.org quick start](https://nixos.org/manual/nix/stable/quick-start.html)

@@ -16,7 +16,7 @@ I'm tracking my Electricity / Gas / Water in [Home Assistant](https://home-assis
 
 > ###### TIP
 >
-> Likely with the latest firmwares your DSMR/P1 meter includes the `electricity_delivery_power_15m` and the `electricity_delivery_power_monthly_15m_max` sensors.
+> Likely with the latest firmware's your DSMR/P1 meter includes the `electricity_delivery_power_15m` and the `electricity_delivery_power_monthly_15m_max` sensors.
 {: .block-tip }
 
 ### Track 15m values
@@ -31,7 +31,7 @@ utility_meter:
 
 ```
 
-#### Sidenote for Peak & Offpeak
+#### Side-note for Peak & Offpeak
 
 If you receive data in `peak` & `offpeak` measurements; best to sum them before:
 {% raw %}

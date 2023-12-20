@@ -9,7 +9,7 @@ tags:
 ---
 
 See [part 1 for the actual setup of a custom_component in NixOS]({% post_url 2023-03-29-home-assistant-add-a-custom-component-in-nixos %}). 
-During part 2 we will look howto package an additional python dependency, not part of NixOS yet.
+During part 2 we will look how to package an additional python dependency, not part of NixOS yet.
 
 We are going to package the [tomeko12/pyelectroluxconnect](https://github.com/tomeko12/pyelectroluxconnect) package. 
 

@@ -100,7 +100,7 @@ imapsync \
     --ssl2
 ```
 
-Optionally you can add `--subfolder2 gmail` to keep it in a seperate mailbox. 
+Optionally you can add `--subfolder2 gmail` to keep it in a separate mailbox. 
 
 {% include post_img img="imapsync-in-progress.png" alt="Imapsync in progress" %}
 

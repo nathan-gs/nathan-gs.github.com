@@ -10,7 +10,7 @@ tags:
 
 If you're looking for a way to add custom components to your [Home Assistant](https://home-assistant.io/) setup, then NixOS has a good solution. [NixOS](https://nixos.org) is an open source Linux distribution that is designed to be _functional_. This can be a good alternative to have a more declarative configuration in contrast to [HACS](https://hacs.xyz/). 
 
-I'm using the [hultnevp/solis-sensor](https://github.com/hultenvp/solis-sensor) HA component as an example here.
+I'm using the [hultenvp/solis-sensor](https://github.com/hultenvp/solis-sensor) HA component as an example here.
 
 ### First of all declare a `package`
 
