@@ -54,7 +54,7 @@ The data now looks like:
 
 #### Converting querytime to DateTime
 
-We are going to convert the querytime to a DateTime, using [Edit Metadata](https://msdn.microsoft.com/en-us/library/azure/dn905986.aspx), launch the column selector and select the *querytime* field, as fieldtype select *DateTime*. No need to insert the *format*.
+We are going to convert the querytime to a DateTime, using [Edit Metadata](https://msdn.microsoft.com/en-us/library/azure/dn905986.aspx), launch the column selector and select the *querytime* field, as field type select *DateTime*. No need to insert the *format*.
 
 #### Extracting the hour, the quarter, the day of the week and making a readable label.
 

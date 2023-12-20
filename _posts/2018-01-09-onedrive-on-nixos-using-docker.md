@@ -159,9 +159,11 @@ nixos-rebuild --rollback
 ```
 
 ## Conclusion
-#### Warning
 
-We are using an open-source, unoffical OneDrive client. Which might break, delete your data, corrupt your data, etc... Also trusting a third party docker container can come with risks, it might steal your credentials, etc.
+> #### Warning
+> 
+> We are using an open-source, unofficial OneDrive client. Which might break, delete your data, corrupt your data, etc... Also trusting a third party docker container can come with risks, it might steal your credentials, etc.
+{: .block-warning }
 
 #### Conclusion
 
@@ -169,6 +171,6 @@ Running Docker containers on [NixOS](http://nixos.org) works as a charm, using a
 
 The docker container used [croc/onedrive](https://hub.docker.com/r/croc/onedrive/) could be made a lot smaller, by using the [alpine](https://hub.docker.com/_/alpine/) image, and should be versioned.
 
-The NixOS community is very active, mostly on [GitHub](https://github.com/nixos/nixpkgs) and the [mailinglist](https://groups.google.com/forum/#!forum/nix-devel).
+The NixOS community is very active, mostly on [GitHub](https://github.com/nixos/nixpkgs) and the [mailing list](https://groups.google.com/forum/#!forum/nix-devel).
 
 In conclusion having OneDrive on my NAS means I can integrate it with my backup and snapshot flows.

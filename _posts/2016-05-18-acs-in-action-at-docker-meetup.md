@@ -5,7 +5,7 @@ categories: [presentations]
 ---
 
 
-More than 50 Docker and DevOps enthousiasts attended 
+More than 50 Docker and DevOps enthusiasts attended 
 the [Impromptu: Container Ops, from Pets to Cattle with DC/OS (w/ AZUG)](https://www.meetup.com/Docker-Belgium/events/230661369/) hosted at
 Microsoft. 
 

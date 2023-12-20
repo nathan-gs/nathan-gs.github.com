@@ -4,7 +4,7 @@ title: "Azure Container Service in Action @ BigData.be"
 categories: [presentations]
 ---
 
-More than 50 Big Data and DevOps enthousiasts attended 
+More than 50 Big Data and DevOps enthusiasts attended 
 the [37th meetup - Mesosphere DC/OS and Apache Beam](https://www.meetup.com/bigdatabe/events/230836380/) hosted at
 Microsoft. 
 

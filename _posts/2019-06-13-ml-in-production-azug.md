@@ -7,7 +7,7 @@ tags:
  - Machine Learning
  - Deep Learning
  - AutoML
- - Team Datascience Process
+ - Team Data Science Process
  - Databricks
  - Apache Spark
  - mlflow

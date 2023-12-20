@@ -48,7 +48,7 @@ Failing Query:
     PRIMARY KEY(id)) ENGINE = INNODB”.
 ```
 
-The problem: the Doctrine CLI task tries to insert multiple CREATE TABLE queries (one for each child + for the parant).
+The problem: the Doctrine CLI task tries to insert multiple CREATE TABLE queries (one for each child + for the parent).
 
 Luckily you can circumvent this behavior by calling (in the setUp method):
 ```php

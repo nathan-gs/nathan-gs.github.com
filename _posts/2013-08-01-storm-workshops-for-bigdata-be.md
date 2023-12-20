@@ -16,6 +16,6 @@ The goals will be many-fold:
 
 4) bootstrap a simple web-application to display the Storm output: the ranked stocks
 
-Lot's of stuff to do so it would be great to see similar enthousiasm like the previous workshop, but if you're mostly in for learning: you're more than welcome as well!
+Lot's of stuff to do so it would be great to see similar enthusiasm like the previous workshop, but if you're mostly in for learning: you're more than welcome as well!
 
 [More at Meetup.com](https://www.meetup.com/bigdatabe/events/131008082/).

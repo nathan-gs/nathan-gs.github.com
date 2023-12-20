@@ -57,7 +57,7 @@ We manage to process the data in `15 minutes`.
 {% include post_img img="nr_msgs.png" alt="Incoming Messages"  %}
 {% include post_img img="nr_msgs_min.png" alt="Incoming Messages per Minute"  %}
 
-#### Distribution of Spark taks
+#### Distribution of Spark tasks
 {% include post_img img="spark_summary.png" alt="Spark Task Distribution"  %}
 
 Do notice that the task time is highly correlated with the input size.

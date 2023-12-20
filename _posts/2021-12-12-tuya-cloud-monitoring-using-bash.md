@@ -32,7 +32,7 @@ Timestamp # Timestamp in Milliseconds
 GET # Method in uppercase
 hash(body) # Hash of the body
 hash(headers) # Hash of special headers
-path # Url path parth
+path # Url path part
 ```
 
 which can be signed using:

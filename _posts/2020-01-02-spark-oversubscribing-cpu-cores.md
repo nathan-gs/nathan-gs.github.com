@@ -23,4 +23,4 @@ Setting this in Databricks is very simple:
 More information:
 - [Apache Spark Standalone configuration](https://spark.apache.org/docs/latest/spark-standalone.html)
 
-We are not done yet. Picking the correct overcommiting core ratio requires carefully watching the CPU metrics, especially watch the CPU utilization before and after. 
+We are not done yet. Picking the correct over-committing core ratio requires carefully watching the CPU metrics, especially watch the CPU utilization before and after. 
