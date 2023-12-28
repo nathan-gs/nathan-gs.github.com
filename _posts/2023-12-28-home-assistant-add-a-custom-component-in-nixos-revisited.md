@@ -98,12 +98,12 @@ I'm adding 2 custom components, `solis-sensor` only depending on packages alread
 
 > ##### NOTE
 >
-> In an earlier version I leveraged an `activationScript` to make symlinks to the correct packages, this is no longer necessary, will no longer work.
+> In an earlier version I leveraged an `activationScript` to make symlinks to the correct packages, this is no longer necessary and will no longer work.
 {: .block-note }
 
 
 ### Conclusions 
 
-Finally we apply our config using `nixos-rebuild switch` and we reload Home Assistant. 
+Finally we apply our config using `nixos-rebuild switch` and we reload Home Assistant. If you want to take a look at more examples, and a slightly more extensive Home Assistant in NixOS setup, take a look at [nathan-gs/nix-conf](https://github.com/nathan-gs/nix-conf). 
 
 Your Home Assistant `custom_component` is now ready for use. 
