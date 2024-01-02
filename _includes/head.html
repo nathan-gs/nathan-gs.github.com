@@ -15,6 +15,10 @@
     {% assign header_color = '#fca311' %}
 {% elsif page.layout == 'post' %}
     {% assign header_color = '#0084d1' %}
+{% elsif page.layout == 'tag' %}
+    {% assign header_color = '#33cc66' %}
+{% elsif page.header_color %}
+    {% assign header_color = page.header_color %}
 {% else %}
     {% assign header_color = '#eb613d' %}
 {% endif %}

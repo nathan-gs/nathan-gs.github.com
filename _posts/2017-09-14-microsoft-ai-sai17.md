@@ -2,6 +2,9 @@
 layout: post
 title: "Microsoft AI at SAI '17"
 categories: [presentations]
+tags:
+- Azure
+- AI
 ---
 
 [SAI](http://sai.be) hosted an evening of [Deep Learning frameworks](https://sai.be/event/8155) in Antwerp. I talked on AI, breakthroughs and (ethical) challenges and how Microsoft can help your organization doing more with data. 

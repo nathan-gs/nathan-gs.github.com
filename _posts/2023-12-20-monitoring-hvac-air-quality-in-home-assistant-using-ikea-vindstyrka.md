@@ -9,6 +9,7 @@ tags:
 - Air Quality
 - IKEA
 - HVAC
+- Home Automation
 ---
 
 We recently installed Heat Recovery Ventilation (_WTW Ventilatie in Dutch_) combined with 2 filters; a carbon filter against odor and a fine dust (PM) filter. To find out and monitor, I installed 3 [IKEA Vindstyrka](https://www.ikea.com/be/en/p/vindstyrka-air-quality-sensor-smart-00498231/) Zigbee sensors within the ventilation pipes. 

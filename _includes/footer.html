@@ -34,9 +34,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="u-url" href="{{ "/feed.xml" | relative_url }}">
-                            <i class="fas fa-rss fa-fw"></i>
-                            RSS
+                        <a class="u-url" href="{{ "/tags" | relative_url }}">
+                            <i class="fas fa-hashtag fa-fw"></i>
+                            Tags
                         </a>
                     </li>
                     <li>
@@ -50,7 +50,11 @@
 
             <div class="footer-col footer-col-3">
                 <h2 class="footer-heading">{{ site.title | escape }}</h2>
-                <p>{{ site.description | markdownify }}</p>
+                <p><a href="/cv">Sr. Cloud Solution Architect Manager, Data & AI</a> at Microsoft Belux, 
+                    fascinated with <a href="{% include tag_url tag="Big Data" %}">Big Data</a>, <a href="{% include tag_url tag="AI" %}">AI</a>, 
+                    <a href="{% include tag_url tag="Data Mesh" %}">Data Mesh</a>, Event Driven Systems, <a href="{% include tag_url tag="NixOS" %}">NixOS</a> 
+                    and <a href="{% include tag_url tag="Home Automation" %}">home automation</a>. 
+                    <a href="/presentations">Speaker</a> on Big Data, AI and Spark.</p>
             </div>
         </div>
 

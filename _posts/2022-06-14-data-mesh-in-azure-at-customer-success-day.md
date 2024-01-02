@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Data Mesh in Azure at Microsoft Customer Success Day"
+title: "Data Mesh in Azure at Microsoft Customer Success Day '22"
 categories: [presentations]
 tags:
   - Azure
   - Data Mesh
+  - Domain Driven Design
+  - Big Data
 ---
 
 During Microsoft Belgium & Luxembourg's Customer Success Day we presented a session on **Data Mesh**.

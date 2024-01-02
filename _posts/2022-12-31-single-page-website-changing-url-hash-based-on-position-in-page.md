@@ -3,8 +3,7 @@ layout: post
 title: "Single Page Website: changing the url hash based on the position in the page"
 categories: 
 tags:
- - Javascript
- - Website
+ - Web Development
 redirect_from:
   - /2022/12/31/single-page-website-changing-location-hash-based-on-position-in-page
 ---

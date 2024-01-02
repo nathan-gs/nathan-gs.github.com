@@ -2,6 +2,10 @@
 layout: post
 title: "Cloudera, Azure and Big Data at Cloudera Meetup '17 "
 categories: [presentations]
+tags:
+- Azure
+- Big Data
+- Apache Spark
 ---
 
 [Big Industries](http://bigindustries.be) hosted an evening of [Cloudera in the Cloud](https://www.meetup.com/Belgium-Cloudera-User-Group/events/240605775/). 

@@ -1,12 +1,9 @@
 ---
 title: NixOS on Microsoft Windows 11 using WSL2
 tags: 
- - nixos
- - windows
- - nix
- - wsl
- - windows subsystem for linux
- - linux
+- NixOS
+- Windows Subsystem for Linux
+- Linux
 excerpt: >
   <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" /> [NixOS](https://nixos.org) is my go-to Linux distribution, providing a Functional approach to packaging & configuration management. 
 

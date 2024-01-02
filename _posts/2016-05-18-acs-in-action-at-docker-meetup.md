@@ -2,6 +2,10 @@
 layout: post
 title: "Azure Container Service in Action @ Docker Belgium & AZUG"
 categories: [presentations]
+tags:
+- Azure
+- Mesos
+- Docker
 ---
 
 

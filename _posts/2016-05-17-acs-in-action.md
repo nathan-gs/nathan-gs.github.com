@@ -2,6 +2,10 @@
 layout: post
 title: "Azure Container Service in Action @ BigData.be"
 categories: [presentations]
+tags:
+- Azure
+- Mesos
+- Docker
 ---
 
 More than 50 Big Data and DevOps enthusiasts attended 

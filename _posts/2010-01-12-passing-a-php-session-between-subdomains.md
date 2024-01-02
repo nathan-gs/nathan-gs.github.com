@@ -4,7 +4,9 @@ title: 'Passing a PHP session between subdomains'
 categories: 
 excerpt: >
     Sometimes you need to have access to the same session between multiple subdomains. Eg. a user logs in at the main website, but should also have access to the forums subdomain. Ideally you implement a check from the subdomain to the main domain, but this isn’t always possible.  However, sharing a session between multiple domains is not possible.
-tags: [php]
+tags: 
+- Web Development
+- PHP
 redirect_from:
   - /post/330449188/passing-a-php-session-between-subdomains
 ---

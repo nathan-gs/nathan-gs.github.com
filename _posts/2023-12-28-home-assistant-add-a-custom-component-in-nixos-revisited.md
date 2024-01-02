@@ -5,7 +5,7 @@ categories:
 tags:
  - NixOS
  - Home Assistant
- - IoT
+ - Home Automation
 ---
 
 Since NixOS 23.11 there is a [new way of packaging Home Assistant custom components](https://github.com/NixOS/nixpkgs/tree/master/pkgs/servers/home-assistant/custom-components), making some of the work written in [earlier](/2023/03/29/home-assistant-add-a-custom-component-in-nixos/) [blog](/2023/07/03/home-assistant-add-a-custom-component-in-nixos-part2/) posts irrelevant. Let's repackage the [electrolux_status](https://github.com/mauro-midolo/homeassistant_electrolux_status) and it's dependency [tomeko12/pyelectroluxconnect](https://github.com/tomeko12/pyelectroluxconnect). 

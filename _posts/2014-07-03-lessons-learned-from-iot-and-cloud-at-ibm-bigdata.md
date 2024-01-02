@@ -5,6 +5,12 @@ categories: [presentations]
 excerpt: >
 redirect_from: 
   - /presentations/ibm-bigdatadev14
+tags:
+- IoT
+- Apache Storm
+- Big Data
+- Lambda Architecture
+- Kappa Architecture  
 ---
 
 {% include youtube code='TSt49yPBmW0&t=479s' aspect_ratio='16:9' %}

@@ -9,7 +9,16 @@ title: Home
     {% for post in paginator.posts %}
         <li>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">
+          <span class="date">{{ post.date | date: date_format }}</span>
+          {%- if post.tags -%}
+          <span class="tags">
+            {% for tag in post.tags %}            
+              <a href="{% include tag_url tag=tag %}">#{{ tag }}</a>
+            {% endfor %}
+            </span>
+          {%- endif -%}
+        </span>
     
         <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>

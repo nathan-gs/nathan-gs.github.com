@@ -1,12 +1,10 @@
 ---
 title: Nix on Microsoft Windows 10
 tags: 
- - nixos
- - windows
- - nix
- - wsl
- - windows subsystem for linux
- - linux
+ - NixOS
+ - Microsoft Windows
+ - Windows Subsystem for Linux
+ - Linux
 excerpt: >
    <img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; margin: 10px" /> 
    Using [nix](https://nixos.org/nix), the _functional_ package manager on the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) is fairly easy, however a couple of additional steps need to be done. We will be using Ubuntu from the Microsoft Store, apply some workarounds, and install *nix*. Nix is also the basis of [NixOS](https://nixos.org) a purely functional linux distribution.

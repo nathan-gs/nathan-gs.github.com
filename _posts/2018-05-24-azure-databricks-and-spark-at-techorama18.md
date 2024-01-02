@@ -2,6 +2,12 @@
 layout: post
 title: "Azure Databricks and Spark @ Techorama '18"
 categories: [presentations]
+tags:
+- Apache Spark
+- Databricks
+- Machine Learning
+- Databricks
+- Azure
 ---
 
 {% include slideshare code='zxYC7ZnL3R3Avi' aspect_ratio='16:9' %}

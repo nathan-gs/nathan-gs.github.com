@@ -2,6 +2,11 @@
 layout: post
 title: "A real time architecture using Hadoop and Storm @ Devoxx 2013"
 categories: [presentations]
+tags:
+- Apache Hadoop
+- Apache Storm
+- Big Data
+- Lambda Architecture
 ---
 
 {% include youtube code='EhcUCZrmfJg' aspect_ratio='16:9' %}

@@ -2,7 +2,7 @@
 layout: post
 title: "#48 on Grey's The 150 Most Influential People in Big Data & Hadoop"
 
-tags: [bigdata, hadoop]
+tags: [Big Data]
 ---
 
 According to [greycampus.com](https://www.greycampus.com/blog/big-data/the-150-most-influential-people-in-big-data-hadoop) I'm on 

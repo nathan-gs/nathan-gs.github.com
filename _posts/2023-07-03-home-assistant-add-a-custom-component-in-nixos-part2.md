@@ -5,7 +5,7 @@ categories:
 tags:
  - NixOS
  - Home Assistant
- - IoT
+ - Home Automation
 ---
 
 See [part 1 for the actual setup of a custom_component in NixOS]({% post_url 2023-03-29-home-assistant-add-a-custom-component-in-nixos %}). 

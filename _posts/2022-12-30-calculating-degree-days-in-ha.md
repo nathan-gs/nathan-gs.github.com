@@ -9,7 +9,7 @@ excerpt: >
 tags:
  - Home Assistant
  - Energy
- - Automation
+ - Home Automation
 ---
 
 

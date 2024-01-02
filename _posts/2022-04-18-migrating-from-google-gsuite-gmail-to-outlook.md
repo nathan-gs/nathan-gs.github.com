@@ -3,12 +3,8 @@ layout: post
 title: Migrating from Google Gsuite/Gmail to Outlook.com
 categories: []
 tags:
- - Google
  - Gmail
  - Outlook
- - Microsoft
- - Email
- - Custom Domain
 ---
 
 Since [Gsuite (previously Google Apps) is no longer free](https://support.google.com/a/answer/2855120?product_name=UnuFlow&hl=en&visit_id=637858683232001326-3343759727&rd=1&src=supportwidget0&hl=en), and my personal email (nathan.gs) was hosted there I'm looking for alternatives.

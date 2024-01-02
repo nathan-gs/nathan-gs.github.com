@@ -1,0 +1,60 @@
+---
+layout: default
+header_color: '#33cc66'
+title: Tags
+permalink: /tags/
+---
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+
+    <div class="post-content">        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js"></script>
+        
+        <div class="wordcloud" style="height: 400px; width: 90%"></div>
+        
+        <h4>Main Tag pages</h4>
+        <ul class="tag-list">
+            {% for tag in site.post_tags %}
+            <li style="float: left; width: 200px;">
+                <a href="{{tag.url}}">{{tag.title}}</a>        
+            </li>
+            {% endfor %}
+        </ul>
+
+        <script>
+    
+            $(document).ready(function () {
+    
+                var skillWords = [];
+                {% for tag in site.tags %}
+                    {% assign tag_slug = tag[0] | sluggify %}
+                    {%- capture url %}
+                        {% for pt in site.post_tags %}
+                            {% if pt.title == tag[0] %}
+                                {{ pt.url | relative_url }}
+                            {% endif %}
+                        {% endfor %}
+                    {%- endcapture %}
+                    {% assign weight = site.tags[tag_slug] | size %}
+                    {% assign title = tag[0] %}
+                    skillWords.push({
+                        text: "{{ title }}",
+                        weight: '{{ weight }}',
+                        link: '{{ url | strip }}'
+                    });
+                {% endfor %}
+    
+    
+            $('.wordcloud').jQCloud(skillWords, {
+                'shape': 'rectangular'
+            });    
+            });
+    
+        </script>
+
+        
+    </div>
+</article>

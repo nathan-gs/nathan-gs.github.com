@@ -2,6 +2,9 @@
 layout: post
 title: "AI, Amplifying human ingenuity through Intelligent Technology @ Data Innovation Summit (disummit.com) '18"
 categories: [presentations]
+tags:
+- AI
+- Machine Learning
 ---
 
 **[@WesleyBackelant](https://twitter.com/WesleyBackelant)** and I spoke at [disummit.com](https://disummit.com) on **AI** and some of it's **Ethical** challenges, as well as the **[Microsoft AI](https://microsoft.com/ai)** platform.

@@ -1,11 +1,9 @@
 ---
 title: OneDrive on NixOS using Docker
 tags: 
- - nixos
- - linux
- - docker
- - onedrive
- - microsoft
+ - NixOS
+ - Linux
+ - Docker
 ---
 
 My NAS is a Atom based Thecus running [NixOS](https://nixos.org). NixOS is a Linux distribution with a functional, as in _functional programming_, approach to package and configuration management. It contains many [packages](https://nixos.org/nixos/packages.html) and [services](https://nixos.org/nixos/options.html#). In most cases enabling a new service is as easy as adding `services.openssh.enable = true` to `/etc/nixos/configuration.nix`.<br/>

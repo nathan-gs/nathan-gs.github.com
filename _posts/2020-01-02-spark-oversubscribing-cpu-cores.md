@@ -6,6 +6,7 @@ tags:
  - Azure
  - Databricks
  - Apache Spark
+ - Big Data
 ---
 
 Apache Spark by default allocates 1 executor per CPU available on the system, so a 16 core VM will have 16 executors available. This is a sane default setting, each Thread will have a full cpu core available. Azure Databricks follows this convention. 

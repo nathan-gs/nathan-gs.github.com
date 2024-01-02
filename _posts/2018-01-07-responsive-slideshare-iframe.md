@@ -1,5 +1,7 @@
 ---
 title: "Making SlideShare iframes responsive, using CSS"
+tags:
+- Web Development
 ---
 
 While reviving my blog I wanted a way to embed my [presentations]({% link presentations.html %}), by default the SlideShare embed code uses a fixed width and height.

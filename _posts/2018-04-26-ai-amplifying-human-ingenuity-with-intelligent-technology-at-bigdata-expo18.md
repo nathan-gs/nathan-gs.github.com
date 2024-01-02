@@ -2,6 +2,9 @@
 layout: post
 title: "AI, Amplifying human ingenuity through Intelligent Technology @ Big Data Expo '18"
 categories: [presentations]
+tags:
+- AI
+- Machine Learning
 ---
 
 **[@WesleyBackelant](https://twitter.com/WesleyBackelant)** and I spoke at the first edition of [BigData-expo.be](https://www.bigdata-expo.be/en/program) on **AI** and some of it's **Ethical** challenges, as well as the **[Microsoft AI](https://microsoft.com/ai)** platform.

@@ -35,6 +35,14 @@ header_pages:
  - presentations.html
  - cv/index.html
 
+collections:
+  post_tags:
+    permalink: /tags/:name
+    output: true
+    label: tags
+    title: Tags
+    layout: tag
+
 # Build settings
 markdown: kramdown
 theme: minima

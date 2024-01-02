@@ -5,12 +5,10 @@ categories: [presentations]
 tags:
  - Azure
  - Machine Learning
- - Deep Learning
- - AutoML
- - Team Data Science Process
+ - AI
  - Databricks
  - Apache Spark
- - mlflow
+ - Big Data
 ---
 
 

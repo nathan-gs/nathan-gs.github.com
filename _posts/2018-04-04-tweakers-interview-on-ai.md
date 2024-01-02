@@ -6,6 +6,9 @@ excerpt: >
   An interview on **AI** with **[@WesleyBackelant](https://twitter.com/WesleyBackelant)** and **[me](https://nathan.gs)** was published at [tweakers.net](/assets/post/2018/04/04/tweakers-interview-on-ai/Tweakers-Interview_over_AI_en_Ethiek.pdf) [Dutch].
 
   [BigData-expo.be](https://bigdata-expo.be) arranged for us to do an interview, to give some extra background to our presentation on [**AI** and **Ethics**](/presentations/2018/04/26/ai-amplifying-human-ingenuity-with-intelligent-technology-at-bigdata-expo18/). 
+tags:
+- AI
+- Machine Learning
 ---
 
 An interview on **AI** with **[@WesleyBackelant](https://twitter.com/WesleyBackelant)** and **[me](https://nathan.gs)** was published at [tweakers.net](/assets/post/2018/04/04/tweakers-interview-on-ai/Tweakers-Interview_over_AI_en_Ethiek.pdf), it's in Dutch.

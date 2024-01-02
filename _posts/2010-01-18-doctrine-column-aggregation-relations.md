@@ -4,7 +4,9 @@ title: 'Doctrine Column Aggregation & Relations'
 categories: 
 excerpt: >
     Solving a SQL STATE access violation error, when generating doctrine table structures.
-tags: [php]
+tags: 
+- Web Development
+- PHP
 redirect_from: 
   - /post/340691908/doctrine-column-aggregation-relations    
 ---

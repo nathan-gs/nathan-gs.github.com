@@ -2,6 +2,9 @@
 layout: post
 title: 'Hadoop Pig: Map Reduce the Easy Way @ FOSDEM 2011'
 categories: [presentations]
+tags:
+- Apache Hadoop
+- Big Data
 excerpt: >
     My presentation about Hadoop and Pig during the Fosdem 2011 [Data Dev Room](https://archive.fosdem.org/2011/schedule/track/data_analytics_devroom.html).
 redirect_from:

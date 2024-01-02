@@ -5,9 +5,12 @@ excerpt: >
     [Pieter Colpaert](https://twitter.com/pietercolpaert), the **#opendata** specialist in Belgium did a call to the community to try and predict which train will have high occupancy.
     <br/>
     I am not a Data Scientist, but decided to give it a try on [Azure Machine Learning](https://studio.azureml.net/), [my employer’s](https://microsoft.be/) Machine Learning offer in the Cloud. I used the free version to create this. Using Azure ML you can use the build in algorithms, or use Python or R scripts. We also have Jupyter notebooks available to quickly explore the data.
-    
 
-tags: [azure, ml, bigdata, opendata]
+tags:
+- Azure
+- Machine Learning
+- Big Data
+- AI
 ---
 
 *This post first appeared on [medium.com](https://medium.com/@nathan.gs/predicting-occupancy-on-the-belgian-railroads-based-on-spitsgids-irail-data-using-azure-ml-95aa89f22620).*

@@ -6,6 +6,7 @@ tags:
   - Azure
   - Data Mesh
   - Microsoft Fabric
+  - Big Data
 excerpt: >
     In the ever-evolving landscape of data management, organizations are constantly seeking innovative solutions to overcome the challenges posed by traditional centralized data architectures. Enter the concept of Data Mesh, a paradigm shift that decentralizes data ownership and processing, allowing organizations to scale efficiently and unlock the true potential of their data. In this presentation, we explore how Microsoft Fabric can be a game-changer in implementing a Data Mesh.
     

@@ -2,11 +2,9 @@
 layout: post
 title: Using Jekyll and Nix to blog
 tags: 
- - nixos
- - jekyll
- - nix
- - github pages
- - github
+ - NixOS
+ - Web Development
+ - Jekyll
 
 excerpt: >
    For my blogging I use [Jekyll](https://jekyllrb.com) and [Nix](https://nixos.org/nix), hosted on [Github Pages](https://pages.github.com/). Now that we have a working Nix on Windows setup, we can start to blog. 
