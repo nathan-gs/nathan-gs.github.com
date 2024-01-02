@@ -4,7 +4,7 @@ title: "Flanders/Belgium's Capacity Tariffs in Home Assistant with Improvements"
 categories: []
 tags:
  - Home Assistant
- - Energy
+ - Home Energy Management
  - Home Automation
 ---
 

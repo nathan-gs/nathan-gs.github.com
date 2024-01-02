@@ -8,7 +8,7 @@ excerpt: >
   This configuration is using the [Home Assistant](https://home-assistant.io) platform to define two sensors: `degree_day_daily` and `gas_m3_per_degree_day`. The `degree_day_daily` sensor calculates the difference between a regularized temperature (18.0°C in this case) and the average temperature reported by the `sensor.garden_garden_temperature_noordkant_temperature` sensor over the past 24 hours. The `gas_m3_per_degree_day` sensor calculates the gas usage (as reported by the `sensor.gas_delivery_daily` sensor) per degree day, which is defined as the difference between the regularized temperature and the average temperature.
 tags:
  - Home Assistant
- - Energy
+ - Home Energy Management
  - Home Automation
 ---
 

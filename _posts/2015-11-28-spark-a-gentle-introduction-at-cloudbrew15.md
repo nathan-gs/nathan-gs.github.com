@@ -5,7 +5,6 @@ categories: [presentations]
 tags:
 - Apache Spark
 - Big Data
-- Microsoft
 - Azure
 - Power BI
 ---
