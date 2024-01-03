@@ -2,6 +2,7 @@
 title: "Making SlideShare iframes responsive, using CSS"
 tags:
 - Web Development
+last_modified_at: 2022-12-15
 ---
 
 While reviving my blog I wanted a way to embed my [presentations]({% link presentations.html %}), by default the SlideShare embed code uses a fixed width and height.
@@ -90,11 +91,12 @@ The CSS `calc()` function is according to [w3schools](https://www.w3schools.com/
 
 Using plain CSS it is very easy to make responsive iframes that keep the aspect ratio, on mobile, tablet and desktop.
 
-## Updates
-### December 2021
+### Updates
 
-Slideshare changed their layout, so instead of a `38px` extra margin, use `58px`. 
+> #### December 2021
+>
+> Slideshare changed their layout, so instead of a `38px` extra margin, use `58px`. 
 
-### December 2022
-
-Slideshare changed their layout, so instead of a `38px` extra margin, use `51px`. 
+> #### December 2022
+>
+> Slideshare changed their layout, so instead of a `38px` extra margin, use `51px`. 

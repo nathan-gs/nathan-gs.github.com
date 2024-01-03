@@ -6,6 +6,7 @@ tags:
  - NixOS
  - Home Assistant
  - Home Automation
+last_modified_at: 2023-12-28
 ---
 
 If you're looking for a way to add custom components to your [Home Assistant](https://home-assistant.io/) setup, then NixOS has a good solution. [NixOS](https://nixos.org) is an open source Linux distribution that is designed to be _functional_. This can be a good alternative to have a more declarative configuration in contrast to [HACS](https://hacs.xyz/). 

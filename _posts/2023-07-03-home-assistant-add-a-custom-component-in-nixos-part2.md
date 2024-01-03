@@ -6,6 +6,7 @@ tags:
  - NixOS
  - Home Assistant
  - Home Automation
+last_modified_at: 2023-12-28
 ---
 
 See [part 1 for the actual setup of a custom_component in NixOS]({% post_url 2023-03-29-home-assistant-add-a-custom-component-in-nixos %}). 
