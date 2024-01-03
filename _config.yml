@@ -75,6 +75,10 @@ defaults:
     values:
       permalink: "/tags/:name/"
       layout: tag
+  - scope:
+      type: posts
+    values:
+      layout: post
       
 kramdown:
   input: GFM
