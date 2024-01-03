@@ -1,6 +1,5 @@
 ---
 title: Home Assistant
-layout: tag
 redirect_from:
 - /tags/ha
 ---

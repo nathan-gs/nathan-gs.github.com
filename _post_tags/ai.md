@@ -1,4 +1,3 @@
 ---
 title: AI
-layout: tag
 ---

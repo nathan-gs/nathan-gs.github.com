@@ -39,9 +39,6 @@ collections:
   post_tags:
     permalink: /tags/:name
     output: true
-    label: tags
-    title: Tags
-    layout: tag
 
 # Build settings
 markdown: kramdown
@@ -72,7 +69,13 @@ defaults:
       path: "cv/Nathan Bijnens.pdf"
     values:
       sitemap: false
-
+  - scope:
+      path: ''
+      type: post_tags
+    values:
+      permalink: "/tags/:name/"
+      layout: tag
+      
 kramdown:
   input: GFM
   syntax_highlighter: rouge

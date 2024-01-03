@@ -1,0 +1,44 @@
+{% assign page = include.page %}
+{% assign min_tags = include.min_tags | default: 3 %}
+{% assign related_post_count = 1 %}
+{% assign related_posts = "" %}
+{% assign max_posts = include.max_posts | default: 6 %}
+<ul class="post-list">
+{% for i in (1..min_tags) reversed %}
+    {% for post in site.posts %}
+        {% assign related = 0 %}
+        {% for tag in page.tags %}
+            {% for post_tag in post.tags %}
+                {% if post_tag == tag %}
+                    {% assign related = related | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        
+        {% if related >= i and post.url != page.url and related_post_count <= max_posts %}
+            {% if related_posts contains post.url %}
+            {% else %}
+                {% assign related_post_count = related_post_count | plus: 1 %}
+                {%- capture related_posts | split: "|" -%}{{related_posts}}|{{post.url}}{%- endcapture -%}
+                <li>
+                    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                    <span class="post-meta">
+                        {{ post.date | date: date_format }}
+                        {%- if post.tags -%}
+                            <span class="tags">
+                                {% for tag in post.tags %}            
+                                    <a href="{% include tag_url tag=tag %}">#{{ tag }}</a>
+                                {% endfor %}
+                            </span>
+                        {%- endif -%}
+                    </span>
+                
+                    <p>
+                        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </p>
+                </li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}    
+{% endfor %}
+</ul>
