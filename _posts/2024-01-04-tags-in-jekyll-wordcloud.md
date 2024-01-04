@@ -5,9 +5,9 @@ tags:
  - Jekyll
 ---
 
-Let's start building a Word Cloud, for the [Tags Overview](/tags/) page. I want to feature a word cloud, with the size of the letters based on the number of times the tag was used in a post. I used a similar approach in my [cv](/cv/#skills). 
+On my Jekyll based blog I want to add Word Cloud on the [tags page](/tags/). A word cloud, with the size of the words based on the number of times the tag was used in a post. I used a similar approach in my [CV](/cv/#skills). A word cloud can add value to your tags page by making it more attractive, interactive, and informative. 
 
-This is the second post in a series on Tags in Jekyll, check [Tags in Jekyll: the Setup](/2024/01/03/tags-in-jekyll/). 
+> This is the second post in a series on _Tags in Jekyll_, check [Tags in Jekyll: the Setup](/2024/01/03/tags-in-jekyll/) and [Tags in Jekyll: related posts](/2024/01/05/tags-in-jekyll-related-posts/).
 
 ### Setting up jQcloud
 

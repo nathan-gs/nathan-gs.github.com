@@ -4,7 +4,12 @@ tags:
  - Web Development
  - Jekyll
 last_modified_at: "2024-01-04"
+excerpt: >
+    [Jekyll](https://jekyllrb.com) is a popular blog engine that allows you to create static websites with markdown files. One of the features that Jekyll offers is the ability to tag your posts with keywords that describe their content. Tags are useful for a blog because they help you organize your posts, make them easier to find, and improve your SEO. In this post, I will show you how to use tags in Jekyll and how to create a tags page and a tags feed for your blog. <br><br>
+    Jekyll has support for [tags and categories](https://jekyllrb.com/docs/posts/#tags-and-categories), however using the Tag functionality comes   with certain gotcha's if you want to maintain Github Pages compatibility. 
 ---
+
+[Jekyll](https://jekyllrb.com) is a popular blog engine that allows you to create static websites with markdown files. One of the features that Jekyll offers is the ability to tag your posts with keywords that describe their content. Tags are useful for a blog because they help you organize your posts, make them easier to find, and improve your SEO. In this post, I will show you how to use tags in Jekyll and how to create a tags page and a tags feed for your blog. 
 
 Jekyll has support for [tags and categories](https://jekyllrb.com/docs/posts/#tags-and-categories), however using the Tag functionality comes with certain gotcha's if you want to maintain Github Pages compatibility. 
 
@@ -14,7 +19,7 @@ The goals are
 - a visual overview of top tags
 - The ability to add some extra content to my tags pages.
 
-This is the first post in a series on Tags in Jekyll, check [Tags in Jekyll: Word Cloud](/2024/01/04/tags-in-jekyll-wordcloud/). 
+> This is the first post in a series on _Tags in Jekyll_, check [Tags in Jekyll: Word Cloud](/2024/01/04/tags-in-jekyll-wordcloud/) and [Tags in Jekyll: related posts](/2024/01/05/tags-in-jekyll-related-posts/).
 
 
 ### Defining Tags
