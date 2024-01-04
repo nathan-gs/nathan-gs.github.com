@@ -1,9 +1,9 @@
 ---
-layout: post
 title: "Tags in Jekyll: the setup"
 tags: 
  - Web Development
  - Jekyll
+last_modified_at: "2024-01-04"
 ---
 
 Jekyll has support for [tags and categories](https://jekyllrb.com/docs/posts/#tags-and-categories), however using the Tag functionality comes with certain gotcha's if you want to maintain Github Pages compatibility. 
@@ -13,6 +13,8 @@ The goals are
 - smoother discovery of related content
 - a visual overview of top tags
 - The ability to add some extra content to my tags pages.
+
+This is the first post in a series on Tags in Jekyll, check [Tags in Jekyll: Word Cloud](/2024/01/04/tags-in-jekyll-wordcloud/). 
 
 
 ### Defining Tags
