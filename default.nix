@@ -13,6 +13,6 @@ in
     buildInputs = [ jekyll_env bundler ruby ];
 
     shellHook = ''
-      exec ${jekyll_env}/bin/jekyll serve --watch --force_polling --future --host 0.0.0.0
+      exec ${jekyll_env}/bin/jekyll serve --profile --watch --incremental --force_polling --future --host 0.0.0.0
     '';
   }

@@ -41,3 +41,6 @@ dist
 /_site/
 /.vscode/settings.json
 /vendor/
+
+.jekyll-metadata
+test.html
