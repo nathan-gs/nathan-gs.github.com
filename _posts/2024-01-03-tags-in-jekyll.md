@@ -19,7 +19,7 @@ The goals are
 - a visual overview of top tags
 - The ability to add some extra content to my tags pages.
 
-> This is the first post in a series on _Tags in Jekyll_, check [Tags in Jekyll: Word Cloud](/2024/01/04/tags-in-jekyll-wordcloud/) and [Tags in Jekyll: related posts](/2024/01/05/tags-in-jekyll-related-posts/).
+> This is the first post in a series on _Tags in Jekyll_, check [Tags in Jekyll: Word Cloud](/2024/01/04/tags-in-jekyll-wordcloud/).
 
 
 ### Defining Tags
