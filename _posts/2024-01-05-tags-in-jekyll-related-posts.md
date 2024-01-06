@@ -80,7 +80,7 @@ On my `post.html` template I include it like this:
 
 ### Alternatives
 
-There is a plugin [jsware/jekyll-related-posts](https://github.com/jsware/jekyll-related-posts) available who implements post relationship slightly differently. And of course after finishing the implmentation (& blog post) you spot a similar way by [webjeda.com](https://blog.webjeda.com/jekyll-related-posts/).
+There is a plugin [jsware/jekyll-related-posts](https://github.com/jsware/jekyll-related-posts) available who implements post relationship slightly differently. And of course after finishing the implmentation (& blog post) you spot a similar way by [webjeda.com](https://blog.webjeda.com/jekyll-related-posts/) and [wu-mng/jekyll-related-posts](https://github.com/wu-mng/jekyll-related-posts).
 
 ### Conclusion
 
