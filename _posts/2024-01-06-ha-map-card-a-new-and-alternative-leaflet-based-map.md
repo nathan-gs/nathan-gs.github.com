@@ -72,7 +72,7 @@ entities:
   - zone.home
 ``` 
 
-We are also overriding the `tile_layer_url` to make use of the same tile layer Home Assistant uses ([CARTO](https://carto.com/)), always be careful to give proper attribution. By default it will use the [OpenStreetMap tiles]()
+We are also overriding the `tile_layer_url` to make use of the same tile layer Home Assistant uses ([CARTO](https://carto.com/)), always be careful to give proper attribution. By default it will use the [OpenStreetMap tiles](https://wiki.openstreetmap.org/wiki/Tiles).
 
 #### The result 
 
