@@ -3,7 +3,6 @@ layout: post
 title: "Home Assistant: Map Card, a new leaflet based map with WMS and other advanced features"
 categories: 
 tags:
- - NixOS
  - Home Assistant
  - Geography
  - Home Automation

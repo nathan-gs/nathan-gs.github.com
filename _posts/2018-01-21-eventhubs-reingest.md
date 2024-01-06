@@ -5,6 +5,7 @@ tags:
  - Event Hub
  - Apache Spark
  - Kappa Architecture
+ - OSS
 excerpt: >
   When building a [Kappa Architecture](https://www.oreilly.com/ideas/questioning-the-lambda-architecture) replaying 
   historic events is an important property of the system. EventHub and IoTHub support [EventHub Capture](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview) a way to automatically 
