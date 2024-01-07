@@ -2,3 +2,5 @@
 title: NixOS
 layout: tag
 ---
+
+<img src="/assets/post/2019/04/12/nix-on-windows/nixos.png" alt="Nix" height="100" width="100" style="float: left; padding: 30px;" /> [NixOS](https://nixos.org) and the [nix package manager](https://nixos.org/nix) are tools for managing software in a reproducible and reliable way. NixOS is a [Linux]({% include tag_url tag="Linux" %}) distribution that uses Nix as its package manager and build system. Nix is a purely functional package manager that treats packages as values in a functional language, and stores them in a unique and immutable way in the Nix store. This allows for multiple versions, complete dependencies, atomic upgrades, rollbacks, and multi-user support. Nixpkgs is the package repository that contains thousands of packages for Nix and NixOS. Users can install packages using the nix-env command, and configure their system using the nixos-rebuild command. Nix also supports declarative configuration. Nix is designed to make software management easy and predictable.
