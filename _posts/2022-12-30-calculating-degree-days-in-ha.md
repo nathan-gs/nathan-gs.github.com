@@ -69,7 +69,7 @@ template:
 {% endraw %}
 ```
 
-You can find the implementation in my NixOS config [nathan-gs/nix-conf](https://github.com/nathan-gs/nix-conf/blob/main/smarthome/energy.nix#L379-L436) as well.
+You can find the implementation in my NixOS config [nathan-gs/nix-conf](https://github.com/nathan-gs/nix-conf/blob/main/smarthome/hvac/degree_days.nix) as well.
 
 ### Dashboard
 
