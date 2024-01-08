@@ -97,7 +97,7 @@ $spacing-unit: 30px;
         }
 
         thead tr th {
-            border-bottom: 1px solid $accentColor;            
+            border-bottom: 1px solid $darkAccentColor;            
         }
     
         tbody {
@@ -128,7 +128,7 @@ $spacing-unit: 30px;
     > li > ul > li > ul > li > ul > li > ul > li:before {
         content: "\f07b"; /* FontAwesome Unicode */
         font-family: "Font Awesome 5 Free";
-        color: $accentColor;
+        color: $darkAccentColor;
         display: inline-block;
         margin-left: -1.3em; /* same as padding-left set on li */
         width: 1.3em; /* same as padding-left set on li */
@@ -136,7 +136,7 @@ $spacing-unit: 30px;
     }
 
     .fas {
-        color: $accentColor;
+        color: $darkAccentColor;
         margin-left: -1.3em;
     }
 }
@@ -178,4 +178,14 @@ pre {
 
 .site-title, .site-title:visited, .site-header .site-nav a, .site-header .site-nav a:visited {
     color: #424242;
+}
+
+.anchorjs-link:hover {
+    color: $darkAccentColor;
+    text-decoration: none;
+}
+
+.anchorjs-link {
+    color: $accentColor;
+    text-decoration: none;
 }

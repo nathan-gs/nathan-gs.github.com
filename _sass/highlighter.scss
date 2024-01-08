@@ -9,7 +9,7 @@ code.highlighter-rouge {
     width: auto;
     background: $codeBackground !important;
 
-    border-left-color: $accentColor;
+    border-left-color: $darkAccentColor;
     border-left-width: 5px;
     border-left-style: solid;
     border-radius: 3px;
@@ -40,7 +40,7 @@ code.highlighter-rouge {
 
             pre.lineno {
                 border: 0;
-                color: $accentColor;
+                color: $darkAccentColor;
             }
 
             td.rouge-gutter {

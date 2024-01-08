@@ -1,11 +1,11 @@
 blockquote.block-note {
-    border-color: $accentColor;
+    border-color: $darkAccentColor;
     background-color: $lightAccentColor;
     font-style: inherit;
     padding: 10px;
 
     h1, h2, h3, h4, h5, h6 {
-        color: $accentColor;
+        color: $darkAccentColor;
     }
     
 }
