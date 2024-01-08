@@ -1,5 +1,7 @@
 ---
 permalink: /_site_tags_missing.txt
+sitemap: false
+published: false
 ---
 {% if jekyll.environment != 'production' %}
 {%- assign post_tags = site.post_tags | map: "title" -%}

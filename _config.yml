@@ -47,6 +47,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - 'cv/Nathan Bijnens.pdf'
+  - shell.nix
+  - gemset.nix
+  - .vscode
+  - .bundle
+  - .jekyll-cache
+  - bin
 
 google_analytics: UA-12327464-1
 
