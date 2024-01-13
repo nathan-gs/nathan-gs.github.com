@@ -129,3 +129,8 @@ series:
 ```
 
 {% include post_img img="degreedays.png" alt="Degree Days inside Home Assistant" %}
+
+> #### TIP
+>
+> Definitely take a look at the newer blog post [adjusting the degree day gas usage with the occupancy rate](/2024/01/13/ha-degree-days-with-occupancy/). 
+{: .block-tip }
