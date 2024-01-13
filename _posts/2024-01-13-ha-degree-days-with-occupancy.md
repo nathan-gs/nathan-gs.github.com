@@ -3,14 +3,14 @@ layout: post
 title: "Degree Days with Occupancy adjustments in Home Assistant"
 categories: 
 excerpt: >
-  [Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark gas consumption in relation to temperature. By tracking the degree days, it is possible to estimate how much energy is needed to heat or cool a building and compare it to the actual energy usage. While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*hours/24`.
+  [Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark energy consumption in relation to temperature.While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*hours/24`.
 tags:
  - Home Assistant
  - Home Energy Management
  - Home Automation
 ---
 
-[Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark gas consumption in relation to temperature. By tracking the degree days, it is possible to estimate how much energy is needed to heat or cool a building and compare it to the actual energy usage. While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*hours/24`.
+[Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark energy consumption in relation to temperature.While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*hours/24`.
 
 > #### TIP
 > 
@@ -20,7 +20,7 @@ tags:
 
 ### Occupancy and Hours at Home
 
-Let's first start with measuring our occupancy. 
+Let's first start with measuring our occupancy, a binary sensor named `anyone_home` is created in Home Assistant to intuitively capture the occupancy status.
 
 {% raw %}
 ```yaml
@@ -32,7 +32,7 @@ template:
 ```
 {% endraw %}
 
-And the hours we are at home per day, for this we are using the [history_stats](https://www.home-assistant.io/integrations/history_stats/) integration.
+Let's calculate the hours we are at home per day, utilizing the [history_stats](https://www.home-assistant.io/integrations/history_stats/) integration, to create a sensor named `occupancy_anyone_home_daily`. The history_stats platform is employed here to calculate the total time the binary sensor has been in the `on` state within the specified time range, starting from midnight and ending at the current time. 
 
 {% raw %}
 ```yaml
@@ -49,7 +49,7 @@ sensor:
 
 ### Calculating the degree day daily and the occupancy rate
 
-Based on the sensors `degree_day_daily` and `gas_m3_per_degree_day` we defined in [Calculating Degree Days in Home Assistant](/2022/12/30/calculating-degree-days-in-ha/):
+Based on the sensors `degree_day_daily` and `gas_m3_per_degree_day` as we defined in [Calculating Degree Days in Home Assistant](/2022/12/30/calculating-degree-days-in-ha/). 
 
 {% raw %}
 ```yaml
@@ -86,7 +86,7 @@ template:
 ```
 {% endraw %}
 
-We are going to define a new sensor `gas_m3_per_degree_day_occupancy_adjusted`.
+We are going to define a new sensor `gas_m3_per_degree_day_occupancy_adjusted` using a scheduled trigger in Home Assistant to calculate and update at 1s before midnight. The sensor's value is determined by multiplying the previously calculated `gas_m3_per_degree_day` by the `occupancy_rate`. The `occupancy_rate` is derived from the daily duration of occupancy tracked by the `occupancy_anyone_home_daily` sensor, divided by 24h to represent the fraction of the day with occupants present. This dynamic computation results in a metric that adjusts gas consumption in relation to Degree Days based on the occupancy of the house, providing a more refined understanding of energy usage.
 
 {% raw %}
 ```yaml
