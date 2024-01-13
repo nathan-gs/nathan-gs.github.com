@@ -16,6 +16,11 @@ tags:
 
 Calculating [Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark gas consumption in relation to temperature. The formula is quite simple, it uses as reference temperature 18°C minus the average temperature of the day, minimized on 0°C. The concept is based on the idea that the amount of energy needed to maintain a comfortable indoor temperature increases as the difference between the indoor temperature and the outdoor temperature increases. By tracking the degree days, it is possible to estimate how much energy is needed to heat or cool a building and compare it to the actual energy usage.
 
+> #### TIP
+>
+> An addition has been written [adjusting the gas usage with the occupancy rate](/2024/01/13/ha-degree-days-with-occupancy/). 
+{: .block-tip }
+
 This configuration is using the [Home Assistant](https://home-assistant.io) platform to define three sensors: `outside_temperature_avg`, `degree_day_daily` and `gas_m3_per_degree_day`. 
 
 1.  The `outside_temperature_avg` sensor, based on the [statistics](https://www.home-assistant.io/integrations/statistics) module calculates the average temperature over the past 24h. 
