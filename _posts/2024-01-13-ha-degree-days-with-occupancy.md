@@ -3,18 +3,32 @@ layout: post
 title: "Degree Days with Occupancy adjustments in Home Assistant"
 categories: 
 excerpt: >
-  [Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark energy consumption in relation to temperature.While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*hours/24`.
+  [Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark energy consumption in relation to temperature.While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*(1+(24-hours))/(1+24)`.
 tags:
  - Home Assistant
  - Home Energy Management
  - Home Automation
 ---
 
-[Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark energy consumption in relation to temperature.While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*hours/24`.
+[Degree Days](https://en.wikipedia.org/wiki/Degree_day) (or [Graaddag](https://nl.wikipedia.org/wiki/Graaddag) in Dutch) allows you to benchmark energy consumption in relation to temperature.While it definitely is a useful benchmark it falls short into taking account if people are home or not. Based on the Degree Day calculation, and the # of hours anyone is at home, I will calculate a new metric: `(DD/gas m3)*(1+(24-hours))/(1+24)`.
 
 > #### TIP
 > 
 > This calculation builds on [Calculating Degree Days in Home Assistant](/2022/12/30/calculating-degree-days-in-ha/)
+
+### Explanation
+
+`(DD/gas m3)*(1+(24-hours))/(1+24)`
+
+- __DD__: Degree Days, a measure of how much the outside air temperature deviates from a base temperature
+- __gas m3__: Gas consumption
+- __hours__: Hours of occupancy
+
+If we break down the formula:
+
+1. `(1 + (24-hours))`: This term adjusts the hours by adding 1 and represents a scaling factor. It ensures that the adjustment factor is at least 1, preventing the possibility of having a 0 result. 
+2. `(1 + 24)`: Similarly, this part of the formula ensures there's a minimum value of 1 for the denominator.
+3. `(DD/gas m3) * ...`: The main part of the formula multiplies the Degree Days to gas consumption ratio by the adjustment factor calculated from the hours. This multiplication adjusts the original ratio based on the duration for which someone was at home (and therefore the heating needs increased).
 
 ## Implementation in Home Assistant
 
@@ -98,7 +112,7 @@ template:
     - name: gas_m3_per_degree_day_occupancy_adjusted
       state: >
         {% set gas_m3_per_degree_day = states('sensor.gas_m3_per_degree_day') | float(0) %}
-        {% set occupancy_rate = (states('sensor.occupancy_anyone_home_daily') | float(0) / 24) %}
+        {% set occupancy_rate = (1 + (states('sensor.occupancy_anyone_home_daily') | float(0)) / (1 + 24)) %}
         {{ gas_m3_per_degree_day * occupancy_rate }}    
       unit_of_measurement: '(m³/DD)*O'
 ```
