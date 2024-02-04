@@ -14,6 +14,11 @@ Distributed builds involve distributing the compilation workload across multiple
 
 The client's nix-daemon (running as root) will connect over ssh to an unpriviledged user on the server, on the server the derivation will be build and after copied back to the client.
 
+> #### WARNING
+>
+> This assumes a high degree of trust between client and server. 
+{: .block-warning }
+
 ### Step 1: Generate a ssh-key on the client
 
 As root generate a new ssh key, with a specific name
@@ -63,7 +68,8 @@ nix = {
       system = "x86_64-linux";
       maxJobs = 2;
       speedFactor = 2;
-      # Supported features is badly documented, important to add these, otherwise many big packages will still get build locally.
+      # Supported features is badly documented, important to add these, 
+      # otherwise many big packages will still get build locally.
       supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
       mandatoryFeatures = [ ];
     }
