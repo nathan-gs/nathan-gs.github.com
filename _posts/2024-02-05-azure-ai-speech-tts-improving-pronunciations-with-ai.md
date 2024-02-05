@@ -70,6 +70,7 @@ graph TD
     subgraph Outp[Output]
         AzureAISpeech -->|Text to Speech| FinalAudio(Final Audio)
         AzureAISpeech -->|SSML| Viseme(Facial Positions<br> with viseme)
+        AzureAISpeech -->|Video| Avatar(Avatar<br> video output)
     end
 
 ```
