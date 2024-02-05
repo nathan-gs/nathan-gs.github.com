@@ -20,7 +20,7 @@ While the results are generally very good sometimes there are some challenges wi
 
 ### The flow
 
-We are going to pre-process our text file, detect Named Entities using Azure AI Language and generate pronounciations using Azure OpenAI for these. In the next step we will use the generated SSML inside the Azure AI Speech Audio Content Creation studio before finally generating the audio.
+We are going to pre-process our text file, detect Named Entities using Azure AI Language and generate pronunciations using Azure OpenAI for these. In the next step we will use the generated SSML inside the Azure AI Speech Audio Content Creation studio before finally generating the audio.
 
 ```mermaid
 graph TD
@@ -29,21 +29,21 @@ graph TD
         txtFile(Text)
     end
 
-    txtFile -->Pronounciation
+    txtFile -->Pronunciation
     txtFile -->MixedLanguage
 
-    Pronounciation <-.-> Cache
+    Pronunciation <-.-> Cache
 
     subgraph Cache
-        Database[(Named Entities <br> with <br> Pronounciations)]
+        Database[(Named Entities <br> with <br> Pronunciations)]
         Lexicon(Custom Lexicon)
     end
 
-    subgraph Pronounciation[Pronounciations Pre-Processing]
+    subgraph Pronunciation[Pronunciations Pre-Processing]
         AzureAILanguage[Detect Named Entities<br>using<br> Azure AI Language]
         AzureAILanguage -->|Named Entities| AzureOpenAIP[Generate Pronunciations<br>using Azure OpenAI]
         
-        AzureOpenAIP -->|Pronounciations| HumanProunounciationCheck([Check pronounciations by Human])
+        AzureOpenAIP -->|Pronunciations| HumanProunounciationCheck([Check Pronunciations by Human])
     end
 
     subgraph MixedLanguage[Mixed Languages]
@@ -53,7 +53,7 @@ graph TD
     txtFile --> ssmlCombiner
     
     MixedLanguage -->|SSML| ssmlCombiner
-    Pronounciation -->|SSML| ssmlCombiner
+    Pronunciation -->|SSML| ssmlCombiner
 
 
     subgraph AudioContentCreation   
@@ -80,13 +80,13 @@ The workflow starts with input text, goes through a comprehensive process of nam
 
 Pre-processing text before transforming it into synthesized speech is a critical step to ensure natural-sounding and contextually accurate output. Azure AI Language and Azure OpenAI play integral roles in enhancing this pre-processing phase, along with the incorporation of custom lexicons.
 
-#### Pronounciations
+#### Pronunciations
 
 __Detect Named Entities using Azure AI Language__: [Azure AI Language Named Entity Recognition (NER)](https://learn.microsoft.com/en-us/azure/ai-services/language-service/named-entity-recognition/overview) is employed to detect entities like persons, organizations, locations, and more. This capability is crucial because likely most errors are made when pronouncing these.
 
 __Generate Pronunciations using Azure OpenAI__: [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/) is utilized to generate pronunciations for the identified named entities. 
 
-__Cache__: save and reuse entities and pronounciations. Azure AI Speech has native support for loading [Lexicons](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-pronunciation#custom-lexicon-file-examples) from blob storage. 
+__Cache__: save and reuse entities and Pronunciations. Azure AI Speech has native support for loading [Lexicons](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-pronunciation#custom-lexicon-file-examples) from blob storage. 
 
 #### Language Detection
 
