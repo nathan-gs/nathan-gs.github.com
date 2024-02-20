@@ -11,7 +11,7 @@ image: /assets/post/2024/01/06/ha-map-card-a-new-and-alternative-leaflet-based-m
 excerpt: >
     <img src="/assets/post/2024/01/06/ha-map-card-a-new-and-alternative-leaflet-based-map/ha-map-card-pm25.png" alt="custom:map-card with a WMS layer" height="166" width="252" style="float: left; padding: 30px;" />
     Introducing [ha-map-card](https://github.com/nathan-gs/ha-map-card) a new lovelace card, serving as an enhancement to the native Home Assistant [map-card](https://www.home-assistant.io/dashboards/map/), bringing a host of advanced features to the forefront. Built on the foundation of [leaflet](https://leafletjs.com/). The main features are:  __Custom Tile Layers__ and __WMS Layers Support__.
-
+last_modified_at: "2024-02-20"
 ---
 
 <img src="/assets/post/2024/01/06/ha-map-card-a-new-and-alternative-leaflet-based-map/ha-map-card-pm25.png" alt="custom:map-card with a WMS layer" height="166" width="252" style="float: left; padding: 30px;" />
@@ -21,7 +21,9 @@ The main features are:
 
 - __Custom Tile Layers__: One of the standout features is the ability to use custom map tiles. Tailor your map to suit your preferences, ensuring a personalized and visually appealing dashboard. This makes it easy to use [OpenStreetMap](https://www.openstreetmap.org) and other maps inside your dashboards.
 - __WMS Layer Support__: ha-map-card goes beyond the basics by offering support for Web Map Service (WMS) layers. This advanced functionality allows users to overlay additional map information, such as weather data or satellite imagery.
+- selecting how an entity is displayed, etc
 - more to come, like ImageOverlay & VideoOverlays, legends, etc
+
 
 > #### TIP
 >
@@ -51,8 +53,6 @@ Using the Belgium's [IRCELINE WMS service](https://www.irceline.be/en/documentat
 
 ```yaml
 type: custom:map-card
-'x': 51.2
-'y': 3.6
 zoom: 8
 card_size: 6
 wms:
@@ -68,7 +68,10 @@ wms:
 tile_layer_url: 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
 tile_layer_attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>'
 entities:
-  - zone.home
+  - entity: zone.home
+    display: icon
+    size: 50
+  - person.nathan    
 ``` 
 
 We are also overriding the `tile_layer_url` to make use of the same tile layer Home Assistant uses ([CARTO](https://carto.com/)), always be careful to give proper attribution. By default it will use the [OpenStreetMap tiles](https://wiki.openstreetmap.org/wiki/Tiles).
