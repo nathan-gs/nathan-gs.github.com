@@ -22,7 +22,7 @@ In version `0.4.0` some new options are introduced to enable multiple Tile Layer
 
 ### Obtaining an API key
 
-OpenWeatherMap requires an API key, head to the https://home.openweathermap.org/api_keys portal to obtain one.
+OpenWeatherMap requires an API key, head to the [api keys portal](https://home.openweathermap.org/api_keys) to obtain one.
 
 ### Installation of map-card
 
