@@ -21,7 +21,7 @@ Displaying a weather map in Home Assistant got easier using [__ha-map-card__](ht
 >##### TIP
 >
 > An earlier version was introduced in [Home Assistant: Map Card, a new leaflet based map with WMS and other advanced features](/2024/01/06/ha-map-card-a-new-and-alternative-leaflet-based-map/).
-{.block-tip}
+{: .block-tip}
 
 In version `0.4.0` some new options are introduced to enable multiple Tile Layers, we are going to use this to visualize a Cloud map using [OpenWeatherMap](https://openweathermap.org/api/weathermaps).
 
