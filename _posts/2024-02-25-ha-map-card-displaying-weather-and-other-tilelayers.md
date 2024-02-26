@@ -18,12 +18,13 @@ excerpt: >
 <img src="/assets/post/2024/02/25/ha-map-card-displaying-weather-and-other-tilelayers/ha-map-card-with-weather-carto.png" alt="custom:map-card with a CARTO and Weather layer" height="148" width="157" style="float: left; padding: 30px;" />
 Displaying a weather map in Home Assistant got easier using [__ha-map-card__](https://github.com/nathan-gs/ha-map-card) and it's support for multiple __Tile Layers__. My open-source project [nathan-gs/ha-map-card](https://github.com/nathan-gs/ha-map-card) provides a lovelace card, serving as an enhancement to the native Home Assistant [map-card](https://www.home-assistant.io/dashboards/map/), bringing a host of advanced features like __custom tile layers__, __entity__ display options. It is built on [leaflet](https://leafletjs.com/).
 
+In version `0.4.0` some new options are introduced to enable multiple Tile Layers, we are going to use this to visualize a Cloud map using [OpenWeatherMap](https://openweathermap.org/api/weathermaps).
+
 >##### TIP
 >
 > An earlier version was introduced in [Home Assistant: Map Card, a new leaflet based map with WMS and other advanced features](/2024/01/06/ha-map-card-a-new-and-alternative-leaflet-based-map/).
 {: .block-tip}
 
-In version `0.4.0` some new options are introduced to enable multiple Tile Layers, we are going to use this to visualize a Cloud map using [OpenWeatherMap](https://openweathermap.org/api/weathermaps).
 
 ### Obtaining an API key
 
