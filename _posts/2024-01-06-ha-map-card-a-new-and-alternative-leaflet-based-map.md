@@ -80,6 +80,10 @@ We are also overriding the `tile_layer_url` to make use of the same tile layer H
 
 <img src="/assets/post/2024/01/06/ha-map-card-a-new-and-alternative-leaflet-based-map/ha-map-card-pm25.png" alt="custom:map-card with a WMS layer" width="100%" />. 
 
+### A second more advanced example: multiple TileLayer overlays
+
+In [Home Assistant: Map Card, displaying Weather and Other Tile Layers](/2024/02/25/ha-map-card-displaying-weather-and-other-tilelayers/) another scenario is described. 
+
 ## Conclusion
 
 Unlock the full potential of geospatial inside Home Assistant with the [ha-map-card](https://github.com/nathan-gs/ha-map-card)'s advanced features, customizability, and support for WMS layers.
