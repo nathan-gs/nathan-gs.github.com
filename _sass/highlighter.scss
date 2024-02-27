@@ -7,16 +7,19 @@ code.highlighter-rouge {
 
 .highlighter-rouge .highlight {
     width: auto;
-    background: $codeBackground !important;
+    background: #fff !important;
 
-    border-left-color: $darkAccentColor;
     border-left-width: 5px;
     border-left-style: solid;
-    border-radius: 3px;
+    border-left: 5px solid $lightAccentColor;
+    border-right: 1px solid $lightAccentColor;
+    border-top: 1px solid $lightAccentColor;
+    border-bottom: 1px solid $lightAccentColor;
+    border-radius: 5px;
 
     pre,code {
         background-color: #fff;      
-        font-size: 12px;  
+        font-size: 12px;          
     }
     
 
@@ -25,12 +28,14 @@ code.highlighter-rouge {
     }
 
     pre {
-        border: 1px solid $lightAccentColor;
+        border: 0px solid $lightAccentColor;
 
-        padding: 8px 12px;
+        padding: 5px 6px 5px 6px;
+        margin: 0;
 
         table.rouge-table {
             margin-bottom: 0 !important;
+            border: 0;
 
             pre {
                 border: 0;
@@ -40,17 +45,19 @@ code.highlighter-rouge {
 
             pre.lineno {
                 border: 0;
-                color: $darkAccentColor;
+                color: #B6D9E2;
             }
 
             td.rouge-gutter {
                 width: 20px;
+                border-right: 1px solid $lightAccentColor;
             }
 
             th, td {
                 padding: 0;
                 vertical-align: top;
                 background-color: #fff;
+                border: 0;
             }
         }
     }
