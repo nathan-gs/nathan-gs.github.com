@@ -11,6 +11,7 @@ tags:
 - Big Data
 - Lambda Architecture
 - Kappa Architecture  
+- Architecture
 ---
 
 {% include youtube code='TSt49yPBmW0&t=479s' aspect_ratio='16:9' %}

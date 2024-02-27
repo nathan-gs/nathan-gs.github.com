@@ -7,6 +7,7 @@ tags:
   - Data Mesh
   - Domain Driven Design
   - Big Data
+  - Architecture
 ---
 
 During Microsoft Belgium & Luxembourg's Customer Success Day we presented a session on **Data Mesh**.

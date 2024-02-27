@@ -9,6 +9,7 @@ tags:
 - Apache Hadoop
 - Apache Storm
 - Lambda Architecture
+- Architecture
 ---
 
 {% include slideshare code='79W3vSkgaiS322' aspect_ratio='16:9' %}

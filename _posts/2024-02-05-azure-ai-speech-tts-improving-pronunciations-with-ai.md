@@ -6,6 +6,7 @@ tags:
  - AI
  - Azure
  - Generative AI
+ - Architecture
 excerpt: >
     [Azure AI Speech](https://azure.microsoft.com/en-us/products/ai-services/ai-speech), a cloud-based service offered by Microsoft Azure, has been at the forefront of [Text-to-Speech (TTS)](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech) capabilities. Text-to-Speech technology has come a long way from its early, often robotic-sounding, iterations. With advancements in deep learning and neural networks, AI has played a pivotal role in refining the naturalness and expressiveness of synthesized voices. Azure Speech employs Neural Text-to-Speech (Neural TTS), a cutting-edge technology that utilizes deep neural networks to model the complex patterns and nuances of human speech. This approach enables the synthesis of high-quality, natural-sounding voices that closely mimic the cadence, intonation, and rhythm of human speech. 
 

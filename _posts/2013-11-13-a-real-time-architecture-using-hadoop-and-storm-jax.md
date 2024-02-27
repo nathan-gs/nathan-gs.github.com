@@ -7,6 +7,7 @@ tags:
 - Apache Storm
 - Big Data
 - Lambda Architecture
+- Architecture
 ---
 
 {% include youtube code='CrABmVi12_A' aspect_ratio='16:9' %}

@@ -9,6 +9,7 @@ tags:
 - Apache Storm
 - Big Data
 - Lambda Architecture
+- Architecture
 ---
 
 {% include slideshare code='NTJcAvRm8i27vG' aspect_ratio='16:9' %}
