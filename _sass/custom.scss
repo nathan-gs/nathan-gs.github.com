@@ -189,3 +189,22 @@ pre {
     color: $accentColor;
     text-decoration: none;
 }
+
+// Headers
+
+
+h1, .post-title {
+    font-size: 36px;
+}
+
+h2, .post-content h2 {
+    font-size: 28px;
+}
+
+h3, .post-content h3 {
+    font-size: 24px;
+}
+
+h4, .post-content h4 {
+    font-size: 18px;
+}
