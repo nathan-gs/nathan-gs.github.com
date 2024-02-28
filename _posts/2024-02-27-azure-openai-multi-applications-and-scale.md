@@ -82,15 +82,17 @@ AI_Use_Case_3 --> Hub
 
 A [hub and spoke](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) network topology is a common design pattern for cloud architectures, especially when multiple applications need to access a shared service or resource. By creating a central hub that hosts the networking (vnets, firewalls), each application is only connected to the central hub through vnet peering so one can achieve good isolation. The hub and spoke model simplifies the network management and security, as the hub can act as a single point of control and inspection for the traffic between the spokes. A Landing Zone is a focused area that houses specific resources, typically each Landing Zone is a Spoke.
 
-The Azure OpenAI instance is hosted in one of the dedicated Landing Zones, the applications will be in different Landing Zones. 
+The Azure OpenAI instance is hosted in one of the dedicated Landing Zones, the applications will be in different Landing Zones. There is a [Azure OpenAI Landing Zone reference architecture
+](https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-openai-landing-zone-reference-architecture/ba-p/3882102)
 
 #### The OpenAI Landing Zone
 
-The Azure OpenAI Landing Zone contains Azure OpenAI and [Azure API Management](https://azure.microsoft.com/en-us/products/api-management/). By using Azure API Management in front of the Azure OpenAI service, you can apply policies, such as authentication, throttling, caching, and transformation, to your APIs. Additionally, you can monitor and analyze the performance and usage of your APIs using Azure API Management’s built-in analytics. This comes in very handy to split costs between multiple applications making use of OpenAI. Azure API Management can easily mimic the Azure OpenAI API, so it remains compatible with existing OpenAI clients. 
+The Azure OpenAI Landing Zone contains Azure OpenAI and [Azure API Management](https://azure.microsoft.com/en-us/products/api-management/). By using Azure API Management in front of the Azure OpenAI service, you can apply policies, such as authentication, throttling, caching, and transformation, to your APIs. Additionally, you can monitor and analyze the performance and usage of your APIs using Azure API Management’s built-in analytics. This comes in very handy to split costs between multiple applications making use of OpenAI, take a look at [Calculating Charge backs for Business Units/Projects Utilizing a Shared Azure OpenAI Instance](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/calculating-chargebacks-for-business-units-projects-utilizing-a/ba-p/3909202). Azure API Management can easily mimic the Azure OpenAI API, so it remains compatible with existing OpenAI clients. 
 
 Azure API Management connects to the [Azure OpenAI private endpoint](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks), keeping all traffic internal. 
 
-Azure API Management can protect the OpenAI API using [OAuth 2.0 authorization with Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad).
+Azure API Management can protect the OpenAI API using [OAuth 2.0 authorization with Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad). The [Azure OpenAI Architecture Patterns and implementation steps
+](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/azure-openai-architecture-patterns-and-implementation-steps/ba-p/3979934#:~:text=AOAI%20with%20APIM,-Architecture%20diagram%3A) contains good guidance on Authentication and Monitoring.
 
 #### Application Landing Zones
 
