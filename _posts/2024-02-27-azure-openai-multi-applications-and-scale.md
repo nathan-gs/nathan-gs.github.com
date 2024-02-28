@@ -82,7 +82,7 @@ AI_Use_Case_3 --> Hub
 
 A [Hub and Spoke](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) network topology is a common design pattern for cloud architectures, especially when multiple applications need to access a shared service or resource. By creating a central hub that hosts the networking (vnets, firewalls), each application is only connected to the central hub so one can achieve good isolation. The hub and spoke model simplifies the network management and security, as the hub can act as a single point of control and inspection for the traffic between the spokes. A Landing Zone is a focused area that houses specific resources, typically each Landing Zone is a Spoke.
 
-The Azure OpenAI instance is hosted in one of the dedicated Landing Zones, the applications will be in different Landing Zones. There is a [Azure OpenAI Landing Zone reference architecture
+The Azure OpenAI instance is hosted in one of the dedicated Landing Zones, the applications will be in different Landing Zones. There is an [Azure OpenAI Landing Zone reference architecture
 ](https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-openai-landing-zone-reference-architecture/ba-p/3882102).
 
 #### The OpenAI Landing Zone
@@ -96,7 +96,7 @@ Azure API Management can protect the OpenAI API using [OAuth 2.0 authorization w
 
 #### Application Landing Zones
 
-Proper architecture prescribes dedicated landing zones for separate applications, see the [Azure landing zones for modern application platforms](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/ready) guidance.
+Proper architecture prescribes dedicated Landing Zones for separate applications, see the [Azure Landing Zones for modern application platforms](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/ready) guidance.
 
 #### Templates 
 - [nicolegit/hub-and-spoke-playground](https://github.com/nicolgit/hub-and-spoke-playground/blob/main/scenarios/aoai.md)
@@ -106,7 +106,7 @@ Proper architecture prescribes dedicated landing zones for separate applications
 
 One of the challenges of using provisioned throughput is that it allocates a fixed amount of capacity for your applications, regardless of the actual demand. This means that you might have spare capacity during periods of low activity, such as at night or on weekends. To optimize the utilization of provisioned throughput, you need to design your applications to adapt to the fluctuations in demand.
 
-In this architecture, I suggest a hybrid approach that combines interactive and batch applications. Interactive applications are those that require immediate responses from the Azure OpenAI service, such as chatbots or web apps. Batch applications are those that can tolerate some delay in processing, such as data analysis or reporting. Interactive applications are directly connected to the Azure OpenAI landing zone, making use of the hub and spoke network topology described above. Batch applications, on the other hand, use [Azure Service Bus](https://azure.microsoft.com/en-us/products/service-bus/), a fully managed cloud messaging service, to communicate with the Azure OpenAI service.
+In this architecture, I suggest a hybrid approach that combines interactive and batch applications. Interactive applications are those that require immediate responses from the Azure OpenAI service, such as chatbots or web apps. Batch applications are those that can tolerate some delay in processing, such as data analysis or reporting. Interactive applications are directly connected to the Azure OpenAI Landing Zone, making use of the hub and spoke network topology described above. Batch applications, on the other hand, use [Azure Service Bus](https://azure.microsoft.com/en-us/products/service-bus/), a fully managed cloud messaging service, to communicate with the Azure OpenAI service.
 
 
 ```mermaid
