@@ -33,7 +33,7 @@ Provisioned throughput is different from the pay-as-you-go (PAYG) option, where 
 
 ## How to design architectures for multi-application scenarios
 
-While the provisioned throughput feature offers many advantages, such as predictable performance and cost savings, however not all use cases in an organization will require a dedicated Azure OpenAI PTU instance. I see some patterns emerging where a single instance is shared between many use cases. Multiple applications connecting through a `Hub and Spoke` network to the Azure OpenAI landing zone. The OpenAI service is not directly exposed, Azure API Management is in front. 
+While the provisioned throughput feature offers many advantages, such as predictable performance and cost savings, not all use cases in an organization will require a dedicated Azure OpenAI PTU instance. I see some patterns emerging where a single instance is shared between many use cases. 
 
 #### Multi Application Architecture
 
@@ -80,14 +80,14 @@ AI_Use_Case_3 --> Hub
 
 #### Hub and Spoke
 
-A [hub and spoke](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) network topology is a common design pattern for cloud architectures, especially when multiple applications need to access a shared service or resource. By creating a central hub that hosts the networking (vnets, firewalls), each application is only connected to the central hub through vnet peering so one can achieve good isolation. The hub and spoke model simplifies the network management and security, as the hub can act as a single point of control and inspection for the traffic between the spokes. A Landing Zone is a focused area that houses specific resources, typically each Landing Zone is a Spoke.
+A [Hub and Spoke](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology) network topology is a common design pattern for cloud architectures, especially when multiple applications need to access a shared service or resource. By creating a central hub that hosts the networking (vnets, firewalls), each application is only connected to the central hub through vnet peering so one can achieve good isolation. The hub and spoke model simplifies the network management and security, as the hub can act as a single point of control and inspection for the traffic between the spokes. A Landing Zone is a focused area that houses specific resources, typically each Landing Zone is a Spoke.
 
 The Azure OpenAI instance is hosted in one of the dedicated Landing Zones, the applications will be in different Landing Zones. There is a [Azure OpenAI Landing Zone reference architecture
-](https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-openai-landing-zone-reference-architecture/ba-p/3882102)
+](https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-openai-landing-zone-reference-architecture/ba-p/3882102).
 
 #### The OpenAI Landing Zone
 
-The Azure OpenAI Landing Zone contains Azure OpenAI and [Azure API Management](https://azure.microsoft.com/en-us/products/api-management/). By using Azure API Management in front of the Azure OpenAI service, you can apply policies, such as authentication, throttling, caching, and transformation, to your APIs. Additionally, you can monitor and analyze the performance and usage of your APIs using Azure API Management’s built-in analytics. This comes in very handy to split costs between multiple applications making use of OpenAI, take a look at [Calculating Charge backs for Business Units/Projects Utilizing a Shared Azure OpenAI Instance](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/calculating-chargebacks-for-business-units-projects-utilizing-a/ba-p/3909202). Azure API Management can easily mimic the Azure OpenAI API, so it remains compatible with existing OpenAI clients. 
+The Azure OpenAI Landing Zone contains Azure OpenAI and [Azure API Management](https://azure.microsoft.com/en-us/products/api-management/). By using Azure API Management in front of the Azure OpenAI service, you can apply policies, such as authentication, throttling, caching, and transformation, to your APIs. Additionally, you can monitor and analyze the performance and usage of your APIs using Azure API Management’s built-in analytics. This comes in very handy to split costs between multiple applications making use of OpenAI, take a look at [Calculating Charge backs for Business Units/Projects Utilizing a Shared Azure OpenAI Instance](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/calculating-chargebacks-for-business-units-projects-utilizing-a/ba-p/3909202). Azure API Management [can easily mimic](https://github.com/nicolgit/hub-and-spoke-playground/blob/main/scenarios/aoai.md#import-openai-rest-interface-in-apim-using-its-swagger-specification) the Azure OpenAI API, so it remains compatible with existing OpenAI clients. 
 
 Azure API Management connects to the [Azure OpenAI private endpoint](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks), keeping all traffic internal. 
 
@@ -149,7 +149,7 @@ BatchApp2 <--> ServiceBus
 
 #### Azure Service Bus and Azure Functions
 
-Azure Service Bus allows you to send and receive messages between decoupled applications and services. By using Azure Service Bus, you can implement a queue-based load leveling pattern, which buffers requests from batch applications and sends them to the Azure OpenAI service when the provisioned throughput is available. This way, you can balance the load between interactive and batch applications, and avoid overloading the Azure OpenAI service during peak hours. 
+Azure Service Bus allows you to send and receive messages between decoupled applications and services. By using Azure Service Bus, you can implement a [queue-based load leveling pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling), which buffers requests from batch applications and sends them to the Azure OpenAI service when the provisioned throughput is available. This way, you can balance the load between interactive and batch applications, and avoid overloading the Azure OpenAI service during peak hours. 
 
 [Azure Functions](https://azure.microsoft.com/en-us/products/functions/) (but also [Logic Apps](https://azure.microsoft.com/en-us/products/logic-apps/)) provides seamless integration with Azure Service Bus, enabling you to create functions that react to and send messages to queues or topics. One of the use cases for Azure Functions and Service Bus is to call the Azure API Management (and Open AI) and respond back on the Service Bus with the Open AI reply. 
 
