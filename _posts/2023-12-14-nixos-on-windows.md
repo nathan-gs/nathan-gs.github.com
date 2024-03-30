@@ -41,8 +41,10 @@ We are going to use the [nix-community/NixOS-WSL](https://github.com/nix-communi
 2. Import the image to WSL
 
     ```powershell
-    wsl --import NixOS .\Downloads\NixOS\nixos-wsl.tar.gz
+    wsl --import NixOS %userprofile%\AppData\Local\WSL\NixOS .\Downloads\NixOS\nixos-wsl.tar.gz
     ```
+
+    `%userprofile%\AppData\Local\WSL\NixOS` is an arbitrary location, adjust to your needs.
 
 3. Run NixOS 
   
