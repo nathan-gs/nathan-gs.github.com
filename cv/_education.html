@@ -11,9 +11,9 @@
             {% for c in site.data.cv_certificate %}
                
                 <div class="span4 certificate {{c.css_class}}">
-                    {% if c.acclaim_id %}
-                    <a href="https://www.youracclaim.com/badges/{{ c.acclaim_id }}">
-                        <img src="https://images.youracclaim.com/size/70x70/images/{{ c.logo }}" alt="{{c.description}}">
+                    {% if c.website %}
+                    <a href="{{ c.website }}">
+                        <img src="{{ c.logo }}" alt="{{c.description}}">
                     </a>
                     {% else %}
                     <img src="{{ c.logo }}" alt="{{c.description}}">
