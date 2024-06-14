@@ -37,11 +37,13 @@ No pizza is complete without cheese, and in the AI pizza, that’s the training 
 
 ##### Model
 
-Finally, the toppings represent the model itself. Each topping (feature) adds a unique taste (prediction capability), and the combination of them defines the overall flavor profile (performance) of the AI model.
+Finally, the toppings represent the model itself. Each topping (feature) adds a unique taste (prediction capability), and the combination of them defines the overall flavor profile (performance) of the AI model. Depending on the option and recipe taken, the model can be a file (pickle, onnx often in a Docker container) or an API. 
 
 ### Machine Learning
 
-In "classical" Machine Learning the Data Scientist is responsible to select the right algorithms, do data prep and cleaning, do feature engineering and model selection. Comparable to a cook creating a pizza from scratch. 
+In "classical" Machine Learning the Data Scientist is responsible to select the right algorithms, do data prep and cleaning, do feature engineering and model selection. Comparable to a cook creating a pizza from scratch. The Data Scientist has full flexibility in tools, libraries and platforms. To not have to reinvent the pizza-oven the use of [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/), [Azure Databricks](https://learn.microsoft.com/en-us/azure/databricks/machine-learning/) or the Data Science profile in [Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview). 
+
+A good methodology for this recipe is the [Team Data Science Process](https://learn.microsoft.com/en-us/azure/architecture/data-science-process/overview).
 
 ### Custom Azure AI services
 
@@ -68,7 +70,10 @@ To customize large language models, one must become a skilled chef in prompt eng
 ###### Retrieval-Augmented Generation (RAG)
 
 Another technique is Retrieval-Augmented Generation (RAG). Think of RAG as the secret spice blend that elevates a dish. It enhances a language model by allowing it to pull in external knowledge during the generation process, leading to more informed and accurate outputs.
-Conclusion
+
+### Trustworthiness  
+
+To foster trustworthiness in machine learning and artificial intelligence, it is essential to establish robust feedback loops that not only refine algorithms for fairness, accuracy, and transparency but also adhere to ethical standards and incorporate diverse perspectives to mitigate biases. 
 
 ## Conclusion
 
