@@ -57,17 +57,17 @@ An extension of the Azure AI services (see below), in which you can refine the p
 
 LLMs, such as the GPT4 models by OpenAI, are extremely large models trained on vast datasets using extensive computing power. They form the basis of Generative AI.
 
-##### Customizing Large Language Models
+#### Customizing Large Language Models
 
 Large Language Models are typically not fine-tuned with own training data after release, however there are ways to customize them.
 
 <img src="/assets/post/2024/06/13/pizza-model-for-ai/pizza-aas-ai-llm-customization.png" alt="Customizing LLMs" />
 
-###### Prompt Engineering
+##### Prompt Engineering
 
 To customize large language models, one must become a skilled chef in prompt engineering. This involves carefully crafting prompts that guide the model to generate the desired output. It’s like telling the model, “Here’s what I’m looking for; now make it happen.”
 
-###### Retrieval-Augmented Generation (RAG)
+##### Retrieval-Augmented Generation (RAG)
 
 Another technique is Retrieval-Augmented Generation (RAG). Think of RAG as the secret spice blend that elevates a dish. It enhances a language model by allowing it to pull in external knowledge during the generation process, leading to more informed and accurate outputs.
 
