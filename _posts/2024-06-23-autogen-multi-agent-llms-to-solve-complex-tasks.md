@@ -17,7 +17,18 @@ Some interesting papers and articles on the topic
 - [Today’s AI models are impressive. Teams of them will be formidable (The Economist)](https://www.economist.com/science-and-technology/2024/05/13/todays-ai-models-are-impressive-teams-of-them-will-be-formidable) from May 2024
 - [The Promise of Multi-Agent AI (Forbes)](https://www.forbes.com/sites/joannechen/2024/05/24/the-promise-of-multi-agent-ai) from May 2024
 
-### What are Agents
+#### Use Cases
+
+- __Code Generation__: execution, and debugging: AutoGen can help developers write, run, and fix code using LLMs, tools, and human feedback. For example, an AssistantAgent can generate code snippets, suggest corrections, or execute code based on the user's requests. A UserProxyAgent can solicit human input, run code, or call functions or tools. AutoGen can also support automated code generation and question answering with retrieval augmented agents. 
+- __Code Conversion__: AutoGen can automatically convert one programming language to an another. For example convert COBOL to Java, one _Agent_ can generate code snippets, while another _Agent_ suggest corrections, and another  _Agent_ executes the code. This can be mixed with direct human interaction.
+- __Schema Matching for APIs__: using multiple Agents to convert the schema of one API to the schema of another API, and then use an LLM to generate a mapping between them. For example, if one API returns a field called “firstName” &  “lastName” and another API returns a field called “fullName”.
+- __Writing ETL and SQL__: by a combination of agents automatically write extract, transform, load (ETL) pipelines, as well as SQL queries. 
+- __Better Writing__: AutoGen can also be used to write blog posts, like the one you're reading now. Different agents can contribute to various sections, ensuring that the content is well-researched, coherent, and engaging.
+- __Gaming__: Autogen [can play chess](https://github.com/microsoft/autogen/blob/main/notebook/agentchat_nested_chats_chess.ipynb), tic-tac-toe, text based adventure and other games.
+- __Social Simulation__: Autogen is an excellent basis for _multi-agent debates_.
+- __Planning Trips and Travel__: Incorporating specific agents tasked with local knowledge and language help, to come-up with a better travel plan.
+
+## What are Agents
 
 In artificial intelligence, an agent is a computer program or system designed to perceive its environment, make decisions, and take actions to achieve specific goals or sets of goals. A multi-agent system involves multiple autonomous agents that interact with each other to achieve a common goal. By collaborating, they enhance overall system performance and achieve better outcomes than individual drones acting independently. The new wave of Generative AI revived and adapted this concepts to _Large Language Model Multi-Agent Systems_ (__LLM-MA__). 
 
@@ -40,7 +51,7 @@ In the context of AutoGen, agents are specialized entities equipped with large l
 <img src="/assets/post/2024/06/23/autogen-multi-agent-llms-to-solve-complex-tasks/autogen_agentchat.png" alt="AutoGen: Agentchat" />
 _AutoGen agentchat from [microsoft/autogen](https://github.com/microsoft/autogen) on Github._
 
-### Types of Agents
+#### Types of Agents
 
 Some examples of agents in AutoGen are:
 
@@ -59,17 +70,6 @@ AutoGen is not just limited to generating text; it can interact with the environ
 AutoGen allows __Human Feedback Loops__ to improve agent performance, like we are used to in interactive chatgpt-like applications. Another important feedback mechanism is __Agent-to-Agent Feedback__, imagine two AutoGen agents collaborating on a creative writing task. Agent A generates an initial story fragment, and Agent B responds with a continuation. They iterate, providing feedback and refining the narrative until they create a cohesive story. Finally, __Code Execution Feedback loops__ can help Autogen write executable code, by running the generated sample and processing the output (including looking at return codes and error messages).
 
 By combining these three approaches, AutoGen achieves adaptability, continuous improvement, and versatility. 
-
-### Use Cases
-
-- __Code Generation__: execution, and debugging: AutoGen can help developers write, run, and fix code using LLMs, tools, and human feedback. For example, an AssistantAgent can generate code snippets, suggest corrections, or execute code based on the user's requests. A UserProxyAgent can solicit human input, run code, or call functions or tools. AutoGen can also support automated code generation and question answering with retrieval augmented agents. 
-- __Code Conversion__: AutoGen can automatically convert one programming language to an another. For example convert COBOL to Java, one _Agent_ can generate code snippets, while another _Agent_ suggest corrections, or executes the code based. This can be mixed with direct human interaction.
-- __Schema Matching for APIs__: using multiple Agents to convert the schema of one API to the schema of another API, and then use an LLM to generate a mapping between them. For example, if one API returns a field called “firstName” &  “lastName” and another API returns a field called “fullName”.
-- __Writing ETL__: by a combination of agents automatically write extract, transform, load (ETL) pipelines. 
-- __Better Writing__: AutoGen can also be used to write blog posts, like the one you're reading now. Different agents can contribute to various sections, ensuring that the content is well-researched, coherent, and engaging.
-- __Gaming__: Autogen [can play chess](https://github.com/microsoft/autogen/blob/main/notebook/agentchat_nested_chats_chess.ipynb) and other games.
-- __Social Simuation__: Autogen is an excellent basis for _multi-agent debates_.
-- __Planning Trips and Travel__: Incorporating specific agents tasked with local knowledge and language help, to come-up with a better travel plan.
 
 ## Getting started
 
