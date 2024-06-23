@@ -7,7 +7,6 @@ tags:
  - Azure
  - Generative AI
  - Architecture
- - LLM
 ---
 
 [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service) is a cloud-based platform that allows you to access and deploy powerful AI models based on OpenAI technologies, such as GPT-4. In this post, we will explore how to use the [provisioned throughput](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/provisioned-throughput) (PTU) feature of Azure OpenAI Service, and how to design architectures for scalable and multi-application scenarios that leverage Large Language Models (LLMs).

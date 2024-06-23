@@ -5,7 +5,6 @@ categories:
 tags:
  - AI
  - Generative AI
- - LLM
  - Machine Learning
  - Azure
 excerpt: >
