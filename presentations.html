@@ -4,11 +4,27 @@ title: Presentations
 permalink: /presentations/
 categories: [presentations]
 upcoming_presentations: 
-#    - date: 2019-06-13
-#      title: Data Science in Production at AZUG
+    - date: 2025-03-25
+      title: AI Revolution Unleashed at the Microsoft AI Tour 2025
+      tags: 
+        - Generative AI
+        - AI
 #      url: 
 
-
+previous_presentations:
+    - date: 2025-02-24 00:00:00 +0000
+      title: Panel Discussion on a Data Centric NATO at Tide '25
+      tags: 
+        - Big Data
+    - date: 2025-02-25 00:00:00 +0000
+      title: Panel Discussion on Ethical AI at Tide '25     
+      tags: 
+        - AI
+    - date: 2025-02-26 00:00:00 +0000
+      title: Mastering LLM Projects from Concept to Creation and Implementing LLMOps at Tide '25
+      tags: 
+        - Generative AI      
+        - AI
 ---
 
 {% if page.upcoming_presentations.size > 0 %}
@@ -18,7 +34,14 @@ upcoming_presentations:
     
         {% for post in page.upcoming_presentations %}
         <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <h4 style="margin-bottom: 0">
+            {%- if post.url -%}
+            <a href="{{ post.url }}">{{ post.title | escape }}</a>
+            {%- else -%}
+            {{post.title | escape}}
+            {%- endif -%}
+        </h4> 
         <span class="post-meta">
             {{ post.date | date: date_format }}
             {%- if post.tags -%}
@@ -30,9 +53,6 @@ upcoming_presentations:
             {%- endif -%}
         </span>
     
-        <h4>
-            <a href="{{ post.url }}">{{ post.title | escape }}</a>
-        </h4>
         </li>
         {% endfor %}
     
@@ -42,23 +62,30 @@ upcoming_presentations:
 <h2>Past Presentations</h2>
 {% endif %}
 <ul class="post-list">
-{% for post in site.categories.presentations %}
-    <li>
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">
-        {{ post.date | date: date_format }}
-        {%- if post.tags -%}
-            <span class="tags">
-                {% for tag in post.tags %}            
-                    <a href="{% include tag_url tag=tag %}">#{{ tag }}</a>
-                {% endfor %}
-            </span>
-        {%- endif -%}
-    </span>
+{% assign all_presentations = site.categories.presentations | concat: page.previous_presentations %}
+{% assign sorted_presentations = all_presentations | sort: "date" | reverse %}
 
-    <h4>
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </h4>
+{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+{% for post in sorted_presentations %}
+    <li>
+        <h4 style="margin-bottom: 0">
+            {%- if post.url -%}
+                <a href="{{ post.url }}">{{ post.title | escape }}</a>
+            {%- else -%}
+                {{post.title | escape}}
+            {%- endif -%}
+        </h4>
+        <span class="post-meta">
+            {{ post.date | date: date_format }}
+            {%- if post.tags -%}
+                <span class="tags">
+                    {% for tag in post.tags %}            
+                        <a href="{% include tag_url tag=tag %}">#{{ tag }}</a>
+                    {% endfor %}
+                </span>
+            {%- endif -%}
+        </span>
+
     </li>
 {% endfor %}
 </ul>
