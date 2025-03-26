@@ -11,7 +11,7 @@ On my Jekyll based blog I want to add Word Cloud on the [tags page](/tags/). A w
 
 ### Setting up jQcloud
 
-Making use of a of [jQCloud](https://github.com/lucaong/jQCloud) and the latest `jQuery` (I'm using these because of the implementation I already done on my CV page).
+Making use of [jQCloud](https://github.com/lucaong/jQCloud) and the latest `jQuery` (I'm using these because of the implementation I already done on my CV page).
 
 Just add the following to your page.
 

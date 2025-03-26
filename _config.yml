@@ -52,6 +52,8 @@ exclude:
   - .jekyll-cache
   - bin
   - "*.nix"
+  - devenv.lock
+  - devenv.nix
 
 google_analytics: UA-12327464-1
 
