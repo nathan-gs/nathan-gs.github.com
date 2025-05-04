@@ -54,8 +54,8 @@
     for i in *; do
       echo "Creating post for $i"
       mkdir -p $DEVENV_ROOT/ha-map-card/$i
-      cp -r $i/index.md $DEVENV_ROOT/_ha_map_card/$i.md
-      find "$i" -maxdepth 1 -type f ! -name "index.md" -exec cp -r {} "$DEVENV_ROOT/ha-map-card/$i/" \;
+      cp -r $i/README.md $DEVENV_ROOT/_ha_map_card/$i.md
+      find "$i" -maxdepth 1 -type f ! -name "README.md" -exec cp -r {} "$DEVENV_ROOT/ha-map-card/$i/" \;
     done
     #cp -r _tmp_ha_map_card/showcase/* _ha_map_card/
     cd $DEVENV_ROOT
