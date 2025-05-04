@@ -39,18 +39,23 @@ collections:
   post_tags:
     permalink: /tags/:name
     output: true
+  ha_map_card:
+    permalink: /ha-map-card/:name
+    output: true
 
 # Build settings
 markdown: kramdown
 theme: minima
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - 'cv/Nathan Bijnens.pdf'
-  - .vscode
-  - .bundle
-  - .jekyll-cache
-  - bin
+  - .vscode/
+  - .bundle/
+  - .jekyll-cache/
+  - .sass-cache/
+  - bin/
   - "*.nix"
   - devenv.lock
   - devenv.nix
@@ -82,6 +87,13 @@ defaults:
     values:
       permalink: "/tags/:name/"
       layout: tag
+  - scope:
+      path: ''
+      type: ha_map_card
+    values:
+      permalink: "/ha-map-card/:name/"
+      layout: ha_map_card
+      header_color: '#1AA89C'
   - scope:
       type: posts
     values:
