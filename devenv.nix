@@ -48,16 +48,18 @@
   scripts.ha-map-card-gallery.exec = ''
     cd $DEVENV_ROOT
     rm -rf _tmp_ha_map_card
-    #git clone git@github.com:nathan-gs/ha-map-card.git _tmp_ha_map_card
-    cp -r /home/nathan/projects/ha-map-card _tmp_ha_map_card
+    git clone git@github.com:nathan-gs/ha-map-card.git _tmp_ha_map_card
+    #cp -r /home/nathan/projects/ha-map-card _tmp_ha_map_card
     cd _tmp_ha_map_card/showcase
     for i in *; do
+      if [ "$i" = "README.md" ]; then
+        continue
+      fi
       echo "Creating post for $i"
       mkdir -p $DEVENV_ROOT/ha-map-card/$i
       cp -r $i/README.md $DEVENV_ROOT/_ha_map_card/$i.md
       find "$i" -maxdepth 1 -type f ! -name "README.md" -exec cp -r {} "$DEVENV_ROOT/ha-map-card/$i/" \;
     done
-    #cp -r _tmp_ha_map_card/showcase/* _ha_map_card/
     cd $DEVENV_ROOT
     rm -rf _tmp_ha_map_card
   '';

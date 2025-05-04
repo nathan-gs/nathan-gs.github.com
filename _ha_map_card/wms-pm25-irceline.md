@@ -1,18 +1,11 @@
 ---
-authors: 
-  - nathan-gs
-  - name: Nathan
-    website: https://nathan.gs
-  - name: Nathan
-    github: nathan-gs
-  - github: nathan-gs
-  - website: https://nathan.gs
+authors: [ nathan-gs ]
 title: Displaying PM2.5 in Belgium (WMS map)
 ---
 
 ![WMS Image](ha-map-card-pm25.png)
 
-Basic WMS map, using the [irceline.be](https://www.irceline.be) provided WMS map.
+Basic WMS layer, using the [irceline.be](https://www.irceline.be) provided WMS map.
 
 ### Code
 
