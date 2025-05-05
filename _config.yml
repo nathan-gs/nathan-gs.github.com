@@ -94,6 +94,7 @@ defaults:
       permalink: "/ha-map-card/:name/"
       layout: ha_map_card
       header_color: '#1AA89C'
+      tags: [ "Home Assistant" ]
   - scope:
       type: posts
     values:

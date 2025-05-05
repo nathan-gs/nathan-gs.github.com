@@ -9,55 +9,63 @@ permalink: /ha-map-card/
         <h1 class="post-title">{{ page.title | escape }}</h1>
     </header>
 
-    <div class="post-content">        
+    <div class="post-content">    
+      <section>
         <p>
           <strong><a href="https://github.com/nathan-gs/ha-map-card">ha-map-card</a></strong> is a lovelace card, serving as an enhancement to the native Home Assistant map-card, bringing a host of advanced features to the forefront. Built on the foundation of leaflet.          
         </p>
-        <h2>Gallery</h2>
-        <ul class="post-list">
-          {% for post in site.ha_map_card %}
-            {% assign item_name = post.path | split: '/' | last | replace: '.md', '' | sluggify %}
-              <li>
-                <h3 style="margin-bottom: 0;">
-                    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h3>
-              {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-              <span class="post-meta">      
-                {%- if post.authors %}
-                <span class="authors">
-                  <i class="fa-solid fa-user-group"></i> &nbsp; 
-                  {%- assign author_entries = post.authors -%}
-                  {%- for entry in author_entries -%}
-                    {%- if entry.github -%}
-                      <a href="https://github.com/{{ entry.github }}">{{ entry.name | default: entry.github }}</a>
-                    {%- elsif entry.website -%}
-                      <a href="{{ entry.website }}">{{ entry.name | default: entry.website | split: '/' | last }}</a>
-                    {%- else -%}
-                      <a href="https://github.com/{{ entry }}">{{ entry }}</a>
-                    {%- endif -%}
-                    {%- unless forloop.last -%}, {% endunless %}
-                  {%- endfor %}         
-                  {%- endif %}
+      </section>    
+        <section>
+          <h2>Gallery</h2>
+          <p>
+            These are examples written by a third party, as part of the <a href="https://github.com/nathan-gs/ha-map-card/tree/main/showcase">ha-map-card showcase</a>.
+          </p>
+          <ul class="post-list">
+            {% for post in site.ha_map_card %}
+              {% assign item_name = post.path | split: '/' | last | replace: '.md', '' | sluggify %}
+                <li>
+                  <h3 style="margin-bottom: 0;">
+                      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                  </h3>
+                {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+                <span class="post-meta">      
+                  {%- if post.authors %}
+                  <span class="authors">
+                    <i class="fa-solid fa-user-group"></i> &nbsp; 
+                    {%- assign author_entries = post.authors -%}
+                    {%- for entry in author_entries -%}
+                      {%- if entry.github -%}
+                        <a href="https://github.com/{{ entry.github }}">{{ entry.name | default: entry.github }}</a>
+                      {%- elsif entry.website -%}
+                        <a href="{{ entry.website }}">{{ entry.name | default: entry.website | split: '/' | last }}</a>
+                      {%- else -%}
+                        <a href="https://github.com/{{ entry }}">{{ entry }}</a>
+                      {%- endif -%}
+                      {%- unless forloop.last -%}, {% endunless %}
+                    {%- endfor %}         
+                    {%- endif %}
+                  </span>
+                  <span class="github_link"><i class="fab fa-github fa-fw"> </i> <a href="https://github.com/nathan-gs/ha-map-card/tree/main/showcase/{{ item_name }}/"> ha-map-card/{{ item_name }}</a></span>
+                    
                 </span>
-                <span class="github_link"><i class="fab fa-github fa-fw"> </i> <a href="https://github.com/nathan-gs/ha-map-card/tree/main/showcase/{{ item_name }}/"> ha-map-card/{{ item_name }}</a></span>
-                  
-              </span>
-          
-                <p class="post-excerpt">
-                  {% assign excerpt_html = post.excerpt | markdownify %}
-                  {% assign base_path = "/ha-map-card/" | append: item_name | append: "/" %}
-                  {% assign temp_html = excerpt_html %}
-                  {% assign img_prefix = '<img src="' | append: base_path %}
-                  {% assign temp_html = temp_html | replace: '<img src="', img_prefix %}
-                  {% assign http_prefix = '<img src="' | append: base_path | append: 'http' %}
-                  {% assign temp_html = temp_html | replace: http_prefix, '<img src="http' %}
-                  {% assign slash_prefix = '<img src="' | append: base_path | append: '/' %}
-                  {% assign temp_html = temp_html | replace: slash_prefix, '<img src="/' %}
-                  {{ temp_html }}
-                </p>
-              </li>
-          {% endfor %}
-          </ul>
+            
+                  <p class="post-excerpt">
+                    {% assign excerpt_html = post.excerpt | markdownify %}
+                    {% assign base_path = "/ha-map-card/" | append: item_name | append: "/" %}
+                    {% assign temp_html = excerpt_html %}
+                    {% assign img_prefix = '<img src="' | append: base_path %}
+                    {% assign temp_html = temp_html | replace: '<img src="', img_prefix %}
+                    {% assign http_prefix = '<img src="' | append: base_path | append: 'http' %}
+                    {% assign temp_html = temp_html | replace: http_prefix, '<img src="http' %}
+                    {% assign slash_prefix = '<img src="' | append: base_path | append: '/' %}
+                    {% assign temp_html = temp_html | replace: slash_prefix, '<img src="/' %}
+                    {{ temp_html }}
+                  </p>
+                </li>
+            {% endfor %}
+            </ul>
+
+        </section>
 
         
     </div>
