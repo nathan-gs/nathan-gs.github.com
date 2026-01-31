@@ -13,6 +13,10 @@
     pkgs.rubyPackages.github-pages 
   ];
 
+  # Suppress warnings from Ruby bundled gems with unbuilt native extensions (debug, racc, rbs)
+  # These are shipped with Ruby 3.3 but not compiled in Nix - they're not needed for Jekyll
+  env.RUBYOPT = "-W0";
+
   
 
   # https://devenv.sh/languages/
@@ -34,14 +38,14 @@
   '';
 
   scripts.build-prod.exec = ''    
-    JEKYLL_ENV=production jekyll build --strict_front_matter --destination /home/nathan/projects/nathan.gs-website-raw
-    cd /home/nathan/projects/nathan.gs-website-raw
+    JEKYLL_ENV=production jekyll build --strict_front_matter --destination ../nathan.gs-website-raw
+    cd ../nathan.gs-website-raw
     git add -A
     git commit -a -m "$(date "+%Y-%m-%d %H:%M")"
   '';
 
   scripts.publish-prod.exec = ''
-    cd /home/nathan/projects/nathan.gs-website-raw
+    cd ../nathan.gs-website-raw
     git push
   '';
 

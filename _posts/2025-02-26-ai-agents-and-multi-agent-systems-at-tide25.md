@@ -5,6 +5,7 @@ categories: [presentations]
 tags:
  - AI
  - Generative AI
+ - Agentic AI
  - Azure
 ---
 
