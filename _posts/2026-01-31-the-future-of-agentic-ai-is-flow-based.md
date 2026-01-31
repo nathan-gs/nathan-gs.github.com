@@ -6,6 +6,14 @@ tags:
  - AI
  - Generative AI
  - Agentic AI
+excerpt: |
+  After nearly two years of working intensively with Agentic AI—first as Sr CSA Manager Data & AI at Microsoft, working with strategic enterprise customers, and now as CEO of Scrydon—I've come to a clear conclusion: **the future of Agentic AI is flow-based**.
+
+  The initial promise of fully autonomous agents—AI systems that could independently reason, plan, and execute complex tasks—has given way to a more nuanced reality. As McKinsey notes in their analysis "One year of Agentic AI: Six lessons from the people doing the work":
+
+  > It's not about the agent; it's about the workflow.
+
+  This insight resonates deeply with what I've observed across dozens of enterprise deployments. Let me explain why flow-based agentic AI represents the path forward.
 ---
 
 After nearly two years of working intensively with Agentic AI—first as Sr CSA Manager Data & AI at Microsoft, working with strategic enterprise customers, and now as CEO of [Scrydon](https://scrydon.com/)—I've come to a clear conclusion: **the future of Agentic AI is flow-based**.
