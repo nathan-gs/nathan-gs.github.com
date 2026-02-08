@@ -13,6 +13,11 @@
     pkgs.rubyPackages.github-pages 
   ];
 
+  languages.python.enable = true;
+  languages.python.package = pkgs.python3.withPackages (ps: with ps; [
+    requests
+  ]);
+
   # Suppress warnings from Ruby bundled gems with unbuilt native extensions (debug, racc, rbs)
   # These are shipped with Ruby 3.3 but not compiled in Nix - they're not needed for Jekyll
   env.RUBYOPT = "-W0";
