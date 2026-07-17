@@ -2,7 +2,6 @@
 
 - Coaching & Mentoring
 - Entrepreneurial 
-- Business Understanding and building customer journeys
 - Go to market strategy
 - Analytical Mindset
 - Business Management
