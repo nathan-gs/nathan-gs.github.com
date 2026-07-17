@@ -22,6 +22,12 @@
   # These are shipped with Ruby 3.3 but not compiled in Nix - they're not needed for Jekyll
   env.RUBYOPT = "-W0";
 
+  # Jekyll auto-requires bundler whenever a Gemfile is present, which then fails to
+  # resolve Gemfile.lock against bundler-installed gems -- ours come from Nix via GEM_PATH.
+  # The Gemfile exists only to pin the Cloudflare Pages build to these same versions;
+  # locally we run jekyll straight off the Nix gems. See the comment in ./Gemfile.
+  env.JEKYLL_NO_BUNDLER_REQUIRE = "true";
+
   
 
   # https://devenv.sh/languages/

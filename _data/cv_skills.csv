@@ -1,44 +1,54 @@
 skill,weight
-Big Data, 50
-Cloud, 40
-Coaching, 40
-Leadership, 40
-Azure, 35
-Strategy, 35
+AI, 50
+AI OS, 45
+Leadership, 45
+Agentic AI, 40
+Decision Intelligence, 38
+Strategy, 38
+Coaching, 35
+Entrepreneurship, 35
+Generative AI, 35
+Big Data, 30
+Cloud, 30
 Influencing, 30
-Spark, 30
-Management, 30
-Selling, 27
+Product Strategy, 30
+Management, 28
+Digital Sovereignty, 26
+Go-to-Market, 25
 Public Speaking, 25
-Solution Selling, 22
-AI, 20
-Trusted Advisor, 20
-Business Management, 20
-Linux, 16
-Software Architecture, 15
-Go-to-Market, 15
+Selling, 25
+Azure, 20
+Fundraising, 20
+Solution Selling, 20
+Business Management, 18
+Knowledge & Data, 18
+Trusted Advisor, 18
 Business To Technology Strategy, 15
-Data Mesh, 12
+Software Architecture, 15
+Spark, 15
+Linux, 14
 Kappa & Lambda Architecture, 12
 DevOps, 11
+Data Mesh, 10
+Databricks, 10
 Digital Transformation, 10
 NoSQL, 10
 Scala, 10
 SQL, 10
-Databricks, 10
-IoT, 9
 Hadoop, 9
+IoT, 9
 Scalability, 9
+Machine Learning, 8
 Stream Processing, 8
 git, 7
 Security, 7
 Technology Evangelism, 7
 ETL, 6
-TDD, 6
 Kafka, 6
 NixOS, 6
-Analytics, 5
+TDD, 6
 Amazon AWS, 5
+Analytics, 5
 Data Visualization, 5
 Functional Programming, 5
 Spark Streaming, 5
@@ -49,7 +59,6 @@ Best Practices, 4
 Design Patterns, 4
 Docker, 4
 JavaScript, 4
-Machine Learning, 4
 REST, 4
 Software Engineering, 4
 Cognitive Services, 3
