@@ -50,6 +50,10 @@ theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
+  # Setting `exclude` replaces Jekyll's defaults rather than extending them, so
+  # vendor/ must be listed explicitly: .bundle/config sets BUNDLE_PATH=vendor,
+  # and Cloudflare Pages installs the gems there at build time.
+  - vendor/
   - 'cv/Nathan Bijnens.pdf'
   - .vscode/
   - .bundle/
