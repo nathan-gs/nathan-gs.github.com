@@ -2,7 +2,7 @@ div.jqcloud {
     font-family: inherit;
 
     // jQCloud centres the cloud in a fixed-height box, leaving whitespace above
-    // and below. These margins crop it — but only as far as that whitespace
+    // and below. These margins crop it, but only as far as that whitespace
     // actually extends. Crop deeper than the gap and the outer words collide
     // with the heading either side. Raise them only if the cloud shrinks.
     margin-top: -30px;
