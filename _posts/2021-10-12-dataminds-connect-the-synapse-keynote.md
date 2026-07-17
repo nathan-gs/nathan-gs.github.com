@@ -6,6 +6,7 @@ tags:
  - Azure
  - Azure Synapse Analytics
  - Apache Spark
+ - Knowledge & Data
  - Big Data
 ---
 

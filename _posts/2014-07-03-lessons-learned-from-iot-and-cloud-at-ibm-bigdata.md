@@ -12,6 +12,7 @@ tags:
 - Lambda Architecture
 - Kappa Architecture  
 - Architecture
+- Knowledge & Data
 ---
 
 {% include youtube code='TSt49yPBmW0&t=479s' aspect_ratio='16:9' %}

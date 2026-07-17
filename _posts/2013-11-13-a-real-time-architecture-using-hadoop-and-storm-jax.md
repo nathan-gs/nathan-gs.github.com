@@ -8,6 +8,7 @@ tags:
 - Big Data
 - Lambda Architecture
 - Architecture
+- Knowledge & Data
 ---
 
 {% include youtube code='CrABmVi12_A' aspect_ratio='16:9' %}

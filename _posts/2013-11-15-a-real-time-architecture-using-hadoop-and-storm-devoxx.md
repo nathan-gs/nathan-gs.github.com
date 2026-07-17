@@ -8,6 +8,7 @@ tags:
 - Big Data
 - Lambda Architecture
 - Architecture
+- Knowledge & Data
 ---
 
 {% include youtube code='EhcUCZrmfJg' aspect_ratio='16:9' %}

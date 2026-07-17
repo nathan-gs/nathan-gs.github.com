@@ -5,6 +5,7 @@ categories: [presentations]
 tags:
 - Apache Hadoop
 - Big Data
+- Knowledge & Data
 excerpt: >
     My presentation about Hadoop and Pig during the Fosdem 2011 [Data Dev Room](https://archive.fosdem.org/2011/schedule/track/data_analytics_devroom.html).
 redirect_from:

@@ -31,9 +31,8 @@ $(document).ready(function () {
     
     var tags = [];
     {% for tag in site.tags %}
-        {% assign tag_slug = tag[0] | sluggify %}                    
-        {% assign weight = site.tags[tag_slug] | size %}
         {% assign title = tag[0] %}
+        {% assign weight = tag[1] | size %}
         tags.push({
             text: "{{ title }}",
             weight: '{{ weight }}',

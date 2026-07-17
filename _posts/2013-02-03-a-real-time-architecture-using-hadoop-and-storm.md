@@ -10,6 +10,7 @@ tags:
 - Apache Storm
 - Lambda Architecture
 - Architecture
+- Knowledge & Data
 ---
 
 {% include slideshare code='79W3vSkgaiS322' aspect_ratio='16:9' %}

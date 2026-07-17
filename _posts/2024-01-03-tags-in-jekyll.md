@@ -108,7 +108,7 @@ layout: base
 
     <div class="post-content">
         {{ content }}
-        {% assign tag = page.title | sluggify %}
+        {% assign tag = page.title %}
         {% assign tag_posts = site.tags[tag] %}
         <ul class="post-list">
             {% for post in tag_posts %}

@@ -4,6 +4,7 @@ title: "Microsoft Inspirience '12: Getting more out of your Big Data"
 categories: [presentations]
 tags:
 - Big Data
+- Knowledge & Data
 ---
 
 

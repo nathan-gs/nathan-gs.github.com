@@ -6,6 +6,7 @@ tags:
 - Azure
 - Big Data
 - Apache Spark
+- Knowledge & Data
 ---
 
 [Big Industries](http://bigindustries.be) hosted an evening of [Cloudera in the Cloud](https://www.meetup.com/Belgium-Cloudera-User-Group/events/240605775/). 

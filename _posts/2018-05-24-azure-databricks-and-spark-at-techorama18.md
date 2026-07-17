@@ -8,6 +8,7 @@ tags:
 - Machine Learning
 - Databricks
 - Azure
+- Knowledge & Data
 ---
 
 {% include slideshare code='zxYC7ZnL3R3Avi' aspect_ratio='16:9' %}

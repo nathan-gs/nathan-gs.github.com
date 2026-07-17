@@ -35,11 +35,11 @@
 
   # https://devenv.sh/scripts/
   scripts.watch.exec = ''
-    jekyll serve --host 0.0.0.0
+    jekyll serve --host 0.0.0.0 --port 4001
   '';
 
   scripts.watch-incremental.exec = ''
-    jekyll serve --host 0.0.0.0 --incremental
+    jekyll serve --host 0.0.0.0 --incremental --port 4001
   '';
 
   scripts.build-prod.exec = ''    

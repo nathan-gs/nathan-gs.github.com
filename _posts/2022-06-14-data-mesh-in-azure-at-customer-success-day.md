@@ -7,6 +7,7 @@ tags:
   - Data Mesh
   - Domain Driven Design
   - Big Data
+  - Knowledge & Data
   - Architecture
 ---
 

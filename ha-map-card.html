@@ -22,7 +22,7 @@ permalink: /ha-map-card/
           </p>
           <ul class="post-list">
             {% for post in site.ha_map_card %}
-              {% assign item_name = post.path | split: '/' | last | replace: '.md', '' | sluggify %}
+              {% assign item_name = post.path | split: '/' | last | replace: '.md', '' %}
                 <li>
                   <h3 style="margin-bottom: 0;">
                       <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
