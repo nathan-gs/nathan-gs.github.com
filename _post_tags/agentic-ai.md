@@ -10,4 +10,4 @@ Key characteristics of agentic AI include:
 - **Multi-agent collaboration**: Multiple specialized agents can work together on complex problems
 - **Human-in-the-loop**: Effective agentic systems maintain human oversight and control
 
-At [Scrydon](https://scrydon.com/platform/agentic-ai), we're building a flow-based agentic AI platform that enables organizations to deploy intelligent agents while retaining full control and sovereignty over their data and processes.
+At [Scrydon](https://scrydon.com/platform/ai-os/agentic-ai/), we're building a flow-based agentic AI platform that enables organizations to deploy intelligent agents while retaining full control and sovereignty over their data and processes.

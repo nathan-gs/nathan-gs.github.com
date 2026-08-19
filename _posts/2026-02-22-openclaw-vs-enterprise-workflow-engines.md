@@ -10,7 +10,9 @@ excerpt: |
   OpenClaw and workflow engines like n8n, Make, or Scrydon are often mentioned together, but they solve fundamentally different problems. This post explores the architectural divide between autonomous AI agents and deterministic flow-based platforms, and where the two are converging.
 ---
 
-The AI automation space is splitting into two distinct paradigms. On one side: autonomous personal AI agents like [OpenClaw](https://openclaw.ai/). On the other: deterministic workflow engines like [n8n](https://n8n.io/), [Make](https://www.make.com/), and [Scrydon](https://scrydon.com/platform/agentic-ai). 
+The AI automation space is splitting into two distinct paradigms. On one side: autonomous personal AI agents like [OpenClaw](https://openclaw.ai/). On the other: deterministic workflow engines like [n8n](https://n8n.io/), [Make](https://www.make.com/), and [Scrydon](https://scrydon.com/platform/ai-os/agentic-ai/). 
+
+*Disclosure: I'm CEO of Scrydon, one of the platforms compared below.*
 
 They appear similar on the surface—both automate work, integrate with APIs, and can be self-hosted—but they solve entirely different classes of problems. Understanding this distinction matters, because choosing the wrong approach leads to fragile systems, security issues, or unmet expectations.
 
@@ -43,7 +45,7 @@ What makes OpenClaw magical for an individual creates real challenges for enterp
 - **Compliance:** Did data leave the controlled environment? Was it processed by a third-party LLM?
 - **Predictability:** Open-ended autonomy is powerful for personal tasks, but organizations often require deterministic, repeatable outcomes.
 
-This is where the workflow engine ecosystem shines—from general-purpose tools like n8n and Make to sovereign, enterprise-grade platforms like [Scrydon](https://scrydon.com/platform/agentic-ai).
+This is where the workflow engine ecosystem shines—from general-purpose tools like n8n and Make to sovereign, enterprise-grade platforms like [Scrydon](https://scrydon.com/platform/ai-os/agentic-ai/).
 
 ### The Workflow Engine Landscape
 
@@ -53,7 +55,7 @@ Not all workflow engines are the same. The space ranges from lightweight persona
 
 **Make** (formerly Integromat) follows a similar model with a more polished visual builder and a broader consumer audience. Like n8n, it is instruction-driven and deterministic.
 
-**Scrydon** occupies a different niche. It is a [flow-based Agentic AI platform](https://scrydon.com/platform/agentic-ai) that embeds LLMs directly into deterministic workflows, enabling visual orchestration of AI agents, integrations, and business logic—while logging every decision, reasoning path, and tool invocation for audit. Where n8n connects APIs, Scrydon orchestrates AI agents within a sovereign infrastructure—deployable air-gapped, on-premise, or in European clouds. This matters for organizations in defense, government, healthcare, and critical infrastructure where data leaving the controlled environment isn't an option.
+**Scrydon** occupies a different niche. It is a [flow-based Agentic AI platform](https://scrydon.com/platform/ai-os/agentic-ai/) that embeds LLMs directly into deterministic workflows, enabling visual orchestration of AI agents, integrations, and business logic—while logging every decision, reasoning path, and tool invocation for audit. Where n8n connects APIs, Scrydon orchestrates AI agents within a sovereign infrastructure—deployable air-gapped, on-premise, or in European clouds. This matters for organizations in defense, government, healthcare, and critical infrastructure where data leaving the controlled environment isn't an option.
 
 ### The Coding Agent Parallel
 
@@ -65,7 +67,7 @@ This pattern—autonomous generation, deterministic execution—is essentially t
 
 ### Where This Is Heading
 
-The most interesting development is that these two paradigms are starting to converge. The next generation of frontier workflow engines (such as [Scrydon](https://scrydon.com/platform/agentic-ai)) will likely embed some of the flexibility of autonomous agents:
+The most interesting development is that these two paradigms are starting to converge. The next generation of frontier workflow engines (such as [Scrydon](https://scrydon.com/platform/ai-os/agentic-ai/)) will likely embed some of the flexibility of autonomous agents:
 
 - **AI-generated flows:** Instead of manually designing a workflow node by node, you describe your intent in natural language and an AI agent generates the flow for you—which you then review, adjust, and deploy. Autonomy in *creating* the workflow, determinism in *running* it.
 - **Intelligent monitoring:** Autonomous agents that observe running workflows, detect anomalies, and suggest adjustments—without actually changing the production flow directly.
