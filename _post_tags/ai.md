@@ -7,4 +7,5 @@ Artificial Intelligence (AI) encompasses technologies that enable machines to pe
 Related topics on this blog:
 - [Generative AI](/tags/gen-ai) — Large language models, content generation, and creative AI
 - [Agentic AI](/tags/agentic-ai) — Autonomous agents and multi-agent systems, such as [Scrydon's Agentic AI](https://scrydon.com/platform/ai-os/agentic-ai/) platform
+- [AI OS](/tags/ai-os) — The runtime that schedules, routes, and governs the work, such as [Scrydon's AI OS](https://scrydon.com/platform/ai-os/) platform
 - [Machine Learning](/tags/ml) — Predictive models and data science
