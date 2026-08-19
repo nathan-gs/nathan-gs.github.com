@@ -2,7 +2,7 @@
 title: AI OS
 ---
 
-An AI OS (or Agentic OS) is the runtime that brings the right context to the right agent, system, or person at the right time. Where individual agents are executors, the operating system is the layer that schedules, routes, and governs the work — turning isolated copilots into organisational AI.
+An [AI OS](https://scrydon.com/platform/ai-os/) (or [Agentic OS](https://scrydon.com/platform/ai-os/agentic-os/)) is the runtime that brings the right context to the right agent, system, or person at the right time. Where individual agents are executors, the operating system is the layer that schedules, routes, and governs the work — turning isolated copilots into organisational AI.
 
 Like a traditional operating system, it decomposes into a handful of elements:
 - **Governance** — the kernel: policy, identity, and audit that agents cannot talk their way around
