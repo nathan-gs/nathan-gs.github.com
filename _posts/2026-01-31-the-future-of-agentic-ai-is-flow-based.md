@@ -52,7 +52,7 @@ In a flow-based system, while individual LLM calls may be non-deterministic, the
 
 This determinism is crucial for enterprise adoption. When a CFO asks "what will this AI do?", you can show them the flow—not just hope for the best.
 
-Platforms like [Scrydon](https://scrydon.com/platform/agentic-ai) make agents predictable and auditable with full control over LLMs, prompts, and tool usage. Every decision, reasoning path, and tool invocation is logged for regulatory audits.
+Platforms like [Scrydon](https://scrydon.com/platform/ai-os/agentic-os/) make agents predictable and auditable with full control over LLMs, prompts, and tool usage. Every decision, reasoning path, and tool invocation is logged for regulatory audits.
 
 ### 2. Humans Stay in Control
 
@@ -82,7 +82,7 @@ The landscape of agentic AI tooling has exploded. Beyond code-centric frameworks
 
 - **Power Automate** has added AI Builder and Copilot capabilities, bringing flow-based AI to the Microsoft ecosystem
 - **Microsoft AI Foundry** offers orchestration capabilities for enterprise AI development
- - **[Scrydon](https://scrydon.com)** provides a sovereignty-first, flow-based Agentic AI platform 
+ - **[Scrydon](https://scrydon.com/platform/ai-os/agentic-ai/)** provides a sovereignty-first, flow-based Agentic AI platform 
 
 There's also a growing category of "vibe coding" tools—platforms like **Lovable**, **Google AI Studio**, **Bolt**, and similar—where you describe what you want and AI generates the application. These have their place for quick prototyping and experimentation, but they typically lack the production-grade features enterprises require: version control, staging environments, audit trails, rollback capabilities, and the ability to deploy on-premise or in sovereign environments. When your business processes are critical, the gap between a working prototype and a production system becomes significant. 
 

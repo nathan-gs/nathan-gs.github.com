@@ -11,4 +11,4 @@ Related topics on this blog:
 - [Kappa Architecture](/tags/kappa-architecture) — Stream-first data architectures
 - [Data Mesh](/tags/data-mesh) — Decentralized, domain-oriented data ownership
 
-For sovereign, enterprise-grade analytics, see [Scrydon's Big Data Platform](https://scrydon.com/platform/analytics).
+For sovereign, enterprise-grade analytics, see [Scrydon's Big Data Platform](https://scrydon.com/platform/analytics/).
