@@ -52,7 +52,7 @@ In a flow-based system, while individual LLM calls may be non-deterministic, the
 
 This determinism is crucial for enterprise adoption. When a CFO asks "what will this AI do?", you can show them the flow—not just hope for the best.
 
-Platforms like [Scrydon](https://scrydon.com/platform/ai-os/) make agents predictable and auditable with full control over LLMs, prompts, and tool usage. Every decision, reasoning path, and tool invocation is logged for regulatory audits.
+Platforms like [Scrydon](https://scrydon.com/platform/ai-os/agentic-os/) make agents predictable and auditable with full control over LLMs, prompts, and tool usage. Every decision, reasoning path, and tool invocation is logged for regulatory audits.
 
 ### 2. Humans Stay in Control
 
