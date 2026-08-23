@@ -9,16 +9,28 @@ tags:
  - NixOS
  - AI OS
 excerpt: |
-  I moved my Solis inverter off SolisCloud and onto local Modbus. The hardware is still Chinese, the firmware is still Ginlong's, the FTDI chip in the USB adapter still comes from a supply chain I have no say over. Not one thing about my dependency changed.
+  I moved my Solis inverter off SolisCloud and onto local Modbus. The hardware is still Chinese, the firmware is still Solis's, the FTDI chip in the USB adapter still comes from a supply chain I have no say over. Not one thing about my dependency changed.
 
   What changed is that the decision to charge my battery no longer leaves my house. That distinction — dependency versus dependence — is the whole sovereignty argument, at home and at work, and it's the one most organisations get backwards.
 ---
 
-Two weeks ago my solar battery was steered from a datacentre I have never seen, run by a company I have no contract with, over an API I do not pay for and cannot hold to any SLA. Every time my house decided "charge now, the capacity peak is about to break", that decision travelled from Belgium to SolisCloud and back before anything happened in my garage.
+It started as an irritation.
 
-Today the same decision is a write to holding register `43018` over a €15 USB-to-RS485 adapter, on a two-metre twisted pair, at 9600 baud.
+My solar battery reported its state of charge once every five minutes. My car charger ramps in seconds; my heat pump modulates in seconds. So I was running a control loop on a number that could be five minutes stale, and I had built rate limits and hysteresis around that staleness as if it were a law of physics rather than someone's API tier.
 
-The inverter is the same inverter. Same [Ginlong](https://www.ginlong.com/) RHI-5K-48ES-5G, same firmware, same Chinese factory. The batteries are still Pylontech. The FTDI chip in the adapter still comes from a supply chain in which I am a rounding error. **Not one thing about my dependency changed.** What changed is who gets to decide.
+Worse, when my house decided something — *charge now, the capacity peak is about to break* — that decision travelled from Belgium to a SolisCloud endpoint and back before anything happened in my basement. Often enough, it came back an error. Every automation I owned had a retry wrapped around it, because a company's uptime had quietly become my house's uptime.
+
+Then the irritation turned into something less comfortable.
+
+Germany's Federal Office for Information Security has been [warning](https://www.cleanenergywire.org/news/solar-pv-hardware-opens-door-chinese-interference-german-power-supply-security-agency) that internet-connected solar inverters carry a "substantial risk potential" for interference with the power grid — and pointed at incidents in which Deye inverters were **remotely shut down**, leaving their owners without electricity. Not breached by an attacker. Switched off, over the same vendor channel that exists so an app can draw you a nice graph.
+
+My inverter had exactly that channel. Every cloud-connected inverter does. And I had built my entire home energy management on top of it, voluntarily, because it was the path of least resistance.
+
+So two weeks ago I unplugged it.
+
+Today the decision to charge my battery is a write to holding register `43018` over a [€30 USB-to-RS485 adapter](https://www.amazon.com.be/dp/B0DWLG6WYC), on a two-metre twisted pair, at 9600 baud, in my basement.
+
+The inverter is the same inverter. Same [Solis](https://www.solisinverters.com/) RHI-5K-48ES-5G, same firmware, same Chinese factory. The batteries are still Pylontech. The FTDI chip in the adapter still comes from a supply chain in which I am a rounding error. **Not one thing about my dependency changed.** What changed is who gets to decide.
 
 That gap — between *dependency*, which you mostly cannot escape, and *dependence*, which you very much can — is the entire sovereignty argument. It is the argument I'm having at home with a soldering iron, and the argument I'm having at [Scrydon](https://scrydon.com/) with enterprises who think sovereignty means building their own GPUs. Most people conflate the two, conclude that sovereignty is impossible, and stop thinking.
 
@@ -34,18 +46,17 @@ It worked. For three years, it mostly worked.
 
 ## What "mostly worked" actually cost
 
-Once you write the bill down, it's uglier than it feels day to day:
+Once you write the bill down, it's uglier than it feels day to day. The latency and the failed writes were the visible half. The other half I had simply stopped noticing:
 
-- **Five-minute samples.** SolisCloud gave me a battery state-of-charge every five minutes. My car charger ramps in seconds. My heat pump modulates in seconds. I was running a control loop on data that could be five minutes stale, and I had built rate limits and hysteresis around that staleness as if it were a law of physics rather than someone's API tier.
-- **Writes that sometimes didn't.** A setpoint change was a request to a remote service. Sometimes it failed. Sometimes it succeeded and took minutes to reach the hardware. My automations carried retries because a company's uptime had become my house's uptime.
-- **Capabilities the app simply didn't expose.** Register `43110` bit 5 — "allow charging from the grid" — was off. There was no way to reach it from the cloud side. Solar-only top-up stalls around 90–95 % as PV fades, and there was nothing I could do about it, because the vendor had decided which of my inverter's own functions I was allowed to use.
-- **A single point of "and then what?"** If Ginlong deprecated the API, geofenced it, moved it behind a subscription, or was simply acquired by someone with different ideas, my battery would keep storing electricity and stop being *steerable*. The hardware would be physically fine and functionally lobotomised. There is no legal remedy for that. There is no support ticket for that.
+- **Capabilities the app didn't expose.** Register `43110` bit 5 — "allow charging from the grid" — was off. There was no way to reach it from the cloud side. Solar-only top-up stalls around 90–95 % as PV fades, and there was nothing I could do about it, because the vendor had decided which of my own inverter's functions I was allowed to use.
+- **Accounting I had to fake.** I estimated battery charge and discharge in kWh from state-of-charge deltas at a fixed 83 Wh/%, because that was all the cloud gave me. The inverter had been tracking the real figures the whole time. I just couldn't see them.
+- **A single point of "and then what?"** If Solis deprecated the API, geofenced it, moved it behind a subscription, or was simply acquired by someone with different ideas, my battery would keep storing electricity and stop being *steerable*. The hardware would be physically fine and functionally lobotomised. There is no legal remedy for that. There is no support ticket for that — and, as the Deye owners found out, no notice period either.
 
 None of this is a story about a villain. SolisCloud was never malicious. It was just someone else's computer that happened to hold the only key to mine.
 
 ## The switch
 
-The fix turned out to be embarrassingly physical. The RHI-5G speaks the ESINV-33000 Modbus register map on that same 4-pin COM connector the WiFi stick was using. Everything SolisCloud was showing me — and everything it was letting me set — is a register on a bus in my own garage:
+The fix turned out to be embarrassingly physical. The RHI-5G speaks the ESINV-33000 Modbus register map on that same 4-pin COM connector the WiFi stick was using. Everything SolisCloud was showing me — and everything it was letting me set — is a register on a bus in my own basement:
 
 | What | Register |
 |---|---|
@@ -89,7 +100,7 @@ The usual framing is that sovereignty costs you something — that you trade cap
 
 - **Polling went from 5 minutes to 2 seconds.** Not 150× more data for its own sake; 150× more *control authority*. I can now write automations that were previously nonsense, like "keep force-charging until SoC has been at 100 % for fifteen minutes" — a genuine closed loop instead of setting a floor and hoping.
 - **Register `43110` bit 5 became reachable.** The grid-charge capability the cloud hid from me is a `select` entity now. That single bit is the difference between a battery that stalls at 92 % and one that finishes.
-- **Real energy accounting replaced a linear guess.** I used to estimate battery charge/discharge kWh from SoC deltas at a fixed 83 Wh/%, because that's all the cloud gave me. Registers `33161`–`33168` are the inverter's own BMS-tracked counters. The estimate is gone.
+- **Real energy accounting replaced the 83 Wh/% guess.** Registers `33161`–`33168` are the inverter's own BMS-tracked charge and discharge counters. The estimate is gone, and the Energy dashboard now shows measurements instead of arithmetic.
 - **The write path stopped failing.** No cloud lag in the loop, no retry logic wrapped around someone else's availability.
 
 Local control was better on every axis I care about. That's not a coincidence and it's not luck — it's what happens when you delete a 5,000 km round trip from a control loop. **Latency and sovereignty are the same property viewed from two angles.**
@@ -102,7 +113,7 @@ I don't want to sell this as free, because it wasn't, and the enterprise version
 
 **What I gave up.** SolisCloud firmware OTA. The installer's remote access. The vendor app. Those are real losses and I chose them deliberately — which is the point. It was a decision I got to make, on a ledger I could see, rather than a term someone changed in a document I never read.
 
-**What I did not gain.** Anything at all resembling independence from China. Ginlong still wrote that firmware. Pylontech still made those cells. If the RHI-5K dies out of warranty I am buying another inverter from a supply chain with no European option at my price point, and I know it.
+**What I did not gain.** Anything at all resembling independence from China. Solis still wrote that firmware. Pylontech still made those cells. If the RHI-5K dies out of warranty I am buying another inverter from a supply chain with no European option at my price point, and I know it.
 
 ## Dependency is not dependence
 
@@ -117,7 +128,7 @@ Here is the distinction, as plainly as I can put it.
 
 You cannot fab your own silicon. You cannot smelt your own lithium. You are not going to build an EUV lithography machine in Flanders, and pretending otherwise is how sovereignty debates turn into theatre. **Supply chain dependency is, for almost everyone, unavoidable.**
 
-Control is a different game entirely. Control is about where the decision is made, who holds the keys, and what happens on the day the terms change. And control is *cheap* by comparison — mine cost fifteen euros and a weekend.
+Control is a different game entirely. Control is about where the decision is made, who holds the keys, and what happens on the day the terms change. And control is *cheap* by comparison — mine cost thirty euros and a weekend.
 
 The failure mode I keep seeing is people who conflate the two, correctly conclude that the first is hopeless, and therefore give up on the second. That's precisely backwards. The unavoidable dependency is the reason to be ruthless about the avoidable dependence, not an excuse to accept it.
 
@@ -141,7 +152,7 @@ It's the WiFi stick, at enterprise scale.
 
 We don't claim Scrydon eliminates dependency. We didn't build the accelerators and we didn't train every model, and any vendor telling you otherwise is selling you a flag rather than an architecture.
 
-What a [sovereign AI OS](https://scrydon.com/platform/ai-os/) claims is narrower and much more useful: the governance kernel, the context layer, the process and workflow scheduler, and the integrations run **where you decide** — air-gapped, on-premise, or in a European cloud — under keys you hold, with an audit trail you own, and with the models underneath swappable rather than load-bearing. The dependency stays. The dependence goes. Same trade as my garage, same shape, more zeros.
+What a [sovereign AI OS](https://scrydon.com/platform/ai-os/) claims is narrower and much more useful: the governance kernel, the context layer, the process and workflow scheduler, and the integrations run **where you decide** — air-gapped, on-premise, or in a European cloud — under keys you hold, with an audit trail you own, and with the models underneath swappable rather than load-bearing. The dependency stays. The dependence goes. Same trade as my basement, same shape, more zeros.
 
 That last property is the one doing most of the work. A model you can replace in an afternoon is a supplier. A model your processes have quietly grown around — whose specific behaviour your prompts, evaluations and integrations are now shaped to — is a landlord. The difference has nothing to do with which country trained it, and everything to do with whether you kept the layer above it yours.
 
@@ -155,4 +166,4 @@ Whether you're auditing a home battery or an AI platform, the same three questio
 
 Answer those three honestly. It won't get you out of the supply chain — nothing will. But it tells you exactly where you're renting your own operations back from someone else, and roughly what a serial cable would cost.
 
-Mine was fifteen euros.
+Mine was thirty euros.
