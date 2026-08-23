@@ -6,8 +6,7 @@ tags:
  - Sovereignty
  - Home Assistant
  - Home Energy Management
- - NixOS
- - AI OS
+ - Home Automation
 excerpt: |
   I moved my Solis inverter off SolisCloud and onto local Modbus. The hardware is still Chinese, the firmware is still Solis's, the FTDI chip in the USB adapter still comes from a supply chain I have no say over. Not one thing about my dependency changed.
 
