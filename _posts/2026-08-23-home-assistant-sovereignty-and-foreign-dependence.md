@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Home Assistant, Sovereignty and Foreign Dependence"
+title: "Solar, Home Automation, Sovereignty and Foreign Dependence"
 categories: 
 tags:
  - Sovereignty
