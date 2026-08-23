@@ -96,10 +96,10 @@ $spacing-unit: 30px;
             vertical-align: top;
         }
 
-        thead tr th {
-            border-bottom: 1px solid $darkAccentColor;            
-        }
-    
+        // Leave the header underline to minima's own greyscale table palette
+        // (#dedede borders, #c9c9c9 under the header). The accent colour here
+        // was the only non-grey in the table and read as a mismatch.
+
         tbody {
             tr:nth-child(odd) {
                 background-color: $lightAccentColor;
