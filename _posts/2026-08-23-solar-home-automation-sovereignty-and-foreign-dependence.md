@@ -16,7 +16,11 @@ excerpt: |
 
 It started as an irritation.
 
-My solar battery reported its state of charge once every five minutes. My car charger ramps in seconds; my heat pump modulates in seconds. So I was running a control loop on a number that could be five minutes stale, and I had built rate limits and hysteresis around that staleness as if it were a law of physics rather than someone's API tier.
+My solar battery reported its state of charge once every five minutes.
+
+That number matters more here than it might sound. Flanders bills electricity transport on a [capacity tariff](/2023/12/30/flanders-capacity-electricity-tariffs-in-home-assistant-improvements/): your meter averages consumption over each quarter-hour, and the single highest quarter of the month sets what you pay. I try to be a grid-friendly customer and keep the house under **2.5 kW** — which means one careless fifteen minutes, once, sets the bill for the whole month. My car charger ramps in seconds. The battery is what absorbs the spike.
+
+So I was running a control loop on a number that could be five minutes stale, inside a fifteen-minute window I was being billed on. I had built rate limits and hysteresis around that staleness as if it were a law of physics, rather than someone's API tier.
 
 Worse, when my house decided something — *charge now, the capacity peak is about to break* — that decision travelled from Belgium to a SolisCloud endpoint and back before anything happened in my basement. Often enough, it came back an error. Every automation I owned had a retry wrapped around it, because a company's uptime had quietly become my house's uptime.
 
@@ -28,13 +32,13 @@ My inverter had exactly that channel. Every cloud-connected inverter does. And I
 
 So two weeks ago I unplugged it.
 
-Today the decision to charge my battery is a write to holding register `43018` over a [€30 USB-to-RS485 adapter](https://www.amazon.com.be/dp/B0DWLG6WYC), on a two-metre twisted pair, at 9600 baud, in my basement.
+Today the decision to charge my battery is a write to holding register `43018` over a [€30 USB-to-RS485 adapter](https://www.amazon.com.be/dp/B0DWLG6WYC), at 9600 baud, in my basement.
 
 The inverter is the same inverter. Same [Solis](https://www.solisinverters.com/) RHI-5K-48ES-5G, same firmware, same Chinese factory. The batteries are still Pylontech. The FTDI chip in the adapter still comes from a supply chain in which I am a rounding error. **Not one thing about my dependency changed.** What changed is who gets to decide.
 
 That gap — between *dependency*, which you mostly cannot escape, and *dependence*, which you very much can — is the entire sovereignty argument. It is the argument I'm having at home with a soldering iron, and the argument I'm having at [Scrydon](https://scrydon.com/) with enterprises who think sovereignty means building their own GPUs. Most people conflate the two, conclude that sovereignty is impossible, and stop thinking.
 
-I should declare my interest early: I'm CEO of Scrydon, and a sovereign [AI OS](/tags/ai-os) is what we build. So read the second half as a practitioner's argument, not a neutral survey. The first half is just a man with a multimeter.
+I should declare my interest early: I'm CEO of Scrydon, and a sovereign [AI OS](https://scrydon.com/platform/ai-os/) is what we build. So read the second half as a practitioner's argument, not a neutral survey. The first half is just a man with a multimeter.
 
 ## The setup, briefly
 
